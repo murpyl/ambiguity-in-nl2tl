@@ -1,0 +1,1658 @@
+{
+  "0": {
+    "nl": "Every a is eventually followed by a e.",
+    "ltl": "G(a -> F e)",
+    "samples": [
+      {
+        "reasoning": "1. Atomic propositions: `a` and `e`.\n2. The property applies at all times: whenever `a` occurs, `e` must occur at some future time.\n3. Express this as \u201calways, if `a`, then eventually `e`.\u201d\n4. Sanity check: each occurrence of `a` requires a later occurrence of `e`.\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `e`.\n2. The statement says that at every point in time, if `a` occurs, then `e` must occur eventually afterward.\n3. This is expressed by requiring `a -> F e` globally.\n4. Sanity check: whenever `a` holds, the formula requires an eventual occurrence of `e`.\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `e`.\n2. At every point in time, if `a` occurs, `e` must occur eventually afterward.\n3. This is expressed by `G(a -> F e)`.\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `e`.\n2. The sentence says that whenever `a` occurs, `e` must occur at some later point.\n3. `G` applies this requirement at all times, and `F` expresses eventual occurrence.\n4. Thus, each `a` implies that `e` eventually occurs.\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `e`.\n2. At every time, if `a` holds, then `e` must hold at some future time.\n3. `G` expresses \u201calways,\u201d and `F` expresses \u201ceventually.\u201d\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `e`.\n2. Whenever `a` occurs, `e` must occur at some point afterward.\n3. Apply this condition globally: `G(a -> F e)`.\n4. This requires `e` eventually after every occurrence of `a`.\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `e`.\n2. At every time, if `a` occurs, `e` must occur at some time later.\n3. Express this as `G(a -> F e)`.\n4. This requires an eventual `e` for each occurrence of `a`.\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `e`.\n2. The sentence says that whenever `a` occurs, `e` must occur at some point afterward.\n3. \u201cWhenever\u201d gives `G`, and \u201ceventually\u201d gives `F`: `G(a -> F e)`.\n4. This applies the requirement at every time `a` holds.\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `e`.\n2. Whenever `a` occurs, `e` must occur at some point afterward.\n3. \u201cWhenever\u201d is represented by `G`, and \u201ceventually\u201d by `F`, so we use `G(a -> F e)`.\n4. This requires every occurrence of `a` to be followed eventually by `e`.\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `e`.\n2. The property applies at all times: whenever `a` occurs, `e` must eventually occur afterward.\n3. Express this as `G(a -> F e)`.\n4. Sanity check: if `a` never occurs, the condition holds vacuously; if it does, an `e` must eventually occur.\n\nFORMULA: G(a -> F e)",
+        "formula": "G(a -> F e)"
+      }
+    ]
+  },
+  "1": {
+    "nl": "It is never the case that a and b hold at the same time.",
+    "ltl": "G(!(a & b))",
+    "samples": [
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The statement says that at every time, `a` and `b` are not both true.\n3. This gives `G !(a && b)`.\n4. The formula excludes their simultaneous occurrence at all times.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says that at every time, `a` and `b` do not both hold.\n3. \u201cAt every time\u201d is `G`; \u201cnot both\u201d is `!(a && b)`.\n4. This rules out simultaneous truth of `a` and `b` throughout the trace.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cNever\u201d means the condition must hold at all times. The condition is that `a` and `b` do not both hold at the same time.\n3. This is expressed as `G !(a && b)`.\n4. At every time, the formula rules out their simultaneous truth.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The statement says that at every time, `a` and `b` do not both hold.\n3. \u201cAt every time\u201d is `G`; \u201cnot both\u201d is `!(a && b)`.\n4. Thus the formula rules out simultaneous truth of `a` and `b` at all times.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says that at every point in time, they do not both hold.\n3. \u201cAt every point\u201d is `G`; \u201cnot both\u201d is `!(a && b)`.\n4. Thus, the formula rules out simultaneous `a` and `b` at all times.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "Atomic propositions: `a` and `b`.\n\nThe statement applies at all times: `a` and `b` must not both hold simultaneously. This is expressed as always not (`a` and `b`).\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says that at every time, `a` and `b` are not both true.\n3. This is expressed by globally negating their conjunction.\n4. The formula rules out their holding together at any time.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement says that at every time, `a` and `b` are not both true.\n3. \u201cAt every time\u201d is `G`; \u201cnot both true\u201d is `!(a && b)`.\n4. Thus, the formula rules out their simultaneous occurrence at all times.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says that at every time, `a` and `b` do not both hold.\n3. \u201cAt every time\u201d is `G`, and \u201cnot both\u201d is `!(a && b)`.\n4. Thus, the formula rules out any time at which both propositions hold.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement says that at every point in time, `a` and `b` do not both hold.\n3. This is expressed by applying `G` to `!(a && b)`.\n4. Thus, the formula rules out their simultaneous occurrence at all times.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      }
+    ]
+  },
+  "2": {
+    "nl": "Whenever a is enabled, b is enabled three steps later.",
+    "ltl": "G(a -> X (X (X b)))",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cWhenever `a` is enabled\u201d means the condition applies at every time step. \u201c`b` is enabled three steps later\u201d means `b` holds after three applications of the next operator.\n3. Thus, at every step, if `a` holds, then `b` holds three steps later.\n4. This requires `b` at exactly the time three steps after any occurrence of `a`.\n\nFORMULA: G(a -> X X X b)",
+        "formula": "G(a -> X X X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement says that at every time, if `a` is enabled, then `b` is enabled three steps later.\n3. \u201cThree steps later\u201d is represented by applying `X` three times to `b`.\n4. Thus, globally, `a` implies `XXX b`.\n\nFORMULA: G(a -> XXX b)",
+        "formula": "G(a -> XXX b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cWhenever\u201d means the condition applies at every time step: if `a` is enabled now, then `b` is enabled three steps later.\n3. Three steps later is `X X X b`, so the implication is `a -> X X X b`, required globally.\n4. This does not require `b` to be enabled at any other time.\n\nFORMULA: G(a -> X X X b)",
+        "formula": "G(a -> X X X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time, if `a` is enabled, then `b` must be enabled three steps later.\n3. Three steps later is represented by applying `X` three times.\n4. The implication is required globally, so it is enclosed in `G`.\n\nFORMULA: G(a -> X X X b)",
+        "formula": "G(a -> X X X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cWhenever\u201d means the condition applies at every time step: if `a` is enabled now, then `b` must be enabled three steps later.\n3. Three steps later is `X X X b`, so the implication is `a -> X X X b`, applied globally.\n\nFORMULA: G(a -> X X X b)",
+        "formula": "G(a -> X X X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cWhenever\u201d means the condition applies at every time step. If `a` holds now, `b` must hold exactly three steps later.\n3. Three steps later is `X X X b`, so the property is `G(a -> X X X b)`.\n4. This requires `b` at the third next time step whenever `a` holds now; it does not constrain `b` at the intervening steps.\n\nFORMULA: G(a -> X X X b)",
+        "formula": "G(a -> X X X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cWhenever\u201d means the condition applies at every time step. If `a` holds, then `b` must hold three steps later.\n3. Three steps later is represented by applying `X` three times.\n\nFORMULA: G(a -> X X X b)",
+        "formula": "G(a -> X X X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`, representing that each is enabled.\n2. At every time, if `a` is enabled, then `b` must be enabled three steps later.\n3. Three steps later is represented by applying `X` three times: `X X X b`.\n4. The formula applies this condition globally.\n\nFORMULA: G(a -> X X X b)",
+        "formula": "G(a -> X X X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time, if `a` is enabled, then `b` must be enabled exactly three steps later.\n3. \u201cThree steps later\u201d is `X X X b`, and the condition applies always: `G(a -> X X X b)`.\n4. This does not require `b` to be enabled at the intervening steps.\n\nFORMULA: G(a -> X X X b)",
+        "formula": "G(a -> X X X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` holds, `b` must hold three steps later.\n3. Express this as: always, if `a` holds now, then `b` holds after three next steps.\n4. This places no requirement on `b` at intervening steps.\n\nFORMULA: G(a -> X X X b)",
+        "formula": "G(a -> X X X b)"
+      }
+    ]
+  },
+  "3": {
+    "nl": "e must hold everywhere until from some point on, d holds infinitely often.",
+    "ltl": "e U (G (F d))",
+    "samples": [
+      {
+        "reasoning": "1. Atomic propositions: `e` and `d`.\n2. `e` must hold at every step until a point is reached from which `d` occurs infinitely often.\n3. \u201c`d` occurs infinitely often\u201d is `G F d`; the strong-until operator requires `e` to hold before its right-hand condition is reached.\n4. Since `G F d` is unchanged by shifting the starting point, the formula is `e U G F d`.\n\nFORMULA: e U G F d",
+        "formula": "e U G F d"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `e` and `d`.\n2. `e` must hold up to a point where `d` holds infinitely often from then on.\n3. \u201c`d` holds infinitely often\u201d is expressed as `G F d`; the \u201cuntil\u201d structure gives `e U G F d`.\n4. This requires `e` to hold before the right-hand condition is met.\n\nFORMULA: e U G F d",
+        "formula": "e U G F d"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `e` and `d`.\n2. `e` must hold up to a point from which `d` holds infinitely often.\n3. \u201cUntil\u201d is represented by `U`; \u201cfrom some point on, infinitely often\u201d is `F G F d`? More precisely, infinitely often from some point onward is `G F d`, which already expresses that `d` occurs infinitely often.\n4. Thus, `e` holds until `G F d` becomes true.\n\nFORMULA: e U G F d",
+        "formula": "e U G F d"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `e` and `d`.\n2. The sentence says that `e` must hold until the condition \u201c`d` holds infinitely often\u201d is met.\n3. \u201c`d` holds infinitely often\u201d is `G F d`; strong until gives `e U (G F d)`.\n4. If `d` holds infinitely often, `G F d` is already true at the current point, so this formula does not require `e` to hold first.\n\nFORMULA: e U (G F d)",
+        "formula": "e U (G F d)"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `e` and `d`.\n2. **Logical structure:** `e` holds until the condition \u201c`d` holds infinitely often from now on\u201d is satisfied.\n3. **Build the formula:** \u201c`d` holds infinitely often\u201d is `G F d`. Strong until gives `e U (G F d)`.\n4. **Sanity check:** The formula requires `e` at each position before the right-hand condition holds.\n\nFORMULA: e U (G F d)",
+        "formula": "e U (G F d)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `e` and `d`.\n2. `e` must hold until a point at which `d` holds infinitely often.\n3. \u201c`d` holds infinitely often\u201d is `G F d`; combining this with \u201cuntil\u201d gives `e U G F d`.\n4. Sanity check: `e` is required before the recurring-`d` condition is reached.\n\nFORMULA: e U G F d",
+        "formula": "e U G F d"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `e` and `d`.\n2. `e` must continue to hold until the condition is reached; that condition is that `d` holds infinitely often from some point onward.\n3. \u201c`d` holds infinitely often\u201d is `G F d`. Thus the until structure is `e U G F d`.\n4. Sanity check: `e` holds at each step before the condition is reached.\n\nFORMULA: e U G F d",
+        "formula": "e U G F d"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `e`, `d`.\n2. `e` holds until a point is reached from which `d` occurs infinitely often.\n3. \u201c`d` occurs infinitely often\u201d is `G F d`; the strong-until structure is `e U G F d`.\n4. This requires `e` to hold before the point where the suffix has infinitely many `d`s.\n\nFORMULA: e U G F d",
+        "formula": "e U G F d"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `e` and `d`.\n2. **Logical structure:** `e` must hold at every point up to some point where `d` holds infinitely often thereafter.\n3. **Formula pieces:** \u201c`d` holds infinitely often\u201d is `G F d`; requiring `e` until that condition is reached gives `e U G F d`.\n4. **Sanity check:** The formula requires `e` throughout the prefix before the right-hand condition is met, and that condition requires `d` to recur infinitely often.\n\nFORMULA: e U G F d",
+        "formula": "e U G F d"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `e` and `d`.\n2. `e` must hold continuously until a point is reached from which `d` holds infinitely often.\n3. \u201c`d` holds infinitely often\u201d is `G F d`; the \u201cuntil\u201d structure is `e U (G F d)`.\n4. The formula requires `e` to hold before the condition `G F d` is reached.\n\nFORMULA: e U (G F d)",
+        "formula": "e U (G F d)"
+      }
+    ]
+  },
+  "4": {
+    "nl": "If b holds at some point, a has to hold somewhere beforehand.",
+    "ltl": "(F b) -> (!b U (a & !b))",
+    "samples": [
+      {
+        "reasoning": "1. **Atomic propositions:** `a` and `b`.\n2. **Logical structure:** If `b` ever occurs, then `a` must occur at a strictly earlier point. If `b` never occurs, there is no requirement.\n3. **Build the formula:** `F b` means `b` occurs eventually. `!b U (a && !b)` requires reaching a point where `a` holds and `b` does not, while `b` stays false beforehand. Thus, if `b` ever occurs, this ensures `a` happened strictly before its first occurrence.\n4. **Sanity check:** A trace with no `b` satisfies the implication; a trace with `b` requires an earlier `a` with `b` false at that earlier point.\n\nFORMULA: F b -> (!b U (a && !b))",
+        "formula": "F b -> (!b U (a && !b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Any occurrence of `b` must be preceded by an occurrence of `a`. If `b` never occurs, the condition is satisfied without requiring `a`.\n3. Thus, either `a` occurs while `b` is false, with `b` forbidden before then, or `b` never occurs.\n4. The formula allows `b` only after a strictly earlier `a`.\n\nFORMULA: (!b U (a && !b)) || G !b",
+        "formula": "(!b U (a && !b)) || G !b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition is: if `b` ever occurs, an occurrence of `a` must be at a strictly earlier position.\n3. Either `b` never occurs, or `a` occurs while `b` is still false; after that, `b` may occur.\n4. This also rules out `a` and `b` first occurring together.\n\nFORMULA: G(!b) || (!b U (a && !b))",
+        "formula": "G(!b) || (!b U (a && !b))"
+      },
+      {
+        "reasoning": "Atomic propositions: `a`, `b`.\n\nThe condition is that no `b` occurs before an earlier `a`. Thus, either `b` never occurs, or `b` stays false until a position where `a` holds and `b` does not; after that, `b` may occur.\n\nFORMULA: G(!b) || (!b U (a && !b))",
+        "formula": "G(!b) || (!b U (a && !b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The requirement is that no `b` occurs before an earlier `a`. If `b` never occurs, the requirement is satisfied.\n3. `!b U (a && !b)` says that an `a` occurs while `b` is absent, with no earlier `b`; after that, `b` may occur. `G(!b)` covers traces where `b` never occurs.\n4. The formula disallows `a` and `b` holding simultaneously as the first occurrence, since \u201cbeforehand\u201d requires `a` to be earlier.\n\nFORMULA: (!b U (a && !b)) || G(!b)",
+        "formula": "(!b U (a && !b)) || G(!b)"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `a` and `b`.\n2. **Logical structure:** Any occurrence of `b` must have an occurrence of `a` at a strictly earlier position. If `b` never occurs, the condition is satisfied.\n3. **Formula construction:** `!b U (a && !b)` says there is a position with `a` and no `b`, with no `b` occurring before it. `G !b` covers the case where `b` never occurs.\n4. **Sanity check:** The formula rejects a `b` at or before the first `a`, and permits `b` after an earlier `a`.\n\nFORMULA: (!b U (a && !b)) || G !b",
+        "formula": "(!b U (a && !b)) || G !b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition is: if `b` occurs anywhere, then `a` must occur before its first occurrence.\n3. `F b` says that `b` eventually occurs. `!b U a` says that `a` occurs while `b` has not yet occurred.\n4. Together, the formula requires an earlier `a` whenever `b` occurs.\n\nFORMULA: F b -> (!b U a)",
+        "formula": "F b -> (!b U a)"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `a`, `b`.\n2. **Logical structure:** Every occurrence of `b` must have an earlier occurrence of `a`. If `a` never occurs, then `b` must never occur either.\n3. **Formula construction:** Before the first `a`, require `b` to be false; the first `a` must not coincide with `b`. Alternatively, neither proposition needs to occur, provided `b` never occurs.\n4. **Sanity check:** This allows `b` after an earlier `a`, but disallows `b` before or at the first `a`.\n\nFORMULA: ((!b U (a && !b)) || G !b)",
+        "formula": "((!b U (a && !b)) || G !b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition applies if `b` ever occurs: there must be an earlier position where `a` holds. In particular, `a` and `b` holding at the same position is not enough.\n3. `F b` says that `b` occurs eventually. `!b U (a && !b)` says that an `a` occurs at a position where `b` does not, with no `b` before it.\n4. Thus, if any `b` occurs, the required earlier `a` must occur before the first `b`; if no `b` occurs, the condition is vacuously satisfied.\n\nFORMULA: F b -> (!b U (a && !b))",
+        "formula": "F b -> (!b U (a && !b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition is: if `b` ever occurs, `a` must occur before the first `b`. If `b` never occurs, the condition is satisfied.\n3. `G(!b)` covers traces where `b` never occurs. `!b U a` requires `a` to occur with no earlier `b`.\n4. Together, these allow `b` only if `a` has already occurred.\n\nFORMULA: G(!b) || (!b U a)",
+        "formula": "G(!b) || (!b U a)"
+      }
+    ]
+  },
+  "5": {
+    "nl": "Whenever a holds, b holds as well.",
+    "ltl": "G(a -> b)",
+    "samples": [
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The statement applies at every point in time: whenever `a` holds, `b` must also hold.\n3. Express this as \u201calways, if `a` then `b`.\u201d\n4. This requires `b` whenever `a` holds, without restricting times when `a` is false.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The statement says that at every point in time, if `a` holds, then `b` holds as well.\n3. Express this as \u201calways, `a` implies `b`.\u201d\n4. This imposes no requirement when `a` is false.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. The condition applies at every time: whenever `a` holds, `b` must hold at that same time.\n3. Express this as `a -> b`, and require it globally with `G`.\n4. Sanity check: at any time when `a` is true, the implication requires `b` to be true.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement says that at every time, if `a` holds, then `b` also holds.\n3. This is expressed by globally requiring `a -> b`.\n4. If `a` holds at any point, the formula requires `b` to hold at that same point.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The statement applies at every point in time: whenever `a` is true, `b` must also be true.\n3. Express this as `G(a -> b)`.\n4. This requires `b` to hold at every point where `a` holds.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The condition applies at every time: whenever `a` holds, `b` also holds at that same time.\n3. Express this as `a -> b`, required globally with `G`.\n4. This ensures there is no point in time where `a` holds and `b` does not.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. At every point in time, if `a` holds, then `b` holds.\n3. Express this as a globally applied implication.\n4. This permits `b` to hold when `a` does not, as required.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time point, if `a` holds, then `b` holds.\n3. \u201cWhenever\u201d means the condition applies globally, so use `G`.\n4. The implication `a -> b` expresses that `b` holds whenever `a` does.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. \u201cWhenever\u201d means the condition applies at every point in time.\n3. At each point, if `a` holds, then `b` must also hold.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. The property applies at every time: whenever `a` holds, `b` also holds.\n3. Express this as a global implication from `a` to `b`.\n\nFORMULA: G(a -> b)",
+        "formula": "G(a -> b)"
+      }
+    ]
+  },
+  "6": {
+    "nl": "Both a and b hold in every time step.",
+    "ltl": "G (a && b)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Both must hold at every time step.\n3. \u201cAt every time step\u201d is represented by `G`, and both propositions holding together by `&&`.\n4. Thus, the formula requires `a` and `b` to hold at all times.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence requires both to hold at every time step.\n3. \u201cEvery time step\u201d is `G`, and both propositions holding together is `a && b`.\n4. Thus, the formula requires `a` and `b` to hold globally.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Both must hold at every time step.\n3. \u201cAt every time step\u201d is expressed with `G`, and \u201cboth\u201d with `&&`.\n4. Thus, the formula requires `a` and `b` to hold globally.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cIn every time step\u201d means the condition must hold globally.\n3. Both propositions must hold together at each time step, so the condition is `a && b`.\n4. Applying the global operator gives `G(a && b)`.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Both must hold at every time step.\n3. \u201cAt every time step\u201d is `G`, and both holding together is `a && b`.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says that both propositions hold at every time step.\n3. \u201cAt every time step\u201d is `G`; \u201cboth\u201d is `a && b`.\n4. Together, this gives `G(a && b)`.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cBoth \u2026 hold in every time step\u201d means that at all times, `a` and `b` are both true.\n3. Apply `G` to their conjunction: `G(a && b)`.\n4. This requires both propositions to hold at the current and every future time step.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says both propositions hold at every time step.\n3. Use `G` (\u201calways\u201d) to require both propositions together: `G(a && b)`.\n4. This ensures `a` and `b` hold in every time step.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement requires both propositions to hold at every time step.\n3. \u201cEvery time step\u201d is expressed with `G`, and both propositions holding together with `&&`.\n4. Thus, the formula requires `a` and `b` to hold globally.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Both must hold at every time step.\n3. \u201cAt every time step\u201d is expressed with `G`, and both propositions are joined with `&&`.\n4. The formula requires `a` and `b` to hold together at all times.\n\nFORMULA: G(a && b)",
+        "formula": "G(a && b)"
+      }
+    ]
+  },
+  "7": {
+    "nl": "a holds always and whenever b holds, c does not hold.",
+    "ltl": "G a && G(b -> !c)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. `a` holds at every time, and at every time when `b` holds, `c` does not hold.\n3. These conditions are `G a` and `G(b -> !c)`, combined with `&&`.\n4. The formula enforces both conditions throughout the trace.\n\nFORMULA: G a && G(b -> !c)",
+        "formula": "G a && G(b -> !c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. `a` holds at every time, and at every time when `b` holds, `c` does not hold.\n3. These conditions are `G a` and `G(b -> !c)`, joined by `&&`.\n4. This requires `a` always and rules out `b` and `c` holding together at any time.\n\nFORMULA: G a && G(b -> !c)",
+        "formula": "G a && G(b -> !c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. `a` holds at all times. Also, at every time when `b` holds, `c` does not hold.\n3. Combine these conditions: `G a` and `G(b -> !c)`.\n4. This ensures both requirements hold throughout the timeline.\n\nFORMULA: G a && G(b -> !c)",
+        "formula": "G a && G(b -> !c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. `a` holds at every time, and at every time that `b` holds, `c` does not hold.\n3. Combine both conditions under the global operator `G`.\n\nFORMULA: G(a && (b -> !c))",
+        "formula": "G(a && (b -> !c))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. `a` holds at every point in time. Also, at every point where `b` holds, `c` does not hold.\n3. These conditions are `G a` and `G(b -> !c)`, combined with `&&`.\n4. This applies the required conditions globally.\n\nFORMULA: G a && G(b -> !c)",
+        "formula": "G a && G(b -> !c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. `a` must hold at every time, and at every time when `b` holds, `c` must not hold.\n3. These conditions are `G a` and `G(b -> !c)`, joined by conjunction.\n4. This ensures both requirements hold throughout the trace.\n\nFORMULA: G a && G(b -> !c)",
+        "formula": "G a && G(b -> !c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. The sentence says that `a` is always true, and at every time when `b` is true, `c` is false.\n3. These requirements are `G a` and `G(b -> !c)`, joined by `&&`.\n4. The formula applies both requirements at every point in the timeline.\n\nFORMULA: G a && G(b -> !c)",
+        "formula": "G a && G(b -> !c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. `a` must hold at every time, and at every time when `b` holds, `c` must not hold.\n3. These conditions are `G(a)` and `G(b -> !c)`, joined by `&&`.\n4. The formula enforces both conditions at all times.\n\nFORMULA: G(a) && G(b -> !c)",
+        "formula": "G(a) && G(b -> !c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. `a` must hold at all times, and at all times when `b` holds, `c` must not hold.\n3. These conditions are combined with `&&`.\n\nFORMULA: G a && G(b -> !c)",
+        "formula": "G a && G(b -> !c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. `a` must hold at every time, and at every time when `b` holds, `c` must not hold.\n3. These requirements are `G a` and `G(b -> !c)`, combined with `&&`.\n4. The formula enforces both conditions at all times.\n\nFORMULA: G a && G(b -> !c)",
+        "formula": "G a && G(b -> !c)"
+      }
+    ]
+  },
+  "8": {
+    "nl": "If it is the case that every a is eventually followed by a b, then c needs to holds infinitely often.",
+    "ltl": "G(a -> F b) -> G F c",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. \u201cEvery `a` is eventually followed by a `b`\u201d means that whenever `a` holds, `b` holds at some point in the future: `G(a -> F b)`.\n3. \u201c`c` holds infinitely often\u201d means that from every point onward, `c` eventually holds: `G(F c)`.\n4. The first condition implies the second.\n\nFORMULA: G(a -> F b) -> G(F c)",
+        "formula": "G(a -> F b) -> G(F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. \u201cEvery `a` is eventually followed by a `b`\u201d means that always, if `a` holds, then `b` holds at some point in the future: `G(a -> F b)`.\n3. \u201c`c` holds infinitely often\u201d means that from every point, `c` eventually holds: `G(F c)`.\n4. The first property implies the second.\n\nFORMULA: G(a -> F b) -> G(F c)",
+        "formula": "G(a -> F b) -> G(F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. \u201cEvery `a` is eventually followed by a `b`\u201d means that whenever `a` holds, `b` holds at some point afterward: `G(a -> F b)`.\n3. \u201c`c` holds infinitely often\u201d is expressed as `G F c`.\n4. The sentence makes the first property imply the second.\n\nFORMULA: (G(a -> F b)) -> (G F c)",
+        "formula": "(G(a -> F b)) -> (G F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. \u201cEvery `a` is eventually followed by a `b`\u201d means that at every time, if `a` holds, then `b` holds at some future time: `G(a -> F b)`.\n3. \u201c`c` holds infinitely often\u201d is `G F c`.\n4. The sentence makes the second condition follow if the first condition holds, so we place the first condition as the antecedent of an implication.\n\nFORMULA: G(a -> F b) -> G F c",
+        "formula": "G(a -> F b) -> G F c"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. \u201cEvery `a` is eventually followed by a `b`\u201d means that always, if `a` holds, then `b` eventually holds: `G(a -> F b)`.\n3. \u201c`c` holds infinitely often\u201d means that always, `c` will hold again eventually: `G F c`.\n4. The sentence makes the second condition conditional on the first, so we join them with implication.\n\nFORMULA: G(a -> F b) -> G F c",
+        "formula": "G(a -> F b) -> G F c"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. \u201cEvery `a` is eventually followed by a `b`\u201d means that whenever `a` holds, `b` holds at some future point: `G(a -> F b)`.\n3. \u201c`c` holds infinitely often\u201d means that from every point, `c` eventually holds: `G F c`.\n4. The sentence says the first condition implies the second.\n\nFORMULA: (G(a -> F b)) -> (G F c)",
+        "formula": "(G(a -> F b)) -> (G F c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. The condition \u201cevery `a` is eventually followed by a `b`\u201d is `G(a -> F b)`. The requirement that `c` holds infinitely often is `G F c`.\n3. The first condition implies the second.\n\nFORMULA: G(a -> F b) -> G F c",
+        "formula": "G(a -> F b) -> G F c"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. \u201cEvery `a` is eventually followed by a `b`\u201d means that whenever `a` holds, `b` holds at some point eventually: `G(a -> F b)`.\n3. \u201c`c` needs to hold infinitely often\u201d means that from every point, `c` holds again eventually: `G F c`.\n4. The first condition implies the second, so the condition is an implication.\n\nFORMULA: (G(a -> F b)) -> G F c",
+        "formula": "(G(a -> F b)) -> G F c"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. \u201cEvery `a` is eventually followed by a `b`\u201d means that whenever `a` holds, `b` holds at some point in the future: `G(a -> F b)`.\n3. \u201c`c` holds infinitely often\u201d is expressed as `GF c`.\n4. The sentence makes the second condition a consequence of the first, so we combine them with implication.\n\nFORMULA: (G(a -> F b)) -> GF c",
+        "formula": "(G(a -> F b)) -> GF c"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. The condition \u201cevery `a` is eventually followed by a `b`\u201d is `G(a -> F b)`.\n3. If that condition holds, then `c` must hold infinitely often, expressed as `G F c`.\n4. Combining them with implication gives the formula below.\n\nFORMULA: G(a -> F b) -> G F c",
+        "formula": "G(a -> F b) -> G F c"
+      }
+    ]
+  },
+  "9": {
+    "nl": "If a holds infinitely often, then b holds infinitely often as well.",
+    "ltl": "G F a -> G F b",
+    "samples": [
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says that if `a` occurs infinitely often, then `b` must also occur infinitely often.\n3. \u201cInfinitely often\u201d is `G F`: at every point, the proposition will occur again eventually. So the implication is `G F a -> G F b`.\n4. This requires infinitely many occurrences of `b` whenever there are infinitely many occurrences of `a`.\n\nFORMULA: (G F a) -> (G F b)",
+        "formula": "(G F a) -> (G F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that at every point, `a` will hold again: `G F a`. The same applies to `b`: `G F b`.\n3. The sentence says that if the first condition holds, the second does too, so we use implication.\n4. The formula expresses that implication over the entire trace.\n\nFORMULA: (G F a) -> (G F b)",
+        "formula": "(G F a) -> (G F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201c`a` holds infinitely often\u201d means that at every point, `a` will hold again: `G(F(a))`. Likewise, `b` holds infinitely often is `G(F(b))`.\n3. The sentence says the first condition implies the second.\n4. Thus, if `a` occurs infinitely often, `b` must also occur infinitely often.\n\nFORMULA: G(F(a)) -> G(F(b))",
+        "formula": "G(F(a)) -> G(F(b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that at every point, `a` holds at some future point: `G F a`. The same applies to `b`.\n3. The sentence says that if `a` holds infinitely often, then `b` does too, so we use implication.\n4. Sanity check: whenever `a` occurs infinitely often, the formula requires `b` to occur infinitely often.\n\nFORMULA: (G F a) -> (G F b)",
+        "formula": "(G F a) -> (G F b)"
+      },
+      {
+        "reasoning": "Atomic propositions: `a` and `b`.\n\n\u201c`a` holds infinitely often\u201d means that at every point in time, `a` will hold again eventually: `G F a`. Likewise, \u201c`b` holds infinitely often\u201d is `G F b`. The sentence says the first condition implies the second.\n\nFORMULA: (G F a) -> (G F b)",
+        "formula": "(G F a) -> (G F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that at every point in time, `a` will hold again eventually: `G F a`. The same applies to `b`: `G F b`.\n3. The sentence says the first condition implies the second.\n\nFORMULA: (G F a) -> (G F b)",
+        "formula": "(G F a) -> (G F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that at every point, `a` will hold again eventually: `G F a`. Likewise, \u201cb holds infinitely often\u201d is `G F b`.\n3. The sentence says that the first condition implies the second.\n\nFORMULA: (G F a) -> (G F b)",
+        "formula": "(G F a) -> (G F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that at every point, `a` will hold again eventually: `G F a`. Likewise, \u201cb holds infinitely often\u201d is `G F b`.\n3. The sentence says the first condition implies the second.\n\nFORMULA: (G F a) -> (G F b)",
+        "formula": "(G F a) -> (G F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that always, `a` will hold again eventually: `G F a`. The same applies to `b`: `G F b`.\n3. The sentence says that if the first condition holds, then the second does too.\n4. So the formula is `(G F a) -> (G F b)`.\n\nFORMULA: (G F a) -> (G F b)",
+        "formula": "(G F a) -> (G F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201c`a` holds infinitely often\u201d means that from every point in time, `a` eventually holds: `G F a`. The same applies to `b`: `G F b`.\n3. The sentence says that if the first condition holds, then the second does too, so we use implication.\n4. Thus, whenever `a` occurs infinitely often, `b` also occurs infinitely often.\n\nFORMULA: (G F a) -> (G F b)",
+        "formula": "(G F a) -> (G F b)"
+      }
+    ]
+  },
+  "10": {
+    "nl": "Either a or b holds infinitely often",
+    "ltl": "G F a || G F b",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement requires `a` or `b` to hold infinitely often.\n3. `F(a || b)` says that `a` or `b` holds at some future point; applying `G` requires this to be true from every point onward.\n4. Thus, the formula expresses that `a` or `b` occurs infinitely often.\n\nFORMULA: G F (a || b)",
+        "formula": "G F (a || b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cEither a or b holds infinitely often\u201d means that `a` holds infinitely often, or `b` holds infinitely often.\n3. \u201cInfinitely often\u201d is expressed as `G F`, so the formula is `(G F a) || (G F b)`.\n4. This allows either proposition\u2014or both\u2014to hold infinitely often.\n\nFORMULA: (G F a) || (G F b)",
+        "formula": "(G F a) || (G F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement says that at every point in time, `a` or `b` will hold at some point in the future.\n3. \u201cAt every point\u201d is `G`; \u201cat some point in the future\u201d is `F`; either proposition is `a || b`.\n4. This ensures `a` or `b` holds infinitely often.\n\nFORMULA: G F (a || b)",
+        "formula": "G F (a || b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says that at infinitely many points in time, at least one of `a` or `b` holds.\n3. \u201cAt infinitely many points\u201d is expressed as \u201calways, eventually\u201d; \u201ceither\u201d is `a || b`.\n4. Thus, the formula requires `a || b` to recur infinitely often.\n\nFORMULA: G F (a || b)",
+        "formula": "G F (a || b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The statement requires that at arbitrarily many points in time, at least one of `a` or `b` holds.\n3. \u201cInfinitely often\u201d is expressed as `G F`: always, eventually again. The condition at each such point is `a || b`.\n4. This allows either proposition, or both, to hold infinitely often.\n\nFORMULA: G F (a || b)",
+        "formula": "G F (a || b)"
+      },
+      {
+        "reasoning": "Atomic propositions: `a`, `b`.\n\nThe statement says that at infinitely many time points, at least one of `a` or `b` holds. \u201cInfinitely often\u201d is expressed as `G F`, so the formula is `G F (a || b)`.\n\nFORMULA: G F (a || b)",
+        "formula": "G F (a || b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The statement requires that at every point in time, there is some future point where `a` or `b` holds.\n3. \u201cAt every point, eventually\u201d is `G F`, and \u201ceither `a` or `b`\u201d is `a || b`.\n4. Thus, the formula says `a` or `b` occurs infinitely often.\n\nFORMULA: G F (a || b)",
+        "formula": "G F (a || b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says that, at infinitely many points in time, at least one of `a` or `b` holds.\n3. \u201cInfinitely often\u201d is expressed as \u201calways, eventually\u201d: `G F`.\n4. Therefore, the formula is `G F (a || b)`.\n\nFORMULA: G F (a || b)",
+        "formula": "G F (a || b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cEither a or b holds infinitely often\u201d means that at infinitely many points, at least one of them holds.\n3. \u201cInfinitely often\u201d is expressed as `G F`, so the formula is `G F (a || b)`.\n4. This permits `a` and `b` to alternate, as long as one holds infinitely often.\n\nFORMULA: G F (a || b)",
+        "formula": "G F (a || b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. The statement says that at infinitely many points in time, at least one of `a` or `b` holds.\n3. \u201cInfinitely often\u201d is expressed as `G F`: at every point, eventually `a || b` holds.\n4. This allows either proposition, or both, to hold at those points.\n\nFORMULA: G F (a || b)",
+        "formula": "G F (a || b)"
+      }
+    ]
+  },
+  "11": {
+    "nl": "a never holds from some point in time on.",
+    "ltl": "F G ! a",
+    "samples": [
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cFrom some point in time on\u201d means that eventually a point is reached; \u201cnever holds\u201d means `a` is false at every time from then onward.\n3. Combine these as `F G !a`.\n4. This says that eventually, `a` remains false forever.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says that at some future point, `a` stops holding forever after that.\n3. \u201cAt some point\u201d is `F`, and \u201cfrom then on, always not `a`\u201d is `G !a`.\n4. Thus the property is `F G !a`.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      },
+      {
+        "reasoning": "1. Atomic proposition: `a`.\n2. The sentence says that at some point, `a` stops holding forever.\n3. \u201cAt some point\u201d is `F`; \u201cfrom then on, always not `a`\u201d is `G !a`.\n4. Thus, the formula means eventually `a` is always false.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says that eventually there is a point after which `a` never holds.\n3. \u201cEventually, always not `a`\u201d is expressed as `F G !a`.\n4. This allows `a` to hold initially, but requires it to remain false from some point onward.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cFrom some point in time on\u201d means there is a future point after which the condition holds forever.\n3. \u201cNever holds\u201d means `!a` at every point from then on.\n4. Together, this is eventually always not `a`.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says there is some point in the future after which `a` is always false.\n3. \u201cThere is some point\u201d is `F`; \u201cfrom then on, always not `a`\u201d is `G !a`.\n4. Together: `F G !a`.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says that at some point, `a` stops holding and never holds afterward.\n3. \u201cAt some point onward, always not `a`\u201d is `F G !a`.\n4. This allows `a` to hold before that point, but requires it to remain false thereafter.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. The sentence says that at some point in the future, `a` stops holding and remains false thereafter.\n3. \u201cAt some point\u201d is `F`; \u201cfrom then on, always\u201d is `G`; \u201cnever holds\u201d is `!a`.\n4. Thus, eventually `a` is always false.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says that eventually there is a point after which `a` is always false.\n3. \u201cEventually\u201d is `F`; \u201calways\u201d is `G`; \u201cnot `a`\u201d is `!a`.\n4. Thus the formula is `F G !a`.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says that at some point, `a` stops holding and never holds afterward.\n3. \u201cAt some point\u201d is `F`; \u201cfrom then on, always not `a`\u201d is `G !a`.\n4. Combined, this is `F G !a`.\n\nFORMULA: F G !a",
+        "formula": "F G !a"
+      }
+    ]
+  },
+  "12": {
+    "nl": "Whenever a and b do not hold, c holds eventually.",
+    "ltl": "G (!(a && b) -> F c)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. \u201ca and b do not hold\u201d means `!(a && b)`, equivalently `!a || !b`. \u201cWhenever\u201d makes this condition apply at all times, and \u201cc holds eventually\u201d requires `F c` whenever it applies.\n3. The implication is therefore `(!a || !b) -> F c`, under `G`.\n\nFORMULA: G((!a || !b) -> F c)",
+        "formula": "G((!a || !b) -> F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every time, if neither `a` nor `b` holds, then `c` must hold at some point in the future.\n3. This is expressed by globally checking the condition and requiring `F c` whenever `!a && !b` is true.\n4. The formula applies the eventuality from every time the antecedent holds.\n\nFORMULA: G((!a && !b) -> F c)",
+        "formula": "G((!a && !b) -> F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. Whenever both `a` and `b` are false, `c` must hold at some point from then on.\n3. \u201cWhenever\u201d gives `G`, and \u201ceventually\u201d gives `F`.\n\nFORMULA: G((!a && !b) -> F c)",
+        "formula": "G((!a && !b) -> F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. \u201cWhenever a and b do not hold\u201d means at every time when neither `a` nor `b` holds, `c` must hold at some time in the future.\n3. This is expressed by requiring `F c` whenever `!a && !b` is true, at all times.\n4. The formula allows `c` to hold immediately or later.\n\nFORMULA: G((!a && !b) -> F c)",
+        "formula": "G((!a && !b) -> F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every point in time, if `a` and `b` do not both hold, then `c` must hold at some point in the future.\n3. \u201cAt every point\u201d gives `G`; the condition is `!(a && b)`; \u201ceventually `c`\u201d gives `F c`.\n4. The implication ensures the eventuality is required whenever the condition holds.\n\nFORMULA: G(!(a && b) -> F c)",
+        "formula": "G(!(a && b) -> F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every point in time, if neither `a` nor `b` holds, then `c` must hold at some point eventually.\n3. Express the condition as `(!a && !b) -> F c`, and require it globally with `G`.\n4. This ensures the requirement applies whenever the trigger occurs.\n\nFORMULA: G((!a && !b) -> F c)",
+        "formula": "G((!a && !b) -> F c)"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `a`, `b`, and `c`.\n2. **Logical structure:** At every point in time, if neither `a` nor `b` holds, then `c` must hold at some point in the future.\n3. **Build the formula:** \u201cNeither `a` nor `b`\u201d is `!a && !b`; \u201cwhenever\u201d gives `G`; \u201ceventually\u201d gives `F`.\n\nFORMULA: G((!a && !b) -> F c)",
+        "formula": "G((!a && !b) -> F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. The condition is that both `a` and `b` are false. Whenever that condition holds, `c` must hold at some point in the future.\n3. Apply the condition as the antecedent of an implication, require the implication globally, and use `F c` for \u201ceventually c.\u201d\n\nFORMULA: G((!a && !b) -> F c)",
+        "formula": "G((!a && !b) -> F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. Whenever both `a` and `b` are false, `c` must hold at some point in the future.\n3. \u201cWhenever\u201d gives the outer `G`; \u201ceventually\u201d gives `F`.\n\nFORMULA: G((!a && !b) -> F c)",
+        "formula": "G((!a && !b) -> F c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. The condition is that both `a` and `b` do not hold. Whenever that condition occurs, `c` must hold at some point in the future.\n3. Express the condition as `!a && !b`, apply `F c` as the consequence, and require this implication globally with `G`.\n\nFORMULA: G((!a && !b) -> F c)",
+        "formula": "G((!a && !b) -> F c)"
+      }
+    ]
+  },
+  "13": {
+    "nl": "a and b never occur at the same time but one of them holds in every time step.",
+    "ltl": "G(!(a &&b)) && G(a || b)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, at least one of them holds, and they do not both hold simultaneously.\n3. This is \u201cat least one\u201d (`a || b`) combined with \u201cnot both\u201d (`!(a && b)`), required globally (`G`).\n4. Together, these conditions ensure exactly one of `a` and `b` holds at every time step.\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, at least one of them holds, and they do not both hold simultaneously.\n3. This means exactly one of `a` or `b` holds at each step.\n4. The formula enforces this condition globally.\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. At every time step, at least one of them holds, and they do not both hold.\n3. Combine these conditions under \u201calways\u201d (`G`).\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, at least one of them holds, and they do not both hold.\n3. These conditions are `G(a || b)` and `G(!(a && b))`.\n4. Together, they ensure exactly one of `a` and `b` holds at every time step.\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, at least one of them holds, and they do not both hold.\n3. This means exactly one of `a` or `b` holds at each step.\n4. The condition must hold globally, so we apply `G`.\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, at least one of them holds, and they do not both hold.\n3. This is exclusive-or at every step, expressed with `G`.\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, at least one of them holds, and they do not both hold.\n3. This is expressed by requiring `a || b` and forbidding `a && b` at all times.\n4. Thus, exactly one of `a` and `b` holds at every time step.\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, at least one of them holds, and they do not both hold.\n3. This is exclusive-or at every step, so we apply `G` to the condition.\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, at least one of them holds, and they do not both hold at the same time.\n3. Combine those conditions under `G` (\u201calways\u201d): `(a || b) && !(a && b)`.\n4. This expresses that exactly one of `a` and `b` holds at each time step.\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, at least one of `a` or `b` holds, and they never both hold.\n3. Combining these conditions gives exclusive-or at every step.\n4. This says exactly one of `a` and `b` holds at every time step.\n\nFORMULA: G((a || b) && !(a && b))",
+        "formula": "G((a || b) && !(a && b))"
+      }
+    ]
+  },
+  "14": {
+    "nl": "Whenever the inputs a and b are the same, the outputs c and d are the same.",
+    "ltl": "G ((a <-> b) -> (c <-> d))",
+    "samples": [
+      {
+        "reasoning": "1. Atomic propositions: a, b, c, d.\n2. The condition must hold at every point in time.\n3. When a and b have the same value, c and d must also have the same value.\n4. Thus, equality of a and b implies equality of c and d, under G.\n\nFORMULA: G ((a <-> b) -> (c <-> d))",
+        "formula": "G ((a <-> b) -> (c <-> d))"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, `c`, and `d`.\n2. The condition applies at all times: whenever `a` and `b` have the same truth value, `c` and `d` must also have the same truth value.\n3. \u201cSame truth value\u201d for `a` and `b` is `(a&&b)||(!a&&!b)`, and likewise for `c` and `d`. The implication must hold globally.\n\nFORMULA: G((((a&&b)||(!a&&!b)) -> ((c&&d)||(!c&&!d))))",
+        "formula": "G((((a&&b)||(!a&&!b)) -> ((c&&d)||(!c&&!d))))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are a, b, c, and d.\n2. At every time, if a and b have the same truth value, then c and d must have the same truth value.\n3. Express \u201csame\u201d with equivalence and apply the condition globally.\n4. This constrains the outputs whenever the inputs match, at every time.\n\nFORMULA: G((a <-> b) -> (c <-> d))",
+        "formula": "G((a <-> b) -> (c <-> d))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are a, b, c, and d.\n2. At every point in time, if a and b have the same truth value, then c and d must also have the same truth value.\n3. \u201ca and b are the same\u201d is `(a <-> b)`, and \u201cc and d are the same\u201d is `(c <-> d)`. \u201cWhenever\u201d means the condition holds globally.\n4. The formula therefore checks this implication at all times.\n\nFORMULA: G((a <-> b) -> (c <-> d))",
+        "formula": "G((a <-> b) -> (c <-> d))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are a, b, c, and d.\n2. \u201cWhenever\u201d means the condition must hold at every time. If a and b have the same truth value, then c and d must have the same truth value.\n3. \u201ca and b are the same\u201d is `(a <-> b)`, and \u201cc and d are the same\u201d is `(c <-> d)`. Thus, the condition is an implication that holds globally.\n\nFORMULA: G((a <-> b) -> (c <-> d))",
+        "formula": "G((a <-> b) -> (c <-> d))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, `c`, and `d`.\n2. At every time, if `a` and `b` have the same truth value, then `c` and `d` have the same truth value.\n3. Use `<->` to express that each pair has the same truth value, and `G` to apply the condition always.\n4. The formula checks the condition at every time step.\n\nFORMULA: G((a <-> b) -> (c <-> d))",
+        "formula": "G((a <-> b) -> (c <-> d))"
+      },
+      {
+        "reasoning": "1. Atomic propositions: a, b, c, and d.\n2. The condition must hold at every time: if a and b have the same truth value, then c and d have the same truth value.\n3. \u201cSame\u201d is represented by equivalence, so the condition is (a <-> b) -> (c <-> d), and \u201cwhenever\u201d makes it global with G.\n4. This applies at each point in time.\n\nFORMULA: G ((a <-> b) -> (c <-> d))",
+        "formula": "G ((a <-> b) -> (c <-> d))"
+      },
+      {
+        "reasoning": "1. Atomic propositions: a, b, c, d.\n2. At every time, if a and b have the same truth value, then c and d have the same truth value.\n3. \u201cWhenever\u201d means the condition must hold globally; \u201care the same\u201d is expressed with equivalence.\n\nFORMULA: G ((a <-> b) -> (c <-> d))",
+        "formula": "G ((a <-> b) -> (c <-> d))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, `c`, and `d`.\n2. At every time, if `a` and `b` have the same truth value, then `c` and `d` must also have the same truth value.\n3. \u201cSame\u201d is represented by `<->`, and \u201cwhenever\u201d by `G`.\n\nFORMULA: G((a<->b)->(c<->d))",
+        "formula": "G((a<->b)->(c<->d))"
+      },
+      {
+        "reasoning": "1. Atomic propositions: a, b, c, d.\n2. At every time, if a and b have the same truth value, then c and d have the same truth value.\n3. \u201cSame\u201d is expressed with equivalence, and \u201cwhenever\u201d means globally.\n\nFORMULA: G((a <-> b) -> (c <-> d))",
+        "formula": "G((a <-> b) -> (c <-> d))"
+      }
+    ]
+  },
+  "15": {
+    "nl": "a can only happen if b happend before",
+    "ltl": "(! a) U b",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The requirement is that no `a` occurs before a prior `b`; a `b` occurring at the same time as `a` does not count as prior.\n3. Either `a` never occurs, or there is a `b` with no `a` up to and including that point. After that, `a` may occur.\n\nFORMULA: G(!a) || (!a U (b && !a))",
+        "formula": "G(!a) || (!a U (b && !a))"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. The requirement is that no `a` occurs before a `b`; after a `b` has occurred, `a` may occur. If no `b` ever occurs, `a` must never occur.\n3. `G(!a)` covers the case where `a` never occurs. `!a U (b && !a)` requires a `b` to occur before any `a`, with `a` absent at the moment `b` first satisfies this condition.\n4. Thus, an `a` cannot occur simultaneously with the first qualifying `b`, nor before it.\n\nFORMULA: G(!a) || (!a U (b && !a))",
+        "formula": "G(!a) || (!a U (b && !a))"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `a`, `b`.\n2. **Logical structure:** An occurrence of `a` is allowed only after an earlier occurrence of `b`. If `a` never occurs, the condition is satisfied.\n3. **Formula construction:** Before the first qualifying `b`, `a` must remain false. The `!a` in `b && !a` ensures `a` does not occur simultaneously with that first `b`. Alternatively, `a` may never occur: `G(!a)`.\n\nFORMULA: (!a U (b && !a)) || G(!a)",
+        "formula": "(!a U (b && !a)) || G(!a)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition is that whenever `a` occurs, `b` must have occurred at some earlier time.\n3. This requires a past-time operator: `O b` means \u201c`b` occurred sometime in the past.\u201d Standard future-only LTL cannot express this condition exactly.\n4. With the past-time operator, the formula is `G(a -> O b)`.\n\nFORMULA: G(a -> O b)",
+        "formula": "G(a -> O b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. An occurrence of `a` is allowed only after an earlier occurrence of `b`. If `b` never occurs, `a` must not occur.\n3. This means either `b` occurs at a point where `a` does not, with no earlier `a`, or `a` never occurs.\n4. The formula disallows `a` at the same time as the first qualifying `b`, so `b` is strictly earlier.\n\nFORMULA: (!a U (b && !a)) || G !a",
+        "formula": "(!a U (b && !a)) || G !a"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition says that whenever `a` occurs, `b` must have occurred at an earlier time.\n3. This requires remembering the past. The listed future-only LTL operators cannot express that condition exactly. With a past-time operator, it would be `G(a -> P b)`, where `P b` means \u201cb happened previously.\u201d\n\nFORMULA: G(a -> P b)",
+        "formula": "G(a -> P b)"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `a`, `b`.\n2. **Logical structure:** If `a` occurs, `b` must have occurred at an earlier time. If `a` never occurs, the condition is satisfied regardless of whether `b` occurs.\n3. **Formula construction:** Either `a` never occurs (`G !a`), or a `b` occurs at a time when `a` does not, with neither proposition occurring beforehand (`(!a && !b) U (b && !a)`).\n4. **Sanity check:** This rules out `a` occurring before or at the same time as the first `b`.\n\nFORMULA: G !a || ((!a && !b) U (b && !a))",
+        "formula": "G !a || ((!a && !b) U (b && !a))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The requirement is that `a` must not occur until `b` has occurred at an earlier time. If `b` never occurs, `a` must never occur either.\n3. `!a U (b && !a)` ensures `a` does not occur up to and including a time when `b` occurs. `|| G(!a)` allows traces where neither proposition ever enables `a`.\n\nFORMULA: (!a U (b && !a)) || G(!a)",
+        "formula": "(!a U (b && !a)) || G(!a)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition is that whenever `a` happens, `b` must have happened at an earlier time.\n3. This requires referring to the past. Standard future-only LTL operators cannot express that condition exactly. With the past-time operator `O` (\u201conce\u201d), it is `G(a -> O b)`.\n\nFORMULA: G(a -> O b)",
+        "formula": "G(a -> O b)"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `a`, `b`.\n2. **Logical structure:** Every occurrence of `a` must have a *strictly earlier* occurrence of `b`. If `a` never occurs, the condition holds even if `b` never occurs.\n3. **Formula construction:** Either `a` never occurs, or `a` stays false until a position where `b` is true and `a` is false. After that, `a` is unrestricted.\n4. **Sanity check:** This disallows `a` before or at the first qualifying `b`, while allowing `a` afterward.\n\nFORMULA: G(!a) || (!a U (b && !a))",
+        "formula": "G(!a) || (!a U (b && !a))"
+      }
+    ]
+  },
+  "16": {
+    "nl": "Once a happened, b won't happen again.",
+    "ltl": "G (a -> X G ! b)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement says that whenever `a` happens, `b` must not happen from then on.\n3. Express this as: globally, if `a` holds, then globally afterward `b` does not hold.\n4. This also rules out `a` and `b` holding at the same time.\n\nFORMULA: G(a -> G(!b))",
+        "formula": "G(a -> G(!b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` occurs, `b` must not occur at any later time. This does not forbid `b` from occurring simultaneously with `a`.\n3. For each occurrence of `a`, require that starting from the next time onward, `b` never occurs.\n4. This applies globally, so every occurrence of `a` triggers the condition.\n\nFORMULA: G(a -> X G(!b))",
+        "formula": "G(a -> X G(!b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` occurs, `b` must be false at every later time. \u201cAgain\u201d allows `b` to occur at the same time as `a`, so the restriction starts at the next time.\n3. `G` applies this condition at every time, and `X G(!b)` says that from the next time onward, `b` never occurs.\n4. This also applies if `a` occurs more than once.\n\nFORMULA: G(a -> XG(!b))",
+        "formula": "G(a -> XG(!b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` occurs, `b` must not occur at any later time. \u201cAgain\u201d allows `b` to occur at the same time as `a`, so the restriction starts at the next time step.\n3. Require that whenever `a` holds, from the next step onward `b` never holds.\n4. This permits `b` at the time of `a`, but rules it out at every subsequent time.\n\nFORMULA: G(a -> X G(!b))",
+        "formula": "G(a -> X G(!b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` occurs, `b` must not occur at any later time. A `b` occurring at the same time as `a` is not \u201cagain.\u201d\n3. For each `a`, require that from the next time onward, `b` is always false.\n4. This allows `b` before `a`, but rules out `b` after an occurrence of `a`.\n\nFORMULA: G(a -> X G !b)",
+        "formula": "G(a -> X G !b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. Each time `a` happens, `b` must not happen at any later time. The word \u201cagain\u201d allows `b` to occur at the same time as `a`.\n3. From the next time onward, `b` must always be false: `X G(!b)`. Require this whenever `a` happens: `G(a -> X G(!b))`.\n4. This also ensures that if `a` never happens, the property imposes no restriction on `b`.\n\nFORMULA: G(a -> X G(!b))",
+        "formula": "G(a -> X G(!b))"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says that whenever `a` happens, `b` does not occur from that point onward.\n3. Express this as: whenever `a` is true, `b` is false now and at every future time.\n4. This also rules out `b` at the same time as `a`; if only later occurrences of `b` are forbidden, use `X G(!b)` instead.\n\nFORMULA: G(a -> G(!b))",
+        "formula": "G(a -> G(!b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Each time `a` happens, `b` must not happen from then on.\n3. `G` checks every time point, and `G(!b)` says `b` never happens from that point onward.\n4. Thus, whenever `a` holds, `b` is prohibited at that time and all later times.\n\nFORMULA: G(a -> G(!b))",
+        "formula": "G(a -> G(!b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Each time `a` happens, `b` must not happen at any later time.\n3. `X G !b` says that starting in the next state, `b` never happens. Applying this whenever `a` occurs gives:\n\nFORMULA: G(a -> X G !b)",
+        "formula": "G(a -> X G !b)"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `a`, `b`.\n2. **Logical structure:** Whenever `a` occurs, `b` must not occur from the next time onward.\n3. **Build the formula:** `G(a -> X G !b)` \u2014 globally, if `a` happens, then starting at the next time, `b` never happens.\n4. **Sanity check:** This allows `b` before `a` and excludes `b` after an occurrence of `a`.\n\nFORMULA: G(a -> X G !b)",
+        "formula": "G(a -> X G !b)"
+      }
+    ]
+  },
+  "17": {
+    "nl": "a releases b",
+    "ltl": "(b U (b & ! a)) | G b",
+    "samples": [
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. \u201ca releases b\u201d means `b` must hold until `a` holds; if `a` never holds, `b` must hold forever.\n3. This is expressed with the release operator as `a R b`.\n4. The formula preserves `b` while waiting for `a`, including the case where `a` never occurs.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca releases b\u201d uses the LTL release operator: `b` must hold until `a` occurs; if `a` never occurs, `b` must hold forever.\n3. The corresponding formula is `a R b`.\n4. This matches the standard LTL meaning of release.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cReleases\u201d names the LTL release relation: `b` must hold until `a` occurs; if `a` never occurs, `b` must hold forever.\n3. The release operator is written `R`.\n4. So the formula is `a R b`.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca releases b\u201d uses the release operator: `b` must hold until `a` holds; if `a` never holds, `b` must hold forever.\n3. This is written as `a R b`.\n4. The formula matches the stated release relation.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. \u201ca releases b\u201d means `b` must hold until `a` occurs; if `a` never occurs, `b` must hold forever.\n3. This is expressed using the release operator `R`.\n4. Sanity check: `a` need not occur, but `b` remains required until it does.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca releases b\u201d means `b` must hold until `a` occurs; if `a` never occurs, `b` must hold forever.\n3. This is the LTL release operator, written `a R b`.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. \u201ca releases b\u201d means `b` must hold until `a` occurs; if `a` never occurs, `b` must hold forever.\n3. This is expressed by the release operator.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca releases b\u201d means `b` must hold until `a` holds; if `a` never holds, `b` must hold forever.\n3. This is the release operator with `a` as the releasing condition and `b` as the proposition being maintained.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca releases b\u201d means `b` must remain true until `a` becomes true; if `a` never becomes true, `b` must remain true forever.\n3. This is the release relation with `a` as the releasing proposition and `b` as the required proposition.\n4. Sanity check: `a R b` requires `b` to hold while waiting for `a`, including when `a` occurs.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201c`a` releases `b`\u201d means `b` must hold until `a` occurs; if `a` never occurs, `b` must hold forever.\n3. The LTL release operator expresses this directly as `a R b`.\n4. This matches the stated release relationship.\n\nFORMULA: a R b",
+        "formula": "a R b"
+      }
+    ]
+  },
+  "18": {
+    "nl": "a and b won't occur at the same time",
+    "ltl": "G !(a & b)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, they must not both be true.\n3. Express this as always not (`a` and `b`).\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says they must never both be true at the same time.\n3. At every time, require that `a` and `b` are not both true.\n4. This rules out simultaneous occurrence at all times.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The statement says that at every time, `a` and `b` are not both true.\n3. This is expressed by globally negating their conjunction.\n4. The formula rules out `a` and `b` occurring together at any time.\n\nFORMULA: G(!(a && b))",
+        "formula": "G(!(a && b))"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The condition must hold at every time: `a` and `b` are never both true.\n3. At each time, negate their conjunction: `!(a && b)`.\n4. Apply \u201calways\u201d (`G`) to that condition.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says that at every time, `a` and `b` must not both occur.\n3. Negate their conjunction and apply `G` (globally).\n4. This rules out simultaneous occurrence at every point in time.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says that at every time, they are not both true.\n3. This is expressed as `G !(a && b)`.\n4. This rules out their occurring at the same time while allowing either to occur separately.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition must hold at every time: `a` and `b` are never both true simultaneously.\n3. Express this as always not (`a` and `b`).\n4. This rules out their occurring together at any point in time.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says they must never both hold at the same time.\n3. Negate their conjunction and require that to hold always.\n4. This excludes every time where both `a` and `b` occur.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "The atomic propositions are `a` and `b`. The sentence says they must never both be true at the same time, so globally we require that `a && b` is false.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says that at every time, they are not both true.\n3. This gives `G !(a && b)`.\n4. The formula rules out `a` and `b` occurring at the same time.\n\nFORMULA: G !(a && b)",
+        "formula": "G !(a && b)"
+      }
+    ]
+  },
+  "19": {
+    "nl": "Whenever a holds and b holds in the next step, then c holds one step after b.",
+    "ltl": "G (a && X b -> X X c)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every time step, if `a` holds now and `b` holds in the next step, then `c` must hold one step after `b`\u2014two steps from now.\n3. This gives `G((a && X b) -> X X c)`.\n4. The formula applies that condition at every time step and places `c` at the required offset.\n\nFORMULA: G((a && X b) -> X X c)",
+        "formula": "G((a && X b) -> X X c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. At every time step, if `a` holds now and `b` holds in the next step, then `c` must hold one step after `b`\u2014two steps from now.\n3. The condition is `a && X b`; the required outcome is `X X c`. Apply `G` to express \u201cwhenever.\u201d\n4. This places `c` at the step immediately following the step where `b` holds.\n\nFORMULA: G((a && X b) -> X X c)",
+        "formula": "G((a && X b) -> X X c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. At every time step, if `a` holds now and `b` holds in the next step, then `c` must hold one step after `b`\u2014that is, two steps from now.\n3. The trigger is `a && X b`; the required outcome is `X X c`. Since this applies whenever the trigger occurs, use `G`.\n\nFORMULA: G((a && X b) -> X X c)",
+        "formula": "G((a && X b) -> X X c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every time step, if `a` holds now and `b` holds in the next step, then `c` must hold one step after `b`\u2014two steps from now.\n3. Express this as a global implication: `G((a && X b) -> X X c)`.\n4. This checks that whenever the condition occurs, `c` holds at the required later step.\n\nFORMULA: G((a && X b) -> X X c)",
+        "formula": "G((a && X b) -> X X c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every time step, if `a` holds now and `b` holds in the next step, then `c` must hold one step after that\u2014two steps from now.\n3. The condition is `a && X b`; the required outcome is `X X c`. Apply the implication at all times with `G`.\n\nFORMULA: G((a && X b) -> X X c)",
+        "formula": "G((a && X b) -> X X c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every time step, if `a` holds now and `b` holds in the next step, then `c` must hold one step after `b`.\n3. The condition is `a && X b`; two steps ahead is `X X c`. Apply the implication globally.\n4. This places `c` at the required time relative to the trigger.\n\nFORMULA: G((a && X b) -> X X c)",
+        "formula": "G((a && X b) -> X X c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. At every step, if `a` holds now and `b` holds in the next step, then `c` must hold one step after that\u2014two steps from now.\n3. The trigger is `a && X b`; the consequence is `X X c`. Apply the implication globally.\n4. This checks the condition at every step and places `c` at the required offset.\n\nFORMULA: G((a && X b) -> X X c)",
+        "formula": "G((a && X b) -> X X c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. At every time step, if `a` holds now and `b` holds next, then `c` must hold one step after that\u2014at the step after `b`.\n3. This gives `G(a && X b -> X X c)`.\n4. Sanity check: when the condition holds at time `t`, the formula requires `c` at time `t+2`.\n\nFORMULA: G(a && X b -> X X c)",
+        "formula": "G(a && X b -> X X c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every step, if `a` holds now and `b` holds in the next step, then `c` must hold one step after `b`\u2014two steps after the current step.\n3. The trigger is `a && X b`, and the consequence is `X X c`. Since this applies whenever the trigger occurs, use `G` around the implication.\n4. Sanity check: the formula requires `c` two steps later whenever `a` holds now and `b` holds next.\n\nFORMULA: G((a && X b) -> X X c)",
+        "formula": "G((a && X b) -> X X c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every time step, if `a` holds now and `b` holds at the next step, then `c` must hold one step after `b`\u2014two steps from now.\n3. The condition is `a && X b`, and the required outcome is `X X c`, guarded by `G` for \u201cwhenever.\u201d\n4. Thus, the formula requires `c` at the specified time whenever the trigger occurs.\n\nFORMULA: G((a && X b) -> X X c)",
+        "formula": "G((a && X b) -> X X c)"
+      }
+    ]
+  },
+  "20": {
+    "nl": "Whenever a holds, b holds eventually from the next step on.",
+    "ltl": "G (a -> X F b)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every step where `a` holds, `b` must hold at some step starting from the next step onward.\n3. \u201cWhenever\u201d gives `G`, and \u201cfrom the next step on, eventually\u201d gives `X F b`.\n4. Thus, whenever `a` holds, `X F b` must hold.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every step where `a` holds, `b` must hold at some step after the next-step boundary\u2014that is, at the next step or later.\n3. `G` expresses \u201cwhenever,\u201d and `X F b` expresses that `b` holds eventually from the next step onward.\n4. Thus, whenever `a` holds, `X F b` must hold.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition applies whenever `a` holds, so it is checked globally.\n3. After `a` holds, `b` must hold at some point starting from the next step. This is `X F b`.\n4. Combining these gives `G(a -> X F b)`.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, if `a` holds, then `b` must hold at some point starting from the next step.\n3. \u201cAt every time step\u201d gives `G`; \u201cif `a`, then\u201d gives `a ->`; \u201ceventually from the next step on\u201d gives `X F b`.\n4. Thus, whenever `a` holds, `b` eventually holds from the following step onward.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every step where `a` holds, `b` must hold at some step strictly afterward.\n3. Requiring `F b` at the next step expresses that `b` holds eventually from then on; `G` applies this condition whenever `a` holds.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, if `a` holds, then `b` must hold at some point starting from the next step.\n3. \u201cAt every point\u201d is `G`; \u201cif `a`, then\u201d is `a ->`; \u201ceventually from the next step\u201d is `X F b`.\n4. Thus, whenever `a` holds, `b` is required eventually, but not necessarily immediately.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` holds, `b` must hold at some point starting from the next step.\n3. \u201cWhenever\u201d gives `G`; requiring `b` eventually from the next step gives `X F b`.\n4. Thus, whenever `a` holds, `X F b` must hold.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point where `a` holds, `b` must hold eventually, considering only steps from the next step onward.\n3. \u201cWhenever\u201d gives `G`, and \u201ceventually from the next step on\u201d gives `X F b`. Thus the implication is `a -> X F b`.\n4. This allows `b` to hold at the next step or any later step.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, if `a` holds, then `b` must hold at some time from the following step onward.\n3. \u201cAt every time step\u201d gives `G`; \u201cif `a`, then\u201d gives `a ->`; \u201cfrom the next step onward, eventually `b`\u201d gives `X F b`.\n4. Thus, whenever `a` holds, the requirement for `b` starts at the next step.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, if `a` holds, then `b` must hold at some time starting from the next step.\n3. \u201cAt every time step\u201d gives `G`, \u201cif `a` then\u201d gives `a ->`, and \u201ceventually from the next step\u201d gives `X F b`.\n4. Thus, whenever `a` holds, `b` eventually holds at or after the next step.\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      }
+    ]
+  },
+  "21": {
+    "nl": "a holds in every fifth step.",
+    "ltl": "a && G (a -> X ! a && X X ! a && X X X ! a && X X X X ! a && X X X X X a)",
+    "samples": [
+      {
+        "reasoning": "The only atomic proposition is `a`. Interpreting \u201cevery fifth step\u201d as steps 5, 10, 15, \u2026 (with steps numbered from 1), the requirement is that `a` holds at step 5 and repeats every five steps. Exact periodicity by step number cannot be expressed in standard LTL without a proposition or state that tracks the five-step phase.\n\nA common approximation is to require `a` at step 5 and, whenever `a` holds, again five steps later. This also constrains any occurrences of `a` at other steps.\n\nFORMULA: X X X X a && G(a -> X X X X X a)",
+        "formula": "X X X X a && G(a -> X X X X X a)"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cEvery fifth step\u201d means `a` is required at a recurring interval of five steps. LTL has no step counter, so it cannot, in general, require `a` exactly at positions 5, 10, 15, \u2026 while leaving other positions unrestricted.\n3. If the intended meaning is that whenever `a` holds, it holds again five steps later, the recurrence is `G(a -> X X X X X a)`. This does not by itself ensure that `a` first holds, or forbid extra occurrences.\n\nFORMULA: G(a -> X X X X X a)",
+        "formula": "G(a -> X X X X X a)"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cEvery fifth step\u201d means `a` is required at a fixed five-step interval, anchored to the start of the trace.\n3. Standard LTL cannot express that exact fixed-period pattern: LTL has no way to keep track of position modulo five. The formula below expresses a related condition\u2014`a` holds at step five and every occurrence of `a` is followed by another five steps later\u2014but it does not prevent extra occurrences.\n\nFORMULA: X X X X a && G(a -> X X X X X a)",
+        "formula": "X X X X a && G(a -> X X X X X a)"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cEvery fifth step\u201d refers to positions 5, 10, 15, \u2026, assuming steps are counted from 1. It requires `a` at those positions, but does not rule out `a` at other positions.\n3. Exact periodic-position requirements of this kind cannot be expressed in standard LTL using only `a`: LTL has no way to track the step count modulo 5.\n4. If the intended meaning is that `a` starts at step 5 and then occurs again every five steps (with occurrences of `a` constrained to that cadence), the formula below captures that stronger interpretation.\n\nFORMULA: X X X X (a && G(a -> X X X X X a))",
+        "formula": "X X X X (a && G(a -> X X X X X a))"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. Interpreting \u201cevery fifth step\u201d as steps 5, 10, 15, \u2026, `a` must hold at step 5 and recur five steps after each occurrence.\n3. Assuming the initial state is step 1, `X^4 a` requires `a` at step 5, and `G(a -> X^5 a)` requires it five steps after any occurrence.\n4. This also permits `a` at other steps. Exact \u201conly every fifth step\u201d periodicity cannot be expressed in standard LTL over `a` alone.\n\nFORMULA: X^4 a && G(a -> X^5 a)",
+        "formula": "X^4 a && G(a -> X^5 a)"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. Assuming the first step is the current state, \u201cevery fifth step\u201d means `a` holds at steps 5, 10, 15, and so on.\n3. Require `a` at step 5, then require it again five steps after each occurrence.\n4. This fixes the phase starting from the current state; it does not forbid `a` from holding at other steps.\n\nFORMULA: X X X X a && G(a -> X X X X X a)",
+        "formula": "X X X X a && G(a -> X X X X X a)"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. Interpreting \u201cevery fifth step\u201d as requiring `a` to recur five steps after each time it holds:\n3. \u201cWhenever `a` holds, it holds again five steps later\u201d is `G(a -> X X X X X a)`.\n4. This expresses five-step recurrence, though it does not require `a` to hold initially or forbid it at other steps.\n\nFORMULA: G(a -> X X X X X a)",
+        "formula": "G(a -> X X X X X a)"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cEvery fifth step\u201d means `a` must hold at steps 5, 10, 15, and so on, assuming the first step is step 1.\n3. Exact enforcement of that fixed modulo-5 schedule is not expressible in standard LTL over `a` alone: standard LTL cannot count steps modulo 5. A formula such as `X^4 a && G(a -> X^5 a)` would also impose constraints if `a` holds at other steps.\n\nFORMULA: No exact formula in standard LTL over `a` alone.",
+        "formula": "No exact formula in standard LTL over `a` alone."
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cEvery fifth step\u201d describes a recurring five-step interval: `a` holds initially and, whenever it holds, holds again five steps later.\n3. This gives `a` now and the recurrence `G(a -> X X X X X a)`.\n\nFORMULA: a && G(a -> X X X X X a)",
+        "formula": "a && G(a -> X X X X X a)"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. Interpreting \u201cevery fifth step\u201d as steps 5, 10, 15, \u2026, `a` must hold at step 5 and recur five steps after each such occurrence.\n3. `X^4 a` requires `a` at step 5; `G(a -> X^5 a)` requires it again five steps after each occurrence.\n4. Together, the formula enforces `a` at every fifth step, with no restriction on other steps.\n\nFORMULA: X^4 a && G(a -> X^5 a)",
+        "formula": "X^4 a && G(a -> X^5 a)"
+      }
+    ]
+  },
+  "22": {
+    "nl": "Either a holds infinitely often or b holds in the next step.",
+    "ltl": "G F a || X b",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement is a disjunction: either `a` occurs infinitely often, or `b` holds at the next step.\n3. \u201c`a` occurs infinitely often\u201d is `G F a`; \u201c`b` holds at the next step\u201d is `X b`.\n4. Combining them with inclusive OR gives the formula below.\n\nFORMULA: (G F a) || (X b)",
+        "formula": "(G F a) || (X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that at every point, `a` eventually holds: `G F a`.\n3. \u201cb holds in the next step\u201d means `X b`.\n4. \u201cEither \u2026 or \u2026\u201d combines these with inclusive disjunction.\n\nFORMULA: (G F a) || (X b)",
+        "formula": "(G F a) || (X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says either `a` occurs infinitely often, or `b` holds at the next step.\n3. \u201c`a` occurs infinitely often\u201d is `G F a`; \u201c`b` holds at the next step\u201d is `X b`. Combine them with disjunction.\n4. This allows either condition (or both) to hold.\n\nFORMULA: (G F a) || (X b)",
+        "formula": "(G F a) || (X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that at every point, `a` eventually holds (`G F a`). \u201cb holds in the next step\u201d means `X b`.\n3. \u201cEither \u2026 or \u2026\u201d combines these conditions with `||`.\n4. The formula captures the choice between infinitely many occurrences of `a` and `b` holding at the next step.\n\nFORMULA: (G F a) || X b",
+        "formula": "(G F a) || X b"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence gives a choice: either `a` occurs infinitely often, or `b` holds at the next step.\n3. \u201c`a` holds infinitely often\u201d is `G F a`; \u201c`b` holds in the next step\u201d is `X b`. Join them with `||`.\n4. The formula allows either condition (or both) to hold.\n\nFORMULA: (G F a) || (X b)",
+        "formula": "(G F a) || (X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement says either `a` occurs infinitely often, or `b` holds at the next step.\n3. \u201c`a` holds infinitely often\u201d is `G F a`; \u201c`b` holds in the next step\u201d is `X b`.\n4. Join the alternatives with `||`.\n\nFORMULA: (G F a) || (X b)",
+        "formula": "(G F a) || (X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that always, a will eventually hold: `G F a`.\n3. \u201cb holds in the next step\u201d means `X b`.\n4. \u201cEither \u2026 or \u2026\u201d combines these with inclusive OR: `||`.\n\nFORMULA: G F a || X b",
+        "formula": "G F a || X b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that, at every point, `a` eventually holds: `G F a`.\n3. \u201cb holds in the next step\u201d means `X b`.\n4. \u201cEither \u2026 or \u2026\u201d is inclusive disjunction, so the two conditions are joined with `||`.\n\nFORMULA: (G F a) || (X b)",
+        "formula": "(G F a) || (X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201ca holds infinitely often\u201d means that from every point, `a` eventually holds: `G F a`. \u201cb holds in the next step\u201d means `X b`.\n3. \u201cEither \u2026 or \u2026\u201d combines these with `||`.\n4. The formula expresses that at least one of these conditions holds.\n\nFORMULA: G F a || X b",
+        "formula": "G F a || X b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201c`a` holds infinitely often\u201d means that always, `a` will eventually hold: `G F a`. \u201c`b` holds in the next step\u201d means `X b`.\n3. \u201cEither \u2026 or \u2026\u201d combines these with `||`.\n4. Thus, the formula expresses that at least one of these conditions holds.\n\nFORMULA: (G F a) || X b",
+        "formula": "(G F a) || X b"
+      }
+    ]
+  },
+  "23": {
+    "nl": "a will hold at all instances.",
+    "ltl": "G (a)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says `a` holds at every point in time.\n3. Use `G` (\u201calways\u201d) applied to `a`.\n4. This requires `a` to hold at all instances.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says `a` holds at every time instance.\n3. \u201cAt every time instance\u201d is expressed with `G`.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cAt all instances\u201d means `a` must hold at every point in time.\n3. Use the global operator `G` to express this.\n4. The formula requires `a` to hold always.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says `a` holds at every point in time.\n3. \u201cAt all instances\u201d is represented by the global operator `G`.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says `a` holds at every time.\n3. \u201cAt every time\u201d is expressed with `G`.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says `a` holds at every point in time.\n3. \u201cAt all instances\u201d is expressed with the globally operator `G`.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The statement says `a` holds at every instance.\n3. \u201cAt every instance\u201d is represented by `G`.\n4. Thus, the formula is `G a`.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence says `a` holds at every point in time.\n3. \u201cAt all instances\u201d is represented by the LTL operator `G`.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. Atomic proposition: `a`.\n2. \u201cAt all instances\u201d means the proposition holds globally, at every point in time.\n3. Apply the global operator `G` to `a`.\n4. This requires `a` to hold now and at every future point.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The sentence requires `a` to hold at every time instance.\n3. \u201cAt all instances\u201d corresponds to the LTL operator `G` (globally).\n4. Thus, the formula states that `a` holds globally.\n\nFORMULA: G a",
+        "formula": "G a"
+      }
+    ]
+  },
+  "24": {
+    "nl": "Whenever a holds, b must hold in the next two steps",
+    "ltl": "G (a -> (b | X b))",
+    "samples": [
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. At every time when `a` holds, `b` must hold in each of the next two steps.\n3. Express this as `G(a -> (X b && X X b))`.\n4. This requires `b` at both the next step and the step after that whenever `a` holds.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, if `a` holds, then `b` must hold at each of the next two steps.\n3. The next step is `X b`; the step after that is `X X b`. Require both whenever `a` holds.\n4. The formula applies this condition globally.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, if `a` holds, then `b` must hold at each of the next two time steps.\n3. The next two steps are represented by `X b` and `X X b`, and the \u201cwhenever\u201d condition applies globally.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` holds means the condition applies at every time step. \u201cIn the next two steps\u201d means `b` must hold one step later and two steps later.\n3. For each time step, express this as `a -> (X b && X X b)`, and require it globally.\n4. This ensures both future steps satisfy `b` whenever `a` holds.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cWhenever `a` holds\u201d means the condition applies at every time step. \u201c`b` must hold in the next two steps\u201d means `b` holds one step later and two steps later.\n3. Combine these as `G(a -> (X b && X X b))`.\n4. This requires both future steps to satisfy `b` whenever the current step satisfies `a`.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` holds means the condition applies globally.\n3. The next two steps are the next time point and the one after it, so `b` must hold at both.\n4. Thus, whenever `a` holds, `b` holds at each of those two steps.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition applies whenever `a` holds. In response, `b` must hold at each of the next two steps.\n3. \u201cWhenever\u201d gives `G`, and the two required future steps are `X b` and `X X b`.\n4. Thus, whenever `a` holds, both next positions satisfy `b`.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time when `a` holds, `b` must hold at each of the next two time steps.\n3. The next two steps are expressed as `X b` and `X X b`, and \u201cwhenever\u201d makes the condition globally applicable.\n4. Thus, whenever `a` holds, both next-step requirements must hold.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. The requirement applies whenever `a` holds: `b` must hold at each of the next two steps.\n3. \u201cWhenever\u201d gives `G`, and the next two steps are `X b` and `X X b`.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The requirement applies whenever `a` holds, across all time steps.\n3. In each such case, `b` must hold at both the next step and the step after that.\n4. Thus, globally, `a` implies `b` at the next two steps.\n\nFORMULA: G(a -> (X b && X X b))",
+        "formula": "G(a -> (X b && X X b))"
+      }
+    ]
+  },
+  "25": {
+    "nl": "One of the following aps will hold at all instances: a,b,c",
+    "ltl": "G (a | b | c)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every time instance, at least one of them holds.\n3. \u201cAt every instance\u201d is `G`, and \u201cat least one\u201d is `||`.\n4. The formula requires one or more of `a`, `b`, and `c` to hold at all times.\n\nFORMULA: G(a || b || c)",
+        "formula": "G(a || b || c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. The sentence says that one of these propositions is true at every time instance.\n3. \u201cAt every instance\u201d is expressed with `G`; \u201cone of\u201d is expressed as a disjunction among the globally true propositions.\n4. Thus, at least one of `a`, `b`, or `c` must hold continuously.\n\nFORMULA: (G a) || (G b) || (G c)",
+        "formula": "(G a) || (G b) || (G c)"
+      },
+      {
+        "reasoning": "The atomic propositions are `a`, `b`, and `c`. At every instance, at least one of them must hold, so we place their disjunction under the global operator `G`.\n\nFORMULA: G(a || b || c)",
+        "formula": "G(a || b || c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every instance, at least one of these propositions holds.\n3. \u201cAt every instance\u201d is expressed with `G`, and \u201cat least one\u201d with `||`.\n4. The formula does not require the propositions to be mutually exclusive.\n\nFORMULA: G(a || b || c)",
+        "formula": "G(a || b || c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every time instance, exactly one of these propositions holds.\n3. Express \u201cexactly one\u201d as the disjunction of the three cases, then require it globally.\n4. This excludes both instances where none hold and instances where multiple propositions hold.\n\nFORMULA: G((a && !b && !c) || (!a && b && !c) || (!a && !b && c))",
+        "formula": "G((a && !b && !c) || (!a && b && !c) || (!a && !b && c))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every instance, at least one of them holds.\n3. \u201cAt every instance\u201d is `G`, and \u201cat least one\u201d is `||`.\n4. The formula requires one or more of `a`, `b`, and `c` to hold at each instance.\n\nFORMULA: G(a || b || c)",
+        "formula": "G(a || b || c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every instance, at least one of them holds.\n3. \u201cAt every instance\u201d translates to `G`, and \u201cat least one\u201d to `||`.\n\nFORMULA: G(a || b || c)",
+        "formula": "G(a || b || c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every instance, at least one of them holds.\n3. \u201cAt every instance\u201d is `G`, and \u201cat least one\u201d is `||`.\n4. This allows more than one proposition to hold at the same time.\n\nFORMULA: G(a || b || c)",
+        "formula": "G(a || b || c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every time instance, at least one of these propositions holds.\n3. \u201cAt every instance\u201d is expressed with `G`, and \u201cat least one\u201d with `||`.\n4. The wording does not require exactly one proposition to hold, so the disjunction is inclusive.\n\nFORMULA: G(a || b || c)",
+        "formula": "G(a || b || c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. At every instance, at least one of these propositions holds.\n3. \u201cAt every instance\u201d is represented by `G`, and \u201cat least one\u201d by `||`.\n\nFORMULA: G(a || b || c)",
+        "formula": "G(a || b || c)"
+      }
+    ]
+  },
+  "26": {
+    "nl": "If a holds b will eventually hold",
+    "ltl": "G (a -> F b)",
+    "samples": [
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The statement says that whenever `a` holds, `b` must hold at some point in the future.\n3. Express this as \u201calways, if `a`, then eventually `b`.\u201d\n4. This also allows `b` to hold at the same time as `a`, since `F` includes the current time.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The condition is that whenever `a` holds, `b` eventually holds afterward.\n3. Express this as \u201calways, if `a`, then eventually `b`.\u201d\n4. This ensures the requirement applies at every point in the sequence.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The condition is that whenever `a` holds, `b` must hold at some point in the future.\n3. Express this as `G(a -> F b)`.\n4. This requires every occurrence of `a` to be followed eventually by `b`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. The property says that whenever `a` holds, `b` must hold at some point in the future.\n3. Apply this condition globally: `G(a -> F b)`.\n4. If `a` holds at any time, the formula requires `b` to hold eventually afterward.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. At any time when `a` holds, `b` must hold at some time from then onward.\n3. Express this as `G(a -> F b)`.\n4. This requires the condition for every occurrence of `a`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. If `a` holds now, then `b` must hold at some point in the future.\n3. Express the condition as an implication, with eventuality on `b`.\n\nFORMULA: a -> F b",
+        "formula": "a -> F b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The condition applies whenever `a` holds: from that point, `b` must eventually hold.\n3. Express this as \u201calways, if `a`, then eventually `b`.\u201d\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement says that whenever `a` holds, `b` will hold at some later point.\n3. Use `G` to apply the implication at every point, and `F` to require that `b` eventually holds after `a`.\n4. This means each occurrence of `a` is followed eventually by `b`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The condition says that whenever `a` holds, `b` will hold at some point in the future.\n3. Express this as \u201calways, if `a`, then eventually `b`.\u201d\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The condition is that whenever `a` holds, `b` eventually holds.\n3. Express this as `a -> F b`, applying it globally with `G`.\n4. This requires a future occurrence of `b` each time `a` holds.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      }
+    ]
+  },
+  "27": {
+    "nl": "a must always hold, but if is execeeds, it allow two timestamps to recover.",
+    "ltl": "! G (! (a && X a))",
+    "samples": [
+      {
+        "reasoning": "1. The propositions are `a`, `exceeds`, and `recover`.\n2. `a` must hold at every timestamp. Whenever `exceeds` holds, `recover` must hold within the next two timestamps.\n3. The two-timestamp window is `X recover || X X recover`.\n4. This keeps `a` true globally and applies the recovery condition whenever `exceeds` occurs.\n\nFORMULA: G(a && (exceeds -> (X recover || X X recover)))",
+        "formula": "G(a && (exceeds -> (X recover || X X recover)))"
+      },
+      {
+        "reasoning": "1. The only identifiable atomic proposition is `a`.\n2. \u201ca must always hold\u201d means `a` is true at every timestamp. The rest is unclear: it does not identify what \u201cexceeds,\u201d what may recover, or how that relates to `a` always holding.\n3. Using only the unambiguous requirement gives `G(a)`.\n4. This ensures `a` holds at every timestamp, but does not encode the unclear recovery clause.\n\nFORMULA: G(a)",
+        "formula": "G(a)"
+      },
+      {
+        "reasoning": "1. The only explicitly named atomic proposition is `a`.\n2. \u201c`a` must always hold\u201d translates to `G a`. The condition described as \u201cif [something] exceeds\u201d and what must recover are not specified, so the recovery requirement cannot be translated unambiguously using the given proposition.\n3. Under the part that is clear, the formula is:\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The only clearly named atomic proposition is `a`.\n2. \u201c`a` must always hold\u201d means `a` is true at every timestamp.\n3. The phrase about exceeding and recovering is ambiguous: it does not identify what exceeds or what must recover, so it cannot be translated precisely using the stated proposition alone.\n4. The unambiguous requirement is therefore that `a` always holds.\n\nFORMULA: G(a)",
+        "formula": "G(a)"
+      },
+      {
+        "reasoning": "1. The only clearly named atomic proposition is `a`.\n2. The unambiguous requirement is that `a` always holds. The clause about exceeding and recovering is unclear: it does not identify what exceeds, or which proposition indicates recovery.\n3. The formula for the unambiguous part is `G a`.\n4. This does not encode the exceeding-and-recovery clause; that needs clarification.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The only named atomic proposition is `a`.\n2. I interpret \u201callow two timestamps to recover\u201d to mean that whenever `a` is false, it must become true within the next two timestamps. This allows brief violations, so it is not strict \u201calways holds.\u201d\n3. At every timestamp, require `a` now, at the next timestamp, or two timestamps from now.\n4. This permits a false `a` for at most two timestamps before it must recover.\n\nFORMULA: G(a || X a || X X a)",
+        "formula": "G(a || X a || X X a)"
+      },
+      {
+        "reasoning": "1. The only clearly named atomic proposition is `a`.\n2. \u201c`a` must always hold\u201d translates to `G(a)`.\n3. The condition \u201cif [it] exceeds\u201d and what must recover are unspecified, so the recovery clause cannot be expressed reliably without another proposition or clarification.\n\nFORMULA: G(a)",
+        "formula": "G(a)"
+      },
+      {
+        "reasoning": "The only clearly named atomic proposition is `a`. \u201ca must always hold\u201d translates to `G a`. The clause about something exceeding and recovering is ambiguous: it does not identify what exceeds or what must recover, so it cannot be translated reliably without clarification.\n\nFORMULA: G a",
+        "formula": "G a"
+      },
+      {
+        "reasoning": "1. The only named atomic proposition is `a`.\n2. The sentence is ambiguous: it does not name what \u201cexceeds,\u201d and \u201crecover\u201d does not specify exactly what state must recover. Assuming it means that whenever `a` is false, it becomes true again within the next two timestamps, the recovery condition is that `a` holds at the next or following timestamp.\n3. This gives `G(!a -> (X a || X X a))`. This assumption allows `a` to be temporarily false, so it does not also express that `a` always holds.\n\nFORMULA: G(!a -> (X a || X X a))",
+        "formula": "G(!a -> (X a || X X a))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition given is `a`. The sentence does not name a separate proposition for \u201cexceeds\u201d or \u201crecover.\u201d\n2. Assuming an exceedance is represented by `!a`, and recovery means `a` becomes true within one or two timestamps, the property is: whenever `a` is false, it becomes true within the next two timestamps.\n3. That gives `G(!a -> (X a || X X a))`.\n4. This captures the recovery window, but not a strict requirement that `a` always holds: that requirement would conflict with allowing `a` to be false temporarily. A separate proposition for the exceedance condition would make the intended property clearer.\n\nFORMULA: G(!a -> (X a || X X a))",
+        "formula": "G(!a -> (X a || X X a))"
+      }
+    ]
+  },
+  "28": {
+    "nl": "not a holds at most two timestamps",
+    "ltl": "! G (! (a && X a))",
+    "samples": [
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cAt most two timestamps\u201d means there must not be three distinct timestamps at which `!a` holds.\n3. A third occurrence is expressed by `F(!a && X F(!a && X F(!a)))`, where each `X F` looks strictly later.\n4. Negating that excludes any such triple.\n\nFORMULA: !F(!a && X F(!a && X F(!a)))",
+        "formula": "!F(!a && X F(!a && X F(!a)))"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cAt most two timestamps\u201d means there must not be three distinct timestamps at which `!a` holds.\n3. The formula forbids a first `!a` timestamp followed by a later second and then a later third.\n4. The nested `X F` operators ensure those timestamps are strictly later than one another.\n\nFORMULA: !(F(!a && X F(!a && X F(!a))))",
+        "formula": "!(F(!a && X F(!a && X F(!a))))"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cNot `a` holds at most two timestamps\u201d means there are no three distinct timestamps at which `a` is false.\n3. `F(!a && X F(!a && X F !a))` describes three occurrences of `!a` at strictly increasing timestamps. Negating it rules that pattern out.\n4. The formula therefore permits zero, one, or two timestamps where `!a` holds.\n\nFORMULA: !F(!a && X F(!a && X F !a))",
+        "formula": "!F(!a && X F(!a && X F !a))"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cNot `a` holds at most two timestamps\u201d means `!a` may be true at no more than two positions in the trace.\n3. To enforce this, whenever `!a` holds, every later `!a` must be the second and final occurrence; after that second occurrence, `a` must hold forever.\n4. This allows zero, one, or two occurrences of `!a`, but rules out three or more.\n\nFORMULA: G(!a -> X G(!a -> X G(a)))",
+        "formula": "G(!a -> X G(!a -> X G(a)))"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. The property says that `!a` may hold at no more than two timestamps.\n3. This is equivalent to forbidding any three distinct timestamps, in order, at which `!a` holds.\n4. The formula checks that after a first `!a`, any later second `!a` is followed only by `a`.\n\nFORMULA: G(!a -> X G(!a -> X G(a)))",
+        "formula": "G(!a -> X G(!a -> X G(a)))"
+      },
+      {
+        "reasoning": "The atomic proposition is `a`. The condition concerns `!a`: it may hold at most twice. So we forbid any three timestamps in order where `!a` holds.\n\nFORMULA: !F(!a && X F(!a && X F(!a)))",
+        "formula": "!F(!a && X F(!a && X F(!a)))"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`; \u201cnot a\u201d is `!a`.\n2. The sentence allows `!a` at zero, one, or two timestamps, but not three.\n3. If `!a` holds at one timestamp, then after any later timestamp where `!a` holds, `a` must hold at every subsequent timestamp.\n4. This allows two occurrences of `!a` and rules out a third.\n\nFORMULA: G(!a -> X G(!a -> X G(a)))",
+        "formula": "G(!a -> X G(!a -> X G(a)))"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`; \u201cnot a\u201d is `!a`.\n2. \u201cAt most two timestamps\u201d means there must not be three distinct timestamps at which `!a` holds.\n3. Three such timestamps can be described as `!a` now, followed by a later `!a`, followed by another later `!a`. Negate the possibility of that sequence.\n4. `X F` requires the next position to be followed eventually by a later position, so the three timestamps are distinct.\n\nFORMULA: !F(!a && X F(!a && X F(!a)))",
+        "formula": "!F(!a && X F(!a && X F(!a)))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. The property says `!a` may hold at no more than two timestamps.\n3. After any timestamp where `!a` holds, any later timestamp where `!a` holds must be followed only by timestamps where `a` holds.\n4. This permits a first and second occurrence of `!a`, but rules out a third.\n\nFORMULA: G(!a -> X G(!a -> X G a))",
+        "formula": "G(!a -> X G(!a -> X G a))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`; the condition concerns timestamps where `!a` holds.\n2. At most two such timestamps means there must not be three distinct timestamps with `!a`.\n3. Whenever `!a` holds, any later `!a` must be the last one: after it, `a` holds forever.\n4. This allows zero, one, or two timestamps where `!a`, and forbids three.\n\nFORMULA: G(!a -> X G(!a -> X G(a)))",
+        "formula": "G(!a -> X G(!a -> X G(a)))"
+      }
+    ]
+  },
+  "29": {
+    "nl": "a can only hold every three timestamps",
+    "ltl": "G ( a -> (X !a | XX !a | XXX !a))",
+    "samples": [
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cCan only hold every three timestamps\u201d means that after `a` holds, it must not hold at either of the next two timestamps.\n3. For every timestamp, if `a` holds, then `a` is false at the next timestamp and the one after that.\n4. This allows `a` to hold again three timestamps later.\n\nFORMULA: G(a -> X(!a && X(!a)))",
+        "formula": "G(a -> X(!a && X(!a)))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. Interpreting \u201conly hold every three timestamps\u201d as \u201cif `a` holds, it cannot hold at either of the next two timestamps.\u201d\n3. Apply that rule globally: whenever `a` holds, the next two timestamps must have `a` false.\n4. This permits `a` to hold again three timestamps later.\n\nFORMULA: G(a -> (X !a && X X !a))",
+        "formula": "G(a -> (X !a && X X !a))"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cOnly hold every three timestamps\u201d means that whenever `a` holds, it cannot hold at either of the next two timestamps.\n3. The formula requires `a` to be followed by `!a` twice.\n4. This allows `a` to occur again at the third timestamp after it, or later.\n\nFORMULA: G(a -> X(!a && X(!a)))",
+        "formula": "G(a -> X(!a && X(!a)))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. Interpreting \u201ccan only hold every three timestamps\u201d as \u201cwhenever `a` holds, it cannot hold at either of the next two timestamps.\u201d\n3. This condition must hold globally, so use `G` to apply it at every timestamp.\n4. This permits `a` to hold again after at least three timestamps; it does not require `a` to occur.\n\nFORMULA: G(a -> (X !a && X X !a))",
+        "formula": "G(a -> (X !a && X X !a))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cCan only hold every three timestamps\u201d means that whenever `a` holds, it cannot hold at either of the next two timestamps; it may hold again three timestamps later.\n3. Apply that restriction globally: `G(a -> X(!a && X(!a)))`.\n4. This allows occurrences of `a` separated by three or more timestamps.\n\nFORMULA: G(a -> X(!a && X(!a)))",
+        "formula": "G(a -> X(!a && X(!a)))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cCan only hold every three timestamps\u201d means that whenever `a` holds, it must be false at the next two timestamps; it may hold again at the timestamp after those.\n3. Apply that constraint globally: `G(a -> X(!a && X(!a)))`.\n4. This permits `a` at timestamps 0 and 3, for example, but not at 0 and 1 or 2.\n\nFORMULA: G(a -> X(!a && X(!a)))",
+        "formula": "G(a -> X(!a && X(!a)))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cCan only hold every three timestamps\u201d is interpreted as: whenever `a` holds, it cannot hold at either of the next two timestamps; it may hold again three timestamps later.\n3. Globally, require `a` to imply that `a` is false at the next timestamp and the one after that.\n4. This allows occurrences at least three timestamps apart.\n\nFORMULA: G(a -> X(!a && X(!a)))",
+        "formula": "G(a -> X(!a && X(!a)))"
+      },
+      {
+        "reasoning": "1. The atomic proposition is `a`.\n2. \u201cCan only hold every three timestamps\u201d is interpreted as: whenever `a` holds, it cannot hold at either of the next two timestamps.\n3. This gives `G(a -> X(!a && X(!a)))`.\n4. The formula allows `a` to hold again three timestamps later.\n\nFORMULA: G(a -> X(!a && X(!a)))",
+        "formula": "G(a -> X(!a && X(!a)))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cCan only hold every three timestamps\u201d means that whenever `a` holds, it cannot hold at either of the next two timestamps.\n3. Apply that restriction globally: `G(a -> X(!a && X(!a)))`.\n4. This allows `a` to hold again three or more timestamps later.\n\nFORMULA: G(a -> X(!a && X(!a)))",
+        "formula": "G(a -> X(!a && X(!a)))"
+      },
+      {
+        "reasoning": "1. The only atomic proposition is `a`.\n2. \u201cCan only hold every three timestamps\u201d means that whenever `a` holds, it cannot hold at either of the next two timestamps.\n3. Globally require `a` to be followed by `!a` now-next and at the timestamp after that.\n4. This permits later occurrences of `a` at least three timestamps apart.\n\nFORMULA: G(a -> X(!a && X !a))",
+        "formula": "G(a -> X(!a && X !a))"
+      }
+    ]
+  },
+  "30": {
+    "nl": "Every a is followed by a b.",
+    "ltl": "G ( a -> X b)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, if `a` occurs, then `b` must eventually occur.\n3. Express this as `G(a -> F b)`.\n4. This ensures each occurrence of `a` is followed eventually by an occurrence of `b`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, if `a` occurs, then `b` must occur at some point afterward.\n3. `G` expresses \u201calways,\u201d and `F` expresses \u201ceventually.\u201d\n\nFORMULA: G(a -> X F b)",
+        "formula": "G(a -> X F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` occurs, `b` must occur at some point afterward.\n3. Express this globally as `G(a -> F b)`.\n4. This allows `b` to occur later, not necessarily in the next state.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, if `a` occurs, then `b` must occur at some point from then onward.\n3. Use `G` for \u201calways,\u201d `->` for implication, and `F` for \u201ceventually\u201d: `G(a -> F b)`.\n4. This ensures that each occurrence of `a` is followed by an occurrence of `b`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. Whenever `a` occurs, a `b` must occur at some point afterward.\n3. This is expressed by requiring globally that `a` implies eventually `b`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, if `a` occurs, then `b` must eventually occur.\n3. Express this as `G(a -> F b)`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence says that whenever `a` occurs, `b` eventually occurs.\n3. \u201cWhenever\u201d gives `G`, and \u201ceventually\u201d gives `F`: `G(a -> F b)`.\n4. This ensures every occurrence of `a` is followed at some point by `b`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, if `a` occurs, then `b` must eventually occur.\n3. This is expressed by `G(a -> F b)`.\n4. The formula applies the requirement globally to every occurrence of `a`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. At every point where `a` holds, `b` must hold at some point from then onward.\n3. Express this as \u201calways, if `a`, then eventually `b`.\u201d\n4. This ensures each occurrence of `a` has a corresponding eventual `b`.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Whenever `a` occurs, `b` must occur at some point afterward.\n3. Require this at every point in time: `G(a -> F b)`.\n4. This allows `b` to occur immediately after `a` or later.\n\nFORMULA: G(a -> F b)",
+        "formula": "G(a -> F b)"
+      }
+    ]
+  },
+  "31": {
+    "nl": "Eventually a and b hold.",
+    "ltl": "F (a && b)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cEventually a and b hold\u201d means that at some future time, both hold together.\n3. Apply `F` to their conjunction.\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cEventually a and b hold\u201d means that at some future time, both propositions hold together.\n3. Use `F` for \u201ceventually\u201d and `&&` for \u201cand.\u201d\n4. Thus, the formula expresses that eventually both `a` and `b` are true.\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cEventually a and b hold\u201d means there is some future point at which both propositions hold simultaneously.\n3. This is expressed as `F` applied to their conjunction.\n4. Sanity check: the formula requires a future point where both `a` and `b` are true.\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says that at some future time, both `a` and `b` hold.\n3. \u201cEventually\u201d is `F`, and \u201cboth\u201d is `&&`.\n4. Thus, the formula requires a future point where `a` and `b` are true together.\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. The sentence says that at some future time, both `a` and `b` hold.\n3. \u201cEventually\u201d is `F`, and \u201cboth\u201d is `&&`.\n4. Thus, the formula requires a future point where `a` and `b` hold together.\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. They must hold together at some point in the future.\n3. Use `F` for \u201ceventually\u201d and `&&` to require both propositions at that point.\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says that at some point, both `a` and `b` hold.\n3. \u201cAt some point\u201d is `F`, and \u201cboth\u201d is `&&`.\n4. The formula requires `a` and `b` to hold together at that point.\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cEventually\u201d means that at some future time, both propositions hold together.\n3. Combine them with `&&` and apply `F`.\n4. This requires a future point where `a` and `b` are both true.\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cEventually a and b hold\u201d means that at some future time, both hold together.\n3. Use `F` for \u201ceventually\u201d and `&&` for \u201cand.\u201d\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says there is some future time when both hold.\n3. \u201cEventually\u201d is `F`, and \u201cboth\u201d is `a && b`.\n4. Thus, the formula requires `a` and `b` to hold together at some point.\n\nFORMULA: F(a && b)",
+        "formula": "F(a && b)"
+      }
+    ]
+  },
+  "32": {
+    "nl": "Both a and b hold eventually.",
+    "ltl": "F a && F b",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Each proposition must hold at some point in the future; they need not hold at the same time.\n3. Express this as `F a` and `F b`, joined by `&&`.\n4. This allows `a` and `b` to occur at different future times.\n\nFORMULA: (F a) && (F b)",
+        "formula": "(F a) && (F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Each proposition must hold at some point; they need not hold at the same time.\n3. Express this as `F a` and `F b`, joined by `&&`.\n4. This allows `a` and `b` to become true at different times.\n\nFORMULA: (F a) && (F b)",
+        "formula": "(F a) && (F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Each proposition must hold at some point; they do not have to hold at the same point.\n3. This is expressed as `F a` and `F b`, combined with `&&`.\n4. The formula allows `a` and `b` to occur at different times.\n\nFORMULA: (F a) && (F b)",
+        "formula": "(F a) && (F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. Each must hold at some point; they need not hold at the same time.\n3. This is expressed as `F a` and `F b`, combined with `&&`.\n4. The formula requires both propositions to occur eventually.\n\nFORMULA: (F a) && (F b)",
+        "formula": "(F a) && (F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Each proposition must hold at some point in the future.\n3. Express this as `F a` and `F b`, combined with `&&`.\n4. This allows `a` and `b` to hold at different times, as the sentence permits.\n\nFORMULA: (F a) && (F b)",
+        "formula": "(F a) && (F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. Each proposition must hold at some point in the future; they need not hold at the same time.\n3. Express this as `F a` and `F b`, joined by `&&`.\n4. This allows `a` and `b` to occur at different future times.\n\nFORMULA: (F a) && (F b)",
+        "formula": "(F a) && (F b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence says that `a` holds at some point and `b` holds at some point; they need not hold at the same time.\n3. Express each eventuality with `F` and combine them with `&&`.\n4. This allows `a` and `b` to become true at different times.\n\nFORMULA: (F a) && (F b)",
+        "formula": "(F a) && (F b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Each proposition must hold at some point in the future; they need not hold at the same time.\n3. Combine the two eventuality requirements with `&&`.\n4. This allows `a` and `b` to occur at different times.\n\nFORMULA: F a && F b",
+        "formula": "F a && F b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Each proposition must hold at some point in the future.\n3. Conjoin the two eventuality requirements: `F a && F b`.\n4. This allows `a` and `b` to occur at different times, as the sentence permits.\n\nFORMULA: F a && F b",
+        "formula": "F a && F b"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. Each proposition is required to hold at some point in the future.\n3. Express this as `F a` and `F b`, joined by `&&`.\n4. This allows `a` and `b` to hold at different future times.\n\nFORMULA: (F a) && (F b)",
+        "formula": "(F a) && (F b)"
+      }
+    ]
+  },
+  "33": {
+    "nl": "It is always the case that a is the same as b in the next step.",
+    "ltl": "G (a <-> X b)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, the truth value of `a` must match the truth value of `b` in the next step.\n3. Express the match with `a <-> X b`, and require it always with `G`.\n4. This checks the condition at every step, including the next-step reference.\n\nFORMULA: G(a <-> X b)",
+        "formula": "G(a <-> X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cAlways\u201d applies at every time step, and \u201ca is the same as b in the next step\u201d means `a` has the same truth value as `b` one step later.\n3. Express the stepwise equality as `a <-> X b`, then require it globally with `G`.\n4. Thus, at every step, `a` is equivalent to the next-step value of `b`.\n\nFORMULA: G(a <-> X b)",
+        "formula": "G(a <-> X b)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a` and `b`.\n2. The condition must hold at every time step, comparing `a` with `b` in the next step.\n3. \u201cThe same as\u201d means they have the same truth value, expressed as equivalence: `a <-> b`.\n4. Apply `X` for the next step and `G` for always.\n\nFORMULA: G X (a <-> b)",
+        "formula": "G X (a <-> b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, the truth value of `a` must match the truth value of `b` in the next step.\n3. Match their truth values with `<->`, and require this at all times with `G`.\n\nFORMULA: G(a <-> X b)",
+        "formula": "G(a <-> X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, their truth values must match at the next step.\n3. \u201cAt every point\u201d is `G`, and \u201cat the next step, `a` and `b` are equivalent\u201d is `X(a <-> b)`.\n4. This requires the equivalence to hold at every next step.\n\nFORMULA: G X(a <-> b)",
+        "formula": "G X(a <-> b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every point in time, their truth values must match in the next step.\n3. Matching truth values is expressed by `a <-> b`; applying `X` checks this in the next step, and `G` requires it always.\n4. Thus, the formula requires `a` and `b` to agree at every next step.\n\nFORMULA: G X (a <-> b)",
+        "formula": "G X (a <-> b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. \u201cAlways\u201d applies at every time step, and \u201cthe same as\u201d means `a` and `b` have the same truth value in the next step.\n3. The next-step condition is `X(a <-> b)`, and requiring it always gives `G(X(a <-> b))`.\n4. This checks at every step that `a` and `b` agree one step later.\n\nFORMULA: G(X(a <-> b))",
+        "formula": "G(X(a <-> b))"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, `a` has the same truth value as `b` in the next step.\n3. \u201cSame truth value\u201d is represented by equivalence, and \u201cnext step\u201d by `X`.\n4. Requiring this always gives `G(a <-> X b)`.\n\nFORMULA: G(a <-> X b)",
+        "formula": "G(a <-> X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time, `a` has the same truth value as `b` at the next time.\n3. \u201cAt every time\u201d is `G`, and matching truth values is `<->`; the next-time value of `b` is `X b`.\n4. Thus, the formula states that `a` is equivalent to `X b` at all times.\n\nFORMULA: G(a <-> X b)",
+        "formula": "G(a <-> X b)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. At every time step, `a` has the same truth value as `b` at the next step.\n3. \u201cAt every time step\u201d is `G`, \u201cnext step\u201d is `X`, and \u201csame truth value\u201d is `<->`.\n4. Thus, the property is `G(a <-> X b)`.\n\nFORMULA: G(a <-> X b)",
+        "formula": "G(a <-> X b)"
+      }
+    ]
+  },
+  "34": {
+    "nl": "If b holds then, in the next step, c holds until a holds or always c holds",
+    "ltl": "b -> X ((c U a) || G c)",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are **b**, **c**, and **a**.\n2. The sentence says that whenever **b** holds, the next step must satisfy either \u201c**c** holds until **a** holds\u201d or \u201c**c** always holds.\u201d\n3. \u201cWhenever **b** holds\u201d gives the implication; \u201cin the next step\u201d gives **X**; the alternatives are **c U a** and **G c**.\n\nFORMULA: b -> X((c U a) || G c)",
+        "formula": "b -> X((c U a) || G c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `b`, `c`, and `a`.\n2. The sentence says that whenever `b` holds, starting at the next step, either `c` holds until `a` holds, or `c` holds forever.\n3. The implication is `b -> ...`; the next-step condition is `X(...)`; the alternatives are `(c U a) || G c`.\n\nFORMULA: b -> X((c U a) || G c)",
+        "formula": "b -> X((c U a) || G c)"
+      },
+      {
+        "reasoning": "Atomic propositions: b, c, and a.\n\nThe condition is triggered when b holds. From the next step onward, either c holds until a holds, or c holds always.\n\nFORMULA: b -> X((c U a) || G c)",
+        "formula": "b -> X((c U a) || G c)"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`, and `c`.\n2. The statement says that whenever `b` holds, at the next step either `c` holds until `a` holds, or `c` holds forever.\n3. This gives `b -> X((c U a) || G c)`.\n4. Sanity check: the `X` applies to both alternatives, so either condition begins in the next step.\n\nFORMULA: G(b -> X((c U a) || G c))",
+        "formula": "G(b -> X((c U a) || G c))"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `a`, `b`, and `c`.\n2. **Logical structure:** Whenever `b` holds, the condition must hold at the next step: either `c` holds until `a` holds, or `c` holds always.\n3. **Formula:** Put the two alternatives inside `X`, and make them the consequent of the implication from `b`.\n4. **Sanity check:** If `b` is false, the implication is satisfied; if `b` is true, the next step must satisfy one of the two alternatives.\n\nFORMULA: b -> X((c U a) || G c)",
+        "formula": "b -> X((c U a) || G c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `b`, `c`, and `a`.\n2. The condition is: if `b` holds now, then starting in the next step either `c` holds until `a` holds, or `c` holds forever.\n3. The implication is `b -> ...`; the next-step requirement is `X(...)`; the alternatives are `(c U a) || G c`.\n\nFORMULA: b -> X((c U a) || G c)",
+        "formula": "b -> X((c U a) || G c)"
+      },
+      {
+        "reasoning": "Atomic propositions: `b`, `c`, and `a`.\n\nWhen `b` holds, the condition applies starting in the next step. From then on, either `c` holds until `a` holds, or `c` holds forever. This gives `X((c U a) || G c)` as the consequent of the implication.\n\nFORMULA: `b -> X((c U a) || G c)`",
+        "formula": "b -> X((c U a) || G c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `b`, `c`, and `a`.\n2. The sentence says that whenever `b` holds, the specified condition applies from the next step: either `c` holds until `a` holds, or `c` holds forever.\n3. The implication is `b -> ...`; the next-step condition is `X(...)`; the alternatives are joined with `||`.\n\nFORMULA: b -> X((c U a) || G c)",
+        "formula": "b -> X((c U a) || G c)"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a`, `b`, and `c`.\n2. Whenever `b` holds, the condition applies at the next step: either `c` holds until `a` holds, or `c` holds forever from that step onward.\n3. The alternatives are `c U a` and `G c`, scoped under `X`; the implication is triggered by `b`.\n\nFORMULA: b -> X((c U a) || G c)",
+        "formula": "b -> X((c U a) || G c)"
+      },
+      {
+        "reasoning": "Atomic propositions: `a`, `b`, and `c`.\n\nThe condition is triggered when `b` holds. From the next step onward, either `c` holds until `a` holds, or `c` holds always.\n\nFORMULA: b -> X((c U a) || G c)",
+        "formula": "b -> X((c U a) || G c)"
+      }
+    ]
+  },
+  "35": {
+    "nl": "a holds until b holds or always a holds",
+    "ltl": "(a U b) || G a",
+    "samples": [
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence gives two alternatives: `a` holds until `b` holds, or `a` holds globally.\n3. These are expressed as `(a U b) || G a`.\n4. `a U b` requires `a` to hold until `b` eventually holds; `G a` requires `a` to hold at all times.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence gives two alternatives: `a` holds until `b` holds, or `a` holds always.\n3. These alternatives are combined with `||`. In standard LTL, `a U b` means `a` holds until `b` eventually holds.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence gives two alternatives: `a` holds until `b` holds, or `a` holds always.\n3. \u201cUntil\u201d is `U`, \u201calways\u201d is `G`, and \u201cor\u201d is `||`.\n4. The formula therefore requires either `a U b` or `G a`.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence gives two alternatives: either `a` holds until `b` holds, or `a` holds always.\n3. `a` holds until `b` holds is `a U b`; `a` holds always is `G a`. Join the alternatives with `||`.\n4. The formula allows either `b` eventually to hold with `a` holding up to then, or `a` to hold forever.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence gives two alternatives: `a` holds until `b` holds, or `a` holds forever.\n3. \u201cUntil\u201d is `U`, \u201calways\u201d is `G`, and \u201cor\u201d is `||`.\n4. The disjunction allows either `b` to eventually hold after `a` holds, or `a` to hold forever.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      },
+      {
+        "reasoning": "1. **Atomic propositions:** `a`, `b`.\n2. The statement allows either `a` to hold until `b` holds, or `a` to hold forever.\n3. These alternatives are joined with `||`.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The statement allows either `a` to hold until `b` holds, or `a` to hold forever.\n3. Strong until captures the first case; `G a` captures the second.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence allows either `a` to hold until `b` holds, or `a` to hold forever.\n3. \u201c`a` until `b`\u201d is `a U b`; \u201calways `a`\u201d is `G a`. The alternatives are joined with `||`.\n4. This also covers the case where `b` never holds, provided `a` holds forever.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      },
+      {
+        "reasoning": "1. The atomic propositions are `a` and `b`.\n2. The sentence gives two alternatives: `a` holds until `b` holds, or `a` holds always.\n3. Strong until is `a U b`; always `a` is `G a`. Join the alternatives with `||`.\n4. This allows either `b` eventually to hold while `a` holds up to then, or `a` to hold forever.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      },
+      {
+        "reasoning": "1. Atomic propositions: `a`, `b`.\n2. The sentence gives two alternatives: `a` holds until `b` holds, or `a` holds forever.\n3. \u201c`a` holds until `b` holds\u201d is `a U b`; \u201c`a` holds always\u201d is `G a`. Combine them with `||`.\n4. The formula captures either alternative.\n\nFORMULA: (a U b) || G a",
+        "formula": "(a U b) || G a"
+      }
+    ]
+  }
+}
