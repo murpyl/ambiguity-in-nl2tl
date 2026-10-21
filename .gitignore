@@ -1,0 +1,52 @@
+# Model weights
+gpt-oss-20b/
+*.bin
+*.safetensors
+*.pt
+*.pth
+.vscode/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+# Dataset
+vltl_dataset/
+*.csv
+
+
+# Generated output files
+*log
+log
+_backup.py
+output
+lf-multi-warehouse
+
+testcase*
+decomposer_backup*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Conda / venv
+.venv/
+env/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Credentials
+kaggle.json
+*.key
+
+CHASE
+.history
+output_dynamic*
+tools/
+videos/
+chathistory/
+tmp/
