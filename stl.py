@@ -1,5 +1,7 @@
+import itertools
 import re
-import numpy as np
+
+import z3
 
 TOKEN_RE = re.compile(r"""
     (?P<IFF><->) | (?P<IMPLY>->) | (?P<AND>&&|&) | (?P<OR>\|\||\|) | (?P<NOT>!)
@@ -146,47 +148,32 @@ def to_str(n):
     return f"({to_str(n[1])} {op} {to_str(n[2])})"
 
 
-def _next_true(a):
-    """For each i, smallest j >= i with a[j] true (len(a) if none)."""
-    m = len(a)
-    return np.minimum.accumulate(np.where(a, np.arange(m), m)[::-1])[::-1]
+_fresh = itertools.count()
 
 
-def _window_any(a, lo, hi):
-    """any(a[i+lo .. i+hi]) per i; indices clip to the last position (its value repeats)."""
-    m = len(a)
-    c = np.concatenate(([0], np.cumsum(a)))
-    i = np.arange(m)
-    start = np.minimum(i + lo, m - 1)
-    end = np.full(m, m - 1) if hi is None else np.minimum(i + hi, m - 1)
-    return c[end + 1] - c[start] > 0
+def _window(s, t, lo, hi):
+    return z3.And(s >= t + lo, *([] if hi is None else [s <= t + hi]))
 
 
-def sat(n, sig):
-    """Truth value of n at every position; sig maps atom -> bool array (all same length)."""
-    t = n[0]
-    if t == "atom":
-        return sig[n[1]]
-    if t == "not":
-        return ~sat(n[1], sig)
-    if t == "F":
-        return _window_any(sat(n[2], sig), *n[1])
-    if t == "G":
-        return ~_window_any(~sat(n[2], sig), *n[1])
-    a, b = sat(n[-2], sig), sat(n[-1], sig)
-    if t == "and":
-        return a & b
-    if t == "or":
-        return a | b
-    if t == "imply":
-        return ~a | b
-    if t == "iff":
-        return a == b
-    if t == "U":  # exists j in i+[lo,hi]: b[j] and a on [i, j)
-        lo, hi = n[1]
-        m = len(a)
-        i = np.arange(m)
-        j = _next_true(b)[np.minimum(i + lo, m - 1)]  # earliest b-witness in the window
-        first_not_a = _next_true(~a)[i]
-        return (j < m) & (True if hi is None else j <= i + hi) & (first_not_a >= j)
-    raise ValueError(f"unknown node {n}")
+def encode(n, t, preds):
+    """Z3 Bool for formula n at integer time t.
+
+    Semantics: discrete time, infinite traces, atoms are Int -> Bool functions
+    (stored in preds), a U[lo,hi] b needs a on [i, j) where b holds at j.
+    """
+    k = n[0]
+    if k == "atom":
+        return preds.setdefault(n[1], z3.Function(n[1], z3.IntSort(), z3.BoolSort()))(t)
+    if k == "not":
+        return z3.Not(encode(n[1], t, preds))
+    if k in ("F", "G"):
+        s = z3.Int(f"#s{next(_fresh)}")
+        body = encode(n[2], s, preds)
+        win = _window(s, t, *n[1])
+        return z3.Exists(s, z3.And(win, body)) if k == "F" else z3.ForAll(s, z3.Implies(win, body))
+    if k == "U":
+        s, r = z3.Int(f"#s{next(_fresh)}"), z3.Int(f"#r{next(_fresh)}")
+        hold = z3.ForAll(r, z3.Implies(z3.And(r >= t, r < s), encode(n[2], r, preds)))
+        return z3.Exists(s, z3.And(_window(s, t, *n[1]), encode(n[3], s, preds), hold))
+    a, b = encode(n[1], t, preds), encode(n[2], t, preds)
+    return {"and": z3.And(a, b), "or": z3.Or(a, b), "imply": z3.Implies(a, b), "iff": a == b}[k]

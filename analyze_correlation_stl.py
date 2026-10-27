@@ -1,13 +1,4 @@
-"""NL vagueness/ambiguity vs. semantic diversity of sampled STL answers.
-
-Uses stl_equiv.semantically_equivalent. Two clusterings: exact (intervals matter) and
-structural (all intervals replaced by [0,inf), i.e. diversity ignoring time constants).
-Usage: python analyze_correlation.py [folder]   (default: raw_samples)
-Reads folder/raw_samples*.json, writes folder/metrics_<name>.csv per file.
-Add --report to print the summary from existing metrics_*.csv without recomputing.
-Items run in parallel; pair verdicts are cached in folder/equiv_cache.json (reruns are near-instant).
-"""
-import json, sys
+import json, re, sys
 from multiprocessing import Pool
 from collections import Counter
 from math import log
@@ -25,21 +16,26 @@ UNCLEAR = {2, 4, 10, 14, 19, 22, 23, 25, 28, 30, 31, 33, 37, 39, 40, 47, 48, 55,
            116, 117, 118, 120, 122, 124, 125, 133, 134, 136, 141, 142, 143, 151, 153, 
            157, 173, 174, 177, 185, 186, 188, 191, 194, 196, 198 } 
 
-BAD_GOLD = {1, 12, 29, 34, 64, 68, 87, 92, 105, 121, 127, 146, 154, 164, 166, 167, 179} # ids whose gold formula you marked incorrect; these items are dropped from every metric
+BAD_GOLD = {1, 12, 29, 34, 64, 68, 87, 92, 105, 121, 127, 146, 154, 164, 166, 167, 179} # ids whose gold formula are incorrect; these items are dropped from every metric
 
 
 def formula_of(sample):
     f = sample if isinstance(sample, str) else (sample.get("corrected_formula") or sample["formula"])
+    f = re.sub(r"^\s*(?:(?:FINAL|STL)\s*:\s*)+", "", f, flags=re.I)  # Qwen's "FINAL: STL:" prefixes
     return f.replace("¬", "!").replace("∧", "&&").replace("∨", "||").replace("→", "->").strip()
 
 
 # Pair verdicts: CACHE is loaded from disk (read-only in workers), NEW collects this process's additions.
 CACHE, NEW = {}, {}
-CACHE_VERSION = f"trials={stl_equiv.RANDOM_TRIALS};probes={stl_equiv.MAX_PROBE_TIMES};v1"
+CACHE_VERSION = f"z3;timeout_ms={stl_equiv.TIMEOUT_MS};v1"
+TOUCHED = set()  # pair keys looked up while processing the current item
 
 
 def equivalent(a, b):
+    """True / False, or None if Z3 could not decide (or a formula is unparseable).
+    None is never equal to True, so undecided pairs end up in separate clusters."""
     key = (a, b) if a <= b else (b, a)
+    TOUCHED.add(key)
     if key in CACHE:
         return CACHE[key]
     if key not in NEW:
@@ -114,6 +110,7 @@ def item_row(args):
     """One item's metrics (runs in a worker). Returns (row, new cache entries)."""
     k, item = args
     NEW.clear()
+    TOUCHED.clear()
     fs = [formula_of(s) for s in item["samples"]]
     labels, reps = cluster(fs)
     counts = pd.Series(labels).value_counts()
@@ -123,6 +120,7 @@ def item_row(args):
     row = dict(
         id=k, nl=item["nl"], unclear=int(int(k) in UNCLEAR), n_samples=len(fs),
         n_unparsed=labels.count(NOT_EXPRESSIBLE),
+        n_undecided=sum((CACHE[k] if k in CACHE else NEW[k]) is None for k in TOUCHED),
         n_classes=len(counts),
         norm_entropy=norm_entropy(counts.tolist()),
         majority_share=counts.iloc[0] / len(labels),
@@ -155,7 +153,8 @@ def analyze(path, out_dir):
 
 
 def report(df, name):
-    print(f"\n=== {name} === (unparsed samples: {df.n_unparsed.sum()}/{df.n_samples.sum()})")
+    print(f"\n=== {name} === (unparsed samples: {df.n_unparsed.sum()}/{df.n_samples.sum()}, "
+          f"undecided pairs: {df.n_undecided.sum()})")
     metrics = ["n_classes", "norm_entropy", "majority_share", "struct_n_classes", "struct_norm_entropy", "struct_majority_share", "n_unparsed"] + (["gold_acc"] if df.gold_acc.notna().all() else [])
     print(df.groupby("unclear")[metrics].agg(["mean", "std", "count"]).round(3).T, "\n")
     for m in metrics:
