@@ -15,7 +15,7 @@ from scipy import stats
 from ltl import ParseError
 from ltl_equiv import to_spot
 
-UNCLEAR = {12, 15, 21, 22, 24, 27, 28, 29, 30, 31, 32}  # 0-indexed ambiguous + vague
+UNCLEAR = {12, 15, 21, 24, 27, 28, 29, 30, 32}  # 0-indexed ambiguous + vague
 
 
 def formula_of(sample):

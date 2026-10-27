@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from tqdm import tqdm
 
-MODEL = "qwen/qwen3.8-flash"
+MODEL = "anthropic/claude-haiku-5.5"
 MAX_K = 10
 TEMPERATURE = 1.0
 WORKERS = 16

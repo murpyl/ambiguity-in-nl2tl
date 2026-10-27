@@ -1,0 +1,259 @@
+raw_samples/raw_samples_luna_5.6.json
+
+[0] Every a is eventually followed by a e.
+    gold: G(a -> F e)
+  class 0 x10 (matches gold)
+      10x  G(a -> F e)
+
+[1] It is never the case that a and b hold at the same time.
+    gold: G(!(a & b))
+  class 0 x10 (matches gold)
+      10x  G(!(a && b))
+
+[2] Whenever a is enabled, b is enabled three steps later.
+    gold: G(a -> X (X (X b)))
+  class 0 x10 (matches gold)
+       9x  G(a -> XXX b)
+       1x  G(a -> X X X b)
+
+[3] e must hold everywhere until from some point on, d holds infinitely often.
+    gold: e U (G (F d))
+  class 0 x10 (matches gold)
+       5x  e U (G F d)
+       5x  e U G F d
+
+[4] If b holds at some point, a has to hold somewhere beforehand.
+    gold: (F b) -> (!b U (a & !b))
+  class 0 x9 (matches gold)
+       7x  G(!b) || (!b U (a && !b))
+       1x  G !b || (!b U (a && !b))
+       1x  G(!b) || ((!b) U (a && !b))
+  class 1 x1 (differs from gold)
+       1x  G(!b) || (!b U a)
+
+[5] Whenever a holds, b holds as well.
+    gold: G(a -> b)
+  class 0 x10 (matches gold)
+      10x  G(a -> b)
+
+[6] Both a and b hold in every time step.
+    gold: G (a && b)
+  class 0 x10 (matches gold)
+      10x  G(a && b)
+
+[7] a holds always and whenever b holds, c does not hold.
+    gold: G a && G(b -> !c)
+  class 0 x10 (matches gold)
+       6x  G a && G(b -> !c)
+       2x  G a && G (b -> !c)
+       2x  (G a) && (G(b -> !c))
+
+[8] If it is the case that every a is eventually followed by a b, then c needs to holds infinitely often.
+    gold: G(a -> F b) -> G F c
+  class 0 x10 (matches gold)
+       3x  G(a -> F b) -> G F c
+       2x  (G(a -> F b)) -> (G F c)
+       2x  (G(a -> F b)) -> G F c
+       2x  (G(a -> F b)) -> G(F c)
+       1x  G(a -> F b) -> G(F c)
+
+[9] If a holds infinitely often, then b holds infinitely often as well.
+    gold: G F a -> G F b
+  class 0 x10 (matches gold)
+       8x  (G F a) -> (G F b)
+       2x  G F a -> G F b
+
+[10] Either a or b holds infinitely often
+    gold: G F a || G F b
+  class 0 x10 (matches gold)
+       5x  G F (a || b)
+       4x  (G F a) || (G F b)
+       1x  G(F(a || b))
+
+[11] a never holds from some point in time on.
+    gold: F G ! a
+  class 0 x10 (matches gold)
+       7x  F G !a
+       2x  F (G (!a))
+       1x  F(G(!a))
+
+[12] Whenever a and b do not hold, c holds eventually.
+    gold: G (!(a && b) -> F c)
+  class 0 x6 (matches gold)
+       3x  G(!(a && b) -> F c)
+       3x  G((!(a && b)) -> F c)
+  class 1 x4 (differs from gold)
+       4x  G((!a && !b) -> F c)
+
+[13] a and b never occur at the same time but one of them holds in every time step.
+    gold: G(!(a &&b)) && G(a || b)
+  class 0 x10 (matches gold)
+       8x  G((a || b) && !(a && b))
+       1x  G(!(a && b)) && G(a || b)
+       1x  G(!(a && b) && (a || b))
+
+[14] Whenever the inputs a and b are the same, the outputs c and d are the same.
+    gold: G ((a <-> b) -> (c <-> d))
+  class 0 x10 (matches gold)
+       4x  G((a <-> b) -> (c <-> d))
+       3x  G(((a && b) || (!a && !b)) -> ((c && d) || (!c && !d)))
+       1x  G((((a && b) || (!a && !b)) -> ((c && d) || (!c && !d))))
+       1x  G ((a <-> b) -> (c <-> d))
+       1x  G((((a && b) || (!a && !b)) -> (c <-> d)))
+
+[15] a can only happen if b happend before
+    gold: (! a) U b
+  class 0 x9 (differs from gold)
+       3x  G(!a) || (!a U (b && !a))
+       2x  b R !a
+       2x  ((!a U (b && !a)) || G(!a))
+       1x  (!a U (b && !a)) || G(!a)
+       1x  ((!a) U (b && !a)) || G(!a)
+  class 1 x1 (differs from gold)
+       1x  ((!a U b) || G(!a))
+
+[16] Once a happened, b won't happen again.
+    gold: G (a -> X G ! b)
+  class 0 x10 (differs from gold)
+      10x  G(a -> G(!b))
+
+[17] a releases b
+    gold: (b U (b & ! a)) | G b
+  class 0 x10 (differs from gold)
+      10x  a R b
+
+[18] a and b won't occur at the same time
+    gold: G !(a & b)
+  class 0 x10 (matches gold)
+       9x  G(!(a && b))
+       1x  G !(a && b)
+
+[19] Whenever a holds and b holds in the next step, then c holds one step after b.
+    gold: G (a && X b -> X X c)
+  class 0 x10 (matches gold)
+      10x  G((a && X b) -> X X c)
+
+[20] Whenever a holds, b holds eventually from the next step on.
+    gold: G (a -> X F b)
+  class 0 x10 (matches gold)
+      10x  G(a -> X F b)
+
+[21] a holds in every fifth step.
+    gold: a && G (a -> X ! a && X X ! a && X X X ! a && X X X X ! a && X X X X X a)
+  class 2 x4 (differs from gold)
+       4x  G(a -> X X X X X a)
+  class 1 x2 (differs from gold)
+       1x  X(X(X(X(a && G(a -> X(X(X(X(X(a))))))))))
+       1x  X X X X (a && G(a -> X X X X X a))
+  class 0 x1 (matches gold)
+       1x  a && G(a -> X(!a && X(!a && X(!a && X(!a && X a)))))
+  class 3 x1 (differs from gold)
+       1x  !a && X(!a && X(!a && X(!a && X(a)))) && G(a -> X(!a && X(!a && X(!a && X(a)))))
+  class 4 x1 (differs from gold)
+       1x  X X X X a && G(a -> X X X X X a)
+  class 5 x1 (differs from gold)
+       1x  a && G(a -> X X X X X a)
+
+[22] Either a holds infinitely often or b holds in the next step.
+    gold: G F a || X b
+  class 0 x10 (matches gold)
+       7x  (G F a) || (X b)
+       1x  (G(F a)) || (X b)
+       1x  G(F(a)) || X(b)
+       1x  (G(F(a)) || X b)
+
+[23] a will hold at all instances.
+    gold: G (a)
+  class 0 x10 (matches gold)
+      10x  G a
+
+[24] Whenever a holds, b must hold in the next two steps
+    gold: G (a -> (b | X b))
+  class 0 x10 (differs from gold)
+       9x  G(a -> (X b && X X b))
+       1x  G(a -> (X b && XX b))
+
+[25] One of the following aps will hold at all instances: a,b,c
+    gold: G (a | b | c)
+  class 0 x10 (matches gold)
+      10x  G(a || b || c)
+
+[26] If a holds b will eventually hold
+    gold: G (a -> F b)
+  class 0 x10 (matches gold)
+      10x  G(a -> F b)
+
+[27] a must always hold, but if is execeeds, it allow two timestamps to recover.
+    gold: ! G (! (a && X a))
+  class 0 x8 (differs from gold)
+       6x  G(a) && G(!a -> (X(a) || X(X(a))))
+       2x  G(a) && G(!a -> (X a || X X a))
+  class 1 x2 (differs from gold)
+       2x  G(!a -> (X a || X X a))
+
+[28] not a holds at most two timestamps
+    gold: ! G (! (a && X a))
+  class 0 x8 (differs from gold)
+       3x  G a || (a U (!a && X G a)) || (a U (!a && X (a U (!a && X G a))))
+       1x  G(!a -> X(a U (G a || (!a && X G a))))
+       1x  G(!a -> X(G(a) || (a U (!a && X(G(a))))))
+       1x  G(!a -> X G(!a -> X G(a)))
+       1x  G(!a -> X(G(a) || (a U (!a && X G(a)))))
+       1x  G(!a -> (X G a || X(a U (!a && X G a))))
+  class 1 x1 (differs from gold)
+       1x  G(!a -> X(G(a) || (a U (!a && X(G(a) || (a U (!a && X(G(a) || (a U (!a && X G(a)))))))))))
+  class 2 x1 (differs from gold)
+       1x  G((!a) -> X((G a) || ((!a) U ((!a) && X(G a)))))
+
+[29] a can only hold every three timestamps
+    gold: G ( a -> (X !a | XX !a | XXX !a))
+  class 0 x7 (differs from gold)
+       5x  G(a -> X(!a && X(!a)))
+       1x  G(a -> (X(!a) && XX(!a)))
+       1x  G(a -> (X !a && X X !a))
+  class 1 x2 (differs from gold)
+       2x  G(a -> X(!a && X(!a && X a)))
+  class 2 x1 (differs from gold)
+       1x  G(a -> X(X(X(a))))
+
+[30] Every a is followed by a b.
+    gold: G ( a -> X b)
+  class 0 x7 (differs from gold)
+       7x  G(a -> F b)
+  class 1 x2 (matches gold)
+       2x  G(a -> X b)
+  class 2 x1 (differs from gold)
+       1x  G(a -> X F b)
+
+[31] Eventually a and b hold.
+    gold: F (a && b)
+  class 0 x10 (matches gold)
+      10x  F(a && b)
+
+[32] Both a and b hold eventually.
+    gold: F a && F b
+  class 0 x6 (differs from gold)
+       5x  F(a && b)
+       1x  F (a && b)
+  class 1 x4 (matches gold)
+       3x  (F a) && (F b)
+       1x  F a && F b
+
+[33] It is always the case that a is the same as b in the next step.
+    gold: G (a <-> X b)
+  class 0 x9 (matches gold)
+       9x  G(a <-> X b)
+  class 1 x1 (differs from gold)
+       1x  G(X a <-> X b)
+
+[34] If b holds then, in the next step, c holds until a holds or always c holds
+    gold: b -> X ((c U a) || G c)
+  class 0 x7 (matches gold)
+       7x  b -> X((c U a) || G c)
+  class 1 x3 (differs from gold)
+       3x  G(b -> X((c U a) || G c))
+
+[35] a holds until b holds or always a holds
+    gold: (a U b) || G a
+  class 0 x10 (matches gold)
+      10x  (a U b) || G a
