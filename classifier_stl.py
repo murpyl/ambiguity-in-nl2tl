@@ -15,53 +15,11 @@ import stl
 from stl import to_str
 from analyze_correlation_stl import BAD_GOLD
 from stl_equiv import semantically_equivalent
+from stl_eval import clean, parse, cluster
 
 logger = logging.getLogger("classifier")
 
-SYMBOLS = {"¬": "!", "∧": "&&", "∨": "||", "→": "->", "↔": "<->"}
 TAU = 0.10  # a class is "substantial" if it holds >= TAU of parsed samples
-
-
-def clean(sample):
-    """Formula string, or None if the model never produced a FORMULA: line (extraction fell back to junk)."""
-    if isinstance(sample, dict) and "FORMULA:" not in sample.get("reasoning", "FORMULA:"):
-        logger.debug("sample dropped: no FORMULA: line in reasoning")
-        return None
-    f = sample if isinstance(sample, str) else (sample.get("corrected_formula") or sample["formula"])
-    f = re.sub(r"^\s*(?:(?:FINAL|STL)\s*:\s*)+", "", f, flags=re.I)
-    for k, v in SYMBOLS.items():
-        f = f.replace(k, v)
-    return f.strip()
-
-
-def parse(s):
-    if not s:
-        return None
-    try:
-        return stl.parse(s)
-    except stl.ParseError as e:
-        logger.debug("unparseable %r: %s", s, e)
-        return None
-
-
-def cluster(parsed):
-    """parsed: list of stl ASTs or None. Returns class id per sample (None if unparsed)."""
-    reps, labels = [], []
-    for f in parsed:
-        if f is None:
-            labels.append(None)
-            continue
-        for i, r in enumerate(reps):
-            verdict, why = semantically_equivalent(to_str(f), to_str(r))
-            if verdict is None:
-                logger.warning("undecided pair (treated as different): %s | %s -> %s", to_str(f), to_str(r), why)
-            if verdict is True:  # undecided counts as different
-                labels.append(i)
-                break
-        else:
-            reps.append(f)
-            labels.append(len(reps) - 1)
-    return labels
 
 
 def norm_entropy(counts):
@@ -72,7 +30,11 @@ def norm_entropy(counts):
 def item_features(samples_by_model):
     """samples_by_model: {model: [formula strings]}. Uses only the samples, never the gold."""
     flat = [(m, s) for m, ss in samples_by_model.items() for s in ss]
-    labels = cluster([parse(s) for _, s in flat])
+    try:
+        labels, _ = cluster([s for _, s in flat])
+    except ValueError as error:
+        logger.warning("item omitted because equivalence is undecided: %s", error)
+        return None
     models = [m for (m, _), l in zip(flat, labels) if l is not None]
     cls = [l for l in labels if l is not None]
     n = len(cls)

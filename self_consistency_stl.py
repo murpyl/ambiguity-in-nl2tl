@@ -2,7 +2,6 @@ import csv
 import json
 import os
 import re
-from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -10,6 +9,8 @@ import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 from openai import OpenAI
 from tqdm import tqdm
+from stl_eval import clean, majority, parse
+from stl_equiv import semantically_equivalent
 
 
 # -------------------- Configuration --------------------
@@ -198,18 +199,10 @@ def collect_raw_samples(client: OpenAI, examples):
     return cache
 
 
-def majority_vote(formulas):
-    if not formulas:
-        raise ValueError("Cannot vote on an empty list of formulas")
-    counts = Counter(normalize(formula) for formula in formulas if formula.strip())
-    if not counts:
-        raise ValueError("No non-empty formulas available for majority vote")
-    return counts.most_common(1)[0][0]
-
-
 def evaluate(cache):
     rows = []
     correct_by_k = {k: [] for k in range(1, MAX_K + 1)}
+    decided_by_k = {k: [] for k in range(1, MAX_K + 1)}
 
     complete = {
         key: entry
@@ -227,13 +220,22 @@ def evaluate(cache):
         )
 
     for key, entry in sorted(complete.items(), key=lambda item: int(item[0])):
-        ground_truth = normalize(entry["stl"])
-        formulas = [sample["formula"] for sample in entry["samples"][:MAX_K]]
+        ground_truth = entry["stl"]
+        if parse(ground_truth) is None:
+            raise ValueError(f"Unparseable gold formula for item {key}: {ground_truth}")
+        formulas = [clean(sample) for sample in entry["samples"][:MAX_K]]
 
         for k in range(1, MAX_K + 1):
-            vote = majority_vote(formulas[:k])
-            correct = int(vote == ground_truth)
+            try:
+                vote, n_valid = majority(formulas[:k])
+                verdict = semantically_equivalent(vote, ground_truth)[0] if vote else False
+                if verdict is None:
+                    raise ValueError("undecided gold comparison")
+            except ValueError:
+                vote, n_valid, verdict = None, sum(parse(f) is not None for f in formulas[:k]), None
+            correct = int(verdict is True)
             correct_by_k[k].append(correct)
+            decided_by_k[k].append(verdict is not None)
             rows.append(
                 {
                     "example_idx": key,
@@ -241,7 +243,9 @@ def evaluate(cache):
                     "ground_truth_stl": entry["stl"],
                     "k": k,
                     "majority_vote_stl": vote,
-                    "correct_exact_match": correct,
+                    "n_valid": n_valid,
+                    "status": "undecided" if verdict is None else "decided",
+                    "correct_semantic": correct,
                 }
             )
 
@@ -252,7 +256,9 @@ def evaluate(cache):
             "ground_truth_stl",
             "k",
             "majority_vote_stl",
-            "correct_exact_match",
+            "n_valid",
+            "status",
+            "correct_semantic",
         ]
         writer = csv.DictWriter(file, fieldnames=fieldnames)
         writer.writeheader()
@@ -262,6 +268,8 @@ def evaluate(cache):
         {
             "k": k,
             "accuracy": sum(values) / len(values) if values else 0.0,
+            "decided_accuracy": sum(v for v, decided in zip(values, decided_by_k[k]) if decided) / sum(decided_by_k[k]) if any(decided_by_k[k]) else float("nan"),
+            "n_decided": sum(decided_by_k[k]),
             "n_examples": len(values),
         }
         for k, values in correct_by_k.items()
@@ -269,7 +277,7 @@ def evaluate(cache):
 
     with ACCURACY_CSV.open("w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(
-            file, fieldnames=["k", "accuracy", "n_examples"]
+            file, fieldnames=["k", "accuracy", "decided_accuracy", "n_decided", "n_examples"]
         )
         writer.writeheader()
         writer.writerows(summary)
@@ -284,7 +292,7 @@ def plot_accuracy(summary):
     plt.figure(figsize=(7, 5))
     plt.plot(ks, accuracies, marker="o")
     plt.xlabel("k (number of self-consistency samples)")
-    plt.ylabel("STL translation accuracy (exact match)")
+    plt.ylabel("STL translation accuracy (semantic equivalence)")
     plt.title(f"NL-to-STL Self-Consistency Accuracy vs k ({MODEL})")
     plt.xticks(ks)
     plt.ylim(0, 1)

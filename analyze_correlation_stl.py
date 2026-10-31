@@ -10,6 +10,7 @@ from scipy import stats
 from stl import ParseError, parse, strip_intervals, to_str
 import stl_equiv
 from stl_equiv import semantically_equivalent
+from stl_eval import clean, cluster as semantic_cluster
 
 UNCLEAR = {2, 4, 10, 14, 19, 22, 23, 25, 28, 30, 31, 33, 37, 39, 40, 47, 48, 55, 57, 
            58, 60, 69, 74, 76, 77, 78, 82, 83, 85, 86, 88, 91, 94, 97, 108, 110, 113, 
@@ -20,9 +21,7 @@ BAD_GOLD = {1, 12, 29, 34, 64, 68, 87, 92, 105, 121, 127, 146, 154, 164, 166, 16
 
 
 def formula_of(sample):
-    f = sample if isinstance(sample, str) else (sample.get("corrected_formula") or sample["formula"])
-    f = re.sub(r"^\s*(?:(?:FINAL|STL)\s*:\s*)+", "", f, flags=re.I)  # Qwen's "FINAL: STL:" prefixes
-    return f.replace("¬", "!").replace("∧", "&&").replace("∨", "||").replace("→", "->").strip()
+    return clean(sample)
 
 
 # Pair verdicts: CACHE is loaded from disk (read-only in workers), NEW collects this process's additions.
@@ -77,18 +76,9 @@ def cluster(formulas, strip=False):
     """Class label per sample: semantic-equivalence class id, or NOT_EXPRESSIBLE if unparseable.
     strip=True ignores interval bounds."""
     if strip:
-        formulas = [structural(f) for f in formulas]
-    reps, labels = [], []
-    for f in formulas:
-        if not parses(f):
-            labels.append(NOT_EXPRESSIBLE)
-            continue
-        for i, r in enumerate(reps):
-            if equivalent(f, r):
-                labels.append(i); break
-        else:
-            reps.append(f); labels.append(len(reps) - 1)
-    return labels, reps
+        formulas = [structural(f) if f is not None else None for f in formulas]
+    labels, representatives = semantic_cluster(formulas)
+    return [NOT_EXPRESSIBLE if label is None else label for label in labels], [f for f, _ in representatives]
 
 
 def vote_correct(labels, reps, gold):
@@ -112,21 +102,25 @@ def item_row(args):
     NEW.clear()
     TOUCHED.clear()
     fs = [formula_of(s) for s in item["samples"]]
-    labels, reps = cluster(fs)
-    counts = pd.Series(labels).value_counts()
-    s_counts = pd.Series(cluster(fs, strip=True)[0]).value_counts()
+    try:
+        labels, reps = cluster(fs)
+        s_labels = cluster(fs, strip=True)[0]
+    except ValueError:
+        return None, {}
+    counts = pd.Series([x for x in labels if x != NOT_EXPRESSIBLE]).value_counts()
+    s_counts = pd.Series([x for x in s_labels if x != NOT_EXPRESSIBLE]).value_counts()
     gold = item.get("stl") or item.get("ltl")
-    acc = (sum(equivalent(f, gold) is True for f in fs) / len(fs)) if gold else float("nan")
+    acc = (sum(f is not None and equivalent(f, gold) is True for f in fs) / len(fs)) if gold else float("nan")
     row = dict(
         id=k, nl=item["nl"], unclear=int(int(k) in UNCLEAR), n_samples=len(fs),
         n_unparsed=labels.count(NOT_EXPRESSIBLE),
         n_undecided=sum((CACHE[k] if k in CACHE else NEW[k]) is None for k in TOUCHED),
-        n_classes=len(counts),
-        norm_entropy=norm_entropy(counts.tolist()),
-        majority_share=counts.iloc[0] / len(labels),
-        struct_n_classes=len(s_counts),
-        struct_norm_entropy=norm_entropy(s_counts.tolist()),
-        struct_majority_share=s_counts.iloc[0] / len(labels),
+        n_classes=len(counts) if len(counts) else float("nan"),
+        norm_entropy=norm_entropy(counts.tolist()) if len(counts) else float("nan"),
+        majority_share=counts.iloc[0] / counts.sum() if len(counts) else float("nan"),
+        struct_n_classes=len(s_counts) if len(s_counts) else float("nan"),
+        struct_norm_entropy=norm_entropy(s_counts.tolist()) if len(s_counts) else float("nan"),
+        struct_majority_share=s_counts.iloc[0] / s_counts.sum() if len(s_counts) else float("nan"),
         gold_acc=acc,
         **({f"vote_correct_{n}": vote_correct(labels[:n], reps, gold) for n in range(1, len(fs) + 1)} if gold else {}),
     )
@@ -143,7 +137,8 @@ def analyze(path, out_dir):
     items = [(k, v) for k, v in data.items() if v["samples"]]
     with Pool() as pool:  # workers fork after the cache is loaded
         results = pool.map(item_row, items, chunksize=1)
-    rows = [r for r, _ in results]
+    rows = [r for r, _ in results if r is not None]
+    print(f"Skipped {len(results) - len(rows)} items with undecided STL equivalence")
     for _, new in results:
         NEW.update(new)
     save_cache(cache_path)

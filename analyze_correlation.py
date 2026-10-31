@@ -12,25 +12,17 @@ import pandas as pd
 import spot
 from scipy import stats
 
-from ltl import ParseError
-from ltl_equiv import to_spot
+from ltl_eval import clean, cluster as semantic_cluster, parse
 
 UNCLEAR = {12, 15, 21, 24, 27, 28, 29, 30, 32}  # 0-indexed ambiguous + vague
 
 
 def formula_of(sample):
-    f = sample if isinstance(sample, str) else (sample.get("corrected_formula") or sample["formula"])
-    return f.replace("¬", "!").replace("∧", "&&").replace("∨", "||").replace("→", "->").strip()
+    return clean(sample)
 
 
-def parsed(s, cache={}):
-    """spot formula, or None if unparseable."""
-    if s not in cache:
-        try:
-            cache[s] = to_spot(s)
-        except ParseError:
-            cache[s] = None
-    return cache[s]
+def parsed(s):
+    return parse(s)
 
 
 def equivalent(a, b):
@@ -39,22 +31,13 @@ def equivalent(a, b):
     return None if fa is None or fb is None else spot.are_equivalent(fa, fb)
 
 
-NOT_EXPRESSIBLE = -1  # one shared class for every unparseable sample
+NOT_EXPRESSIBLE = -1
 
 
 def cluster(formulas):
     """Class label per sample: semantic-equivalence class id, or NOT_EXPRESSIBLE if unparseable."""
-    reps, labels = [], []
-    for f in formulas:
-        if parsed(f) is None:
-            labels.append(NOT_EXPRESSIBLE)
-            continue
-        for i, r in enumerate(reps):
-            if equivalent(f, r):
-                labels.append(i); break
-        else:
-            reps.append(f); labels.append(len(reps) - 1)
-    return labels
+    labels, _ = semantic_cluster(formulas)
+    return [NOT_EXPRESSIBLE if label is None else label for label in labels]
 
 
 def norm_entropy(counts):
@@ -68,15 +51,15 @@ def analyze(path, out_dir):
     for k, item in data.items():
         fs = [formula_of(s) for s in item["samples"]]
         labels = cluster(fs)
-        counts = pd.Series(labels).value_counts()
+        counts = pd.Series([label for label in labels if label != NOT_EXPRESSIBLE]).value_counts()
         gold = item.get("ltl")
         acc = (sum(equivalent(f, gold) is True for f in fs) / len(fs)) if gold else float("nan")
         rows.append(dict(
             id=k, nl=item["nl"], unclear=int(int(k) in UNCLEAR), n_samples=len(fs),
             n_unparsed=labels.count(NOT_EXPRESSIBLE),
-            n_classes=len(counts),
-            norm_entropy=norm_entropy(counts.tolist()),
-            majority_share=counts.iloc[0] / len(labels),
+            n_classes=len(counts) if len(counts) else float("nan"),
+            norm_entropy=norm_entropy(counts.tolist()) if len(counts) else float("nan"),
+            majority_share=counts.iloc[0] / counts.sum() if len(counts) else float("nan"),
             gold_acc=acc,
         ))
     df = pd.DataFrame(rows)

@@ -1,7 +1,6 @@
 import csv
 import json
 import os
-from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -9,6 +8,8 @@ import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 from openai import OpenAI
 from tqdm import tqdm
+from ltl_eval import clean, majority, parse
+import spot
 
 MODEL = "anthropic/claude-haiku-5.5"
 MAX_K = 10
@@ -61,12 +62,6 @@ def load_dataset(path: Path):
             nl, ltl = line.rstrip("\n").split(";", 1)
             examples.append({"nl": nl.strip(), "ltl": ltl.strip()})
     return examples
-
-
-def normalize(formula: str) -> str:
-    f = formula.strip().strip("`")
-    f = f.replace("&&", "&").replace("||", "|")
-    return "".join(f.split())
 
 
 def get_client() -> OpenAI:
@@ -122,10 +117,6 @@ def collect_raw_samples(client: OpenAI, examples):
     return cache
 
 
-def majority_vote(formulas):
-    return Counter(normalize(f) for f in formulas).most_common(1)[0][0]
-
-
 def evaluate(cache):
     rows = []
     correct_by_k = {k: [] for k in range(1, MAX_K + 1)}
@@ -135,11 +126,13 @@ def evaluate(cache):
         print(f"Skipping {len(cache) - len(complete)} examples with < {MAX_K} samples (rerun to fill).")
 
     for key, entry in complete.items():
-        gt = normalize(entry["ltl"])
-        formulas = [s["formula"] for s in entry["samples"][:MAX_K]]
+        gt = parse(clean(entry["ltl"]))
+        if gt is None:
+            raise ValueError(f"Unparseable gold formula for item {key}: {entry['ltl']}")
+        formulas = [clean(s) for s in entry["samples"][:MAX_K]]
         for k in range(1, MAX_K + 1):
-            vote = majority_vote(formulas[:k])
-            correct = int(vote == gt)
+            vote, n_valid = majority(formulas[:k])
+            correct = int(vote is not None and spot.are_equivalent(parse(vote), gt))
             correct_by_k[k].append(correct)
             rows.append(
                 {
@@ -148,6 +141,7 @@ def evaluate(cache):
                     "ground_truth": entry["ltl"],
                     "k": k,
                     "majority_vote": vote,
+                    "n_valid": n_valid,
                     "correct": correct,
                 }
             )
@@ -174,7 +168,7 @@ def plot_accuracy(summary):
     plt.figure(figsize=(7, 5))
     plt.plot(ks, accs, marker="o")
     plt.xlabel("k (number of self-consistency samples)")
-    plt.ylabel("Translation accuracy (exact match)")
+    plt.ylabel("Translation accuracy (LTL equivalence)")
     plt.title(f"NL->LTL Self-Consistency Accuracy vs k ({MODEL})")
     plt.xticks(ks)
     plt.ylim(0, 1)

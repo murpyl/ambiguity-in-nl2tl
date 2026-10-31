@@ -16,50 +16,14 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import spot
+from ltl_eval import clean, cluster, parse
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import mutual_info_score, roc_auc_score, average_precision_score
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-SYMBOLS = {"¬": "!", "∧": "&&", "∨": "||", "→": "->", "↔": "<->"}
 TAU = 0.10  # a class is "substantial" if it holds >= TAU of parsed samples
-
-
-def clean(sample):
-    """Formula string, or None if the model never produced a FORMULA: line (extraction fell back to junk)."""
-    if isinstance(sample, dict) and "FORMULA:" not in sample.get("reasoning", "FORMULA:"):
-        return None
-    f = sample if isinstance(sample, str) else (sample.get("corrected_formula") or sample["formula"])
-    for k, v in SYMBOLS.items():
-        f = f.replace(k, v)
-    return f.strip()
-
-
-def parse(s):
-    if not s:
-        return None
-    try:
-        return spot.formula(s)
-    except Exception:
-        return None
-
-
-def cluster(parsed):
-    """parsed: list of spot formulas or None. Returns class id per sample (None if unparsed)."""
-    reps, labels = [], []
-    for f in parsed:
-        if f is None:
-            labels.append(None)
-            continue
-        for i, r in enumerate(reps):
-            if spot.are_equivalent(f, r):
-                labels.append(i)
-                break
-        else:
-            reps.append(f)
-            labels.append(len(reps) - 1)
-    return labels
 
 
 def norm_entropy(counts):
@@ -70,7 +34,7 @@ def norm_entropy(counts):
 def item_features(samples_by_model):
     """samples_by_model: {model: [formula strings]}. Uses only the samples, never the gold."""
     flat = [(m, s) for m, ss in samples_by_model.items() for s in ss]
-    labels = cluster([parse(s) for _, s in flat])
+    labels, _ = cluster([s for _, s in flat])
     models = [m for (m, _), l in zip(flat, labels) if l is not None]
     cls = [l for l in labels if l is not None]
     n = len(cls)
