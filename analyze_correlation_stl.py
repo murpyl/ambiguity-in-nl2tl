@@ -177,7 +177,7 @@ def report(df, name):
 
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if a != "--report"]
-    folder = Path(args[0] if args else "raw_samples")
+    folder = Path(args[0] if args else "raw_samples_stl")
     if "--report" in sys.argv:  # print the summary from saved CSVs; no recomputation
         files = sorted(folder.glob("metrics_*.csv"))
         if not files:
