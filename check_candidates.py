@@ -16,11 +16,11 @@ def load_candidates(path):
                 item = json.loads(line)
                 if not isinstance(item, dict):
                     raise ValueError("expected a JSON object")
-                candidate_id = item.get("candidate_id")
+                candidate_id = item.get("item_id")
                 if not isinstance(candidate_id, str) or not candidate_id.strip():
-                    raise ValueError("candidate_id must be a nonempty string")
+                    raise ValueError("item_id must be a nonempty string")
                 if candidate_id in seen:
-                    raise ValueError(f"duplicate candidate_id: {candidate_id}")
+                    raise ValueError(f"duplicate item_id: {candidate_id}")
             except ValueError as exc:
                 raise ValueError(f"{path}:{line_number}: {exc}") from exc
             seen.add(candidate_id)
@@ -37,8 +37,7 @@ def atoms(node):
 
 
 def validate_item(item):
-    for field in ("scenario", "ambiguous_text", "reading_a_plain", "reading_b_plain",
-                  "reading_a_ltl", "reading_b_ltl"):
+    for field in ("item_id", "family_id", "contrast_id", "ambiguous_text"):
         if not isinstance(item.get(field), str) or not item[field].strip():
             raise ValueError(f"{field} must be a nonempty string")
     propositions = item.get("propositions")
@@ -47,10 +46,23 @@ def validate_item(item):
     if any(not isinstance(value, str) or not value.strip()
            for value in propositions.values()):
         raise ValueError("proposition definitions must be nonempty strings")
-    for field in ("reading_a_ltl", "reading_b_ltl"):
-        undefined = atoms(parse(item[field])) - propositions.keys()
+    readings = item.get("readings")
+    if not isinstance(readings, list) or len(readings) < 2:
+        raise ValueError("readings must contain at least two objects")
+    seen = set()
+    for index, reading in enumerate(readings):
+        if not isinstance(reading, dict):
+            raise ValueError(f"readings[{index}] must be an object")
+        for field in ("reading_id", "plain", "ltl", "clear_rewrite"):
+            if not isinstance(reading.get(field), str) or not reading[field].strip():
+                raise ValueError(f"readings[{index}].{field} must be nonempty text")
+        rid = reading["reading_id"]
+        if rid in seen:
+            raise ValueError(f"duplicate reading_id: {rid}")
+        seen.add(rid)
+        undefined = atoms(parse(reading["ltl"])) - propositions.keys()
         if undefined:
-            raise ValueError(f"{field}: undefined propositions: {sorted(undefined)}")
+            raise ValueError(f"{rid}: undefined propositions: {sorted(undefined)}")
 
 
 def load_solver():
@@ -72,13 +84,30 @@ def screen(item, equivalent):
     result["human_validation_status"] = "not_assessed"
     try:
         validate_item(item)
-        same, detail = equivalent(item["reading_a_ltl"], item["reading_b_ltl"])
-        if same is True:
-            status = "equivalent"
-        elif same is False:
-            status = "inequivalent"
-        else:
-            status = "error"
+        readings = item["readings"]
+        classes = [[reading["reading_id"]] for reading in readings]
+        pairwise = []
+        for i, left in enumerate(readings):
+            for right in readings[i + 1:]:
+                same, detail = equivalent(left["ltl"], right["ltl"])
+                if same is None:
+                    raise ValueError(f"undecided pair {left['reading_id']}/{right['reading_id']}: {detail}")
+                pairwise.append({
+                    "reading_ids": [left["reading_id"], right["reading_id"]],
+                    "equivalent": same,
+                    "solver_witness": detail if not same else None,
+                })
+                if same:
+                    left_class = next(group for group in classes if left["reading_id"] in group)
+                    right_class = next(group for group in classes if right["reading_id"] in group)
+                    if left_class is not right_class:
+                        left_class.extend(right_class)
+                        classes.remove(right_class)
+        result["pairwise_checks"] = pairwise
+        result["reading_classes"] = classes
+        result["k_candidate"] = len(classes)
+        status = "inequivalent" if len(classes) >= 2 else "equivalent"
+        detail = None
     except (ValueError, RuntimeError) as exc:
         status, detail = "error", str(exc)
     result["solver_status"] = status
@@ -91,18 +120,20 @@ def annotation_forms(item, annotation_id):
     # formulas, family labels, IDs, or proposed/solver witnesses into these forms.
     common = {
         "annotation_id": annotation_id,
-        "scenario": item["scenario"],
         "propositions": item["propositions"],
         "requirement": item["ambiguous_text"],
         "annotator_id": None,
     }
+    if item.get("scenario"):
+        common["scenario"] = item["scenario"]
     open_form = {**common, "interpretations": [], "comments": ""}
     assessment = {
         **common,
-        "reading_a": item["reading_a_plain"],
-        "reading_b": item["reading_b_plain"],
-        "supports_a": None,
-        "supports_b": None,
+        "readings": [
+            {"reading_id": reading["reading_id"], "plain": reading["plain"]}
+            for reading in item["readings"]
+        ],
+        "supports": {reading["reading_id"]: None for reading in item["readings"]},
         "additional_interpretations": [],
         "comments": "",
     }
