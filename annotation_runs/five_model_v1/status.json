@@ -1,0 +1,13 @@
+{
+  "status": "blocked",
+  "checked_at": "2026-11-03T23:04:01.767565+00:00",
+  "failed_phase": "OpenRouter catalog availability preflight",
+  "reason": "Active instance enforced revision 1 has allowed_hosts []; proxy rejects openrouter.ai with 403 despite updated published configuration shown by user.",
+  "completed_stages": [],
+  "failed_annotation_stage": null,
+  "paid_annotation_calls": 0,
+  "usage": null,
+  "cost": 0,
+  "model_availability": "unverified",
+  "source_entries": 88
+}
