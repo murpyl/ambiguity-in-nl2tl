@@ -50,3 +50,7 @@ tools/
 videos/
 chathistory/
 tmp/
+
+# Local annotation diagnostics and redundant run artifacts
+/annotation_archive/
+/annotation_runs/**/.run.lock

@@ -1,8 +1,0 @@
-{
-  "checked_at": "2026-11-03T23:03:09.458362+00:00",
-  "endpoint": "https://openrouter.ai/api/v1/models",
-  "phase": "catalog availability preflight",
-  "error_type": "URLError",
-  "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>",
-  "paid_annotation_calls": 0
-}
