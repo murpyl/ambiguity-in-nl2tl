@@ -17,15 +17,17 @@
 6. Reuse existing mocked and critical checks. Add tests only for failures or to
    prevent wasted paid calls. Never spend OpenRouter credits on pipeline tests.
 
-Completed run: [five_model_v1](../annotation_runs/five_model_v1/README.md).
+Completed dataset and regeneration instructions: [five_model_v1](../annotation_final/README.md).
 All ten stages completed; 810 interpretations form 326 reviewed groups. The final
 threshold-3 dataset retains 66/88 requirements with all 88 audited. Authorized
 fixes omit unsupported temperature for Claude/GPT and compact the Stage 2 schema.
 Original sources and successful stages remain unchanged.
 
-Cleanup plan: retain code/tests, all final outputs and the 60 run files required
-for regeneration, frozen-stage validation and successful-call provenance. Move
-redundant logs, exports, historical snapshots and review drafts into the ignored
-annotation_archive directory without deleting data. Preserve original state paths
-as history and record relocation hashes. Verify unchanged evidence and isolated,
-network-free regeneration from retained files; make no model calls or new tests.
+Cleanup plan: keep only the 23 files consumed by offline aggregation in
+annotation_runs/five_model_v1: config, scope, final grouping, and the validated
+data/success receipt for each of ten model stages. Preserve all other run data
+and provenance in the ignored annotation_archive directory with relocation
+hashes. The reduced run is regeneration-only; original state and response text
+must be restored before any annotation runner use. Keep all final outputs and
+verify byte-identical regeneration in isolation with network blocked. Make no
+model calls, code changes or new tests.
