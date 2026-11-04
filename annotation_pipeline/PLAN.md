@@ -40,3 +40,12 @@ Preserve voting, run inputs and existing family/audit JSONL files unchanged.
 Include the new file in generated metadata and use the same regeneration
 command documented in annotation_final/README.md. Reuse the existing 24 tests
 and compilation checks; make no model calls or new routine tests.
+
+Visual explorer plan: build `annotation_final/explorer.html` from the 21 original
+final exports and frozen scope entries using a Python standard-library builder.
+Keep final (66), excluded audit-only (22), and all (88) views distinct. Expose
+all model interpretations/comments/labels/additions, semantic group membership,
+reading votes, full record fields and original source file text/downloads.
+Use embedded data for direct offline opening; preserve every dataset/run input
+and all voting behavior. Verify embedded data identity, deterministic builds
+and inline JavaScript syntax without model calls or new routine tests.

@@ -1,6 +1,7 @@
 # Final five-model annotation dataset
 
 Combined final dataset: [dataset.jsonl](five_model_v1/dataset.jsonl).
+Interactive offline display: [Annotation Atlas](explorer.html).
 All five exact models completed both stages for all 88 source requirements.
 The 326 reviewed semantic groups cover all 810 original Stage 1 interpretations.
 At threshold 3 out of the fixed 5 models, 66 requirements are retained and 22
@@ -90,3 +91,35 @@ run supports offline regeneration. The combined export preserves the 19 existing
 family/audit JSONL files byte for byte; only metadata changes to list the new
 dataset. Source files, retained inputs and all ten receipts are unchanged.
 No paid calls or new tests were needed for this export.
+
+## Offline visual explorer
+
+Open [explorer.html](explorer.html) directly in a browser. The self-contained
+viewer defaults to the 66 final records; switch to Excluded for 22 audit-only
+records or All for all 88. Search every record value, filter by family, and
+inspect reading consensus, all five models’ original Stage 1 wording and
+comments, Stage 2 labels/comments/additions, and every reviewed semantic group.
+Stage 2 additions remain explicitly separate from Stage 1 voting.
+
+The Every field view exposes complete record values. Source files & global
+provenance preserves all 21 generated files as original UTF-8 text, including
+empty family files, with individual downloads and full metadata/input hashes.
+The final dataset download preserves `dataset.jsonl` exactly. Frozen scope
+entries cover all 88 records; excluded records are never presented as final rows.
+The viewer makes no network requests and needs no server or dependencies.
+
+Rebuild it after regenerating the dataset:
+
+```sh
+python -m annotation_pipeline.build_final_display
+```
+
+The builder reads the existing final files and frozen scope; it does not modify
+annotations, aggregation, thresholds or provenance. It writes only
+`annotation_final/explorer.html`, outside the generated dataset directory.
+Optional `--source`, `--scope` and `--output` arguments select other local paths.
+
+Viewer verification covers exact embedded source data, all model results,
+deterministic generation, output-path protection and JavaScript syntax. All 24
+existing tests and compilation pass. Browser rendering and interactions remain
+unverified because approved managed-browser tools were unavailable.
