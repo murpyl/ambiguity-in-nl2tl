@@ -31,3 +31,12 @@ hashes. The reduced run is regeneration-only; original state and response text
 must be restored before any annotation runner use. Keep all final outputs and
 verify byte-identical regeneration in isolation with network blocked. Make no
 model calls, code changes or new tests.
+
+Combined export plan: extend offline aggregation to write `dataset.jsonl`, one
+eligible requirement per line in source review order. Combine existing paired
+family fields with global review/family identity, all Stage 1 group audits,
+reading votes, per-model Stage 2 additions/comments and input-hash provenance.
+Preserve voting, run inputs and existing family/audit JSONL files unchanged.
+Include the new file in generated metadata and use the same regeneration
+command documented in annotation_final/README.md. Reuse the existing 24 tests
+and compilation checks; make no model calls or new routine tests.

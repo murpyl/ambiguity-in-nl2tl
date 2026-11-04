@@ -200,6 +200,24 @@ def write_jsonl(path, rows):
     path.write_text("".join(json.dumps(row, ensure_ascii=False, sort_keys=True) + "\n" for row in rows), encoding="utf-8")
 
 
+def combined_dataset(families, votes, additions, provenance):
+    paired = {}
+    for family, (opens, readings) in families.items():
+        assessments = {row["annotation_id"]: row for row in readings}
+        for row in opens:
+            paired[family, row["annotation_id"]] = {**row, **assessments[row["annotation_id"]]}
+    stage2 = {}
+    for row in additions:
+        stage2.setdefault(row["review_id"], []).append(row)
+    return [
+        {**paired[vote["source_family"], vote["annotation_id"]],
+         "review_id": vote["review_id"], "source_family": vote["source_family"],
+         "stage1_groups": vote["groups"], "reading_votes": vote["readings"],
+         "stage2_annotations": stage2[vote["review_id"]], "provenance": provenance}
+        for vote in votes if vote["eligible"]
+    ]
+
+
 def regenerate(run, output, min_agreeing_models=None, expected_count=88):
     run, output = Path(run), Path(output)
     config = read_json(run / "config.json")
@@ -232,6 +250,8 @@ def regenerate(run, output, min_agreeing_models=None, expected_count=88):
         write_jsonl(temporary / "stage2_additional_interpretations.jsonl", additions)
         provenance = {str(p.relative_to(run)): digest(p) for p in sorted(run.glob("*/stage*.validated.json"))}
         provenance.update({name: digest(run / name) for name in ("config.json", "scope.json", "grouping.json")})
+        dataset_provenance = {"model_generated": True, "expected_models": MODELS, "population": 5, "min_agreeing_models": minimum, "input_sha256": provenance}
+        write_jsonl(temporary / "dataset.jsonl", combined_dataset(families, votes, additions, dataset_provenance))
         metadata = {"generator": ANNOTATOR, "model_generated": True, "expected_models": MODELS, "min_agreeing_models": minimum, "population": 5, "requirements": len(scope), "eligible_requirements": sum(v["eligible"] for v in votes), "input_sha256": provenance, "generated_files": sorted([p.name for p in temporary.iterdir()] + ["metadata.json"])}
         write_json(temporary / "metadata.json", metadata)
         if output.exists():
