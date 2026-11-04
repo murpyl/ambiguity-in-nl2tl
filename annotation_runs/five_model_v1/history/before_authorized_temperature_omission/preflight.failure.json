@@ -1,0 +1,7 @@
+{
+  "failed_at": "2026-11-03T23:20:08.801681+00:00",
+  "error_type": "ValueError",
+  "reason": "ValueError: Configured temperature is not supported by catalog for: anthropic/claude-haiku-5.5, openai/gpt-5.6-luna",
+  "paid_annotation_calls": 0,
+  "source": "actual runner command, exit 2"
+}

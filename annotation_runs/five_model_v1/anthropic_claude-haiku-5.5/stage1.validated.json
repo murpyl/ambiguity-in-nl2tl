@@ -1,0 +1,636 @@
+{
+  "entries": [
+    {
+      "review_id": "R001",
+      "comments": "",
+      "interpretations": [
+        "Eventually a pulse occurs and eventually a flash occurs, in either order and possibly at the same step",
+        "Both events must occur at the same step at some point"
+      ]
+    },
+    {
+      "review_id": "R002",
+      "comments": "",
+      "interpretations": [
+        "Infinitely often a pulse occurs and infinitely often a flash occurs"
+      ]
+    },
+    {
+      "review_id": "R003",
+      "comments": "",
+      "interpretations": [
+        "At every step where a request occurs, a pulse and a flash occur at that same step or later",
+        "At every request, a pulse and a flash occur at strictly later steps"
+      ]
+    },
+    {
+      "review_id": "R004",
+      "comments": "",
+      "interpretations": [
+        "A pulse and a flash both occur strictly before the first stop; if a stop occurs, both must precede it",
+        "Pulse and flash must occur before any stop, with no stop required to occur"
+      ]
+    },
+    {
+      "review_id": "R005",
+      "comments": "",
+      "interpretations": [
+        "After each request, a pulse and a flash occur before the next stop, with the request-to-stop window containing both",
+        "After each request, a pulse and a flash occur at or before the next stop"
+      ]
+    },
+    {
+      "review_id": "R006",
+      "comments": "",
+      "interpretations": [
+        "At some step the signal and the indicator are both active, and both remain active at the following step"
+      ]
+    },
+    {
+      "review_id": "R007",
+      "comments": "",
+      "interpretations": [
+        "Eventually the signal is active and eventually the indicator is active, possibly at different times",
+        "Eventually the signal and the indicator are both active at the same step"
+      ]
+    },
+    {
+      "review_id": "R008",
+      "comments": "",
+      "interpretations": [
+        "Eventually both the signal and the indicator become active and remain active continuously until a release occurs, with release required"
+      ]
+    },
+    {
+      "review_id": "R009",
+      "comments": "",
+      "interpretations": [
+        "A pulse and a flash occur, and a completion occurs afterward",
+        "Eventually a pulse and a flash occur, and at some later step a completion occurs"
+      ]
+    },
+    {
+      "review_id": "R010",
+      "comments": "",
+      "interpretations": [
+        "After each start, a pulse and a flash occur before the next finish",
+        "After a start, a pulse and a flash occur before a finish, with the finish occurring after both"
+      ]
+    },
+    {
+      "review_id": "R011",
+      "comments": "",
+      "interpretations": [
+        "Eventually a pulse is immediately followed by a flash, and eventually a click is immediately followed by a mark"
+      ]
+    },
+    {
+      "review_id": "R012",
+      "comments": "",
+      "interpretations": [
+        "Infinitely often the signal and the indicator are both active on two consecutive steps"
+      ]
+    },
+    {
+      "review_id": "R013",
+      "comments": "",
+      "interpretations": [
+        "Every pulse is followed by a flash at the same or a later step",
+        "Every pulse is followed by a flash at a strictly later step"
+      ]
+    },
+    {
+      "review_id": "R014",
+      "comments": "",
+      "interpretations": [
+        "If a pulse occurs at the current step, a flash occurs at that step or later",
+        "If a pulse occurs now, a flash occurs at the next step"
+      ]
+    },
+    {
+      "review_id": "R015",
+      "comments": "",
+      "interpretations": [
+        "At least one pulse occurs and a flash occurs at that step or later",
+        "At least one pulse occurs and a flash occurs at a strictly later step"
+      ]
+    },
+    {
+      "review_id": "R016",
+      "comments": "",
+      "interpretations": [
+        "After every pulse, the indicator is on at that step or later and stays on forever"
+      ]
+    },
+    {
+      "review_id": "R017",
+      "comments": "",
+      "interpretations": [
+        "A stop occurs, and every pulse before the first stop is eventually followed by a flash, possibly after the stop"
+      ]
+    },
+    {
+      "review_id": "R018",
+      "comments": "",
+      "interpretations": [
+        "Every pulse is followed by a flash, and a chime occurs at some step strictly after that flash"
+      ]
+    },
+    {
+      "review_id": "R019",
+      "comments": "",
+      "interpretations": [
+        "No pulse is ever followed by a flash, so any pulse must have no later flash",
+        "A pulse must not occur at all, since any pulse would be followed by a flash"
+      ]
+    },
+    {
+      "review_id": "R020",
+      "comments": "",
+      "interpretations": [
+        "Every pulse is followed by a flash strictly later and before the next stop, and the flash does not occur at a stop step"
+      ]
+    },
+    {
+      "review_id": "R021",
+      "comments": "",
+      "interpretations": [
+        "Whenever pulses occur at two consecutive steps, a flash occurs at some step at or after the second pulse",
+        "Whenever pulses occur at two consecutive steps, a flash occurs at a strictly later step"
+      ]
+    },
+    {
+      "review_id": "R022",
+      "comments": "",
+      "interpretations": [
+        "There is some point after which every pulse is followed by a flash"
+      ]
+    },
+    {
+      "review_id": "R023",
+      "comments": "",
+      "interpretations": [
+        "Infinitely often a pulse is followed by a flash"
+      ]
+    },
+    {
+      "review_id": "R024",
+      "comments": "",
+      "interpretations": [
+        "After an activation at step t, every pulse at or after t is followed by a flash at that step or later"
+      ]
+    },
+    {
+      "review_id": "R025",
+      "comments": "",
+      "interpretations": [
+        "Whenever a request occurs, the response is active at that same step",
+        "Whenever a request occurs, the response is active at that step or at some later step"
+      ]
+    },
+    {
+      "review_id": "R026",
+      "comments": "",
+      "interpretations": [
+        "If a request occurs at the initial step, the response is active at that initial step"
+      ]
+    },
+    {
+      "review_id": "R027",
+      "comments": "",
+      "interpretations": [
+        "At some step a request occurs and the response is active at that same step"
+      ]
+    },
+    {
+      "review_id": "R028",
+      "comments": "",
+      "interpretations": [
+        "Infinitely often a request occurs while the response is active at that step"
+      ]
+    },
+    {
+      "review_id": "R029",
+      "comments": "",
+      "interpretations": [
+        "From some point onward, whenever a request occurs the response is active at that step"
+      ]
+    },
+    {
+      "review_id": "R030",
+      "comments": "",
+      "interpretations": [
+        "Once a request occurs, the response is active until a release, and a release eventually occurs"
+      ]
+    },
+    {
+      "review_id": "R031",
+      "comments": "",
+      "interpretations": [
+        "Each request requires the response to be active until a release, with the response allowed to stay active forever if no release occurs"
+      ]
+    },
+    {
+      "review_id": "R032",
+      "comments": "",
+      "interpretations": [
+        "After the first release, every request has an active response at that step"
+      ]
+    },
+    {
+      "review_id": "R033",
+      "comments": "",
+      "interpretations": [
+        "Each request is followed by the response being active at that step and at all later steps forever"
+      ]
+    },
+    {
+      "review_id": "R034",
+      "comments": "",
+      "interpretations": [
+        "Each request requires the response to stay active until a release, and a release must occur"
+      ]
+    },
+    {
+      "review_id": "R035",
+      "comments": "",
+      "interpretations": [
+        "After each request, the response is active at the next step"
+      ]
+    },
+    {
+      "review_id": "R036",
+      "comments": "",
+      "interpretations": [
+        "When a request occurs while the response is permitted, the response is active at that step or later"
+      ]
+    },
+    {
+      "review_id": "R037",
+      "comments": "",
+      "interpretations": [
+        "Every pulse has a flash at the same step or at a later step"
+      ]
+    },
+    {
+      "review_id": "R038",
+      "comments": "",
+      "interpretations": [
+        "Whenever a pulse occurs, the light is on at that same step"
+      ]
+    },
+    {
+      "review_id": "R039",
+      "comments": "",
+      "interpretations": [
+        "Every pulse is followed by a flash at the next step"
+      ]
+    },
+    {
+      "review_id": "R040",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, the light is on at that step and stays on at every later step"
+      ]
+    },
+    {
+      "review_id": "R041",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, the light stays on until a release, and a release must occur"
+      ]
+    },
+    {
+      "review_id": "R042",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, the light stays on until a release occurs, or stays on forever if no release occurs"
+      ]
+    },
+    {
+      "review_id": "R043",
+      "comments": "",
+      "interpretations": [
+        "After each pulse, the light is on at the first release at or after that pulse, and such a release must occur"
+      ]
+    },
+    {
+      "review_id": "R044",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, a release occurs before any flash, and a flash occurs at or after that release"
+      ]
+    },
+    {
+      "review_id": "R045",
+      "comments": "",
+      "interpretations": [
+        "When a pulse occurs while enabled, a flash occurs at that step or at a later step"
+      ]
+    },
+    {
+      "review_id": "R046",
+      "comments": "",
+      "interpretations": [
+        "Any pulse occurring before the first stop has a flash at that step or at a later step"
+      ]
+    },
+    {
+      "review_id": "R047",
+      "comments": "",
+      "interpretations": [
+        "At the current step, neither the first nor the second indicator is active"
+      ]
+    },
+    {
+      "review_id": "R048",
+      "comments": "",
+      "interpretations": [
+        "At every step, neither the first nor the second indicator is active"
+      ]
+    },
+    {
+      "review_id": "R049",
+      "comments": "",
+      "interpretations": [
+        "At some step, neither the first nor the second indicator is active"
+      ]
+    },
+    {
+      "review_id": "R050",
+      "comments": "",
+      "interpretations": [
+        "Infinitely often, neither the first nor the second indicator is active"
+      ]
+    },
+    {
+      "review_id": "R051",
+      "comments": "",
+      "interpretations": [
+        "There is some step after which neither the first nor the second indicator is active"
+      ]
+    },
+    {
+      "review_id": "R052",
+      "comments": "",
+      "interpretations": [
+        "Neither indicator is active until a release occurs, and a release must occur"
+      ]
+    },
+    {
+      "review_id": "R053",
+      "comments": "",
+      "interpretations": [
+        "Neither indicator is active until a release occurs, with the indicators allowed to stay inactive forever if no release occurs"
+      ]
+    },
+    {
+      "review_id": "R054",
+      "comments": "",
+      "interpretations": [
+        "At every step where the gate is open, neither indicator is active at that step"
+      ]
+    },
+    {
+      "review_id": "R055",
+      "comments": "",
+      "interpretations": [
+        "Whenever a pulse occurs, neither indicator is active at the immediately following step"
+      ]
+    },
+    {
+      "review_id": "R056",
+      "comments": "",
+      "interpretations": [
+        "After each pulse, there is some step at or after it where neither indicator is active"
+      ]
+    },
+    {
+      "review_id": "R057",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, neither indicator is active from that step until a release at that step or later, and such a release must occur"
+      ]
+    },
+    {
+      "review_id": "R058",
+      "comments": "",
+      "interpretations": [
+        "A check occurs at some step where neither indicator is active"
+      ]
+    },
+    {
+      "review_id": "R059",
+      "comments": "",
+      "interpretations": [
+        "Every request is answered by a pulse or a flash at the same step",
+        "Every request is answered by a pulse or a flash at some step at or after the request"
+      ]
+    },
+    {
+      "review_id": "R060",
+      "comments": "",
+      "interpretations": [
+        "After a request, the next step contains a pulse or a flash"
+      ]
+    },
+    {
+      "review_id": "R061",
+      "comments": "",
+      "interpretations": [
+        "A request is answered immediately by a pulse or a flash, exclusively, at the next step",
+        "A request is answered at the same step by exactly one of a pulse or a flash"
+      ]
+    },
+    {
+      "review_id": "R062",
+      "comments": "",
+      "interpretations": [
+        "Each request is followed by either a pulse then a flash, or a flash then a pulse, on consecutive steps"
+      ]
+    },
+    {
+      "review_id": "R063",
+      "comments": "",
+      "interpretations": [
+        "A request requires the first or second signal to stay active until a release, and a release must eventually occur"
+      ]
+    },
+    {
+      "review_id": "R064",
+      "comments": "",
+      "interpretations": [
+        "A request requires the first or second signal to remain active until a release, with the signal allowed to stay active forever if no release occurs"
+      ]
+    },
+    {
+      "review_id": "R065",
+      "comments": "",
+      "interpretations": [
+        "Requests before a stop must each receive an immediate pulse or flash, and a stop must eventually occur"
+      ]
+    },
+    {
+      "review_id": "R066",
+      "comments": "",
+      "interpretations": [
+        "Requests before any stop must each receive an immediate pulse or flash, with no stop required"
+      ]
+    },
+    {
+      "review_id": "R067",
+      "comments": "",
+      "interpretations": [
+        "Each request is followed by a pulse or flash before the next stop, at the same step or later"
+      ]
+    },
+    {
+      "review_id": "R068",
+      "comments": "",
+      "interpretations": [
+        "The state is active at every step until a release occurs, with a release required or optional"
+      ]
+    },
+    {
+      "review_id": "R069",
+      "comments": "",
+      "interpretations": [
+        "Whenever a request occurs, the state is active from that step until a release occurs"
+      ]
+    },
+    {
+      "review_id": "R070",
+      "comments": "",
+      "interpretations": [
+        "Eventually the state is active continuously until a release occurs"
+      ]
+    },
+    {
+      "review_id": "R071",
+      "comments": "",
+      "interpretations": [
+        "At every step, the state is active until a release occurs"
+      ]
+    },
+    {
+      "review_id": "R072",
+      "comments": "",
+      "interpretations": [
+        "The state and the indicator are both lit and active continuously until a release occurs"
+      ]
+    },
+    {
+      "review_id": "R073",
+      "comments": "",
+      "interpretations": [
+        "The state is active until either a release or a cancellation occurs"
+      ]
+    },
+    {
+      "review_id": "R074",
+      "comments": "",
+      "interpretations": [
+        "The state is active until a release occurs, with the indicator lit throughout that interval",
+        "The state is active until a release, and the indicator is lit at the release step"
+      ]
+    },
+    {
+      "review_id": "R075",
+      "comments": "",
+      "interpretations": [
+        "The state stays active until the indicator becomes lit permanently"
+      ]
+    },
+    {
+      "review_id": "R076",
+      "comments": "",
+      "interpretations": [
+        "After each request, starting at the next step, the state stays active until a release occurs"
+      ]
+    },
+    {
+      "review_id": "R077",
+      "comments": "",
+      "interpretations": [
+        "Until a release occurs, every pulse is followed by a flash at the next step"
+      ]
+    },
+    {
+      "review_id": "R078",
+      "comments": "",
+      "interpretations": [
+        "The first state stays active until a handoff, after which the second state stays active until a release, and the release must eventually occur"
+      ]
+    },
+    {
+      "review_id": "R079",
+      "comments": "",
+      "interpretations": [
+        "A handoff must eventually occur with the first state active before it, and after the handoff the second state stays active until a release"
+      ]
+    },
+    {
+      "review_id": "R080",
+      "comments": "",
+      "interpretations": [
+        "Every pulse is followed by a flash at some later step"
+      ]
+    },
+    {
+      "review_id": "R081",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, the light is on at the next step and stays on from then onward"
+      ]
+    },
+    {
+      "review_id": "R082",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, the light eventually stays on from some later step onward"
+      ]
+    },
+    {
+      "review_id": "R083",
+      "comments": "",
+      "interpretations": [
+        "Every pulse is followed by a flash at a later step, and a chime occurs at a still later step"
+      ]
+    },
+    {
+      "review_id": "R084",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, a flash occurs at a later step with no pulse occurring between them"
+      ]
+    },
+    {
+      "review_id": "R085",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, a flash occurs at a later step with no pause state holding between them"
+      ]
+    },
+    {
+      "review_id": "R086",
+      "comments": "",
+      "interpretations": [
+        "After a pulse, the next release occurs while the light is on"
+      ]
+    },
+    {
+      "review_id": "R087",
+      "comments": "",
+      "interpretations": [
+        "When a pulse occurs while enabled, a flash occurs at some later step"
+      ]
+    },
+    {
+      "review_id": "R088",
+      "comments": "",
+      "interpretations": [
+        "Any pulse before the first stop is followed by a flash at a later step that also occurs before that stop"
+      ]
+    }
+  ]
+}

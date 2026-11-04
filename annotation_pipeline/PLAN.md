@@ -44,3 +44,31 @@ Updated testing policy: only write new tests when something breaks, or when
 needed before paid calls to prevent wasted calls. Reuse existing tests and run
 the mocked end-to-end and critical validation checks before paid annotation.
 Do not create routine tests for documentation edits or unrelated changes.
+
+Continuation preflight: the live catalog advertises no temperature parameter
+for Claude Haiku 5.5 or GPT 5.6 Luna, while the frozen configuration requests
+temperature 0 with require_parameters enabled. Add a critical preflight guard
+and regression before paid calls; preserve configuration and pause on this
+unsupported setting rather than spending credits or silently changing sampling.
+
+Authorized continuation: user approved omitting unsupported temperature only for
+Claude Haiku 5.5 and GPT 5.6 Luna. Add explicit omit_temperature_models config,
+validate its known unique model IDs, record effective per-model settings in
+preflight, and use those exact settings in requests. Preserve temperature 0 for
+the other three models and the existing output/timeout budgets. Reuse mocked
+end-to-end checks and add only the paid-call protection regression before calls.
+
+Authorized grammar fix: Claude Stage 2 returned HTTP 400 because the compiled
+88-branch strict schema was too large. Replace review-ID branches with a shared
+row schema and support shapes deduplicated by reading-ID keyset. Preserve Stage
+1 prompts/schema and frozen responses. Keep exact 88-entry/ID/reading-label
+validation locally. Before resuming, test schema compactness, validation rejection
+and mocked failure/resume preserving the three successful stages. Resume only
+after independent audit; retain the failed attempt and all successful artifacts.
+
+Completion: all five exact models finished both validated stages after explicit
+user-authorized continuations. Coordinator and four semantic review subagents
+reviewed all810 originals; final independent audit refinements are recorded.
+Final326 groups preserve exact membership and stable IDs. Network-free
+regeneration at threshold3 retained66/88, with all88 audited and22 exclusions.
+No original source files or successful stages were changed.

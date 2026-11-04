@@ -1,4 +1,7 @@
 import json
+import copy
+import io
+import urllib.error
 import os
 from pathlib import Path
 import tempfile
@@ -36,7 +39,7 @@ class RunnerTests(unittest.TestCase):
         if endpoint == '/models':
             return json.dumps({'data': [{'id': m, 'context_length': 1000000,
                 'top_provider': {'max_completion_tokens': 100000},
-                'supported_parameters': []} for m in r.MODELS]}).encode(), {}
+                'supported_parameters': ['temperature']} for m in r.MODELS]}).encode(), {}
         self.calls.append(payload)
         stage = 1 if len(payload['messages']) == 1 else 2
         data = answers(self.scope, stage)
@@ -105,6 +108,129 @@ class RunnerTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'Unavailable'):
                 r.preflight(Path(tmp), self.scope, self.config, empty)
         self.assertEqual(self.calls, [])
+
+    def test_unsupported_temperature_blocks_all_paid_calls(self):
+        unsupported = [r.MODELS[1], r.MODELS[2]]
+        def catalog_without_temperature(*args, **kwargs):
+            raw, headers = self.transport(*args, **kwargs)
+            catalog = json.loads(raw)
+            for model in catalog['data']:
+                if model['id'] in unsupported:
+                    model['supported_parameters'] = []
+            return json.dumps(catalog).encode(), headers
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {'OPENROUTER_API_KEY': 'test'}):
+            run = Path(tmp)
+            with self.assertRaisesRegex(ValueError, 'Configured temperature') as caught:
+                r.annotate(run, self.scope, self.config, catalog_without_temperature)
+            for model in unsupported:
+                self.assertIn(model, str(caught.exception))
+            self.assertEqual(self.calls, [])
+            self.assertEqual(r.read(run / 'state.json')['status'], 'paused')
+            self.assertEqual(r.read(run / 'state.json')['attempts'], [])
+
+
+    def test_authorized_temperature_omission_full_mock_run(self):
+        omitted = [r.MODELS[1], r.MODELS[2]]
+        self.config['omit_temperature_models'] = omitted
+        def catalog_without_temperature(*args, **kwargs):
+            raw, headers = self.transport(*args, **kwargs)
+            if args[1] == '/models':
+                catalog = json.loads(raw)
+                for model in catalog['data']:
+                    if model['id'] in omitted:
+                        model['supported_parameters'] = []
+                raw = json.dumps(catalog).encode()
+            return raw, headers
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {'OPENROUTER_API_KEY': 'test'}):
+            run = Path(tmp)
+            r.annotate(run, self.scope, self.config, catalog_without_temperature)
+            self.assertEqual(len(self.calls), 10)
+            budgets = r.read(run / 'preflight.json')['budgets']
+            for payload in self.calls:
+                expected = {'max_tokens': 60000}
+                if payload['model'] not in omitted:
+                    expected['temperature'] = 0
+                self.assertEqual({k: payload[k] for k in ('max_tokens', 'temperature') if k in payload}, expected)
+                self.assertEqual(budgets[payload['model']]['generation_settings'], expected)
+            self.assertEqual(r.read(run / 'state.json')['status'], 'annotations_complete')
+            r.annotate(run, self.scope, self.config, catalog_without_temperature)
+            self.assertEqual(len(self.calls), 10)
+
+    def test_invalid_temperature_omission_blocks_calls(self):
+        for invalid in ('anthropic/claude-haiku-5.5', [r.MODELS[1], r.MODELS[1]], ['unknown/model'], [None]):
+            with self.subTest(invalid=invalid), tempfile.TemporaryDirectory() as tmp:
+                config = {**self.config, 'omit_temperature_models': invalid}
+                with self.assertRaisesRegex(ValueError, 'omit_temperature_models'):
+                    r.annotate(Path(tmp), self.scope, config, self.transport)
+                self.assertEqual(self.calls, [])
+
+
+    def test_compact_stage2_schema_and_exact_local_validation(self):
+        scope = r.read(Path(__file__).resolve().parents[1] / 'annotation_runs/five_model_v1/scope.json')
+        compact = r.schema(2, scope['entries'])
+        self.assertLess(len(json.dumps(compact).encode()), 2000)
+        self.assertEqual(compact, r.schema(2, scope['entries'][:1]))
+        row_schema = compact['properties']['entries']['items']
+        self.assertNotIn('anyOf', row_schema)
+        self.assertEqual(row_schema['properties']['review_id'], {'type': 'string'})
+        self.assertEqual(set(row_schema['properties']['supports']['required']), {'a', 'b'})
+        valid = {'entries': [{'review_id': entry['review_id'], 'comments': '',
+                             'supports': {'a': 'Supported', 'b': 'Not supported'},
+                             'additional_interpretations': []} for entry in scope['entries']]}
+        self.assertIs(r.validate(valid, scope['entries'], 2), valid)
+        for mutation in ('missing', 'extra', 'duplicate', 'unknown', 'missing_reading', 'extra_reading', 'invalid_label'):
+            with self.subTest(mutation=mutation):
+                invalid = copy.deepcopy(valid)
+                if mutation == 'missing':
+                    invalid['entries'].pop()
+                elif mutation == 'extra':
+                    invalid['entries'].append(copy.deepcopy(invalid['entries'][0]))
+                elif mutation == 'duplicate':
+                    invalid['entries'][-1] = copy.deepcopy(invalid['entries'][0])
+                elif mutation == 'unknown':
+                    invalid['entries'][0]['review_id'] = 'UNKNOWN'
+                elif mutation == 'missing_reading':
+                    invalid['entries'][0]['supports'].pop('b')
+                elif mutation == 'extra_reading':
+                    invalid['entries'][0]['supports']['c'] = 'Supported'
+                else:
+                    invalid['entries'][0]['supports']['a'] = 'INVALID'
+                with self.assertRaises(ValueError):
+                    r.validate(invalid, scope['entries'], 2)
+        # Shared grammar shapes do not weaken per-review reading-key validation.
+        varied = copy.deepcopy(self.scope)
+        varied['entries'][0]['readings'][0]['reading_id'] = 'b'
+        grammar = r.schema(2, varied['entries'])
+        supports = grammar['properties']['entries']['items']['properties']['supports']
+        self.assertEqual(len(supports['anyOf']), 2)
+        with self.assertRaisesRegex(ValueError, 'reading assessments'):
+            r.validate(answers(varied, 2), varied['entries'], 2)
+
+    def test_resume_after_stage2_grammar_failure_preserves_three_successes(self):
+        def grammar_failure(*args, **kwargs):
+            raw, headers = self.transport(*args, **kwargs)
+            if args[0] == 'POST' and len(self.calls) == 4:
+                raise urllib.error.HTTPError('https://example.invalid', 400, 'Bad Request', {},
+                    io.BytesIO(b'{"error":{"message":"The compiled grammar is too large"}}'))
+            return raw, headers
+        with tempfile.TemporaryDirectory() as tmp, patch.dict(os.environ, {'OPENROUTER_API_KEY': 'test'}):
+            run = Path(tmp)
+            with self.assertRaises(urllib.error.HTTPError):
+                r.annotate(run, self.scope, self.config, grammar_failure)
+            state = r.read(run / 'state.json')
+            self.assertEqual([a['status'] for a in state['attempts']], ['validated'] * 3 + ['failed'])
+            preserved = {p: p.read_bytes() for p in run.glob('*/stage*') if p.is_file()}
+            frozen = (run / r.MODELS[1].replace('/', '_') / 'stage1.content.txt').read_text()
+            with self.assertRaisesRegex(ValueError, 'authorize-resume'):
+                r.annotate(run, self.scope, self.config, self.transport)
+            self.assertEqual(len(self.calls), 4)
+            r.annotate(run, self.scope, self.config, self.transport, resume=True)
+            self.assertEqual(len(self.calls), 11)
+            self.assertEqual(self.calls[4]['model'], r.MODELS[1])
+            self.assertEqual(self.calls[4]['messages'][1]['content'], frozen)
+            self.assertTrue(all(path.read_bytes() == content for path, content in preserved.items()))
+            self.assertEqual(r.read(run / 'state.json')['status'], 'annotations_complete')
+            self.assertEqual(len(list(run.glob('*/stage*.success.json'))), 10)
 
 
 if __name__ == '__main__':

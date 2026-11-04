@@ -1,0 +1,651 @@
+[
+  {
+    "review_id": "R023",
+    "requirement": "A pulse followed by a flash must occur over and over without end.",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Infinitely often, a pulse occurs that is subsequently followed by a flash.",
+        "A sequence of a pulse followed by a flash repeats indefinitely."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Infinitely often a pulse is followed by a flash"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Pulse-then-flash pairs occur infinitely often, with no final pair."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "Infinitely often a pulse occurs and later a flash occurs.",
+        "Infinitely often a pulse is immediately followed by a flash.",
+        "From every point onward there is a future pulse-flash pair."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Infinitely often, a pulse occurs and is followed later by a flash.",
+        "The pulse-flash sequence must repeat without end, though the spacing between occurrences is not fixed."
+      ]
+    }
+  },
+  {
+    "review_id": "R024",
+    "requirement": "Once an activation occurs, every pulse from that step onward must be followed by a flash.",
+    "propositions": {
+      "a": "an activation occurs",
+      "b": "a pulse occurs",
+      "c": "a flash occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "After the first occurrence of an activation, every pulse that occurs from that step onward must be followed by a flash.",
+        "Once an activation occurs, all pulses from the next step onward must be followed by a flash."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "After an activation at step t, every pulse at or after t is followed by a flash at that step or later"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Once an activation occurs, every pulse at that step or later must be followed by a flash."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "After the first activation, every pulse at or after that step has a later flash.",
+        "After any activation, every pulse from that activation step onward has a later flash.",
+        "After activation, every pulse is immediately followed by a flash."
+      ],
+      "qwen/qwen3.8-flash": [
+        "At the first activation step, every pulse from that step onward must be followed by a flash at a later step.",
+        "Pulses before activation are unconstrained, but activation starts a permanent pulse-to-flash obligation."
+      ]
+    }
+  },
+  {
+    "review_id": "R025",
+    "requirement": "Requests require an active response.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a request occurs, the response must be active at that same step.",
+        "Whenever a request occurs, the response must eventually become active at or after the request."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Whenever a request occurs, the response is active at that same step",
+        "Whenever a request occurs, the response is active at that step or at some later step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Every request requires an active response, likely at the same step or during the request's response interval; no timing is specified."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "At every step where a request occurs, the response is active at that same step.",
+        "For every request, the response is active at some later step.",
+        "For every request, the response is active at that step or later."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Every request must be accompanied or followed by an active response.",
+        "Every request requires an active response, possibly at the same step or at a later step."
+      ]
+    }
+  },
+  {
+    "review_id": "R026",
+    "requirement": "A request at the starting step requires an active response.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "If a request occurs at step 0, the response must be active at step 0.",
+        "If a request occurs at step 0, the response must eventually become active."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "If a request occurs at the initial step, the response is active at that initial step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "If a request occurs at the initial step, an active response is required for it, likely at that step."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "If a request occurs at the initial step, the response is active at that initial step.",
+        "If a request occurs at the initial step, the response is active at some later step.",
+        "If a request occurs at the initial step, the response is active at that step or later."
+      ],
+      "qwen/qwen3.8-flash": [
+        "If a request occurs at the initial step, then an active response must occur at some later step.",
+        "If a request occurs at the initial step, then an active response must occur immediately, possibly at the same or next step."
+      ]
+    }
+  },
+  {
+    "review_id": "R027",
+    "requirement": "There must be a request with an active response.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "There must exist a step where a request occurs and the response is active.",
+        "There must exist a request that eventually receives an active response."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "At some step a request occurs and the response is active at that same step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "There exists a request that has an active response, with no required timing beyond their association."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "At some future step a request occurs and the response is active at that same step.",
+        "There exists a request and a response active at some possibly different step associated with it.",
+        "At some future step a request occurs and the response is active at that step or later."
+      ],
+      "qwen/qwen3.8-flash": [
+        "There exists at least one step where a request occurs and the response is active at that step.",
+        "There exists at least one request that is followed by an active response."
+      ]
+    }
+  },
+  {
+    "review_id": "R028",
+    "requirement": "Requests with an active response must keep occurring.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Steps where a request occurs and the response is active must occur infinitely often.",
+        "Requests must keep occurring, each accompanied or followed by an active response."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Infinitely often a request occurs while the response is active at that step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Requests associated with an active response must continue occurring indefinitely; it may alternatively mean requests must repeatedly occur while the response is active."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "Infinitely often a request occurs while the response is active at the same step.",
+        "From every point onward there is a future step with a request and an active response.",
+        "Requests and active responses recur together infinitely often."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Infinitely often, a request occurs together with an active response.",
+        "The pattern of request with active response must keep recurring without end."
+      ]
+    }
+  },
+  {
+    "review_id": "R029",
+    "requirement": "Eventually, requests must always have an active response.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Eventually, a point is reached from which every request has an active response at that step.",
+        "Eventually, every request that occurs is followed by an active response."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "From some point onward, whenever a request occurs the response is active at that step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "From some future point onward, every request has an active response."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "There is a future step from which every request has the response active at the same step.",
+        "There is a future step from which every request has the response active at some later step.",
+        "Eventually, whenever a request occurs, the response is active at that step or later."
+      ],
+      "qwen/qwen3.8-flash": [
+        "There exists a step N such that from N onward, every request has an active response.",
+        "Eventually, no request may occur without an active response."
+      ]
+    }
+  },
+  {
+    "review_id": "R030",
+    "requirement": "Requests require an active response until a release occurs, and a release must occur.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active",
+      "c": "a release occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "A release must occur, and until that release, any request must have an active response.",
+        "Every request requires an active response until a release occurs, and a release is guaranteed to happen."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Once a request occurs, the response is active until a release, and a release eventually occurs"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Requests require an active response until a release occurs, and a release must eventually occur."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "Until the first release, every request has the response active at the same step; a release eventually occurs.",
+        "Until a release, every request has the response active at that step or later; release is required.",
+        "For every request before a release, the response is active at the request step; a release must occur."
+      ],
+      "qwen/qwen3.8-flash": [
+        "A release must occur, and before that release every request requires an active response.",
+        "After the release, requests no longer require an active response."
+      ]
+    }
+  },
+  {
+    "review_id": "R031",
+    "requirement": "Requests require an active response unless and until a release occurs.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active",
+      "c": "a release occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Until a release occurs, every request must have an active response; if no release occurs, this requirement holds forever.",
+        "Requests require an active response unless a release has occurred."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Each request requires the response to be active until a release, with the response allowed to stay active forever if no release occurs"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Requests require an active response while no release has occurred; a release may occur or may be absent forever."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "Before any release, every request has the response active at the same step; after release there is no requirement; release is optional.",
+        "Until a release occurs, every request has the response active at that step or later; if no release occurs, the requirement holds forever.",
+        "Requests require an active response until release, and release may never occur."
+      ],
+      "qwen/qwen3.8-flash": [
+        "If no release occurs, then every request forever requires an active response.",
+        "Once a release occurs, the request-response requirement ends; release is optional."
+      ]
+    }
+  },
+  {
+    "review_id": "R032",
+    "requirement": "From the first release onward, requests require an active response.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active",
+      "c": "a release occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "From the first step where a release occurs onward, whenever a request occurs, the response must be active.",
+        "Once a release occurs, all future requests require an active response."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "After the first release, every request has an active response at that step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "From the first release onward, every request must have an active response."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "After the first release, every request has the response active at the same step.",
+        "After the first release, every request has the response active at some later step.",
+        "From the first release onward, whenever a request occurs, the response is active at that step or later."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Starting at the first release step, every later request requires an active response.",
+        "Requests before the first release are unconstrained, but requests at or after the first release are obligated."
+      ]
+    }
+  },
+  {
+    "review_id": "R033",
+    "requirement": "Every request requires a response that remains active forever.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a request occurs, the response must be active from that step onward permanently.",
+        "Whenever a request occurs, the response must become active and remain active forever."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Each request is followed by the response being active at that step and at all later steps forever"
+      ],
+      "openai/gpt-5.6-luna": [
+        "For every request, the response is active from the request onward forever."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "For every request, from the request step onward the response is active forever.",
+        "For every request, from some later step after the request the response is active forever.",
+        "For every request, the response is active at the request step and stays active forever."
+      ],
+      "qwen/qwen3.8-flash": [
+        "For every request, the response becomes active at some point and then remains active forever.",
+        "Each request triggers a permanent active response, possibly starting at the request step or later."
+      ]
+    }
+  },
+  {
+    "review_id": "R034",
+    "requirement": "Every request requires the response to stay active until a release, which must occur.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active",
+      "c": "a release occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a request occurs, the response must remain active until a release occurs, and a release must eventually occur.",
+        "Each request requires the response to stay continuously active until a mandatory release."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Each request requires the response to stay active until a release, and a release must occur"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Every request requires the response to remain active until a release, and a release must eventually occur for each such obligation."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "For every request, the response stays active from the request step until a release occurs; a release eventually occurs.",
+        "For every request, the response is active at the request step and remains active until some release; release is required.",
+        "For every request, the response is active until the next release, and a release must occur."
+      ],
+      "qwen/qwen3.8-flash": [
+        "For every request, the response must remain active until a later release, and at least one release must occur.",
+        "Each request creates a continuous active-response obligation ending at a mandatory release."
+      ]
+    }
+  },
+  {
+    "review_id": "R035",
+    "requirement": "A request at the next step requires an active response.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "If a request occurs at the next step, the response must be active at that next step.",
+        "If a request occurs at the next step, the response must eventually be active."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "After each request, the response is active at the next step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "A request occurring at the next step requires an active response, presumably at that next step."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "If a request occurs at the next step, the response is active at that next step.",
+        "If a request occurs at the next step, the response is active at the step after that.",
+        "If a request occurs at the next step, the response is active at that step or later."
+      ],
+      "qwen/qwen3.8-flash": [
+        "If a request occurs at the next step, then an active response must occur at some later step.",
+        "If a request occurs at the next step, then an active response must occur immediately, possibly at that next step or the step after it."
+      ]
+    }
+  },
+  {
+    "review_id": "R036",
+    "requirement": "Requests made while the response is permitted require an active response.",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active",
+      "c": "the response is permitted"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a request occurs while the response is permitted, the response must be active at that step.",
+        "Whenever a request occurs while the response is permitted, an active response must follow."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "When a request occurs while the response is permitted, the response is active at that step or later"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Whenever a request occurs while the response is permitted, that request requires an active response."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "At any step where a request occurs and the response is permitted, the response is active at that same step.",
+        "At any step where a request occurs and the response is permitted, the response is active at some later step.",
+        "At any step where a request and permission hold, the response is active at that step or later."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Any request that occurs while the response is permitted must have an active response later.",
+        "Only requests made during permitted states create an active-response obligation; other requests are unconstrained."
+      ]
+    }
+  },
+  {
+    "review_id": "R037",
+    "requirement": "A pulse is to be followed by a flash, possibly at the same step.",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a pulse occurs, a flash must occur at the same step or at some later step.",
+        "Every pulse must eventually be accompanied or followed by a flash."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Every pulse has a flash at the same step or at a later step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Every pulse is followed by a flash either at the same step or at a later step."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "For every pulse, a flash occurs at the same step or a later step.",
+        "For every pulse, a flash occurs at some later step, not at the same step.",
+        "For every pulse, a flash occurs at the next step or later."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Whenever a pulse occurs, a flash must occur at the same step or at a later step.",
+        "There exists a pulse that is followed by a flash, possibly on the same step."
+      ]
+    }
+  },
+  {
+    "review_id": "R038",
+    "requirement": "A pulse requires the light to be on at that step.",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a pulse occurs, the light must be on at that exact step.",
+        "At any step with a pulse, the light is on."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Whenever a pulse occurs, the light is on at that same step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Whenever a pulse occurs, the light is on at that same step."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "At every step where a pulse occurs, the light is on at that same step.",
+        "At every step where a pulse occurs, the light is on at that step or later.",
+        "A pulse implies that the light is on at the pulse step."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Whenever a pulse occurs, the light must be on at that same step.",
+        "At least one pulse must coincide with the light being on."
+      ]
+    }
+  },
+  {
+    "review_id": "R039",
+    "requirement": "A pulse is to have a flash at the next step.",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a pulse occurs, a flash must occur at the immediately following step.",
+        "Each pulse must be followed by a flash on the next time step."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "Every pulse is followed by a flash at the next step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "Every pulse is followed by a flash exactly one step later."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "For every pulse, a flash occurs at the immediately following step.",
+        "For every pulse, a flash occurs at the next step or later.",
+        "For every pulse, a flash occurs at the same step or the next step."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Whenever a pulse occurs, a flash must occur exactly at the next step.",
+        "There exists a pulse followed immediately by a flash on the next step."
+      ]
+    }
+  },
+  {
+    "review_id": "R040",
+    "requirement": "A pulse requires the light to stay on from that step onward.",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a pulse occurs, the light must stay on permanently from that step onward.",
+        "Every pulse causes the light to remain on indefinitely starting at that step."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "After a pulse, the light is on at that step and stays on at every later step"
+      ],
+      "openai/gpt-5.6-luna": [
+        "After each pulse, the light is on at the pulse step and remains on forever thereafter."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "For every pulse, from the pulse step onward the light is on forever.",
+        "For every pulse, from the next step onward the light is on forever.",
+        "After the first pulse, the light stays on forever."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Whenever a pulse occurs, the light must be on from that step onward and remain on forever.",
+        "A pulse triggers permanent light-on beginning at the pulse step."
+      ]
+    }
+  },
+  {
+    "review_id": "R041",
+    "requirement": "A pulse calls for the light to be on until a release occurs, with a release required.",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on",
+      "c": "a release occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a pulse occurs, the light must be on continuously until a release occurs, and a release must eventually occur.",
+        "A pulse requires the light to stay on until a release, which is guaranteed to occur at or after the pulse."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "After a pulse, the light stays on until a release, and a release must occur"
+      ],
+      "openai/gpt-5.6-luna": [
+        "After a pulse, the light remains on until a release occurs, and a release is required to occur."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "For every pulse, the light is on from the pulse step until a release occurs; a release eventually occurs.",
+        "For every pulse, the light is on from the pulse step until the next release; release is required.",
+        "For every pulse, the light stays on until some release, and a release must occur."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Whenever a pulse occurs, the light must be on until a release occurs, and a release is required.",
+        "A pulse creates a light-on obligation that ends only at a mandatory later release."
+      ]
+    }
+  },
+  {
+    "review_id": "R042",
+    "requirement": "A pulse calls for the light to stay on until a release, or forever if no release comes.",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on",
+      "c": "a release occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a pulse occurs, the light must remain on until a release occurs, or forever if no release ever occurs.",
+        "A pulse requires the light to stay on weakly until a release."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "After a pulse, the light stays on until a release occurs, or stays on forever if no release occurs"
+      ],
+      "openai/gpt-5.6-luna": [
+        "After a pulse, the light remains on until the first subsequent release; if no release occurs, it remains on forever."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "For every pulse, the light is on from the pulse step until a release if one occurs; if no release occurs, the light stays on forever.",
+        "For every pulse, the light is on until the next release; release is optional.",
+        "For every pulse, the light remains on unless or until a release occurs."
+      ],
+      "qwen/qwen3.8-flash": [
+        "Whenever a pulse occurs, the light must stay on until a release; if no release occurs, the light stays on forever.",
+        "A pulse creates a liveness obligation for the light to remain on through the first subsequent release, if any."
+      ]
+    }
+  },
+  {
+    "review_id": "R043",
+    "requirement": "A pulse calls for the light to be on at the first release at or after that pulse, and that release must occur.",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on",
+      "c": "a release occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a pulse occurs, a release must eventually occur at or after that pulse, and the light must be on at the first such release.",
+        "For each pulse, a release is required, and the light must be on at that release step."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "After each pulse, the light is on at the first release at or after that pulse, and such a release must occur"
+      ],
+      "openai/gpt-5.6-luna": [
+        "For each pulse, a release must eventually occur, and the light must be on at the first release occurring at or after that pulse."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "For every pulse, there is a release at or after the pulse, and the light is on at that release step.",
+        "For every pulse, the first release at or after it occurs and the light is on at that step.",
+        "For every pulse, a release eventually occurs and the light is on at the first such release."
+      ],
+      "qwen/qwen3.8-flash": [
+        "For every pulse, there must be a first release at or after that pulse, and at that release step the light must be on.",
+        "The pulse does not require the light to stay on continuously, only to be on at the first relevant release."
+      ]
+    }
+  },
+  {
+    "review_id": "R044",
+    "requirement": "A pulse calls for a release before any flash from that step onward, and a flash at or after the release.",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a release occurs"
+    },
+    "stage1": {
+      "google/gemini-3.8-flash": [
+        "Whenever a pulse occurs, a release must occur before any flash at or after the pulse, and a flash must eventually occur at or after the release.",
+        "A pulse requires that no flash occurs until after a release, followed eventually by a flash."
+      ],
+      "anthropic/claude-haiku-5.5": [
+        "After a pulse, a release occurs before any flash, and a flash occurs at or after that release"
+      ],
+      "openai/gpt-5.6-luna": [
+        "After a pulse, a release must occur before any subsequent flash, and a flash must occur at or after that release."
+      ],
+      "deepseek/deepseek-v4.1-flash": [
+        "For every pulse, from the pulse step onward a release occurs before any flash, and a flash occurs at or after that release.",
+        "For every pulse, no flash occurs until a release occurs, and after the release a flash occurs.",
+        "For every pulse, the next flash is preceded by a release, and a flash occurs at or after the release."
+      ],
+      "qwen/qwen3.8-flash": [
+        "For every pulse, before any flash at or after that pulse, a release must occur; then a flash must occur at or after that release.",
+        "The required order is pulse, then release, then flash, with no flash before the release."
+      ]
+    }
+  }
+]

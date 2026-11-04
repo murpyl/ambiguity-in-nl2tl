@@ -1,0 +1,383 @@
+{
+  "binding": "95dbf9cae141795b210572ad83a11fc21d31834784faeee18b985077e5e11ec9",
+  "status": "annotations_complete",
+  "attempts": [
+    {
+      "model": "google/gemini-3.8-flash",
+      "stage": 1,
+      "started_at": "2026-11-03T23:25:58.203531+00:00",
+      "request_file": "annotation_runs/five_model_v1/google_gemini-3.8-flash/stage1.attempt001.request.json",
+      "usage": {
+        "prompt_tokens": 5537,
+        "completion_tokens": 5261,
+        "total_tokens": 10798,
+        "cost": 0.0238815,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0238815,
+          "upstream_inference_prompt_cost": 0.00415275,
+          "upstream_inference_completions_cost": 0.01972875
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 127,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793748358-196cBaPBcM10toUhunGX",
+      "status": "validated",
+      "ended_at": "2026-11-03T23:26:36.675102+00:00"
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "stage": 2,
+      "started_at": "2026-11-03T23:26:36.683452+00:00",
+      "request_file": "annotation_runs/five_model_v1/google_gemini-3.8-flash/stage2.attempt002.request.json",
+      "usage": {
+        "prompt_tokens": 31956,
+        "completion_tokens": 7544,
+        "total_tokens": 39500,
+        "cost": 0.052257,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.052257,
+          "upstream_inference_prompt_cost": 0.023967,
+          "upstream_inference_completions_cost": 0.02829
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4197,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793748396-zOvVpDFxkJo6CzxxkY9G",
+      "status": "validated",
+      "ended_at": "2026-11-03T23:27:23.571901+00:00"
+    },
+    {
+      "model": "anthropic/claude-haiku-5.5",
+      "stage": 1,
+      "started_at": "2026-11-03T23:27:23.575185+00:00",
+      "request_file": "annotation_runs/five_model_v1/anthropic_claude-haiku-5.5/stage1.attempt003.request.json",
+      "usage": {
+        "prompt_tokens": 7726,
+        "completion_tokens": 8909,
+        "total_tokens": 16635,
+        "cost": 0.0052271,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0052271,
+          "upstream_inference_prompt_cost": 0.0007726,
+          "upstream_inference_completions_cost": 0.0044545
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4308,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793748443-quKLYiRqrmbiY93u2FvN",
+      "status": "validated",
+      "ended_at": "2026-11-03T23:27:56.024314+00:00"
+    },
+    {
+      "model": "anthropic/claude-haiku-5.5",
+      "stage": 2,
+      "started_at": "2026-11-03T23:27:56.030358+00:00",
+      "request_file": "annotation_runs/five_model_v1/anthropic_claude-haiku-5.5/stage2.attempt004.request.json",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 400: Bad Request",
+      "ended_at": "2026-11-03T23:27:56.664196+00:00"
+    },
+    {
+      "model": "anthropic/claude-haiku-5.5",
+      "stage": 2,
+      "started_at": "2026-11-03T23:38:32.935676+00:00",
+      "request_file": "annotation_runs/five_model_v1/anthropic_claude-haiku-5.5/stage2.attempt005.request.json",
+      "usage": {
+        "prompt_tokens": 21821,
+        "completion_tokens": 11727,
+        "total_tokens": 33548,
+        "cost": 0.0080456,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0080456,
+          "upstream_inference_prompt_cost": 0.0021821,
+          "upstream_inference_completions_cost": 0.0058635
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 7501,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793749113-0al5kEt8IHBkkR84SscQ",
+      "status": "validated",
+      "ended_at": "2026-11-03T23:39:15.344180+00:00"
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "stage": 1,
+      "started_at": "2026-11-03T23:39:15.347368+00:00",
+      "request_file": "annotation_runs/five_model_v1/openai_gpt-5.6-luna/stage1.attempt006.request.json",
+      "usage": {
+        "prompt_tokens": 5406,
+        "completion_tokens": 3064,
+        "total_tokens": 8470,
+        "cost": 0.00502815,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 5403,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00502815,
+          "upstream_inference_prompt_cost": 0.00135135,
+          "upstream_inference_completions_cost": 0.0036768
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 42,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793749155-0lrz1fbJvTLb869RWQKz",
+      "status": "validated",
+      "ended_at": "2026-11-03T23:39:35.238580+00:00"
+    },
+    {
+      "model": "openai/gpt-5.6-luna",
+      "stage": 2,
+      "started_at": "2026-11-03T23:39:35.240131+00:00",
+      "request_file": "annotation_runs/five_model_v1/openai_gpt-5.6-luna/stage2.attempt007.request.json",
+      "usage": {
+        "prompt_tokens": 15023,
+        "completion_tokens": 3803,
+        "total_tokens": 18826,
+        "cost": 0.0083192,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 15020,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0083192,
+          "upstream_inference_prompt_cost": 0.0037556,
+          "upstream_inference_completions_cost": 0.0045636
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1561,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793749175-ztohuatFlIgboOIChif8",
+      "status": "validated",
+      "ended_at": "2026-11-03T23:40:06.313915+00:00"
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash",
+      "stage": 1,
+      "started_at": "2026-11-03T23:40:06.316989+00:00",
+      "request_file": "annotation_runs/five_model_v1/deepseek_deepseek-v4.1-flash/stage1.attempt008.request.json",
+      "usage": {
+        "prompt_tokens": 5524,
+        "completion_tokens": 14386,
+        "total_tokens": 19910,
+        "cost": 0.00472493,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00472493,
+          "upstream_inference_prompt_cost": 0.00019334,
+          "upstream_inference_completions_cost": 0.00453159
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 8096,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793749206-o6tinXAAwGgd7NOXJY6F",
+      "status": "validated",
+      "ended_at": "2026-11-03T23:45:23.284002+00:00"
+    },
+    {
+      "model": "deepseek/deepseek-v4.1-flash",
+      "stage": 2,
+      "started_at": "2026-11-03T23:45:23.285566+00:00",
+      "request_file": "annotation_runs/five_model_v1/deepseek_deepseek-v4.1-flash/stage2.attempt009.request.json",
+      "usage": {
+        "prompt_tokens": 18550,
+        "completion_tokens": 22523,
+        "total_tokens": 41073,
+        "cost": 0.007743995,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.007743995,
+          "upstream_inference_prompt_cost": 0.00064925,
+          "upstream_inference_completions_cost": 0.007094745
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 19378,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793749523-2ztDFJXtBfb6sjD7xzxT",
+      "status": "validated",
+      "ended_at": "2026-11-03T23:53:40.709068+00:00"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "stage": 1,
+      "started_at": "2026-11-03T23:53:40.715051+00:00",
+      "request_file": "annotation_runs/five_model_v1/qwen_qwen3.8-flash/stage1.attempt010.request.json",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "ended_at": "2026-11-03T23:53:47.341280+00:00"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "stage": 1,
+      "started_at": "2026-11-04T00:00:40.190842+00:00",
+      "request_file": "annotation_runs/five_model_v1/qwen_qwen3.8-flash/stage1.attempt011.request.json",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "ended_at": "2026-11-04T00:00:47.639630+00:00"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "stage": 1,
+      "started_at": "2026-11-04T00:11:19.654157+00:00",
+      "request_file": "annotation_runs/five_model_v1/qwen_qwen3.8-flash/stage1.attempt012.request.json",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "ended_at": "2026-11-04T00:11:25.290588+00:00"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "stage": 1,
+      "started_at": "2026-11-04T00:21:09.503622+00:00",
+      "request_file": "annotation_runs/five_model_v1/qwen_qwen3.8-flash/stage1.attempt013.request.json",
+      "status": "failed",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "ended_at": "2026-11-04T00:21:13.783485+00:00"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "stage": 1,
+      "started_at": "2026-11-04T00:49:28.185211+00:00",
+      "request_file": "annotation_runs/five_model_v1/qwen_qwen3.8-flash/stage1.attempt014.request.json",
+      "usage": {
+        "prompt_tokens": 5592,
+        "completion_tokens": 18515,
+        "total_tokens": 24107,
+        "cost": 0.00954085,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00954085,
+          "upstream_inference_prompt_cost": 0.0008388,
+          "upstream_inference_completions_cost": 0.00870205
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 11313,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793753368-VCY1YltEG5vu7BWkhAFs",
+      "status": "validated",
+      "ended_at": "2026-11-04T00:54:03.853385+00:00"
+    },
+    {
+      "model": "qwen/qwen3.8-flash",
+      "stage": 2,
+      "started_at": "2026-11-04T00:54:03.855204+00:00",
+      "request_file": "annotation_runs/five_model_v1/qwen_qwen3.8-flash/stage2.attempt015.request.json",
+      "usage": {
+        "prompt_tokens": 19537,
+        "completion_tokens": 27160,
+        "total_tokens": 46697,
+        "cost": 0.014975366,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 5376,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.014975366,
+          "upstream_inference_prompt_cost": 0.002210166,
+          "upstream_inference_completions_cost": 0.0127652
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 19685,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "response_id": "gen-1793753644-NaaoHtXJCJ5PKrJ4XLiF",
+      "status": "validated",
+      "ended_at": "2026-11-04T01:01:07.363611+00:00"
+    }
+  ],
+  "error": "HTTPError: HTTP Error 429: Too Many Requests",
+  "authorized_configuration_change": {
+    "recorded_at": "2026-11-03T23:25:58.046292+00:00",
+    "reason": "User authorized omission of unsupported temperature for exact Claude Haiku5.5 and GPT5.6Luna before any annotation attempts",
+    "previous_state": "history/before_authorized_temperature_omission/state.json"
+  },
+  "authorized_schema_fix": {
+    "recorded_at": "2026-11-03T23:38:06.463001+00:00",
+    "user_message": "authorize fix",
+    "history": "history/before_authorized_schema_fix",
+    "stage2_schema_bytes": 694
+  }
+}

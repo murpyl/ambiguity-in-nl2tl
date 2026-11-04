@@ -1,0 +1,46 @@
+test_full_88_fixture (test_aggregate.AggregationTests.test_full_88_fixture) ... ok
+test_grouping_coverage_and_original_integrity (test_aggregate.AggregationTests.test_grouping_coverage_and_original_integrity) ... ok
+test_invalid_completeness_and_hash (test_aggregate.AggregationTests.test_invalid_completeness_and_hash) ... ok
+test_majority_uncertain_excluded (test_aggregate.AggregationTests.test_majority_uncertain_excluded) ... ok
+test_missing_or_invalid_model_never_reduces_population (test_aggregate.AggregationTests.test_missing_or_invalid_model_never_reduces_population) ... ok
+test_offline_end_to_end_determinism_and_paired_ids (test_aggregate.AggregationTests.test_offline_end_to_end_determinism_and_paired_ids) ... ok
+test_production_requires_88 (test_aggregate.AggregationTests.test_production_requires_88) ... ok
+test_protect_source_and_unrelated_outputs (test_aggregate.AggregationTests.test_protect_source_and_unrelated_outputs) ... ok
+test_scope_and_receipt_identity_are_bound (test_aggregate.AggregationTests.test_scope_and_receipt_identity_are_bound) ... ok
+test_threshold_validation (test_aggregate.AggregationTests.test_threshold_validation) ... ok
+test_tied_labels_are_unresolved_at_lower_threshold (test_aggregate.AggregationTests.test_tied_labels_are_unresolved_at_lower_threshold) ... ok
+test_unexpected_stage_fields_rejected (test_aggregate.AggregationTests.test_unexpected_stage_fields_rejected) ... ok
+test_unique_model_group_count_and_threshold (test_aggregate.AggregationTests.test_unique_model_group_count_and_threshold) ... ok
+test_actual_source_integrity_and_isolation (test_prepare.PrepareTests.test_actual_source_integrity_and_isolation) ... ok
+test_reject_changed_worksheet_or_nonblank_form (test_prepare.PrepareTests.test_reject_changed_worksheet_or_nonblank_form) ... ok
+test_authorized_temperature_omission_full_mock_run (test_runner.RunnerTests.test_authorized_temperature_omission_full_mock_run) ... ok
+test_compact_stage2_schema_and_exact_local_validation (test_runner.RunnerTests.test_compact_stage2_schema_and_exact_local_validation) ... ok
+test_failure_pauses_globally_and_preserves_response (test_runner.RunnerTests.test_failure_pauses_globally_and_preserves_response) ... ok
+test_full_mock_run_and_resume_never_repeats_success (test_runner.RunnerTests.test_full_mock_run_and_resume_never_repeats_success) ... ok
+test_interrupted_unknown_request_is_never_repeated (test_runner.RunnerTests.test_interrupted_unknown_request_is_never_repeated) ... ok
+test_invalid_temperature_omission_blocks_calls (test_runner.RunnerTests.test_invalid_temperature_omission_blocks_calls) ... ok
+test_resume_after_stage2_grammar_failure_preserves_three_successes (test_runner.RunnerTests.test_resume_after_stage2_grammar_failure_preserves_three_successes) ... ok
+test_unsupported_temperature_blocks_all_paid_calls (test_runner.RunnerTests.test_unsupported_temperature_blocks_all_paid_calls) ... ok
+test_validation_and_catalog_preflight (test_runner.RunnerTests.test_validation_and_catalog_preflight) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.301s
+
+OK
+
+Final paid continuation: all10 stages complete; 15 attempts,5 known failed requests
+All10 receipts and preserved prior stage hashes: PASS
+Frozen Stage1 content in every original Stage2 request: PASS
+Fresh scope extraction/source hashes and original IDs: PASS
+Coordinator+semantic subagents+final independent audit: PASS
+326 groups /810 exact original memberships /88 requirements: PASS
+Regeneration:66 retained,22 excluded; all88 audited;95 retained semantic groups
+Fixed5-model counts, unique highest labels, threshold3 and ties: PASS
+Paired family annotation IDs: PASS
+440 separate Stage2-addition rows with counts_as_stage1_vote=false: PASS
+Socket-blocked offline regeneration is byte-identical: PASS
+git diff --check before staging raw artifacts: PASS
+
+Staged raw *.response.json envelopes contain original provider keepalive whitespace; preserved byte-for-byte. Full staged whitespace check reports those original lines.
+git diff --cached --check -- . :!annotation_runs/five_model_v1/*/*.response.json: PASS (all code/docs/generated data)
+Credential-value scan: PASS; no saved request auth headers

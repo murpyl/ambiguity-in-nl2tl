@@ -1,0 +1,440 @@
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R001", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R001", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R001", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R001", "stage1_comments": ""}
+{"additional_interpretations": ["The pulse and flash may occur in either order."], "comments": "Conjunction can be read jointly or distributively.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R001", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R002", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R002", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R002", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R002", "stage1_comments": ""}
+{"additional_interpretations": ["Pulses and flashes may alternate but need not be paired."], "comments": "Plural keep occurring favors separate recurrence, not coincidence.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R002", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R003", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R003", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R003", "stage1_comments": ""}
+{"additional_interpretations": ["Every request is followed by a pulse and then a flash, with the pulse before the flash."], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R003", "stage1_comments": ""}
+{"additional_interpretations": ["The pulse and flash after a request may occur in either order."], "comments": "Followed by a pulse and a flash may be joint or separate.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R003", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R004", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R004", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R004", "stage1_comments": ""}
+{"additional_interpretations": ["A pulse occurs before a flash, both before the first stop."], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R004", "stage1_comments": ""}
+{"additional_interpretations": ["If no stop ever occurs, the requirement may be vacuous or still demand eventual pulse and flash."], "comments": "Both events before a stop can be read jointly or separately.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R004", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R005", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R005", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R005", "stage1_comments": ""}
+{"additional_interpretations": ["After each request, a pulse occurs before a flash, both before the next stop."], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R005", "stage1_comments": ""}
+{"additional_interpretations": ["If no subsequent stop exists, the pulse and flash are still eventually required after the request."], "comments": "Before the next stop can allow joint or separate events.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R005", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R006", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R006", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R006", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R006", "stage1_comments": ""}
+{"additional_interpretations": ["The two consecutive steps must be a common active episode for both signal and indicator."], "comments": "The phrasing favors a common two-step active episode.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R006", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R007", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R007", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R007", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R007", "stage1_comments": ""}
+{"additional_interpretations": ["They may become active at different times and without a common preceding inactive step."], "comments": "Become active does not require a common inactive-to-active transition.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R007", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R008", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R008", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R008", "stage1_comments": ""}
+{"additional_interpretations": ["Both are active from some point until a release, or forever if no release occurs."], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R008", "stage1_comments": ""}
+{"additional_interpretations": ["The release is common to the joint active episode."], "comments": "Active until a release favors a common joint episode.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R008", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R009", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R009", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R009", "stage1_comments": ""}
+{"additional_interpretations": ["A pulse occurs, then a flash, then a completion."], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R009", "stage1_comments": ""}
+{"additional_interpretations": ["Pulse and flash need not be simultaneous; completion is after them."], "comments": "Pulse and flash with completion may be joint or separate.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R009", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R010", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R010", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R010", "stage1_comments": ""}
+{"additional_interpretations": ["After a start, a pulse occurs before a flash, both before a finish."], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R010", "stage1_comments": ""}
+{"additional_interpretations": ["Pulse and flash may occur in either order between start and finish."], "comments": "After start and before finish can allow joint or separate events.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R010", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R011", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R011", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R011", "stage1_comments": ""}
+{"additional_interpretations": ["The pulse-flash and click-mark sequences occur in either order."], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R011", "stage1_comments": ""}
+{"additional_interpretations": ["The two sequences may overlap, be simultaneous, or occur at different times."], "comments": "Same starting step is possible but not clearly favored.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R011", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R012", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R012", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R012", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R012", "stage1_comments": ""}
+{"additional_interpretations": ["Recurring joint two-step active episodes are required."], "comments": "Keep being active for two consecutive steps favors joint recurring episodes.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R012", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R013", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R013", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R013", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R013", "stage1_comments": ""}
+{"additional_interpretations": ["Followed by may be immediate or merely later."], "comments": "Followed by can mean immediate or later.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R013", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R014", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R014", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R014", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R014", "stage1_comments": ""}
+{"additional_interpretations": ["If pulse now, flash may be immediate or later."], "comments": "If pulse now, flash may be immediate or later.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R014", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R015", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R015", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R015", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R015", "stage1_comments": ""}
+{"additional_interpretations": ["At least one pulse-flash pair; adjacency not fixed."], "comments": "At least one pulse followed by a flash can be adjacent or delayed.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R015", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R016", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R016", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R016", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R016", "stage1_comments": ""}
+{"additional_interpretations": ["No delay or flicker is permitted after the pulse."], "comments": "Then stay on permanently favors immediate permanent activation.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R016", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R017", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R017", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R017", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R017", "stage1_comments": ""}
+{"additional_interpretations": ["Flash may occur after the first stop; only pulses before first stop are constrained."], "comments": "Flash after stop suggests later, not necessarily next step.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R017", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R018", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R018", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R018", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R018", "stage1_comments": ""}
+{"additional_interpretations": ["Chime must be strictly after the flash, not merely after pulse."], "comments": "Pulse-to-flash timing is not fixed; chime is strictly after flash.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R018", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R019", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R019", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R019", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R019", "stage1_comments": ""}
+{"additional_interpretations": ["Flashes before pulses are allowed; flashes after pulses are forbidden."], "comments": "Never followed favors no later flash at all.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R019", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R020", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R020", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R020", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R020", "stage1_comments": ""}
+{"additional_interpretations": ["Flash step itself must not coincide with stop."], "comments": "Later flash before stop is clear; immediate flash is stricter.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R020", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R021", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R021", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R021", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R021", "stage1_comments": ""}
+{"additional_interpretations": ["Trigger is consecutive pulse pair; flash after second pulse not necessarily immediate."], "comments": "Followed by may be immediate or later after the pair.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R021", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R022", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R022", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R022", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R022", "stage1_comments": ""}
+{"additional_interpretations": ["Before eventual step, pulses may be unfulfilled."], "comments": "The eventual rule does not specify immediate flash.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R022", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R023", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R023", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R023", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R023", "stage1_comments": ""}
+{"additional_interpretations": ["Repetition may have variable spacing."], "comments": "Over and over can allow adjacent or delayed pairs.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R023", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R024", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R024", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R024", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R024", "stage1_comments": ""}
+{"additional_interpretations": ["Pulses before activation unconstrained."], "comments": "Activation starts universal rule; timing of flash is not fixed.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R024", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R025", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R025", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R025", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both same-step and later-response readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R025", "stage1_comments": ""}
+{"additional_interpretations": ["Response may be simultaneous or delayed."], "comments": "Require can mean same-step or later response.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R025", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R026", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R026", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R026", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both same-step and later-response readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R026", "stage1_comments": ""}
+{"additional_interpretations": ["Only initial-step request triggers; response timing ambiguous."], "comments": "Only the starting-step request is constrained; response timing ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R026", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R027", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R027", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R027", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R027", "stage1_comments": ""}
+{"additional_interpretations": ["Existential; no universal requirement."], "comments": "Existential request with response can be simultaneous or later.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R027", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R028", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R028", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R028", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R028", "stage1_comments": ""}
+{"additional_interpretations": ["Keep occurring means infinitely many request-response episodes."], "comments": "Keep occurring can allow simultaneous or delayed responses.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R028", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R029", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R029", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R029", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both same-step and later-response readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R029", "stage1_comments": ""}
+{"additional_interpretations": ["Eventually stable universal requirement."], "comments": "Eventually always can allow simultaneous or delayed responses.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R029", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R030", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R030", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R030", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both same-step and later-response readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R030", "stage1_comments": ""}
+{"additional_interpretations": ["Active response should occur while pre-release obligation is in force."], "comments": "Same-step response is clear; strictly later may cross release.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R030", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R031", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R031", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R031", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both same-step and later-response readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R031", "stage1_comments": ""}
+{"additional_interpretations": ["Active response should occur while obligation is in force."], "comments": "Same-step response is clear; strictly later timing is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R031", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R032", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R032", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R032", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both same-step and later-response readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R032", "stage1_comments": ""}
+{"additional_interpretations": ["Requests before first release are unconstrained."], "comments": "From release onward can allow simultaneous or delayed responses.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R032", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R033", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R033", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R033", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both immediate and delayed start of permanent activity are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R033", "stage1_comments": ""}
+{"additional_interpretations": ["Response may begin at request step or later, then never deactivate."], "comments": "Remains active forever can start same-step or later.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R033", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R034", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R034", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R034", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R034", "stage1_comments": ""}
+{"additional_interpretations": ["Release must occur after each request's active interval."], "comments": "Stay active until release can start same-step or later.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R034", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R035", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R035", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R035", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both same-step and later-response readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R035", "stage1_comments": ""}
+{"additional_interpretations": ["Request at step one triggers; response timing ambiguous."], "comments": "Next-step request triggers; response timing ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R035", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R036", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R036", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R036", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both same-step and later-response readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R036", "stage1_comments": ""}
+{"additional_interpretations": ["Permission condition evaluated at request step."], "comments": "Permission condition at request step; response timing ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R036", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R037", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R037", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R037", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R037", "stage1_comments": ""}
+{"additional_interpretations": ["If no pulse occurs, requirement vacuously satisfied."], "comments": "Generic rule favors universal, not existential.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R037", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R038", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R038", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R038", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R038", "stage1_comments": ""}
+{"additional_interpretations": ["No existence requirement."], "comments": "Requires favors universal conditional.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R038", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R039", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R039", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R039", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R039", "stage1_comments": ""}
+{"additional_interpretations": ["Flash exactly next step for every pulse."], "comments": "Is to have favors universal rule.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R039", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R040", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R040", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R040", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R040", "stage1_comments": ""}
+{"additional_interpretations": ["Permanent light-on from pulse step onward."], "comments": "Requires favors universal rule.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R040", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R041", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R041", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R041", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R041", "stage1_comments": ""}
+{"additional_interpretations": ["Release required for each pulse obligation."], "comments": "Calls for favors universal obligation.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R041", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R042", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R042", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R042", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R042", "stage1_comments": ""}
+{"additional_interpretations": ["Weak until: no release means forever."], "comments": "Calls for favors universal weak-until obligation.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R042", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R043", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R043", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R043", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R043", "stage1_comments": ""}
+{"additional_interpretations": ["Only first release after pulse matters."], "comments": "Calls for favors universal obligation.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R043", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R044", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R044", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R044", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R044", "stage1_comments": ""}
+{"additional_interpretations": ["Order pulse, release, flash; no flash before release."], "comments": "Calls for favors universal ordering obligation.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R044", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R045", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R045", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R045", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R045", "stage1_comments": ""}
+{"additional_interpretations": ["Enable state at pulse step only."], "comments": "While enabled calls for favors universal conditional.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R045", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R046", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R046", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R046", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R046", "stage1_comments": ""}
+{"additional_interpretations": ["If no stop occurs, reading may be vacuous or apply to all pulses depending on weak or strong until."], "comments": "Before first stop calls for favors universal conditional.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R046", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R047", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R047", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R047", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R047", "stage1_comments": ""}
+{"additional_interpretations": ["No constraint on future steps."], "comments": "Must not be active means both inactive.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R047", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R048", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R048", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R048", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'never both active' and 'neither ever active' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R048", "stage1_comments": ""}
+{"additional_interpretations": ["Neither indicator ever active."], "comments": "Never be active means both inactive at every step.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R048", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R049", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R049", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R049", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R049", "stage1_comments": ""}
+{"additional_interpretations": ["Some step with both inactive."], "comments": "At some point not active means both inactive at that point.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R049", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R050", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R050", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R050", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R050", "stage1_comments": ""}
+{"additional_interpretations": ["Infinitely many steps with both inactive."], "comments": "Infinitely often not active means both inactive infinitely often.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R050", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R051", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R051", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R051", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R051", "stage1_comments": ""}
+{"additional_interpretations": ["After some point, both remain inactive."], "comments": "From some point onward not active means both inactive thereafter.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R051", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R052", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R052", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R052", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R052", "stage1_comments": ""}
+{"additional_interpretations": ["Release required; before it both inactive."], "comments": "Not active until release means both inactive before release.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R052", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R053", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R053", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R053", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R053", "stage1_comments": ""}
+{"additional_interpretations": ["Release optional; before first release both inactive."], "comments": "Not active until optional release means both inactive before first release.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R053", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R054", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R054", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R054", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R054", "stage1_comments": ""}
+{"additional_interpretations": ["Open gate forbids either indicator active."], "comments": "Whenever gate open, both must not be active.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R054", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R055", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R055", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R055", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R055", "stage1_comments": ""}
+{"additional_interpretations": ["Immediately after pulse, both inactive."], "comments": "Immediately following step must have both inactive.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R055", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R056", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R056", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R056", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R056", "stage1_comments": ""}
+{"additional_interpretations": ["Some step at or after pulse with both inactive."], "comments": "Step at that time or later when both are not active.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R056", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R057", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R057", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R057", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R057", "stage1_comments": ""}
+{"additional_interpretations": ["Release required; both inactive from pulse until release."], "comments": "Both inactive until required release.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R057", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R058", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R058", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R058", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both 'not both active' and 'both inactive' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R058", "stage1_comments": ""}
+{"additional_interpretations": ["Check step must have both inactive."], "comments": "Check occurs when both are not active.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R058", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R059", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R059", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R059", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R059", "stage1_comments": ""}
+{"additional_interpretations": ["Disjunction allows varying response type; not necessarily same type for all."], "comments": "Pulse or flash allows varying type, not one fixed type.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R059", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R060", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R060", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R060", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R060", "stage1_comments": ""}
+{"additional_interpretations": ["Next-step response type can vary."], "comments": "Next step pulse or flash allows varying type.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R060", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R061", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R061", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R061", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R061", "stage1_comments": ""}
+{"additional_interpretations": ["Exactly one at same step; type may vary."], "comments": "At once but not both allows varying sole response.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R061", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R062", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R062", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R062", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R062", "stage1_comments": ""}
+{"additional_interpretations": ["Ordering can vary per request; two events on consecutive steps."], "comments": "Either ordering can vary per request.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R062", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R063", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R063", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R063", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R063", "stage1_comments": ""}
+{"additional_interpretations": ["Choice of first or second signal per request; release eventually for each."], "comments": "First or second signal can be chosen per request.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R063", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R064", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R064", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R064", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R064", "stage1_comments": ""}
+{"additional_interpretations": ["Choice per request; release optional."], "comments": "First or second signal can be chosen per request; release optional.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R064", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R065", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R065", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R065", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R065", "stage1_comments": ""}
+{"additional_interpretations": ["Immediate same-step response before mandatory stop; type varies."], "comments": "Immediate pulse or flash allows varying type before required stop.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R065", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R066", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R066", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R066", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R066", "stage1_comments": ""}
+{"additional_interpretations": ["Immediate same-step response unless stop; type varies."], "comments": "Immediate pulse or flash allows varying type unless stop.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R066", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R067", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R067", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R067", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R067", "stage1_comments": ""}
+{"additional_interpretations": ["Response before next stop; type varies."], "comments": "Pulse or flash before next stop allows varying type.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R067", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R068", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R068", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R068", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R068", "stage1_comments": ""}
+{"additional_interpretations": ["Strong versus weak until; release may or may not be required."], "comments": "Until release is ambiguous between strong and weak until.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R068", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R069", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R069", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R069", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R069", "stage1_comments": ""}
+{"additional_interpretations": ["Per request, release may be required or optional."], "comments": "Whenever request, until release is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R069", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R070", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R070", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R070", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R070", "stage1_comments": ""}
+{"additional_interpretations": ["Eventually some interval; strong or weak until ambiguous."], "comments": "Eventually until release is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R070", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R071", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R071", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R071", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R071", "stage1_comments": ""}
+{"additional_interpretations": ["Global obligation from every step; release timing ambiguous."], "comments": "From every step onward until release is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R071", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R072", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R072", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R072", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R072", "stage1_comments": ""}
+{"additional_interpretations": ["Both conditions maintained jointly until release; release optional or required ambiguous."], "comments": "Both conditions until release is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R072", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R073", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R073", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R073", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R073", "stage1_comments": ""}
+{"additional_interpretations": ["Either release or cancellation terminates; eventual termination ambiguous."], "comments": "Until release or cancellation is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R073", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R074", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R074", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R074", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R074", "stage1_comments": ""}
+{"additional_interpretations": ["Terminating release must coincide with lit indicator; eventual occurrence ambiguous."], "comments": "Until release while lit is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R074", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R075", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R075", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R075", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R075", "stage1_comments": ""}
+{"additional_interpretations": ["Permanent illumination is terminator; eventual occurrence ambiguous."], "comments": "Until permanent illumination is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R075", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R076", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R076", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R076", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R076", "stage1_comments": ""}
+{"additional_interpretations": ["Interval starts at next step; release eventual or optional ambiguous."], "comments": "Next-step interval until release is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R076", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R077", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R077", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R077", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R077", "stage1_comments": ""}
+{"additional_interpretations": ["Rule applies until release; release eventual or optional ambiguous."], "comments": "Until release rule is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R077", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R078", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R078", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R078", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R078", "stage1_comments": ""}
+{"additional_interpretations": ["Handoff may be required or optional depending on until; second phase release mandatory."], "comments": "Handoff may be required or optional, but release in second phase is mandatory.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R078", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R079", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R079", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R079", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "Both strong and weak 'until' readings are plausible.", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R079", "stage1_comments": ""}
+{"additional_interpretations": ["Handoff mandatory; release terminator eventual or optional ambiguous."], "comments": "Handoff is mandatory; release terminator is ambiguous.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R079", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R080", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R080", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R080", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R080", "stage1_comments": ""}
+{"additional_interpretations": ["Universal conditional; no pulse existence required."], "comments": "Generic rule favors universal conditional.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R080", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R081", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R081", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R081", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R081", "stage1_comments": ""}
+{"additional_interpretations": ["Light on from next step forever after every pulse."], "comments": "After a pulse favors universal rule.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R081", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R082", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R082", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R082", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R082", "stage1_comments": ""}
+{"additional_interpretations": ["Settling point may vary per pulse."], "comments": "After a pulse favors universal settling rule.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R082", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R083", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R083", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R083", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R083", "stage1_comments": ""}
+{"additional_interpretations": ["Strict order pulse, flash, chime."], "comments": "A pulse is to be followed favors universal sequence.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R083", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R084", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R084", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R084", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R084", "stage1_comments": ""}
+{"additional_interpretations": ["No intervening pulse between pulse and required flash."], "comments": "After a pulse favors universal no-pulse-between rule.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R084", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R085", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R085", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R085", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R085", "stage1_comments": ""}
+{"additional_interpretations": ["No intervening pause state; endpoints may pause."], "comments": "After a pulse favors universal no-pause-between rule.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R085", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R086", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R086", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R086", "stage1_comments": ""}
+{"additional_interpretations": ["For every pulse, if a later release occurs, the light is on at the first such release."], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R086", "stage1_comments": ""}
+{"additional_interpretations": ["Next release after pulse must have light on."], "comments": "After a pulse favors universal next-release rule.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R086", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R087", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R087", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R087", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R087", "stage1_comments": ""}
+{"additional_interpretations": ["Enable state at pulse step; flash later."], "comments": "Pulse while enabled favors universal conditional.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R087", "stage1_comments": "Open interpretation only."}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "google/gemini-3.8-flash", "review_id": "R088", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "anthropic/claude-haiku-5.5", "review_id": "R088", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "openai/gpt-5.6-luna", "review_id": "R088", "stage1_comments": ""}
+{"additional_interpretations": [], "comments": "", "counts_as_stage1_vote": false, "model": "deepseek/deepseek-v4.1-flash", "review_id": "R088", "stage1_comments": ""}
+{"additional_interpretations": ["Flash must occur before same first stop as pulse; if no stop, rule may apply forever."], "comments": "Before first stop favors universal bounded rule.", "counts_as_stage1_vote": false, "model": "qwen/qwen3.8-flash", "review_id": "R088", "stage1_comments": "Open interpretation only."}

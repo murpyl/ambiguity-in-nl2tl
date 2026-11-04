@@ -1,0 +1,1647 @@
+{
+  "reviewed_by": [
+    "semantic_4"
+  ],
+  "groups": [
+    {
+      "group_id": "R067-G001",
+      "review_id": "R067",
+      "canonical": "For each request, a pulse or flash is required before the next stop; the no-stop case and response-step inclusivity are unspecified.",
+      "explanation": "These statements give the same request/deadline obligation without deciding vacuity or same-step responses. Explicit no-stop, strict-after and inclusive variants remain separate.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, a pulse or a flash must occur before the next stop occurs."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "For each request, before any subsequent stop, a pulse or flash must take place."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every request, a pulse or a flash occurs before the next stop."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every request, before the next stop after it, a pulse or a flash must occur."
+        }
+      ]
+    },
+    {
+      "group_id": "R067-G002",
+      "review_id": "R067",
+      "canonical": "Each request receives a pulse or flash at the request step or later, before the next stop.",
+      "explanation": "The same-step allowance is explicit here and is not added to statements leaving that boundary unresolved.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Each request is followed by a pulse or flash before the next stop, at the same step or later"
+        }
+      ]
+    },
+    {
+      "group_id": "R067-G003",
+      "review_id": "R067",
+      "canonical": "Each request needs a pulse or flash before a subsequent stop if one occurs; no response is required when no subsequent stop occurs.",
+      "explanation": "Both make the stop condition conditional and preserve no-stop vacuity without demanding a stop.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Every request receives a pulse or flash before the next stop, if a next stop occurs; no stop is necessarily required."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every request, a pulse or a flash occurs before any subsequent stop; if no stop occurs, there is no requirement."
+        }
+      ]
+    },
+    {
+      "group_id": "R067-G004",
+      "review_id": "R067",
+      "canonical": "For each request followed by a stop, a pulse or flash must occur strictly after the request and before the next stop.",
+      "explanation": "This explicitly excludes a same-step response and makes the obligation conditional on a later stop.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every request, if a stop occurs afterward, a pulse or a flash occurs after the request and before that next stop."
+        }
+      ]
+    },
+    {
+      "group_id": "R067-G005",
+      "review_id": "R067",
+      "canonical": "A request still requires an eventual pulse or flash when no next stop occurs.",
+      "explanation": "This independently stated no-stop obligation is stronger than the conditional/vacuous alternatives and is retained as the original whole statement.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If there is no next stop, the pulse or flash is still eventually required by the request."
+        }
+      ]
+    },
+    {
+      "group_id": "R068-G001",
+      "review_id": "R068",
+      "canonical": "The state remains active until a release occurs, with release eventuality unspecified.",
+      "explanation": "The unqualified until statement is not assigned a mandatory-release or optional-release interpretation.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "The state must remain active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R068-G002",
+      "review_id": "R068",
+      "canonical": "The state remains active until a release, with whether release must occur left unresolved or not explicitly required.",
+      "explanation": "The originals leave release necessity unresolved: required versus optional, may or may not be required, or not explicitly required. None is promoted to a positive forever-without-release assertion.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "The state is active at every step until a release occurs, with a release required or optional"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "The state remains active until a release occurs; release may or may not be required."
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "The state remains active continuously until a release occurs; the release is not explicitly required to occur."
+        }
+      ]
+    },
+    {
+      "group_id": "R068-G003",
+      "review_id": "R068",
+      "canonical": "The state remains active until a release that must eventually occur.",
+      "explanation": "The release is expressly mandatory.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "The state stays active until a mandatory release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R068-G004",
+      "review_id": "R068",
+      "canonical": "The state remains active until an optional release; without a release it stays active forever.",
+      "explanation": "These positively assert optional release or perpetual activity without release; mere absence of an explicit release requirement remains in the unresolved-necessity group.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 2,
+          "text": "The state stays active until a release occurs, release being optional."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "From now until the first release, the state is active; if no release occurs, the state stays active forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R068-G005",
+      "review_id": "R068",
+      "canonical": "The state is active at every step before a release.",
+      "explanation": "The original is phrased only over the pre-release interval and does not resolve release occurrence or the absent-release case.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "The state is active at every step before a release."
+        }
+      ]
+    },
+    {
+      "group_id": "R068-G006",
+      "review_id": "R068",
+      "canonical": "From some relevant point the state remains active until a release.",
+      "explanation": "The onset is an unspecified relevant point rather than expressly now.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "From some relevant point, the state remains active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R068-G007",
+      "review_id": "R068",
+      "canonical": "If no release occurs, the state remains active forever.",
+      "explanation": "This is the original no-release conditional clause, not a full independently asserted release-case obligation.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If no release occurs, the state remains active forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R069-G001",
+      "review_id": "R069",
+      "canonical": "Every request requires the state to be active from that request step until a release.",
+      "explanation": "The same request-step onset is explicit; eventual release and endpoint activity remain unspecified.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, the state must remain active from that step until a release occurs."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, the state is active from that step until a release occurs"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, the state remains active from that request onward until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R069-G002",
+      "review_id": "R069",
+      "canonical": "Every request requires the state to be active until a release, without an explicit activation-step boundary.",
+      "explanation": "The original omits the explicit from-that-step qualifier retained in the preceding group.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Every request requires the state to be active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R069-G003",
+      "review_id": "R069",
+      "canonical": "For every request, the state is active until release; release is optional and absence of release leaves it active forever.",
+      "explanation": "These give the optional-release or unless-released interpretation of the request obligation.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every request, the state is active from the request step until a release occurs; if no release occurs, it stays active forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every request, the state is active until the next release; release is optional."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every request, the state remains active unless or until release."
+        }
+      ]
+    },
+    {
+      "group_id": "R069-G004",
+      "review_id": "R069",
+      "canonical": "For each request at step t, activity may begin at t or later and continue until release.",
+      "explanation": "Allowing delayed activation is weaker than requiring activation at the request step.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every request at step t, the state must remain active from t or a later step until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R069-G005",
+      "review_id": "R069",
+      "canonical": "Each request creates an active-state obligation ending at release, possibly requiring eventual release.",
+      "explanation": "The original leaves an eventual-release alternative open and is kept whole.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Each request creates an active-state obligation that ends at a release, possibly requiring eventual release."
+        }
+      ]
+    },
+    {
+      "group_id": "R070-G001",
+      "review_id": "R070",
+      "canonical": "Eventually a starting point is reached from which the state stays active until release, with release eventuality unspecified.",
+      "explanation": "These use an eventual or existential onset and leave release occurrence unresolved.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Eventually, a step is reached from which the state remains active until a release occurs."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Eventually the state is active continuously until a release occurs"
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "There exists a step N such that from N onward the state remains active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R070-G002",
+      "review_id": "R070",
+      "canonical": "At some future point the state stays active until release, with release eventuality unspecified.",
+      "explanation": "These expressly locate the onset at a future point; no optional-release or forever clause is added.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "At some future point, the state stays active until a release occurs."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "At some future point the state is active until release."
+        }
+      ]
+    },
+    {
+      "group_id": "R070-G003",
+      "review_id": "R070",
+      "canonical": "From a future point the state stays active until an optional release; absent release it stays active forever.",
+      "explanation": "Both explicitly allow the release to be absent.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "From some future point, the state remains active until a release occurs; the release may be absent."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "There is a future step from which the state stays active until a release occurs; if no release occurs, it stays active forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R070-G004",
+      "review_id": "R070",
+      "canonical": "Eventually the state becomes active and stays active until an optional release.",
+      "explanation": "This expressly describes becoming active and optional termination; its onset wording is retained rather than replaced by the strict-future wording.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Eventually the state becomes active and remains active until a release; release is optional."
+        }
+      ]
+    },
+    {
+      "group_id": "R070-G005",
+      "review_id": "R070",
+      "canonical": "Before an onset N the state may be inactive; after N it becomes active and stays active until release.",
+      "explanation": "The before/after N wording and absence of a release-eventuality decision are preserved.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Before N the state may be inactive; after N it becomes active and stays active until release."
+        }
+      ]
+    },
+    {
+      "group_id": "R071-G001",
+      "review_id": "R071",
+      "canonical": "Starting at every step, the state must stay active until a release occurs.",
+      "explanation": "All have the globally renewed every-step obligation without resolving whether releases must occur.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "At every step, the state must remain active until a release occurs."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "From any time step onward, the state must stay active until a release happens."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "At every step, the state is active until a release occurs"
+        }
+      ]
+    },
+    {
+      "group_id": "R071-G002",
+      "review_id": "R071",
+      "canonical": "Starting at every step the state stays active until release, described as continuous activity unless released.",
+      "explanation": "The original includes an explanatory unless-released characterization; it is kept whole rather than equated to a one-time obligation.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Starting at every step, the state remains active until a release occurs, effectively requiring it to stay active continuously unless released."
+        }
+      ]
+    },
+    {
+      "group_id": "R071-G003",
+      "review_id": "R071",
+      "canonical": "From every step the active-until-release obligation holds with release optional; if none occurs activity persists forever.",
+      "explanation": "All retain the every-step scope and optional-release behavior.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At every step, the state is active from that step until a release occurs; if no release occurs, it stays active forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "From any point, the state remains active until release; release is optional."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The obligation to stay active until release holds globally from every step, implying permanent activity if no release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R071-G004",
+      "review_id": "R071",
+      "canonical": "The state is always active unless or until a release occurs.",
+      "explanation": "This can describe one activity obligation ending at release, unlike an obligation explicitly renewed at every later step.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "The state is always active unless or until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R071-G005",
+      "review_id": "R071",
+      "canonical": "At every step the state must be active and remain active until release.",
+      "explanation": "The explicit every-step activity assertion is retained separately from until statements that can leave activity at the release step open.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "At every step, the state must be active and remain active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R072-G001",
+      "review_id": "R072",
+      "canonical": "The state remains active and the indicator lit continuously until release, with release eventuality unspecified.",
+      "explanation": "These share conjunction throughout the interval and do not decide optional versus mandatory release.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Both the state must be active and the indicator lit until a release occurs."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "The state remains active and the indicator lit continuously until a release happens."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "The state and the indicator are both lit and active continuously until a release occurs"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "The state remains active and the indicator remains lit throughout the interval until a release occurs."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "The state remains active and the indicator remains lit until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R072-G002",
+      "review_id": "R072",
+      "canonical": "From now until an optional release, both the state is active and the indicator lit.",
+      "explanation": "Release is explicitly optional, unlike the unresolved until statements.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "From now until a release, both the state is active and the indicator is lit; release is optional."
+        }
+      ]
+    },
+    {
+      "group_id": "R072-G003",
+      "review_id": "R072",
+      "canonical": "Both conditions hold until release, with release possibly required.",
+      "explanation": "The eventual-release possibility is retained as part of this whole original rather than split into separate votes.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Until release, the state is active and the indicator is lit; release may be required."
+        }
+      ]
+    },
+    {
+      "group_id": "R072-G004",
+      "review_id": "R072",
+      "canonical": "Both conditions hold at every step before a release.",
+      "explanation": "The original explicitly describes the pre-release interval without resolving the absence of release.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Both conditions hold at every step before a release."
+        }
+      ]
+    },
+    {
+      "group_id": "R072-G005",
+      "review_id": "R072",
+      "canonical": "If no release occurs, both the state stays active and the indicator stays lit forever.",
+      "explanation": "This original states the no-release conditional, not a complete positive release-case obligation.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If no release occurs, the state remains active and the indicator remains lit forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R073-G001",
+      "review_id": "R073",
+      "canonical": "The state stays active until the first release or cancellation; either event can end the obligation.",
+      "explanation": "All give the same alternative termination condition without expressly requiring an eventual terminating event.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "The state must remain active until either a release occurs or a cancellation occurs."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "The state stays active until the first occurrence of a release or cancellation."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "The state is active until either a release or a cancellation occurs"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "The state remains active until either a release or a cancellation occurs; either terminating event may end the obligation."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "The state is active until the first of release or cancellation; either event can end it."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "The state remains active until the first of a release or a cancellation occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R073-G002",
+      "review_id": "R073",
+      "canonical": "The state remains active until an optional release or cancellation, and stays active forever if neither occurs.",
+      "explanation": "The unless-until and explicit absent-termination statements share optional termination.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "The state is active until either a release or a cancellation occurs; if neither occurs, it stays active forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "The state remains active unless or until release or cancellation."
+        }
+      ]
+    },
+    {
+      "group_id": "R073-G003",
+      "review_id": "R073",
+      "canonical": "Either release or cancellation ends the active-state obligation; neither event is explicitly required.",
+      "explanation": "The original focuses on alternative optional termination and is retained as its own whole explanatory statement.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Either a release or a cancellation ends the active-state obligation; neither event is explicitly required."
+        }
+      ]
+    },
+    {
+      "group_id": "R074-G001",
+      "review_id": "R074",
+      "canonical": "The state remains active until a release coincides with the indicator being lit.",
+      "explanation": "These locate the lit-indicator condition at the terminating release rather than throughout the preceding interval.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "The state must remain active until a step occurs where both a release occurs and the indicator is lit."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "The state stays active until a release happens while the indicator is lit."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "The state is active until a release, and the indicator is lit at the release step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "The state is active until a release, and at that release step the indicator is lit."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "The state is active until a release that occurs while the indicator is lit."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "The state remains active until a release occurs at a step when the indicator is lit."
+        }
+      ]
+    },
+    {
+      "group_id": "R074-G002",
+      "review_id": "R074",
+      "canonical": "The state stays active until release and the indicator stays lit throughout that interval.",
+      "explanation": "These extend the lit-indicator condition over the waiting interval.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "The state is active until a release occurs, with the indicator lit throughout that interval"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "The state is active until a release occurs, and the indicator is lit during that interval."
+        }
+      ]
+    },
+    {
+      "group_id": "R074-G003",
+      "review_id": "R074",
+      "canonical": "The state stays active until release with the indicator lit during the interval, while also leaving a release-coincidence reading possible.",
+      "explanation": "This single original explicitly combines alternative scopes and must not be split into independent votes for either narrower interpretation.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "The state remains active until a release occurs, and the indicator is lit during that interval; the wording may also mean the release-period state must coincide with a lit indicator."
+        }
+      ]
+    },
+    {
+      "group_id": "R074-G004",
+      "review_id": "R074",
+      "canonical": "The terminating release must coincide with the indicator being lit.",
+      "explanation": "This original only constrains the terminating event; it does not independently assert the state-active prefix and is therefore not merged with full active-until-release interpretations.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The terminating release must coincide with the indicator being lit."
+        }
+      ]
+    },
+    {
+      "group_id": "R075-G001",
+      "review_id": "R075",
+      "canonical": "The state stays active until a point from which the indicator remains lit permanently; activity is no longer required after that endpoint.",
+      "explanation": "These share permanent illumination as the termination condition and do not expressly require that endpoint to arrive.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "The state must remain active until a point from which the indicator stays lit permanently."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "The state is active until the indicator enters a permanently lit condition."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "The state stays active until the indicator becomes lit permanently"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "The state is active until a point from which the indicator is lit forever; after that point there is no requirement."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "The state remains active until the indicator is permanently on."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "The state remains active until a point from which the indicator stays lit forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R075-G002",
+      "review_id": "R075",
+      "canonical": "The state remains active until the indicator becomes permanently lit, and that endpoint eventually occurs.",
+      "explanation": "The original explicitly says the permanent-lit condition eventually serves as the endpoint.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "The state remains active until the indicator becomes permanently lit; the permanent-lit condition eventually serves as the endpoint."
+        }
+      ]
+    },
+    {
+      "group_id": "R075-G003",
+      "review_id": "R075",
+      "canonical": "The state stays active until permanent illumination; if that never happens, it stays active forever.",
+      "explanation": "This explicitly preserves the absent-endpoint case as perpetual activity.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "The state is active until the indicator becomes permanently lit; if that never happens, the state stays active forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R075-G004",
+      "review_id": "R075",
+      "canonical": "Permanent illumination of the indicator ends the active-state obligation.",
+      "explanation": "This original states the termination effect without independently asserting the full preceding activity interval.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Permanent illumination of the indicator ends the active-state obligation."
+        }
+      ]
+    },
+    {
+      "group_id": "R076-G001",
+      "review_id": "R076",
+      "canonical": "Every request starts an active-until-release obligation at the immediately following step.",
+      "explanation": "All retain exact next-step onset and a release cutoff, without resolving release eventuality.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, starting at the next step the state must remain active until a release occurs."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "After any request, the state must be active from the next step until a release."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After each request, starting at the next step, the state stays active until a release occurs"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, beginning at the next step the state remains active until a release occurs."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every request, from the next step onward the state is active until a release occurs."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every request at step t, the state must remain active starting at step t plus one until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R076-G002",
+      "review_id": "R076",
+      "canonical": "Every request starts activity at the next step until an optional release; without release activity persists forever.",
+      "explanation": "Both explicitly resolve release as optional while preserving exact next-step onset.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every request, from the step after the request until a release, the state is active; release is optional."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every request, the state is active starting at the next step until release; if no release occurs, it stays active forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R076-G003",
+      "review_id": "R076",
+      "canonical": "A request does not require activity at its own step; activity is required only from the next step onward.",
+      "explanation": "The original states a request-step exemption and next-step onset but omits the release cutoff, so it is retained separately from full active-until-release obligations.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The request itself does not require the state to be active at the request step, only from the next step onward."
+        }
+      ]
+    },
+    {
+      "group_id": "R077-G001",
+      "review_id": "R077",
+      "canonical": "Before the first release, every pulse requires a flash at the immediately next step; the trigger obligation ends at release.",
+      "explanation": "All preserve the pre-release pulse scope and exact next-step flash. Ending the trigger interval does not remove a flash already required by a prior pulse.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Before any release occurs, every pulse must be followed by a flash at the next step."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Until a release happens, any pulse must have a flash at the immediately following step."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Until a release occurs, every pulse is followed by a flash at the next step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Until a release occurs, every pulse is followed by a flash exactly at the next step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "Before the first release, every pulse has a flash at the immediately following step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Until a release occurs, every pulse is followed by a flash at the next step; after release there is no requirement."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Before any release, a pulse implies a flash at the next step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Before the first release, every pulse must be followed by a flash exactly at the next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R077-G002",
+      "review_id": "R077",
+      "canonical": "After release the pulse-to-next-step-flash obligation no longer applies.",
+      "explanation": "This is the original post-release exemption alone, not another assertion of the full pre-release rule.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "After the release occurs, the pulse-to-next-step-flash obligation no longer applies."
+        }
+      ]
+    },
+    {
+      "group_id": "R078-G001",
+      "review_id": "R078",
+      "canonical": "The first state stays active until handoff starts a second active-state phase that eventually ends at a required release.",
+      "explanation": "These give the same ordered two-phase obligation and explicitly require the release ending the second phase.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "The first state must remain active until a handoff occurs, after which the second state remains active until a mandatory release ends it."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "The first state stays active until a handoff, after which the second state stays active until a release, and the release must eventually occur"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "The first state remains active until a handoff; after the handoff, the second state remains active until a release, which must eventually end that second phase."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "The first state is active until a handoff, then the second state is active until release; release is required to end the second phase."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "The first state remains active until a handoff occurs; after the handoff, the second state remains active until a release, and that release must eventually occur."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The behavior is a two-phase sequence: first-state active, handoff, second-state active, mandatory release."
+        }
+      ]
+    },
+    {
+      "group_id": "R078-G002",
+      "review_id": "R078",
+      "canonical": "The first state stays active until handoff, then the second state stays active until release, without an explicit eventual-release requirement.",
+      "explanation": "The original does not retain the mandatory-release qualifier present in the other two-phase statements.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "The first state stays active until a handoff, which starts a phase where the second state stays active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R078-G003",
+      "review_id": "R078",
+      "canonical": "The first state stays active until handoff, the second stays active until release after handoff, and a release eventually occurs.",
+      "explanation": "This explicitly states eventual release separately, without explicitly restricting that eventuality to termination of the second phase.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "The first state is active until a handoff; after the handoff the second state is active until a release; a release eventually occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R078-G004",
+      "review_id": "R078",
+      "canonical": "A handoff transitions from first-state activity to second-state activity, and a release eventually ends the second phase.",
+      "explanation": "This transition-and-termination statement does not independently require continuous first-state activity before handoff, unlike the full two-phase prefix obligations.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "A handoff transitions from first state active to second state active, and a release eventually ends the second phase."
+        }
+      ]
+    },
+    {
+      "group_id": "R079-G001",
+      "review_id": "R079",
+      "canonical": "A handoff eventually occurs with the first state active beforehand; from the handoff onward the second state stays active until release, with release eventuality unspecified.",
+      "explanation": "Both explicitly start the second-state obligation at the handoff. After/then onset and explicitly possibly-required release alternatives remain separate.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "A handoff must eventually occur, with the first state active before it; from the handoff onward the second state remains active until a release occurs."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "A handoff must eventually occur, with the first state active before it; from the handoff onward, the second state remains active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R079-G002",
+      "review_id": "R079",
+      "canonical": "A handoff eventually occurs with the first state active up to it; the second is active from handoff until release.",
+      "explanation": "Up-to-handoff activity is expressly continuous, stronger than merely having the first state active beforehand.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "A handoff must eventually occur with the first state active up to that handoff, and from that handoff the second state must remain active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R079-G003",
+      "review_id": "R079",
+      "canonical": "A handoff eventually occurs while the first state is active; afterward the second is active until release.",
+      "explanation": "The first-state condition is simultaneous with handoff, rather than expressly beforehand.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "Eventually a handoff occurs while the first state is active; after it the second state is active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R079-G004",
+      "review_id": "R079",
+      "canonical": "A handoff is mandatory, starts the second-state obligation, and an eventual release ends that obligation.",
+      "explanation": "Eventual release is explicitly mandatory here.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The handoff is mandatory, the second state obligation starts at the handoff, and a release eventually ends it."
+        }
+      ]
+    },
+    {
+      "group_id": "R079-G005",
+      "review_id": "R079",
+      "canonical": "A handoff eventually occurs with the first state active beforehand; afterward the second state stays active until release, with exact handoff-step onset unspecified.",
+      "explanation": "After-handoff or then wording is retained separately from explicit from-the-handoff inclusive onset. Release eventuality is not resolved.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Eventually a handoff occurs preceded by the first state being active, after which the second state stays active until a release."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "A handoff must eventually occur with the first state active before it, and after the handoff the second state stays active until a release"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "There is a future handoff preceded by the first state being active, then the second state is active until release."
+        }
+      ]
+    },
+    {
+      "group_id": "R079-G006",
+      "review_id": "R079",
+      "canonical": "A handoff eventually occurs with the first state active beforehand; from handoff the second state is active until release, and release may be required.",
+      "explanation": "The original explicitly leaves a required-release alternative open. That unresolved combined interpretation stays whole and separate from statements that do not explicitly articulate the alternative.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Eventually a handoff occurs with the first state active beforehand; from that handoff the second state is active until release, and release may be required."
+        }
+      ]
+    },
+    {
+      "group_id": "R080-G001",
+      "review_id": "R080",
+      "canonical": "Every pulse must have a flash at some strictly later step, including the immediately next step as a possible delay.",
+      "explanation": "Strictly later, next-step-or-later and not-the-same-step have the same positive discrete-step delay.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur at a strictly later step."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash at some later step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, a flash occurs at some strictly later step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash occurs at the next step or later."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, a flash occurs later, not at the same step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur at some strictly later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R080-G002",
+      "review_id": "R080",
+      "canonical": "A pulse must be followed at a subsequent time by a flash, with quantification over pulses not made explicit.",
+      "explanation": "The singular indefinite wording is retained without converting it to a universal or existential commitment.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse must be followed at some subsequent time by a flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R080-G003",
+      "review_id": "R080",
+      "canonical": "Every pulse is followed later by a flash with at least one step separating the events.",
+      "explanation": "The explicit one-step separation wording is preserved rather than deciding whether it means one intervening step or merely a positive delay.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash at some later step, with the delay unspecified and at least one step separating them."
+        }
+      ]
+    },
+    {
+      "group_id": "R080-G004",
+      "review_id": "R080",
+      "canonical": "There exists a pulse that is followed later by a flash.",
+      "explanation": "Existential pulse occurrence and response differ from the universal pulse-response rule.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "There exists a pulse that is followed later by a flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R081-G001",
+      "review_id": "R081",
+      "canonical": "Every pulse requires the light to stay on forever starting at the immediately next step.",
+      "explanation": "All describe permanent illumination after the trigger, with the first required step immediately following the pulse.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light must stay on permanently from the next step onward."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "After any pulse, the light remains on for all subsequent steps."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After a pulse, the light is on at the next step and stays on from then onward"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After a pulse, beginning at the next step, the light remains on forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, from the step after the pulse onward the light is on forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, from the next step onward the light stays on."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "After any pulse, the light is on permanently starting at the next step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs at step t, the light is on for every step after t and remains on forever."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse triggers permanent light-on starting at the next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R082-G001",
+      "review_id": "R082",
+      "canonical": "After every pulse, some later point is reached from which the light stays on permanently; it may fluctuate before settling.",
+      "explanation": "All allow a settling delay and require eventual permanent illumination rather than immediate next-step permanence.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, there must eventually be a step after which the light stays on permanently."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "After a pulse, the light eventually becomes permanently on."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After a pulse, the light eventually stays on from some later step onward"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After each pulse, there is a later point from which the light remains on continuously; it need not be on immediately after the pulse."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, there is a later step from which the light stays on forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, eventually after it the light becomes permanently on."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "After a pulse, at some future point the light stays on from then on."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, there is some later step from which the light becomes on and remains on forever."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The light may fluctuate before settling, but after the pulse it eventually enters a permanently on state."
+        }
+      ]
+    },
+    {
+      "group_id": "R083-G001",
+      "review_id": "R083",
+      "canonical": "Every pulse is followed by a strictly later flash and then a chime strictly later than that flash.",
+      "explanation": "These preserve universal pulse triggering and the strict pulse-then-flash-then-chime order.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur at a strictly later step, and a chime must occur strictly after that flash."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash at a later step, and a chime occurs at a still later step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After each pulse, a flash occurs later, and a chime occurs at a still later step than that flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, a flash occurs later, and a chime occurs strictly later than that flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash occurs later and a chime occurs later than the pulse, with the chime after the flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, the order is pulse, then flash, then chime."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash occurs later, and then a chime occurs later than that flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R083-G002",
+      "review_id": "R083",
+      "canonical": "A pulse is followed by a later flash and then a still later chime, without explicit pulse quantification.",
+      "explanation": "The singular indefinite wording is retained without deciding universal versus existential scope.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse is followed by a later flash, which in turn is followed by an even later chime."
+        }
+      ]
+    },
+    {
+      "group_id": "R083-G003",
+      "review_id": "R083",
+      "canonical": "The required event order is pulse, then flash, then chime.",
+      "explanation": "This original states only the ordering characterization and is not promoted to an independently quantified pulse-response obligation.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The required order is pulse, then flash, then chime."
+        }
+      ]
+    },
+    {
+      "group_id": "R084-G001",
+      "review_id": "R084",
+      "canonical": "Every pulse requires a strictly later flash with no pulse strictly between them; a pulse at the flash step is not explicitly excluded.",
+      "explanation": "These exclude intervening pulses while preserving the open interval and do not strengthen it to flash strictly before a later pulse.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur at a later step with no pulse occurring in between the two."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After a pulse, a flash occurs at a later step with no pulse occurring between them"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After a pulse, a later flash occurs, and no pulse occurs in the interval between that pulse and the flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, there is a later flash such that no pulse occurs between that pulse and the flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash occurs later and no pulse occurs strictly between the pulse and the flash."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs at step t, a flash occurs at some later step t prime, and no pulse occurs between t and t prime."
+        }
+      ]
+    },
+    {
+      "group_id": "R084-G002",
+      "review_id": "R084",
+      "canonical": "After a pulse, a next pulse must not occur before a flash occurs.",
+      "explanation": "The ordering permits a simultaneous next pulse and flash and does not expressly require a flash if no next pulse occurs.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "After a pulse, the next pulse must not occur before a flash occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R084-G003",
+      "review_id": "R084",
+      "canonical": "For each pulse, the required flash must occur strictly before any subsequent pulse.",
+      "explanation": "These use before any subsequent pulse, unlike statements forbidding pulses only strictly in the intervening interval.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, the flash occurs before any subsequent pulse."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The required flash must come before any subsequent pulse."
+        }
+      ]
+    },
+    {
+      "group_id": "R085-G001",
+      "review_id": "R085",
+      "canonical": "Every pulse requires a later flash with no pause state strictly between the pulse and flash.",
+      "explanation": "These constrain only the intervening interval and leave endpoint pause values unconstrained.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur at a later step, and the pause state must not hold at any step strictly between them."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "After a pulse, a flash occurs later without any intervening pause state."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After a pulse, a flash occurs at a later step with no pause state holding between them"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After a pulse, a later flash occurs with no intervening pause state; the exact delay between pulse and flash is otherwise unspecified."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, a flash occurs later and the pause state does not hold between the pulse and the flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, a flash occurs later with no intervening pause state."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs at step t, a flash occurs at some later step t prime, and no pause state holds between t and t prime."
+        }
+      ]
+    },
+    {
+      "group_id": "R085-G002",
+      "review_id": "R085",
+      "canonical": "Every pulse requires a flash at the immediately next step, leaving no intervening pause step.",
+      "explanation": "The exact-next-step response is stronger than an arbitrary later pause-free response.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash occurs at the next step, so there is no pause step in between."
+        }
+      ]
+    },
+    {
+      "group_id": "R085-G003",
+      "review_id": "R085",
+      "canonical": "The required flash must occur before any pause after the pulse.",
+      "explanation": "The strict-before-pause wording rules out a pause at the flash endpoint, unlike an interior-only prohibition.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The required flash must occur before any pause after the pulse."
+        }
+      ]
+    },
+    {
+      "group_id": "R086-G001",
+      "review_id": "R086",
+      "canonical": "After every pulse, a next release is required and must occur with the light on at that release step.",
+      "explanation": "These explicitly require a next release or say it must occur/happen, and place illumination at that endpoint without requiring it continuously beforehand.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the very next release must occur at a step where the light is on."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "After a pulse, the first subsequent release must happen with the light on."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After a pulse, the next release occurs while the light is on"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After a pulse, the next release occurs with the light on at that release step; a next release is implicitly required."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, the next release after it occurs and the light is on at that release."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the first later release occurs while the light is on."
+        }
+      ]
+    },
+    {
+      "group_id": "R086-G002",
+      "review_id": "R086",
+      "canonical": "For each pulse, the light is on at its next release, without continuous illumination being required; release eventuality is unspecified.",
+      "explanation": "These characterize the endpoint value while not expressly requiring or conditionally exempting absent release.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, at the first release after it, the light is on."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The light need not remain on continuously, but it must be on at the next release after the pulse."
+        }
+      ]
+    },
+    {
+      "group_id": "R086-G003",
+      "review_id": "R086",
+      "canonical": "For every pulse, when its next release occurs the light is on.",
+      "explanation": "The original is expressly conditional on the occurrence of the next release.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, when the next release occurs, the light is on."
+        }
+      ]
+    },
+    {
+      "group_id": "R087-G001",
+      "review_id": "R087",
+      "canonical": "Every pulse occurring while enabled requires a flash at a strictly later step; disabled pulses have no obligation from this rule.",
+      "explanation": "All retain the enable guard at the pulse step and an arbitrary positive delay, including next-step-or-later as the same strict-later bound.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs while enabled, a flash must occur at a strictly later step."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse during an enable state must be followed later by a flash."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "When a pulse occurs while enabled, a flash occurs at some later step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs while enabled, a flash occurs at a later step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At any step where a pulse occurs and enable holds, a flash occurs at some later step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "At any step where a pulse and enable hold, a flash occurs at the next step or later."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every enabled pulse, a later flash occurs."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs while the enable state holds, a flash must occur at some strictly later step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Only enabled pulses create a later-flash obligation; disabled pulses are unconstrained."
+        }
+      ]
+    },
+    {
+      "group_id": "R088-G001",
+      "review_id": "R088",
+      "canonical": "Every pulse before the first stop requires a flash strictly after that pulse and strictly before that first stop.",
+      "explanation": "These keep the first-stop scope and the flash strictly inside the pulse-to-stop interval.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "For any pulse occurring before the first stop, a flash must occur strictly after that pulse and also strictly before that first stop."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Before the first stop occurs, any pulse must be followed by a flash that also precedes that stop."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Any pulse before the first stop is followed by a flash at a later step that also occurs before that stop"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "For every pulse before the first stop, a later flash occurs before that first stop; the flash must be strictly later than the pulse."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse before the first stop, a flash occurs later than the pulse and before the first stop."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse before the first stop, a flash occurs later and also before that stop."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse before the first stop, a flash must occur later than the pulse but before that first stop."
+        }
+      ]
+    },
+    {
+      "group_id": "R088-G002",
+      "review_id": "R088",
+      "canonical": "Before any stop, every pulse requires a later flash before that stop.",
+      "explanation": "The any-stop scope can include pulse/stop intervals after the first stop and is not silently restricted to the first-stop prefix.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Before any stop, every pulse has a later flash before that stop."
+        }
+      ]
+    },
+    {
+      "group_id": "R088-G003",
+      "review_id": "R088",
+      "canonical": "The required flash must occur strictly between the pulse and the first stop.",
+      "explanation": "The original states endpoint ordering alone and does not independently quantify over every pulse before the first stop, so it is separate from the full trigger obligation.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The required flash must be strictly between the pulse and the first stop."
+        }
+      ]
+    }
+  ]
+}

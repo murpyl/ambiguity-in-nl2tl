@@ -1,0 +1,10 @@
+{
+  "model": "anthropic/claude-haiku-5.5",
+  "stage": 2,
+  "scope_sha256": "9357c61479b38c2ee38ae5469aeee8374c1b7d47af56678dcc888f899e4ae0c7",
+  "started_at": "2026-11-03T23:38:32.935676+00:00",
+  "completed_at": "2026-11-03T23:39:15.344039+00:00",
+  "validated_sha256": "14717734da8551a3988c85cfa9d5e751c0e30b7b5ceb4ea3b9bf17e7aa099299",
+  "content_sha256": "7e6c2a094cab56573ed98beb0345760cf5a69f4464de3ceb6c4ba396d0f8d092",
+  "attempt": 5
+}

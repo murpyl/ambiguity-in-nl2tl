@@ -110,13 +110,19 @@ def schema(stage, entries=None):
     fields = {'review_id': string, 'comments': string}
     fields['interpretations' if stage == 1 else 'additional_interpretations'] = {'type': 'array', 'items': string, 'minItems': 1 if stage == 1 else 0}
     if stage == 2:
+        # Share the support shape across requirements instead of compiling one
+        # near-identical grammar branch per review ID. Exact per-entry coverage
+        # and reading-key membership remain enforced by validate().
+        keysets = sorted({tuple(sorted(r['reading_id'] for r in entry['readings']))
+                          for entry in entries or []})
+        if not keysets:
+            raise ValueError('Stage 2 schema requires reading entries')
         variants = []
-        for entry in entries or []:
-            properties = {r['reading_id']: {'type': 'string', 'enum': sorted(LABELS)} for r in entry['readings']}
-            row = {**fields, 'review_id': {'type': 'string', 'enum': [entry['review_id']]},
-                   'supports': {'type': 'object', 'properties': properties, 'required': list(properties), 'additionalProperties': False}}
-            variants.append({'type': 'object', 'properties': row, 'required': list(row), 'additionalProperties': False})
-        return {'type': 'object', 'properties': {'entries': {'type': 'array', 'items': {'anyOf': variants}}}, 'required': ['entries'], 'additionalProperties': False}
+        for keys in keysets:
+            properties = {key: {'type': 'string', 'enum': sorted(LABELS)} for key in keys}
+            variants.append({'type': 'object', 'properties': properties,
+                             'required': list(keys), 'additionalProperties': False})
+        fields['supports'] = variants[0] if len(variants) == 1 else {'anyOf': variants}
     return {'type': 'object', 'properties': {'entries': {'type': 'array', 'items': {
         'type': 'object', 'properties': fields, 'required': list(fields), 'additionalProperties': False}}},
         'required': ['entries'], 'additionalProperties': False}
@@ -175,6 +181,15 @@ def preflight(run, scope, config, transport=request):
     missing = [m for m in MODELS if m not in catalog]
     if missing:
         raise ValueError('Unavailable exact model IDs: ' + ', '.join(missing))
+    omitted = config.get('omit_temperature_models', [])
+    if (not isinstance(omitted, list) or any(not isinstance(model, str) or model not in MODELS for model in omitted)
+            or len(omitted) != len(set(omitted))):
+        raise ValueError('omit_temperature_models must contain unique exact known model IDs')
+    unsupported_temperature = [model for model in MODELS if model not in omitted
+                               and 'temperature' not in catalog[model].get('supported_parameters', [])]
+    if unsupported_temperature:
+        raise ValueError('Configured temperature is not supported by catalog for: '
+                         + ', '.join(unsupported_temperature))
     maxout = config['max_output_tokens']
     if type(maxout) is not int or maxout < 1:
         raise ValueError('Invalid output budget')
@@ -190,8 +205,12 @@ def preflight(run, scope, config, transport=request):
         context = top.get('context_length') or item.get('context_length')
         if not limit or not context or maxout > limit or base + 2 * maxout > context:
             raise ValueError(f'Cannot certify two-call context/output budget for {model}: context={context}, output={limit}, required_context={base + 2 * maxout}')
+        settings = {'max_tokens': maxout}
+        if model not in omitted:
+            settings['temperature'] = config['temperature']
         budgets[model] = {'context': context, 'output_limit': limit, 'required_context': base + 2 * maxout,
-                          'structured': 'structured_outputs' in item.get('supported_parameters', [])}
+                          'structured': 'structured_outputs' in item.get('supported_parameters', []),
+                          'generation_settings': settings}
     if not os.environ.get('OPENROUTER_API_KEY'):
         raise ValueError('OPENROUTER_API_KEY is missing')
     write(run / 'preflight.json', {'checked_at': now(), 'budgets': budgets,
@@ -273,7 +292,7 @@ def _annotate(run, scope, config, transport=request, resume=False):
                     raise ValueError('Stage 1 is not frozen')
                 frozen = (folder / 'stage1.content.txt').read_text() if stage == 2 else None
                 payload = {'model': model, 'messages': messages(scope, stage, frozen),
-                           'temperature': config['temperature'], 'max_tokens': config['max_output_tokens'],
+                           **budgets[model]['generation_settings'],
                            'stream': False, 'provider': {'allow_fallbacks': False, 'require_parameters': True}}
                 if budgets[model]['structured']:
                     payload['response_format'] = {'type': 'json_schema', 'json_schema': {

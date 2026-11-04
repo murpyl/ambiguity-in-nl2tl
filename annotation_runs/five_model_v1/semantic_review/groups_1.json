@@ -1,0 +1,1718 @@
+{
+  "reviewed_by": [
+    "semantic_1"
+  ],
+  "groups": [
+    {
+      "group_id": "R001-G001",
+      "review_id": "R001",
+      "canonical": "A pulse eventually occurs and a flash eventually occurs, with no requirement that they coincide.",
+      "explanation": "Independent eventual occurrences have the same meaning as a finite deadline by which both have occurred. Repeated Qwen paraphrases count as one model. Kept separate from a joint simultaneous occurrence.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Eventually, both a pulse occurs and a flash occurs, possibly at different times."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Eventually a pulse occurs and eventually a flash occurs, in either order and possibly at the same step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "There is some future point at which a pulse occurs and some future point at which a flash occurs; the two events need not be ordered or simultaneous."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At some future step a pulse occurs and at some possibly different future step a flash occurs; order is unspecified."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "At some step in the future, a pulse occurs and at some step a flash occurs; order and simultaneity are unrestricted."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "There exists a finite time by which both a pulse and a flash have occurred, possibly on different steps."
+        }
+      ]
+    },
+    {
+      "group_id": "R001-G002",
+      "review_id": "R001",
+      "canonical": "At some future step, a pulse and a flash occur simultaneously.",
+      "explanation": "All members require one joint occurrence, stronger than independent eventual occurrences.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Eventually, a step occurs where both a pulse and a flash occur simultaneously."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "Both events must occur at the same step at some point"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "At some single future step both a pulse and a flash occur simultaneously."
+        }
+      ]
+    },
+    {
+      "group_id": "R002-G001",
+      "review_id": "R002",
+      "canonical": "Pulses occur infinitely often and flashes occur infinitely often, without requiring pairing.",
+      "explanation": "Repeated occurrence forever, each event recurring after every point, and an eventual indefinitely recurring regime express the same unbounded recurrence; no fixed pattern is imposed.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Pulses occur infinitely often and flashes occur infinitely often."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Infinitely often a pulse occurs and infinitely often a flash occurs"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Pulses occur repeatedly without end, and flashes occur repeatedly without end."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "Infinitely often a pulse occurs and infinitely often a flash occurs, not necessarily paired."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "From every point onward, both a pulse and a flash occur again in the future."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Pulses occur infinitely often and flashes occur infinitely often."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "From some point onward, the system keeps producing pulses and flashes repeatedly, without necessarily requiring a fixed pattern."
+        }
+      ]
+    },
+    {
+      "group_id": "R002-G002",
+      "review_id": "R002",
+      "canonical": "Pulse-and-flash simultaneous occurrences happen infinitely often.",
+      "explanation": "Joint recurrence requires coincident events and is separate from independent recurrence.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Steps where both a pulse and a flash occur together happen infinitely often."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "A pulse and a flash occur together infinitely often."
+        }
+      ]
+    },
+    {
+      "group_id": "R003-G001",
+      "review_id": "R003",
+      "canonical": "For every request, a pulse and a flash occur at or after the request, possibly at different steps.",
+      "explanation": "These members explicitly allow fulfilment at the request step. They are not merged with strictly later responses.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, there must eventually be a pulse and eventually be a flash at or after the request."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "At every step where a request occurs, a pulse and a flash occur at that same step or later"
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "For every request, both a pulse and a flash are required after it, possibly including the same step as the request."
+        }
+      ]
+    },
+    {
+      "group_id": "R003-G002",
+      "review_id": "R003",
+      "canonical": "For every request, a pulse and a flash each occur strictly later, without a required order or coincidence.",
+      "explanation": "Later independent responses include the same later step as one possibility; they do not require a joint event or pulse-before-flash ordering.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "At every request, a pulse and a flash occur at strictly later steps"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "For every request, a pulse and a flash must occur after that request, with no specified ordering or timing between the two."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For each request, a pulse occurs later and a flash occurs later; order is unspecified."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For each request, a pulse and a flash both occur at some later step, possibly the same step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every request, a pulse and a flash must occur at some later step or steps; their order is not fixed."
+        }
+      ]
+    },
+    {
+      "group_id": "R003-G003",
+      "review_id": "R003",
+      "canonical": "Every request is followed at a later step by a simultaneous pulse and flash.",
+      "explanation": "Requires a joint later event rather than merely two independent responses.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Whenever a request occurs, there must be a later step where both a pulse and a flash occur simultaneously."
+        }
+      ]
+    },
+    {
+      "group_id": "R003-G004",
+      "review_id": "R003",
+      "canonical": "After every request, a pulse occurs and then a flash occurs later than that pulse.",
+      "explanation": "Adds ordered pulse-then-flash fulfilment for each request.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 2,
+          "text": "Whenever a request occurs, it must be followed by a pulse and then subsequently a flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For each request, a pulse occurs later and then a flash occurs later."
+        }
+      ]
+    },
+    {
+      "group_id": "R004-G001",
+      "review_id": "R004",
+      "canonical": "If any stop occurs, a pulse and a flash must both have occurred strictly before the first stop; no stop is required.",
+      "explanation": "With no reset or renewed-event requirement, having both events before every stop is equivalent to having them before the first stop. Conditional and stop-prohibition formulations allow no-stop traces. Claude 0 explicitly qualifies its first-stop wording by if a stop occurs.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "If a stop ever occurs, both a pulse and a flash must occur strictly before the first stop."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "A pulse and a flash both occur strictly before the first stop; if a stop occurs, both must precede it"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "If any stop occurs, then before the first stop a pulse and a flash occur; order is unspecified."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Before every stop, a pulse and a flash occur."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "If a stop occurs, then before that stop there must have been at least one pulse and at least one flash."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "No stop may occur until both a pulse and a flash have occurred."
+        }
+      ]
+    },
+    {
+      "group_id": "R004-G002",
+      "review_id": "R004",
+      "canonical": "A stop must eventually occur, and a pulse and a flash must both precede it.",
+      "explanation": "Explicitly requires termination by a stop, unlike the conditional no-stop-permitting group.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A stop must eventually occur, preceded by both a pulse and a flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R004-G003",
+      "review_id": "R004",
+      "canonical": "A pulse and a flash must occur no later than a stop, permitting coincidence with the stop.",
+      "explanation": "At-or-before wording permits the stop endpoint, unlike strictly-before interpretations. No no-stop liveness decision is supplied.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 2,
+          "text": "Both a pulse and a flash must occur at or before any stop."
+        }
+      ]
+    },
+    {
+      "group_id": "R004-G004",
+      "review_id": "R004",
+      "canonical": "A pulse and a flash must precede the first or any relevant stop, with relevant-stop scope left open.",
+      "explanation": "The original expressly leaves first-versus-relevant-stop scope unresolved; it is not silently narrowed to a complete universal first-stop conditional.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "A pulse and a flash must both occur before the first or any relevant stop; the requirement is violated if a stop occurs first."
+        }
+      ]
+    },
+    {
+      "group_id": "R004-G005",
+      "review_id": "R004",
+      "canonical": "A pulse and a flash must occur before the first stop, while a stop itself is optional; the no-stop event obligation is unresolved.",
+      "explanation": "Both assert event occurrence before a stop and expressly make only the stop optional, without an explicit if-stop qualification. Before any stop and before the first stop are equivalent here without resets. Preserve the unresolved no-stop event liveness rather than converting either statement to an if-stop-only conditional or asserting an unconditional no-stop obligation.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "A pulse and a flash occur before the first stop, but a stop is not required."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "Pulse and flash must occur before any stop, with no stop required to occur"
+        }
+      ]
+    },
+    {
+      "group_id": "R005-G001",
+      "review_id": "R005",
+      "canonical": "After every request, both a pulse and a flash are due strictly before the next stop, without an explicit decision for the no-next-stop case.",
+      "explanation": "Shares the request-to-next-stop deadline and unordered events. These statements do not expressly settle whether fulfilment remains required without a stop.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every request, before the next stop occurs, both a pulse and a flash must occur."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After each request, a pulse and a flash occur before the next stop, with the request-to-stop window containing both"
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every request, before the next stop after that request, both a pulse and a flash must occur."
+        }
+      ]
+    },
+    {
+      "group_id": "R005-G002",
+      "review_id": "R005",
+      "canonical": "For every request, if a next stop occurs, a pulse and a flash must occur between the request and that stop.",
+      "explanation": "All explicitly condition the event obligation on a subsequent stop; no-stop traces do not create that conditional obligation.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Whenever a request occurs, if a stop follows, a pulse and a flash must occur between the request and that stop."
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After each request, a pulse and a flash must occur before the next stop, if a next stop occurs; the next stop may be absent."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For each request, if a stop occurs afterward, then a pulse and a flash occur after the request and before that next stop."
+        }
+      ]
+    },
+    {
+      "group_id": "R005-G003",
+      "review_id": "R005",
+      "canonical": "After every request, a pulse and a flash must occur at or before the next stop.",
+      "explanation": "Permits the deadline step itself and does not resolve no-stop obligations.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "After each request, a pulse and a flash occur at or before the next stop"
+        }
+      ]
+    },
+    {
+      "group_id": "R005-G004",
+      "review_id": "R005",
+      "canonical": "Every request eventually requires a pulse and a flash after it, and any subsequent stop is a strict deadline.",
+      "explanation": "DeepSeek explicitly requires both events even without a stop; it supplies the complete obligation including that liveness.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For each request, a pulse and a flash occur after it and before any subsequent stop, even if no stop ever occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R005-G005",
+      "review_id": "R005",
+      "canonical": "After every request, a pulse must occur and a flash must then occur before the next stop.",
+      "explanation": "Adds pulse-before-flash order; no-stop consequences remain unstated.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For each request, a pulse occurs and then a flash occurs before the next stop."
+        }
+      ]
+    },
+    {
+      "group_id": "R005-G006",
+      "review_id": "R005",
+      "canonical": "If there is no next stop after a request, that request still requires an eventual pulse and flash.",
+      "explanation": "This is a no-stop-case assertion only; it does not independently state the stopped-case deadline or timing after the request and cannot inherit those from another interpretation.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If there is no next stop, the pulse and flash are still required eventually, because the request creates an obligation."
+        }
+      ]
+    },
+    {
+      "group_id": "R006-G001",
+      "review_id": "R006",
+      "canonical": "Eventually both the signal and indicator are active together throughout two consecutive steps.",
+      "explanation": "All require a shared two-step block; a run lasting at least two steps entails such a block and does not require the run to end after the second step. Duplicate paraphrases count once per model.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Eventually, there are two consecutive steps during which both the signal and the indicator are active."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "At some step the signal and the indicator are both active, and both remain active at the following step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "At some future pair of consecutive steps, both the signal and the indicator are active at each step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At some future pair of consecutive steps, both the signal and the indicator are active at both steps."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Eventually there is a two-step interval during which the signal and the indicator are both active throughout."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "At some future step both are active, and at the next step both are active again."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "There is some step t such that the signal and the indicator are both active at t and at t plus one."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Both the signal and the indicator must be simultaneously active for a continuous run of at least two steps at some point."
+        }
+      ]
+    },
+    {
+      "group_id": "R006-G002",
+      "review_id": "R006",
+      "canonical": "The signal eventually has two consecutive active steps and the indicator eventually has two consecutive active steps, possibly in different intervals.",
+      "explanation": "Allows separate two-step blocks instead of one common active block.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Eventually, the signal is active for two consecutive steps and the indicator is active for two consecutive steps, possibly at different times."
+        }
+      ]
+    },
+    {
+      "group_id": "R007-G001",
+      "review_id": "R007",
+      "canonical": "The signal eventually becomes active and the indicator eventually becomes active, without requiring simultaneous activation.",
+      "explanation": "All describe independent eventual activations. They do not require one simultaneous onset or shared active step.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Eventually the signal becomes active and eventually the indicator becomes active."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "At some future step the signal becomes active and at some possibly different future step the indicator becomes active."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Each of the signal and the indicator eventually becomes active at least once."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "The signal becomes active at some future step and the indicator becomes active at some future step, not necessarily the same step."
+        }
+      ]
+    },
+    {
+      "group_id": "R007-G002",
+      "review_id": "R007",
+      "canonical": "The signal is eventually active and the indicator is eventually active, possibly at different times and without persistence.",
+      "explanation": "State-occurrence wording does not itself demand activation transitions, simultaneity or continued activity. Kept separate from the explicit simultaneous-onset interpretation.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Eventually the signal is active and eventually the indicator is active, possibly at different times"
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Both the signal and the indicator must eventually be active, without any requirement that they remain active."
+        }
+      ]
+    },
+    {
+      "group_id": "R007-G003",
+      "review_id": "R007",
+      "canonical": "Eventually the signal and indicator become active simultaneously.",
+      "explanation": "Explicit simultaneous activation onset is preserved separately from merely sharing an active step.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Eventually there is a step where both the signal and the indicator become active simultaneously."
+        }
+      ]
+    },
+    {
+      "group_id": "R007-G004",
+      "review_id": "R007",
+      "canonical": "At some future step, the signal and indicator are both active; simultaneous onset is not required.",
+      "explanation": "Claude and DeepSeek require a shared active step. OpenAI explicitly says at some future point both are active while disclaiming simultaneous onset/persistence, which preserves shared state rather than shared transition.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "Eventually the signal and the indicator are both active at the same step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "At some future point, the signal is active and the indicator is active, without requiring simultaneous onset or persistence."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At some future step both the signal and the indicator are active simultaneously."
+        }
+      ]
+    },
+    {
+      "group_id": "R008-G001",
+      "review_id": "R008",
+      "canonical": "Eventually a point is reached from which both signal and indicator remain active until a release, with release necessity unspecified.",
+      "explanation": "Shares a common eventual active interval and continuous activity before release, but does not explicitly require release or settle the no-release case. Gemini 1 describes each remaining active after both are active, without a separate endpoint.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Eventually, a time is reached from which both the signal and the indicator remain continuously active until a release occurs."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Eventually both the signal and the indicator are active, and each remains active until a release occurs."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "From some step onward, the signal and the indicator are active and remain active until a release occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R008-G002",
+      "review_id": "R008",
+      "canonical": "Eventually both signal and indicator are active continuously through an interval that ends in a required release.",
+      "explanation": "These explicitly require release to occur, unlike weak or undecided termination interpretations. Endpoint activity is not further resolved by the originals.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Eventually both the signal and the indicator become active and remain active continuously until a release occurs, with release required"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "There is a future interval starting when both are active and ending at a release, with both active throughout; release must occur."
+        }
+      ]
+    },
+    {
+      "group_id": "R008-G003",
+      "review_id": "R008",
+      "canonical": "Eventually both are continuously active until release, with the requirement for release itself left explicitly uncertain.",
+      "explanation": "OpenAI says release is not clearly required; DeepSeek says it may or may not be required. These report unresolved termination rather than asserting strong or weak until.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Eventually a period begins during which both the signal and indicator remain active continuously until a release occurs; a release is not clearly required to occur."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At some future point both signal and indicator become active and remain active until a release occurs; release may or may not be required."
+        }
+      ]
+    },
+    {
+      "group_id": "R008-G004",
+      "review_id": "R008",
+      "canonical": "Eventually both are active unless or until a release; if release never occurs, both remain active forever.",
+      "explanation": "The unless alternative may allow a release to discharge activity without a nonempty active interval. Kept separate from a definite eventual joint active interval.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Eventually both are active unless or until a release occurs; if no release occurs, they stay active forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R008-G005",
+      "review_id": "R008",
+      "canonical": "If no release occurs, from an eventual point both the signal and indicator remain active forever.",
+      "explanation": "This states only the no-release branch; it does not independently constrain traces containing a release.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If no release occurs, then from that eventual point the signal and the indicator remain active forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R009-G001",
+      "review_id": "R009",
+      "canonical": "A pulse and a flash occur, in no specified order, and a completion occurs strictly later than both.",
+      "explanation": "Afterward and later-than-both formulations impose the same completion ordering; the pulse/flash need not coincide.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "A pulse and a flash must occur, followed strictly later by a completion."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "A pulse and a flash occur, and a completion occurs afterward"
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "Eventually a pulse and a flash occur, and at some later step a completion occurs"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "A pulse and a flash occur, and a completion occurs later than both of them or later than the combined pulse-and-flash occurrence."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "A pulse and a flash occur, and a completion occurs at some later step than the later of the two."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "There exists a pulse and a flash that occur before some completion event."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse and a flash must occur at some point, and a completion must occur later than them."
+        }
+      ]
+    },
+    {
+      "group_id": "R009-G002",
+      "review_id": "R009",
+      "canonical": "A pulse and a flash eventually occur, followed by a completion at or after both have occurred.",
+      "explanation": "Explicitly permits completion at the later pulse/flash step.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse and a flash must eventually occur, and at or after both have occurred, a completion occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R009-G003",
+      "review_id": "R009",
+      "canonical": "At one future step a pulse and a flash occur together, and a completion occurs afterward.",
+      "explanation": "The singular future step imposes a simultaneous pulse/flash occurrence, stronger than independent occurrences.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At some future step a pulse and a flash occur, and after both a completion occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R009-G004",
+      "review_id": "R009",
+      "canonical": "A pulse occurs, then a flash occurs, then a completion occurs, all in strict order.",
+      "explanation": "Adds pulse-before-flash order as well as later completion.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "A pulse occurs, then a flash occurs, then a completion occurs in strict order."
+        }
+      ]
+    },
+    {
+      "group_id": "R010-G001",
+      "review_id": "R010",
+      "canonical": "After every start, a pulse and a flash must occur before the next finish, without settling the absence-of-finish case.",
+      "explanation": "Before any subsequent finish and before the next finish impose the same earliest deadline without reset. The no-finish liveness case is left unstated.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "After any start, both a pulse and a flash must occur before the next finish."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After each start, a pulse and a flash occur before the next finish"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For each start, a pulse and a flash occur after it and before the next finish."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "After any start, a pulse and a flash occur before any subsequent finish; order is unspecified."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "If a start occurs, then before the next finish after that start, both a pulse and a flash must occur."
+        }
+      ]
+    },
+    {
+      "group_id": "R010-G002",
+      "review_id": "R010",
+      "canonical": "Following a start, a pulse and a flash occur before a finish that occurs after both, without explicit every-start or next-finish scope.",
+      "explanation": "These use a start/a finish and do not explicitly quantify every start or require the next finish. Their eventual event wording is preserved without adding universal scope.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Following a start, there must eventually be a pulse and a flash prior to a finish occurring."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "After a start, a pulse and a flash occur before a finish, with the finish occurring after both"
+        }
+      ]
+    },
+    {
+      "group_id": "R010-G003",
+      "review_id": "R010",
+      "canonical": "For every start, both a pulse and flash occur after it and before its corresponding finish.",
+      "explanation": "Corresponding-finish scope is not identified with the next finish.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "For every start, a pulse and a flash must occur after it and before the corresponding finish."
+        }
+      ]
+    },
+    {
+      "group_id": "R010-G004",
+      "review_id": "R010",
+      "canonical": "For every start, if a finish occurs afterward, both events must occur between that start and that finish.",
+      "explanation": "Explicitly conditional on the finish occurring, unlike an unconditional liveness obligation.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For each start, if a finish occurs afterward, then a pulse and a flash occur after the start and before that finish."
+        }
+      ]
+    },
+    {
+      "group_id": "R010-G005",
+      "review_id": "R010",
+      "canonical": "If there is no finish after a start, that start still requires an eventual pulse and flash.",
+      "explanation": "Only states the no-finish case; it cannot inherit a stopped-case deadline or scope from another interpretation.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If no finish occurs after the start, the pulse and flash are still eventually required by the start."
+        }
+      ]
+    },
+    {
+      "group_id": "R011-G001",
+      "review_id": "R011",
+      "canonical": "Eventually a pulse occurs immediately before a flash, and eventually a click occurs immediately before a mark; the two pairs need not overlap or have a fixed order.",
+      "explanation": "All require two adjacent pairs without requiring alignment of their first or second steps. Duplicate pair descriptions count once per model.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Eventually there is a pulse immediately followed by a flash, and eventually there is a click immediately followed by a mark."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Eventually a pulse is immediately followed by a flash, and eventually a click is immediately followed by a mark"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Eventually there is a pulse immediately followed by a flash, and there is also a click immediately followed by a mark; the two adjacent pairs may occur in either order."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At some future point a pulse occurs and the next step is a flash; separately, at some future point a click occurs and the next step is a mark."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "At some future point both immediate pairs occur, possibly at different times; order between the pairs is unspecified."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Eventually there is a pulse-flash consecutive pair and a click-mark consecutive pair."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "There is a step where a pulse occurs and the immediately next step where a flash occurs, and separately there is a step where a click occurs and the immediately next step where a mark appears."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The pulse-flash pair and the click-mark pair may occur at different times, but each pair must be consecutive."
+        }
+      ]
+    },
+    {
+      "group_id": "R011-G002",
+      "review_id": "R011",
+      "canonical": "Eventually a simultaneous pulse and click are immediately followed by a simultaneous flash and mark.",
+      "explanation": "Aligns both adjacent pairs into one shared two-step interval.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Eventually there is a step where a pulse and a click occur simultaneously, followed immediately by both a flash and a mark."
+        }
+      ]
+    },
+    {
+      "group_id": "R012-G001",
+      "review_id": "R012",
+      "canonical": "Infinitely often, there is a two-consecutive-step interval during which both signal and indicator are active.",
+      "explanation": "Recurrence forever and eventual occurrence after every point are equivalent here. Permanent activity is permitted but not required; OpenAI permits recurring or continuing instances.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Infinitely often, both the signal and the indicator are active across two consecutive steps."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Infinitely often the signal and the indicator are both active on two consecutive steps"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "The signal and indicator are active together for two consecutive steps, with this pattern recurring or continuing as required by 'keep'."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "Infinitely often there is a pair of consecutive steps at which both signal and indicator are active at both steps."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "From every point onward, eventually there is a two-consecutive-step interval where both are active."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "The signal and indicator remain active for two consecutive steps repeatedly forever."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Infinitely often, the signal and the indicator are both active for two consecutive steps."
+        }
+      ]
+    },
+    {
+      "group_id": "R012-G002",
+      "review_id": "R012",
+      "canonical": "The signal and indicator are active together permanently across every pair of consecutive steps.",
+      "explanation": "Requires permanent joint activity rather than merely infinitely recurring two-step blocks.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Both the signal and the indicator remain active together across every pair of consecutive steps permanently."
+        }
+      ]
+    },
+    {
+      "group_id": "R012-G003",
+      "review_id": "R012",
+      "canonical": "Active periods of the signal and indicator recur indefinitely, and each such period lasts at least two consecutive steps; their alignment is unspecified.",
+      "explanation": "Requires each active period to have length at least two, excluding isolated one-step periods that merely recurring two-step blocks can permit. The original does not explicitly align signal and indicator periods, so joint timing is not added.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The requirement is that active periods of the signal and indicator keep recurring and each such period lasts at least two consecutive steps."
+        }
+      ]
+    },
+    {
+      "group_id": "R013-G001",
+      "review_id": "R013",
+      "canonical": "Every pulse has a flash at that same step or later.",
+      "explanation": "Explicit same-step fulfilment is allowed; not merged with strictly later response.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur at some point at or after that pulse."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash at the same or a later step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, a flash occurs at the same step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R013-G002",
+      "review_id": "R013",
+      "canonical": "Every pulse has a flash at some strictly later step, with no fixed delay.",
+      "explanation": "All expressly require later fulfilment without a next-step restriction.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Whenever a pulse occurs, a flash must occur at some strictly later step."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "Every pulse is followed by a flash at a strictly later step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed at some later step by a flash, with no exact delay specified."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, a flash occurs at some later step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, a flash must occur at some strictly later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R013-G003",
+      "review_id": "R013",
+      "canonical": "Every pulse has a flash at the next step.",
+      "explanation": "Immediate next-step response is stronger than arbitrary later fulfilment.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash occurs at the next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R013-G004",
+      "review_id": "R013",
+      "canonical": "Every pulse has a flash after it, possibly immediately after, with same-step timing not definitively excluded by the wording.",
+      "explanation": "The phrase not necessarily on the same step leaves coincidence unsettled; kept separate from both explicit same-or-later and explicit strictly-later readings.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash must occur after it, possibly immediately after, but not necessarily on the same step."
+        }
+      ]
+    },
+    {
+      "group_id": "R014-G001",
+      "review_id": "R014",
+      "canonical": "If a pulse occurs at the initial step, a flash occurs at some later step.",
+      "explanation": "Explicit initial-step anchor is preserved separately from a current-evaluation-step conditional and from a universally repeated trigger.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "If a pulse occurs at the initial step, a flash must occur at some later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R014-G002",
+      "review_id": "R014",
+      "canonical": "If a pulse occurs at the current evaluation step, a flash occurs at that same step or later.",
+      "explanation": "Same-step fulfilment is explicitly permitted; no every-step quantifier is added.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "If a pulse occurs at the current step, a flash must occur at or after that step."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "If a pulse occurs at the current step, a flash occurs at that step or later"
+        }
+      ]
+    },
+    {
+      "group_id": "R014-G003",
+      "review_id": "R014",
+      "canonical": "If a pulse occurs now, a flash occurs at the next step.",
+      "explanation": "Immediate current-step conditional, kept separate from a next-step rule triggered at every step.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "If a pulse occurs now, a flash occurs at the next step"
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If a pulse occurs now, a flash must occur immediately after, for example at the next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R014-G004",
+      "review_id": "R014",
+      "canonical": "At every step where a pulse occurs, some strictly later step contains a flash.",
+      "explanation": "Whenever/at any step explicitly supplies repeated universal trigger scope rather than a single now evaluation.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs at the current step, a flash occurs at a later step; 'follow' does not specify whether the next step is required."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At any step where a pulse occurs, a flash occurs at some later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R014-G005",
+      "review_id": "R014",
+      "canonical": "At every pulse step, the next step contains a flash.",
+      "explanation": "Universal next-step trigger scope is stronger than a single current-step conditional.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "At any step where a pulse occurs, a flash occurs at the next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R014-G006",
+      "review_id": "R014",
+      "canonical": "At every pulse step, a flash occurs at that same step or later.",
+      "explanation": "Universal scope and inclusive fulfilment are both explicit.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "At any step where a pulse occurs, a flash occurs at that same step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R014-G007",
+      "review_id": "R014",
+      "canonical": "If a pulse occurs at the current evaluation step, a flash occurs at some future step.",
+      "explanation": "Current evaluation anchor is not explicitly step zero. Kept separate from the initial-only conditional and from every-step trigger scope; the future-step response is separate from inclusive current-step fulfilment.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "If a pulse occurs at the current step, then a flash must occur at some future step."
+        }
+      ]
+    },
+    {
+      "group_id": "R015-G001",
+      "review_id": "R015",
+      "canonical": "There exists at least one pulse with a flash at some strictly later step; other pulses need not have responses.",
+      "explanation": "Existence of a pulse-before-flash sequence does not impose a universal rule or a next-step delay.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "There exists at least one pulse that is followed at a later step by a flash."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "At least one pulse occurs and a flash occurs at a strictly later step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "There exists at least one pulse that is followed later by a flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At some future step a pulse occurs and at a later step a flash occurs."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "There exists a pulse and a flash with the pulse before the flash."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "There exists at least one pulse followed later by at least one flash."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "At least one pulse-flash sequence occurs, while other pulses may be unconstrained."
+        }
+      ]
+    },
+    {
+      "group_id": "R015-G002",
+      "review_id": "R015",
+      "canonical": "There exists at least one pulse with a flash at that same step or later.",
+      "explanation": "Explicitly allows a simultaneous pulse and flash as the existential witness.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "There exists at least one pulse that is followed at or after that step by a flash."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "At least one pulse occurs and a flash occurs at that step or later"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "At some future step a pulse and a flash occur with the flash at the same or a later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R016-G001",
+      "review_id": "R016",
+      "canonical": "Every pulse requires the indicator to be on permanently from that pulse step onward.",
+      "explanation": "Current-step onset of permanent activity is explicit in Gemini and DeepSeek; OpenAI from that point onward supplies the same boundary.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the indicator must be active permanently from that step onward."
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After every pulse, the indicator becomes or remains on from that point onward forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, from that same step onward the indicator is on forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R016-G002",
+      "review_id": "R016",
+      "canonical": "Every pulse requires the indicator to be on permanently from the next step onward.",
+      "explanation": "Permanent activity from the pulse step implies permanent activity from the next step. The current-or-next disjunction therefore requires activity from next step onward, allowing current-step activity too; no exact onset transition is asserted.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Whenever a pulse occurs, the indicator must be active permanently starting from the next step onward."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, from the next step onward the indicator is on forever."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, the indicator must be on from the pulse step or the next step onward and never turn off."
+        }
+      ]
+    },
+    {
+      "group_id": "R016-G003",
+      "review_id": "R016",
+      "canonical": "Every pulse eventually leads to an indicator-on state that then persists forever, with no fixed onset delay.",
+      "explanation": "Claude allows that step or later; Qwen says after the pulse it becomes on and remains forever. Neither fixes onset to current/next step.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After every pulse, the indicator is on at that step or later and stays on forever"
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, after that pulse the indicator becomes on and remains on forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R016-G004",
+      "review_id": "R016",
+      "canonical": "After the first pulse, the indicator stays on forever, with the exact boundary of after unstated.",
+      "explanation": "First-pulse formulation omits whether permanence starts at, immediately after, or eventually after the first pulse; it is not narrowed to a fixed boundary.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "After the first pulse, the indicator stays on forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R017-G001",
+      "review_id": "R017",
+      "canonical": "A stop must occur, and every pulse strictly before the first stop has a strictly later flash, possibly after the stop.",
+      "explanation": "All require a stop, restrict triggers to its prefix, and allow fulfilment beyond that prefix. No obligation is imposed on later pulses.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "A stop must occur, and every pulse occurring prior to the first stop must eventually be followed by a flash, even if the flash occurs after the stop."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "A stop occurs, and every pulse before the first stop is eventually followed by a flash, possibly after the stop"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "A stop must occur. Every pulse before the first stop must eventually be followed by a flash, even if that flash occurs after the first stop; pulses after the first stop are unrestricted."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "A stop occurs; for every pulse before the first stop, a flash occurs at some later step, possibly after the first stop."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "A stop occurs; for every pulse before the first stop, a flash occurs eventually after the pulse with no restriction relative to the stop."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "At least one stop occurs, and every pulse before the first stop must have some later flash, even if that flash occurs after the stop."
+        }
+      ]
+    },
+    {
+      "group_id": "R017-G002",
+      "review_id": "R017",
+      "canonical": "A stop must occur, and every pulse before it has a flash at or after that pulse, including fulfilment after the stop.",
+      "explanation": "Same-step fulfilment is explicitly allowed; kept separate from strictly later flash.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A stop is guaranteed to happen, and all pulses before that stop must have a corresponding flash at or after the pulse."
+        }
+      ]
+    },
+    {
+      "group_id": "R017-G003",
+      "review_id": "R017",
+      "canonical": "A stop must occur, and every pulse before the first stop has a flash at some step, without an explicit order relative to the pulse.",
+      "explanation": "At some step does not require the flash to follow its pulse, so the missing temporal order is preserved.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "A stop occurs; for every pulse before the first stop, a flash occurs at some step, and pulses after the stop are unconstrained."
+        }
+      ]
+    },
+    {
+      "group_id": "R017-G004",
+      "review_id": "R017",
+      "canonical": "The response obligation concerns only pulses before the first stop, and their fulfilment is not restricted to that prefix.",
+      "explanation": "This scope explanation does not independently require a stop to occur or specify the flash boundary relative to each pulse. It cannot inherit those omitted constraints.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The obligation applies only to pulses in the prefix before the first stop, but their flash fulfillment is not limited to that prefix."
+        }
+      ]
+    },
+    {
+      "group_id": "R018-G001",
+      "review_id": "R018",
+      "canonical": "Every pulse is followed by a later flash and then by a chime strictly later than that flash.",
+      "explanation": "All describe a flash-then-chime response chain with the chime strictly after the flash, without a fixed flash delay. Duplicate paraphrases count once per model.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, it must be followed by a flash, and strictly after that flash a chime must occur."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Whenever a pulse occurs, there is a subsequent flash and a chime that occurs at a strictly later step than that flash."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash, and a chime occurs at some step strictly after that flash"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash, and for each such pulse the chime occurs strictly after that flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, a flash occurs later than the pulse and a chime occurs strictly later than that flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash occurs later, and after that flash a chime occurs."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, there is a later flash, and after that flash there is a strictly later chime."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Each pulse must be followed by a flash-chime sequence, with the chime occurring at a step after the flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R018-G002",
+      "review_id": "R018",
+      "canonical": "For every pulse, a flash occurs at the next step and a chime occurs at a later step, with the reference point for later unspecified.",
+      "explanation": "Explicitly fixes the flash to the next step but does not explicitly state whether the chime is later than the pulse or later than that flash. Preserve this anchor uncertainty instead of adding a strict flash-to-chime ordering.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, a flash occurs at the next step and a chime occurs at a later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R019-G001",
+      "review_id": "R019",
+      "canonical": "No flash occurs at or after any pulse.",
+      "explanation": "Excludes a flash at the same step as the pulse as well as later flashes.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "No flash may ever occur at or after any pulse."
+        }
+      ]
+    },
+    {
+      "group_id": "R019-G002",
+      "review_id": "R019",
+      "canonical": "No flash occurs strictly later than any pulse; a flash may occur before a pulse and coincidence is not excluded.",
+      "explanation": "All prohibit the strict after relation and do not prohibit prior flashes; no simultaneous exclusion is added.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "No flash may ever occur strictly after a pulse."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "No pulse is ever followed by a flash, so any pulse must have no later flash"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "No pulse may have a flash at any later step after it; simultaneous occurrence is not clearly excluded."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "It is never the case that a pulse occurs and a flash occurs at any later step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "No flash occurs after any pulse; flashes may occur before pulses."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "No pulse may have a flash at any strictly later step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If a pulse occurs, then a flash must never occur afterward, though a flash before the pulse may be allowed."
+        }
+      ]
+    },
+    {
+      "group_id": "R019-G003",
+      "review_id": "R019",
+      "canonical": "No pulse may occur at all.",
+      "explanation": "Claude explicitly bans pulses rather than merely banning later flash responses; this is stronger than the other prohibitions.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "A pulse must not occur at all, since any pulse would be followed by a flash"
+        }
+      ]
+    },
+    {
+      "group_id": "R019-G004",
+      "review_id": "R019",
+      "canonical": "No pulse is immediately followed at the next step by a flash.",
+      "explanation": "Only excludes immediate adjacency, allowing flashes at longer delays.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "No pulse is immediately followed by a flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R020-G001",
+      "review_id": "R020",
+      "canonical": "Every pulse is followed by a later flash strictly before the next subsequent stop, and the flash step is not a stop step.",
+      "explanation": "These members use followed/later wording to order fulfilment after the pulse and strictly before the next stop. They do not impose a stop occurrence; the no-stop case is not further specified.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Every pulse must be followed by a flash strictly before the next stop, with stop being false at the step of the flash."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash strictly later and before the next stop, and the flash does not occur at a stop step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash occurs after it and before the next stop, with no stop at the flash step."
+        }
+      ]
+    },
+    {
+      "group_id": "R020-G002",
+      "review_id": "R020",
+      "canonical": "For every pulse, if a later stop occurs, a flash occurs after the pulse and strictly before that stop, with no stop on the flash step.",
+      "explanation": "Explicitly makes the obligation conditional on a subsequent stop, so no-stop traces are vacuous.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, if a stop occurs afterward, a flash occurs after the pulse and before that stop, and the flash step is not a stop step."
+        }
+      ]
+    },
+    {
+      "group_id": "R020-G003",
+      "review_id": "R020",
+      "canonical": "For every pulse, a flash must occur before any subsequent stop and cannot coincide with a stop, with the flash boundary relative to its pulse unspecified.",
+      "explanation": "All four statements impose the stop deadline and exclude a stop at the flash step but omit explicit later-than-pulse ordering. In particular, same-step fulfilment is not excluded; no missing ordering or no-stop liveness rule is inferred.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "For every pulse, a flash must occur before any subsequent stop, and the flash step cannot also contain a stop."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, a flash occurs before any later stop, and the flash and stop cannot coincide."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur before any subsequent stop, and no stop can occur on the step of the flash."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, before the next stop after that pulse, a flash must occur, and the flash step must not also be a stop."
+        }
+      ]
+    },
+    {
+      "group_id": "R020-G004",
+      "review_id": "R020",
+      "canonical": "If no subsequent stop occurs, each pulse still requires an eventual flash and the stop constraint is vacuous.",
+      "explanation": "States only the no-stop-case liveness, not the stopped-case deadline or a full general response rule.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If there is no subsequent stop, the pulse still requires a flash eventually, but the stop-related constraint is vacuous."
+        }
+      ]
+    },
+    {
+      "group_id": "R021-G001",
+      "review_id": "R021",
+      "canonical": "For every pair of consecutive pulses, a flash occurs at or after the second pulse.",
+      "explanation": "In discrete consecutive steps, strictly after the first pulse is exactly at-or-after the second; DeepSeek 2 therefore joins the explicit inclusive-second-pulse members.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs on two consecutive steps, a flash must eventually occur at or after the second pulse."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Whenever pulses occur at two consecutive steps, a flash occurs at some step at or after the second pulse"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Whenever there are consecutive pulses, a flash occurs at some step after the first pulse."
+        }
+      ]
+    },
+    {
+      "group_id": "R021-G002",
+      "review_id": "R021",
+      "canonical": "Every consecutive pair of pulses has a flash strictly after the second pulse; isolated pulses are unconstrained.",
+      "explanation": "All require a later response after the pair, without next-step restriction.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Whenever a pulse occurs on two consecutive steps, a flash must occur strictly after the second pulse."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "Whenever pulses occur at two consecutive steps, a flash occurs at a strictly later step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Whenever pulses occur on two consecutive steps, a flash must occur at a later step; isolated pulses are not constrained by this rule."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "Whenever pulses occur at two consecutive steps, a flash occurs at some later step after the second pulse."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever pulses occur on two consecutive steps, a flash must occur at some later step after that pair."
+        }
+      ]
+    },
+    {
+      "group_id": "R021-G003",
+      "review_id": "R021",
+      "canonical": "Every consecutive pair of pulses has a flash at the next step after the pair.",
+      "explanation": "Adds immediate next-step fulfilment after the second pulse.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Whenever pulses occur at two consecutive steps, a flash occurs at the next step after the pair."
+        }
+      ]
+    },
+    {
+      "group_id": "R021-G004",
+      "review_id": "R021",
+      "canonical": "Only consecutive-pulse patterns trigger the obligation; isolated pulses do not.",
+      "explanation": "Trigger-scope-only explanation does not independently specify a flash response or its timing and cannot inherit those details.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The obligation is triggered only by consecutive-pulse patterns, not by isolated pulses."
+        }
+      ]
+    },
+    {
+      "group_id": "R022-G001",
+      "review_id": "R022",
+      "canonical": "Eventually a point is reached after which every pulse has a later flash; earlier violations are allowed.",
+      "explanation": "All give eventual stabilization of the ordinary unbounded pulse-to-later-flash rule, without an immediate-next-step requirement.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "There is some point in time after which every pulse that occurs is followed by a flash."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Eventually the property holds globally that any pulse is followed by a flash."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "There is some point after which every pulse is followed by a flash"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "There is a point after which every pulse is followed by a flash; violations before that point are allowed."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "There is a future step from which every later pulse has a flash occurring later."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Eventually the system enters a state where all pulses, whenever they occur, have a later flash."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "There exists a step N such that every pulse at or after N is followed by a flash at a later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R022-G002",
+      "review_id": "R022",
+      "canonical": "Eventually a point is reached after which every pulse is immediately followed at the next step by a flash.",
+      "explanation": "Immediate response is stronger than arbitrary later fulfilment.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "There is a future step from which every pulse is immediately followed by a flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R022-G003",
+      "review_id": "R022",
+      "canonical": "Before a cutoff pulses may be unfulfilled, and after the cutoff the pulse-to-flash rule holds permanently.",
+      "explanation": "This references an unspecified pulse-to-flash rule and does not itself supply the response timing. It is preserved rather than inheriting that definition from another interpretation.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Before N, pulses may be unfulfilled; after N, the pulse-to-flash rule holds permanently."
+        }
+      ]
+    }
+  ]
+}

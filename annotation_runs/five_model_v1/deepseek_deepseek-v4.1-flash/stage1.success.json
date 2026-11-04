@@ -1,0 +1,10 @@
+{
+  "model": "deepseek/deepseek-v4.1-flash",
+  "stage": 1,
+  "scope_sha256": "9357c61479b38c2ee38ae5469aeee8374c1b7d47af56678dcc888f899e4ae0c7",
+  "started_at": "2026-11-03T23:40:06.316989+00:00",
+  "completed_at": "2026-11-03T23:45:23.283869+00:00",
+  "validated_sha256": "a9b694527eaca1a9c66f39beef69c25bad683790e449188fec9339cb99767b1b",
+  "content_sha256": "214a56bd0928066d82107a55835a67e82e43de692c3b14dfc819770b1626415a",
+  "attempt": 8
+}

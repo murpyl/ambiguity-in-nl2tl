@@ -1,0 +1,3 @@
+# Failed annotation attempt
+
+{"error":{"message":"Provider returned error","code":400,"metadata":{"raw":"{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.\"},\"request_id\":\"req_011CggrwTpVzQ9cpa7sgw6nW\"}","provider_name":"Azure","is_byok":false}},"user_id":"user_3D19FjademvVgHKR8fN4YSCtCVx"}

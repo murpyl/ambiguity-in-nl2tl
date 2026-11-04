@@ -1,0 +1,1738 @@
+{
+  "reviewed_by": [
+    "semantic_2"
+  ],
+  "groups": [
+    {
+      "group_id": "R023-G001",
+      "review_id": "R023",
+      "canonical": "Infinitely often a pulse occurs and is followed later by a flash, with no final pulse-flash pair.",
+      "explanation": "All members require unending recurrence of ordered pulse-flash pairs; none fixes a finite gap or requires immediate succession. Multiple equivalent interpretations from one model contribute only one model vote.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Infinitely often, a pulse occurs that is subsequently followed by a flash."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A sequence of a pulse followed by a flash repeats indefinitely."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Infinitely often a pulse is followed by a flash"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Pulse-then-flash pairs occur infinitely often, with no final pair."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "Infinitely often a pulse occurs and later a flash occurs."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "From every point onward there is a future pulse-flash pair."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Infinitely often, a pulse occurs and is followed later by a flash."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The pulse-flash sequence must repeat without end, though the spacing between occurrences is not fixed."
+        }
+      ]
+    },
+    {
+      "group_id": "R023-G002",
+      "review_id": "R023",
+      "canonical": "Infinitely often, a pulse is immediately followed by a flash.",
+      "explanation": "Immediate succession strengthens unbounded later succession and is retained separately.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Infinitely often a pulse is immediately followed by a flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R024-G002",
+      "review_id": "R024",
+      "canonical": "After activation, pulses from the next step onward must be followed by flashes.",
+      "explanation": "The trigger starts one step after activation, unlike activation-inclusive variants.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Once an activation occurs, all pulses from the next step onward must be followed by a flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R024-G003",
+      "review_id": "R024",
+      "canonical": "After an activation, each pulse at or after its step has a flash at that same step or later.",
+      "explanation": "Response timing explicitly allows coincidence; strict-later responses remain separate.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After an activation at step t, every pulse at or after t is followed by a flash at that step or later"
+        }
+      ]
+    },
+    {
+      "group_id": "R024-G004",
+      "review_id": "R024",
+      "canonical": "After the first activation, every pulse at or after that activation step has a strictly later flash.",
+      "explanation": "All members include pulses at the activation step and require a following, hence later, flash. Applying this permanent rule after any activation is equivalent to applying it after the first activation: later suffixes add no stronger obligation. The ordinary followed-by ordering is treated consistently with the recurrent pulse-flash interpretations.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "After the first activation, every pulse at or after that step has a later flash."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "After any activation, every pulse from that activation step onward has a later flash."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "At the first activation step, every pulse from that step onward must be followed by a flash at a later step."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "After the first occurrence of an activation, every pulse that occurs from that step onward must be followed by a flash."
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Once an activation occurs, every pulse at that step or later must be followed by a flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R024-G005",
+      "review_id": "R024",
+      "canonical": "After activation, every pulse is immediately followed by a flash.",
+      "explanation": "The flash is immediate, and activation-step inclusion is not specified; neither feature is erased.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "After activation, every pulse is immediately followed by a flash."
+        }
+      ]
+    },
+    {
+      "group_id": "R024-G006",
+      "review_id": "R024",
+      "canonical": "Activation starts a permanent pulse-to-flash obligation; pulses before activation are unconstrained.",
+      "explanation": "The original does not specify exact trigger or response endpoint inclusivity, so it remains distinct from explicit timing variants.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Pulses before activation are unconstrained, but activation starts a permanent pulse-to-flash obligation."
+        }
+      ]
+    },
+    {
+      "group_id": "R025-G001",
+      "review_id": "R025",
+      "canonical": "At every request step, the response is active at that same step.",
+      "explanation": "All members require simultaneous request and active response.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, the response must be active at that same step."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, the response is active at that same step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At every step where a request occurs, the response is active at that same step."
+        }
+      ]
+    },
+    {
+      "group_id": "R025-G002",
+      "review_id": "R025",
+      "canonical": "Every request has an active response at its own step or at some later step.",
+      "explanation": "Each member permits a same-step response or an eventual later response; neither simultaneity alone nor strict delay is required.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Whenever a request occurs, the response must eventually become active at or after the request."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 1,
+          "text": "Whenever a request occurs, the response is active at that step or at some later step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every request, the response is active at that step or later."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Every request must be accompanied or followed by an active response."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Every request requires an active response, possibly at the same step or at a later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R025-G003",
+      "review_id": "R025",
+      "canonical": "Every request has an active response at some strictly later step.",
+      "explanation": "Strict future response differs from the inclusive eventual and same-step variants.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every request, the response is active at some later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R025-G004",
+      "review_id": "R025",
+      "canonical": "Every request requires an active response, with timing left unspecified and a same-step or response-interval association suggested.",
+      "explanation": "The qualified timing suggestion is preserved as a whole rather than converted into a definite same-step or inclusive temporal claim.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Every request requires an active response, likely at the same step or during the request's response interval; no timing is specified."
+        }
+      ]
+    },
+    {
+      "group_id": "R026-G001",
+      "review_id": "R026",
+      "canonical": "If a request occurs at the initial step, the response is active at that initial step.",
+      "explanation": "All members constrain only the initial-step request and require same-step response activity.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "If a request occurs at step 0, the response must be active at step 0."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "If a request occurs at the initial step, the response is active at that initial step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "If a request occurs at the initial step, the response is active at that initial step."
+        }
+      ]
+    },
+    {
+      "group_id": "R026-G002",
+      "review_id": "R026",
+      "canonical": "If a request occurs at the initial step, the response must eventually become active.",
+      "explanation": "The original does not anchor the eventual response endpoint explicitly; it is kept distinct from explicit same-step-or-later and strict-later formulations.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "If a request occurs at step 0, the response must eventually become active."
+        }
+      ]
+    },
+    {
+      "group_id": "R026-G003",
+      "review_id": "R026",
+      "canonical": "An initial-step request requires an active response for it, likely at that step.",
+      "explanation": "The word likely leaves the timing qualified rather than definite; no explicit timing variant is substituted.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "If a request occurs at the initial step, an active response is required for it, likely at that step."
+        }
+      ]
+    },
+    {
+      "group_id": "R026-G004",
+      "review_id": "R026",
+      "canonical": "If a request occurs at the initial step, an active response occurs at a later step.",
+      "explanation": "Both require a strict delay after the initial request.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "If a request occurs at the initial step, the response is active at some later step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "If a request occurs at the initial step, then an active response must occur at some later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R026-G005",
+      "review_id": "R026",
+      "canonical": "If a request occurs initially, the response is active at that step or later.",
+      "explanation": "Explicitly inclusive eventual timing remains separate from same-step-only and strict-later variants.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "If a request occurs at the initial step, the response is active at that step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R026-G006",
+      "review_id": "R026",
+      "canonical": "An initial-step request requires an immediate response, possibly at that same step or the next step.",
+      "explanation": "A bounded same-or-next-step choice is different from an unbounded eventual response.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If a request occurs at the initial step, then an active response must occur immediately, possibly at the same or next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R027-G001",
+      "review_id": "R027",
+      "canonical": "There exists a step where a request occurs and the response is active simultaneously.",
+      "explanation": "All members assert existence of a coincident request and active response without requiring strict futurity.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "There must exist a step where a request occurs and the response is active."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "At some step a request occurs and the response is active at that same step"
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "There exists at least one step where a request occurs and the response is active at that step."
+        }
+      ]
+    },
+    {
+      "group_id": "R027-G002",
+      "review_id": "R027",
+      "canonical": "There exists a request that eventually receives an active response.",
+      "explanation": "The original leaves the response timing and coincidence unspecified; it is not strengthened into a strict-after or same-step requirement.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "There must exist a request that eventually receives an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R027-G003",
+      "review_id": "R027",
+      "canonical": "There exists a request associated with an active response, possibly at a different step, with no further timing requirement.",
+      "explanation": "Both retain association while allowing timing beyond coincidence and without specifying temporal order.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "There exists a request that has an active response, with no required timing beyond their association."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "There exists a request and a response active at some possibly different step associated with it."
+        }
+      ]
+    },
+    {
+      "group_id": "R027-G004",
+      "review_id": "R027",
+      "canonical": "At some future step, a request occurs while the response is active.",
+      "explanation": "The explicit future-step wording is preserved rather than silently allowing an initial witness.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At some future step a request occurs and the response is active at that same step."
+        }
+      ]
+    },
+    {
+      "group_id": "R027-G005",
+      "review_id": "R027",
+      "canonical": "At some future request step, the response is active at that step or later.",
+      "explanation": "The request witness is future and the response relation is inclusive eventual, distinct from coincident-only or temporally unordered association.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "At some future step a request occurs and the response is active at that step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R027-G006",
+      "review_id": "R027",
+      "canonical": "There exists a request that is followed by an active response.",
+      "explanation": "The ordered followed-by relation remains separate from simultaneous existence and unordered association.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "There exists at least one request that is followed by an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R028-G001",
+      "review_id": "R028",
+      "canonical": "Infinitely often, a request and an active response occur at the same step.",
+      "explanation": "Unending recurrence of coincident request-response steps is equivalent to a future such step from every point; duplicate equivalent statements from a model add no model votes.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Steps where a request occurs and the response is active must occur infinitely often."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Infinitely often a request occurs while the response is active at that step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "Infinitely often a request occurs while the response is active at the same step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "From every point onward there is a future step with a request and an active response."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Requests and active responses recur together infinitely often."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Infinitely often, a request occurs together with an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R028-G002",
+      "review_id": "R028",
+      "canonical": "Requests recur indefinitely, and each is accompanied or followed by an active response.",
+      "explanation": "This relates each recurring request to a same-step or later response rather than requiring infinitely many coincident steps.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Requests must keep occurring, each accompanied or followed by an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R028-G003",
+      "review_id": "R028",
+      "canonical": "Requests associated with active responses recur indefinitely, or alternatively requests repeatedly occur while the response is active.",
+      "explanation": "The original explicitly combines alternatives and remains one whole interpretation, not two independent votes.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Requests associated with an active response must continue occurring indefinitely; it may alternatively mean requests must repeatedly occur while the response is active."
+        }
+      ]
+    },
+    {
+      "group_id": "R028-G004",
+      "review_id": "R028",
+      "canonical": "The pattern of a request with an active response recurs without end.",
+      "explanation": "Exact coincidence is not explicit in the original pattern description; its timing generality is preserved separately.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The pattern of request with active response must keep recurring without end."
+        }
+      ]
+    },
+    {
+      "group_id": "R029-G001",
+      "review_id": "R029",
+      "canonical": "Eventually there is a point from which each request occurs only while the response is active at that step.",
+      "explanation": "Each member eventually forbids a request without a simultaneously active response; this does not require requests to occur.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Eventually, a point is reached from which every request has an active response at that step."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "From some point onward, whenever a request occurs the response is active at that step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "There is a future step from which every request has the response active at the same step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Eventually, no request may occur without an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R029-G002",
+      "review_id": "R029",
+      "canonical": "Eventually every subsequent request has an active response at a later step.",
+      "explanation": "Both require eventually permanent strict-later response obligations, rather than same-step activity.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Eventually, every request that occurs is followed by an active response."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "There is a future step from which every request has the response active at some later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R029-G003",
+      "review_id": "R029",
+      "canonical": "From some point onward, every request has an active response, without specifying the response delay.",
+      "explanation": "The response relation is left general; explicit same-step, strict-later, and inclusive-eventual variants are kept separate.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "From some future point onward, every request has an active response."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "There exists a step N such that from N onward, every request has an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R029-G004",
+      "review_id": "R029",
+      "canonical": "Eventually every request has an active response at that step or later.",
+      "explanation": "This explicitly permits either coincidence or unbounded delay after the stabilized point.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Eventually, whenever a request occurs, the response is active at that step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R030-G001",
+      "review_id": "R030",
+      "canonical": "A release is required, and requests before that release require an active response, with response timing unspecified.",
+      "explanation": "All members terminate a generic request-response requirement at a mandatory release. The conditional request obligation is not replaced by continuous response activity or explicit same-step timing.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "A release must occur, and until that release, any request must have an active response."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Every request requires an active response until a release occurs, and a release is guaranteed to happen."
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Requests require an active response until a release occurs, and a release must eventually occur."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "A release must occur, and before that release every request requires an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R030-G002",
+      "review_id": "R030",
+      "canonical": "Once a request occurs, the response stays active until a release, and a release eventually occurs.",
+      "explanation": "Continuous response activity after a request is stronger and different from merely requiring an active response at each request.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Once a request occurs, the response is active until a release, and a release eventually occurs"
+        }
+      ]
+    },
+    {
+      "group_id": "R030-G003",
+      "review_id": "R030",
+      "canonical": "A release must occur; before that release every request has the response active at its request step.",
+      "explanation": "Both explicitly require same-step active responses before the terminating release, with no continuing response-activity obligation between requests.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "Until the first release, every request has the response active at the same step; a release eventually occurs."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every request before a release, the response is active at the request step; a release must occur."
+        }
+      ]
+    },
+    {
+      "group_id": "R030-G004",
+      "review_id": "R030",
+      "canonical": "A release is required; before it, each request has an active response at that step or later.",
+      "explanation": "Inclusive eventual response permits a delay and is kept distinct from same-step and unspecified request-response requirements.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Until a release, every request has the response active at that step or later; release is required."
+        }
+      ]
+    },
+    {
+      "group_id": "R030-G005",
+      "review_id": "R030",
+      "canonical": "After a release, requests no longer require an active response.",
+      "explanation": "This states only the post-release exemption and omits mandatory release occurrence and pre-release duties; neither missing clause is invented.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "After the release, requests no longer require an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R031-G001",
+      "review_id": "R031",
+      "canonical": "Requests require an active response until a release; release is optional, and if none occurs the requirement lasts forever.",
+      "explanation": "All members express a terminating generic request-response condition without requiring a release or continuous activity after each request.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Until a release occurs, every request must have an active response; if no release occurs, this requirement holds forever."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Requests require an active response unless a release has occurred."
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Requests require an active response while no release has occurred; a release may occur or may be absent forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "Requests require an active response until release, and release may never occur."
+        }
+      ]
+    },
+    {
+      "group_id": "R031-G002",
+      "review_id": "R031",
+      "canonical": "Each request requires continuous response activity until a release, or forever if no release occurs.",
+      "explanation": "Continuous response activity between a request and release differs from imposing a response condition only on request steps.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Each request requires the response to be active until a release, with the response allowed to stay active forever if no release occurs"
+        }
+      ]
+    },
+    {
+      "group_id": "R031-G003",
+      "review_id": "R031",
+      "canonical": "Before any release, every request has the response active at the same step; after release there is no requirement, and release is optional.",
+      "explanation": "The original explicitly requires same-step activity and does not require release liveness.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "Before any release, every request has the response active at the same step; after release there is no requirement; release is optional."
+        }
+      ]
+    },
+    {
+      "group_id": "R031-G004",
+      "review_id": "R031",
+      "canonical": "Until a release, each request has an active response at that step or later; without release this holds forever.",
+      "explanation": "The inclusive delayed response relation differs from same-step-only activity and generic timing.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "Until a release occurs, every request has the response active at that step or later; if no release occurs, the requirement holds forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R031-G005",
+      "review_id": "R031",
+      "canonical": "If no release occurs, every request forever requires an active response.",
+      "explanation": "This states only the no-release case, leaving traces containing a release unspecified; it is weaker than a full until rule.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "If no release occurs, then every request forever requires an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R031-G006",
+      "review_id": "R031",
+      "canonical": "A release ends the request-response requirement, and release is optional.",
+      "explanation": "Only termination and release optionality are explicit; the full pre-release temporal duty is not inferred.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Once a release occurs, the request-response requirement ends; release is optional."
+        }
+      ]
+    },
+    {
+      "group_id": "R032-G001",
+      "review_id": "R032",
+      "canonical": "From the first release step onward, including that step, every request requires an active response; response timing is unspecified.",
+      "explanation": "Both members place the generic active-response obligation on requests at or after the first release. No response-time refinement is added.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "From the first step where a release occurs onward, whenever a request occurs, the response must be active."
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "From the first release onward, every request must have an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R032-G002",
+      "review_id": "R032",
+      "canonical": "Once the first release has occurred, later requests require an active response, with response timing unspecified.",
+      "explanation": "The originals speak of future or later requests; the release-step request is not silently included.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Once a release occurs, all future requests require an active response."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Starting at the first release step, every later request requires an active response."
+        }
+      ]
+    },
+    {
+      "group_id": "R032-G003",
+      "review_id": "R032",
+      "canonical": "After the first release, every request has the response active at its own step.",
+      "explanation": "Both explicitly require same-step response activity after release, distinct from generic response timing and explicitly release-inclusive variants.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After the first release, every request has an active response at that step"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "After the first release, every request has the response active at the same step."
+        }
+      ]
+    },
+    {
+      "group_id": "R032-G004",
+      "review_id": "R032",
+      "canonical": "After the first release, every request has an active response at a strictly later step.",
+      "explanation": "A delayed response relation is different from same-step activity.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "After the first release, every request has the response active at some later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R032-G005",
+      "review_id": "R032",
+      "canonical": "From the first release onward, each request has an active response at that step or later.",
+      "explanation": "This explicitly combines release-inclusive trigger scope with inclusive eventual response timing.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "From the first release onward, whenever a request occurs, the response is active at that step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R032-G006",
+      "review_id": "R032",
+      "canonical": "Requests before the first release are unconstrained, while requests at or after that release are obligated; the obligation itself is unspecified.",
+      "explanation": "The original says only obligated, without stating active-response content or response timing. Those missing clauses are not borrowed from other interpretations.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Requests before the first release are unconstrained, but requests at or after the first release are obligated."
+        }
+      ]
+    },
+    {
+      "group_id": "R033-G001",
+      "review_id": "R033",
+      "canonical": "For every request, the response is active from the request step onward forever.",
+      "explanation": "All members require immediate permanent activation; once the first request occurs later requests add no stronger obligation.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, the response must be active from that step onward permanently."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Each request is followed by the response being active at that step and at all later steps forever"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "For every request, the response is active from the request onward forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every request, from the request step onward the response is active forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every request, the response is active at the request step and stays active forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R033-G002",
+      "review_id": "R033",
+      "canonical": "For each request, the response becomes active at some point and then remains active forever.",
+      "explanation": "The onset is left unspecified instead of being forced to the request step or a strictly later step.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Whenever a request occurs, the response must become active and remain active forever."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every request, the response becomes active at some point and then remains active forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R033-G003",
+      "review_id": "R033",
+      "canonical": "For every request, there is a permanent active-response suffix beginning at some later step.",
+      "explanation": "Both originals require existence of a permanent active suffix, without asserting its exact onset or an OFF-to-ON transition. A suffix already active at the request also remains active from the next step onward, so an at-request-or-later witness and a strictly-later witness give the same permanent-suffix property. The separate becomes-active wording is kept conservative because it may imply an onset event.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every request, from some later step after the request the response is active forever."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Each request triggers a permanent active response, possibly starting at the request step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R034-G001",
+      "review_id": "R034",
+      "canonical": "Each request requires continuous active response until a release that must eventually occur for that obligation.",
+      "explanation": "All members create a triggered continuous-active-response obligation with a mandatory terminating release. Next release does not explicitly say strictly subsequent: if an until obligation can end at any qualifying release, it can end at the first such release. Release-step activity is not refined. D1 remains separate because it explicitly requires activity at the request step even when release coincidence could otherwise vacuously terminate an until interval; D0 from-request-until wording leaves that coincidence boundary ambiguous.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs, the response must remain active until a release occurs, and a release must eventually occur."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Each request requires the response to stay continuously active until a mandatory release."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Each request requires the response to stay active until a release, and a release must occur"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Every request requires the response to remain active until a release, and a release must eventually occur for each such obligation."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every request, the response stays active from the request step until a release occurs; a release eventually occurs."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Each request creates a continuous active-response obligation ending at a mandatory release."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every request, the response is active until the next release, and a release must occur."
+        }
+      ]
+    },
+    {
+      "group_id": "R034-G002",
+      "review_id": "R034",
+      "canonical": "For each request, the response is active at the request step and stays active until a required release.",
+      "explanation": "The original explicitly requires request-step activity even before resolving release coincidence; this is not erased by generic until wording.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every request, the response is active at the request step and remains active until some release; release is required."
+        }
+      ]
+    },
+    {
+      "group_id": "R034-G004",
+      "review_id": "R034",
+      "canonical": "For each request, the response stays active until a strictly later release, and at least one release must occur.",
+      "explanation": "This explicitly requires later release timing and a global at-least-one-release clause, including its vacuity difference when no requests occur.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every request, the response must remain active until a later release, and at least one release must occur."
+        }
+      ]
+    },
+    {
+      "group_id": "R035-G001",
+      "review_id": "R035",
+      "canonical": "If a request occurs at the next step, the response is active at that next step.",
+      "explanation": "Both constrain the single next-step request and require a coincident response there.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "If a request occurs at the next step, the response must be active at that next step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "If a request occurs at the next step, the response is active at that next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R035-G002",
+      "review_id": "R035",
+      "canonical": "If a request occurs at the next step, the response must eventually be active.",
+      "explanation": "The eventual response bound is not explicitly anchored to the next-step request; that generality is not replaced with a precise delay.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "If a request occurs at the next step, the response must eventually be active."
+        }
+      ]
+    },
+    {
+      "group_id": "R035-G003",
+      "review_id": "R035",
+      "canonical": "After every request, the response is active at the next step.",
+      "explanation": "Universal triggering on every request differs from checking only whether a request occurs at the next step from the current reference.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After each request, the response is active at the next step"
+        }
+      ]
+    },
+    {
+      "group_id": "R035-G004",
+      "review_id": "R035",
+      "canonical": "A request occurring at the next step requires an active response, presumably at that next step.",
+      "explanation": "Presumably qualifies the response timing and is not upgraded to a definite same-step condition.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "A request occurring at the next step requires an active response, presumably at that next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R035-G005",
+      "review_id": "R035",
+      "canonical": "If a request occurs at the next step, the response is active at the step after that.",
+      "explanation": "The response is exactly one step after the next-step request.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "If a request occurs at the next step, the response is active at the step after that."
+        }
+      ]
+    },
+    {
+      "group_id": "R035-G006",
+      "review_id": "R035",
+      "canonical": "If a request occurs at the next step, the response is active at that step or later.",
+      "explanation": "The original explicitly permits same-step or unbounded later response.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "If a request occurs at the next step, the response is active at that step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R035-G007",
+      "review_id": "R035",
+      "canonical": "If a request occurs at the next step, an active response occurs at some later step.",
+      "explanation": "Strict-later response is distinct from same-step, inclusive eventual, and exact-one-step delay.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "If a request occurs at the next step, then an active response must occur at some later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R035-G008",
+      "review_id": "R035",
+      "canonical": "If a request occurs at the next step, its active response is immediate, possibly at that step or the step after it.",
+      "explanation": "The bounded same-or-next choice is not equivalent to unbounded inclusive eventual response.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "If a request occurs at the next step, then an active response must occur immediately, possibly at that next step or the step after it."
+        }
+      ]
+    },
+    {
+      "group_id": "R036-G001",
+      "review_id": "R036",
+      "canonical": "Whenever a request occurs while the response is permitted, the response is active at that same step.",
+      "explanation": "Both use request-and-permission as the trigger and explicitly require same-step activity.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs while the response is permitted, the response must be active at that step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At any step where a request occurs and the response is permitted, the response is active at that same step."
+        }
+      ]
+    },
+    {
+      "group_id": "R036-G002",
+      "review_id": "R036",
+      "canonical": "Whenever a request occurs while the response is permitted, an active response occurs later.",
+      "explanation": "All members require a strictly following active response for permission-qualified requests.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Whenever a request occurs while the response is permitted, an active response must follow."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "At any step where a request occurs and the response is permitted, the response is active at some later step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Any request that occurs while the response is permitted must have an active response later."
+        }
+      ]
+    },
+    {
+      "group_id": "R036-G003",
+      "review_id": "R036",
+      "canonical": "Whenever a request occurs while the response is permitted, the response is active at that step or later.",
+      "explanation": "Both explicitly allow coincidence or eventual delay after a permission-qualified request.",
+      "members": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "When a request occurs while the response is permitted, the response is active at that step or later"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "At any step where a request and permission hold, the response is active at that step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R036-G004",
+      "review_id": "R036",
+      "canonical": "Requests made while the response is permitted require an active response, without fixing response timing; other requests impose no stated duty.",
+      "explanation": "Both express the permission-qualified generic response condition. Absence of a stated obligation for other requests is preserved without adding timing.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Whenever a request occurs while the response is permitted, that request requires an active response."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "Only requests made during permitted states create an active-response obligation; other requests are unconstrained."
+        }
+      ]
+    },
+    {
+      "group_id": "R037-G001",
+      "review_id": "R037",
+      "canonical": "Every pulse has a flash at the same step or at some later step.",
+      "explanation": "All members universally require an inclusive eventual flash and allow coincidence.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur at the same step or at some later step."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Every pulse must eventually be accompanied or followed by a flash."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Every pulse has a flash at the same step or at a later step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash either at the same step or at a later step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, a flash occurs at the same step or a later step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur at the same step or at a later step."
+        }
+      ]
+    },
+    {
+      "group_id": "R037-G002",
+      "review_id": "R037",
+      "canonical": "Every pulse has a flash at a strictly later step.",
+      "explanation": "On discrete steps, later and next-step-or-later express the same strict-future relation.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash occurs at some later step, not at the same step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, a flash occurs at the next step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R037-G003",
+      "review_id": "R037",
+      "canonical": "There exists a pulse with a flash at its step or later.",
+      "explanation": "An existential pulse witness differs from a duty for every pulse and is not vacuously satisfied without pulses.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "There exists a pulse that is followed by a flash, possibly on the same step."
+        }
+      ]
+    },
+    {
+      "group_id": "R038-G001",
+      "review_id": "R038",
+      "canonical": "At every pulse step, the light is on at that same step.",
+      "explanation": "All members impose the same simultaneous light-on condition for every pulse. Equivalent duplicates from one model count once.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light must be on at that exact step."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "At any step with a pulse, the light is on."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light is on at that same step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light is on at that same step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "At every step where a pulse occurs, the light is on at that same step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "A pulse implies that the light is on at the pulse step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light must be on at that same step."
+        }
+      ]
+    },
+    {
+      "group_id": "R038-G002",
+      "review_id": "R038",
+      "canonical": "Every pulse has the light on at that step or later.",
+      "explanation": "Inclusive eventual light-on permits delay unlike same-step-only activity.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "At every step where a pulse occurs, the light is on at that step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R038-G003",
+      "review_id": "R038",
+      "canonical": "At least one pulse coincides with the light being on.",
+      "explanation": "The existential witness is neither universal nor vacuous when pulses are absent.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "At least one pulse must coincide with the light being on."
+        }
+      ]
+    },
+    {
+      "group_id": "R039-G001",
+      "review_id": "R039",
+      "canonical": "Every pulse is followed by a flash exactly one step later.",
+      "explanation": "All members require an immediate next-step flash for each pulse.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur at the immediately following step."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Each pulse must be followed by a flash on the next time step."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash at the next step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "Every pulse is followed by a flash exactly one step later."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, a flash occurs at the immediately following step."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a flash must occur exactly at the next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R039-G002",
+      "review_id": "R039",
+      "canonical": "Every pulse has a flash at the next step or later.",
+      "explanation": "Unbounded strict-future response differs from exact next-step response.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, a flash occurs at the next step or later."
+        }
+      ]
+    },
+    {
+      "group_id": "R039-G003",
+      "review_id": "R039",
+      "canonical": "Every pulse has a flash at the same step or the next step.",
+      "explanation": "The bounded inclusive choice differs from exact-next and unbounded-later responses.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, a flash occurs at the same step or the next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R039-G004",
+      "review_id": "R039",
+      "canonical": "There exists a pulse followed by a flash at the next step.",
+      "explanation": "An existential pair differs from the universal requirement for every pulse.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "There exists a pulse followed immediately by a flash on the next step."
+        }
+      ]
+    },
+    {
+      "group_id": "R040-G001",
+      "review_id": "R040",
+      "canonical": "For every pulse, the light is on from that pulse step onward forever.",
+      "explanation": "All members explicitly include the pulse step and require permanent activity afterward.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light must stay on permanently from that step onward."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "Every pulse causes the light to remain on indefinitely starting at that step."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After a pulse, the light is on at that step and stays on at every later step"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After each pulse, the light is on at the pulse step and remains on forever thereafter."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, from the pulse step onward the light is on forever."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light must be on from that step onward and remain on forever."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse triggers permanent light-on beginning at the pulse step."
+        }
+      ]
+    },
+    {
+      "group_id": "R040-G002",
+      "review_id": "R040",
+      "canonical": "For every pulse, the light is on from the next step onward forever.",
+      "explanation": "The pulse step itself need not have the light on, unlike the inclusive permanent-activity group.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, from the next step onward the light is on forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R040-G003",
+      "review_id": "R040",
+      "canonical": "After the first pulse, the light stays on forever; exact inclusion of the first pulse step is unstated.",
+      "explanation": "This first-pulse formulation leaves its boundary unspecified; it is not silently equated with either explicit pulse-inclusive or next-step onset.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "After the first pulse, the light stays on forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R041-G001",
+      "review_id": "R041",
+      "canonical": "Each pulse requires continuous light-on until a release at or after the pulse, and such a release must occur.",
+      "explanation": "All members impose triggered continuous light activity with a required release witness. The first qualifying release can discharge an until obligation; no extra independent stage-one votes are created by equivalent duplicates.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light must be on continuously until a release occurs, and a release must eventually occur."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse requires the light to stay on until a release, which is guaranteed to occur at or after the pulse."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After a pulse, the light stays on until a release, and a release must occur"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After a pulse, the light remains on until a release occurs, and a release is required to occur."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, the light is on from the pulse step until a release occurs; a release eventually occurs."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, the light is on from the pulse step until the next release; release is required."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, the light stays on until some release, and a release must occur."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light must be on until a release occurs, and a release is required."
+        }
+      ]
+    },
+    {
+      "group_id": "R041-G002",
+      "review_id": "R041",
+      "canonical": "Each pulse creates continuous light-on until a mandatory strictly later release.",
+      "explanation": "The explicit later release is preserved separately from a release allowed at the pulse step.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse creates a light-on obligation that ends only at a mandatory later release."
+        }
+      ]
+    },
+    {
+      "group_id": "R042-G001",
+      "review_id": "R042",
+      "canonical": "Each pulse requires the light to stay on until a release, or forever if no release occurs.",
+      "explanation": "All members express weak termination: a release is not required and light-on persists indefinitely without one. None explicitly requires light-on through the release endpoint.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light must remain on until a release occurs, or forever if no release ever occurs."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse requires the light to stay on weakly until a release."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After a pulse, the light stays on until a release occurs, or stays on forever if no release occurs"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, the light is on from the pulse step until a release if one occurs; if no release occurs, the light stays on forever."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, the light is on until the next release; release is optional."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, the light remains on unless or until a release occurs."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, the light must stay on until a release; if no release occurs, the light stays on forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R042-G002",
+      "review_id": "R042",
+      "canonical": "After each pulse, the light stays on until the first subsequent release, or forever if none occurs.",
+      "explanation": "Subsequent explicitly places the release after the pulse; the same-step release option is not inferred.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After a pulse, the light remains on until the first subsequent release; if no release occurs, it remains on forever."
+        }
+      ]
+    },
+    {
+      "group_id": "R042-G003",
+      "review_id": "R042",
+      "canonical": "A pulse requires the light to remain on through the first subsequent release, if any.",
+      "explanation": "Through explicitly includes the release endpoint, while the no-release forever clause is not explicit. These timing and vacuity distinctions are preserved.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse creates a liveness obligation for the light to remain on through the first subsequent release, if any."
+        }
+      ]
+    },
+    {
+      "group_id": "R043-G001",
+      "review_id": "R043",
+      "canonical": "For each pulse, the first release at or after that pulse must occur and the light is on at that release step.",
+      "explanation": "All members require release existence and light-on at the first qualifying release, without demanding continuous light-on beforehand.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a release must eventually occur at or after that pulse, and the light must be on at the first such release."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After each pulse, the light is on at the first release at or after that pulse, and such a release must occur"
+        },
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "For each pulse, a release must eventually occur, and the light must be on at the first release occurring at or after that pulse."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, the first release at or after it occurs and the light is on at that step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, a release eventually occurs and the light is on at the first such release."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, there must be a first release at or after that pulse, and at that release step the light must be on."
+        }
+      ]
+    },
+    {
+      "group_id": "R043-G002",
+      "review_id": "R043",
+      "canonical": "For each pulse, a release must occur at or after it and the light is on at that release, without specifying the first release.",
+      "explanation": "Requiring some release witness does not guarantee light-on at the first release; the original unspecified endpoint choice remains distinct.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "For each pulse, a release is required, and the light must be on at that release step."
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, there is a release at or after the pulse, and the light is on at that release step."
+        }
+      ]
+    },
+    {
+      "group_id": "R043-G003",
+      "review_id": "R043",
+      "canonical": "A pulse requires light-on only at the first relevant release, not continuous light-on beforehand.",
+      "explanation": "This clarifies endpoint-only activity but does not explicitly assert that a release occurs; the missing liveness clause is not invented.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The pulse does not require the light to stay on continuously, only to be on at the first relevant release."
+        }
+      ]
+    },
+    {
+      "group_id": "R044-G001",
+      "review_id": "R044",
+      "canonical": "For each pulse, a release occurs before any flash at or after that pulse, and a flash eventually occurs at or after that release.",
+      "explanation": "All members impose the release-before-flash ordering from the pulse step onward together with eventual flash existence. No ordering between pulse and a same-step release is added.",
+      "members": [
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 0,
+          "text": "Whenever a pulse occurs, a release must occur before any flash at or after the pulse, and a flash must eventually occur at or after the release."
+        },
+        {
+          "model": "google/gemini-3.8-flash",
+          "interpretation_index": 1,
+          "text": "A pulse requires that no flash occurs until after a release, followed eventually by a flash."
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "interpretation_index": 0,
+          "text": "After a pulse, a release occurs before any flash, and a flash occurs at or after that release"
+        },
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, from the pulse step onward a release occurs before any flash, and a flash occurs at or after that release."
+        },
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 0,
+          "text": "For every pulse, before any flash at or after that pulse, a release must occur; then a flash must occur at or after that release."
+        }
+      ]
+    },
+    {
+      "group_id": "R044-G002",
+      "review_id": "R044",
+      "canonical": "After each pulse, a release precedes any subsequent flash, and a flash occurs at or after the release.",
+      "explanation": "Subsequent flashes are named rather than explicitly including a flash at the pulse step; the trigger-step boundary remains distinct.",
+      "members": [
+        {
+          "model": "openai/gpt-5.6-luna",
+          "interpretation_index": 0,
+          "text": "After a pulse, a release must occur before any subsequent flash, and a flash must occur at or after that release."
+        }
+      ]
+    },
+    {
+      "group_id": "R044-G003",
+      "review_id": "R044",
+      "canonical": "For each pulse, no flash occurs until release, and after release a flash occurs.",
+      "explanation": "The no-flash-until boundary and explicit post-release flash are retained as written rather than replacing them with the stricter before-any-flash wording.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 1,
+          "text": "For every pulse, no flash occurs until a release occurs, and after the release a flash occurs."
+        }
+      ]
+    },
+    {
+      "group_id": "R044-G004",
+      "review_id": "R044",
+      "canonical": "For each pulse, a release precedes the next flash, and a flash occurs at or after the release.",
+      "explanation": "The next-flash endpoint is explicit, but inclusion of a pulse-step flash is not; it remains separate from the fully pulse-inclusive ordering.",
+      "members": [
+        {
+          "model": "deepseek/deepseek-v4.1-flash",
+          "interpretation_index": 2,
+          "text": "For every pulse, the next flash is preceded by a release, and a flash occurs at or after the release."
+        }
+      ]
+    },
+    {
+      "group_id": "R044-G005",
+      "review_id": "R044",
+      "canonical": "The required order is pulse, then release, then flash, with no flash before release.",
+      "explanation": "The sequential then wording explicitly orders release after pulse, unlike variants allowing a release at the pulse step.",
+      "members": [
+        {
+          "model": "qwen/qwen3.8-flash",
+          "interpretation_index": 1,
+          "text": "The required order is pulse, then release, then flash, with no flash before the release."
+        }
+      ]
+    }
+  ]
+}

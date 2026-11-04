@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-11-03T23:36:20.306959+00:00",
+  "user_message": "authorize fix",
+  "authorized_change": "Replace Stage2 strict output grammar with shared row schema; retain all88 entries and local validation; resume failed ClaudeStage2 then remaining models, never repeat3 successful stages",
+  "preserved_successful_stages": 3,
+  "attempts_before_change": 4
+}

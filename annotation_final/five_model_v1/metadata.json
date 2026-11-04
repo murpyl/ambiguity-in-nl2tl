@@ -1,0 +1,52 @@
+{
+  "eligible_requirements": 66,
+  "expected_models": [
+    "google/gemini-3.8-flash",
+    "anthropic/claude-haiku-5.5",
+    "openai/gpt-5.6-luna",
+    "deepseek/deepseek-v4.1-flash",
+    "qwen/qwen3.8-flash"
+  ],
+  "generated_files": [
+    "exclusions.jsonl",
+    "joint_separate_open_interpretations.jsonl",
+    "joint_separate_reading_assessment.jsonl",
+    "metadata.json",
+    "negation_scope_open_interpretations.jsonl",
+    "negation_scope_reading_assessment.jsonl",
+    "next_later_open_interpretations.jsonl",
+    "next_later_reading_assessment.jsonl",
+    "or_scope_open_interpretations.jsonl",
+    "or_scope_reading_assessment.jsonl",
+    "order_scope_open_interpretations.jsonl",
+    "order_scope_reading_assessment.jsonl",
+    "same_later_open_interpretations.jsonl",
+    "same_later_reading_assessment.jsonl",
+    "stage2_additional_interpretations.jsonl",
+    "trigger_scope_final_open_interpretations.jsonl",
+    "trigger_scope_final_reading_assessment.jsonl",
+    "until_termination_open_interpretations.jsonl",
+    "until_termination_reading_assessment.jsonl",
+    "vote_summary.jsonl"
+  ],
+  "generator": "aggregate:five-model-semantic-consensus-v1",
+  "input_sha256": {
+    "anthropic_claude-haiku-5.5/stage1.validated.json": "695f3abe858c96d617c7ae23877db57882c989a71ea589839b48677bb7b3e4fd",
+    "anthropic_claude-haiku-5.5/stage2.validated.json": "14717734da8551a3988c85cfa9d5e751c0e30b7b5ceb4ea3b9bf17e7aa099299",
+    "config.json": "71ebc97738c57c70beffaa4a1b127f13584da14ee5b7a4434678823a58efc092",
+    "deepseek_deepseek-v4.1-flash/stage1.validated.json": "a9b694527eaca1a9c66f39beef69c25bad683790e449188fec9339cb99767b1b",
+    "deepseek_deepseek-v4.1-flash/stage2.validated.json": "f423548c1aa170a7fb1bf16d5a31bc93fe1b2061272caee999aca4c240073ee5",
+    "google_gemini-3.8-flash/stage1.validated.json": "8050eb9faf9afdabf2281362b189b38c174b25327c66a4972ab0b705ba1e6dbb",
+    "google_gemini-3.8-flash/stage2.validated.json": "6260b974167d66687be3fd4c84766f1754d4465c6e607d30c2e662ec5c956097",
+    "grouping.json": "4ff93f788581a292fa33bde5981c87a7c29629e3848febfa8211196603b9332c",
+    "openai_gpt-5.6-luna/stage1.validated.json": "5aec631664b8cadd29fe1cf6b7a2374266172175d178bdf38e057b813adb7438",
+    "openai_gpt-5.6-luna/stage2.validated.json": "55b3c1b686409984b318f52c0966a67898cb2738db1d163454edc969709e1abb",
+    "qwen_qwen3.8-flash/stage1.validated.json": "094f8998637ef128c8d8c7257acc34e8db85157ec30e50dd37266d0d68d8639b",
+    "qwen_qwen3.8-flash/stage2.validated.json": "f9bf35ed4c22870e23f9e22d15fc5a8c34e11ea18eb54ad60b3ed9ae6a461ec4",
+    "scope.json": "6f5a79005004950ccaee04ceafdeba494c3dcf85fcec4d93ff21b179c0664b84"
+  },
+  "min_agreeing_models": 3,
+  "model_generated": true,
+  "population": 5,
+  "requirements": 88
+}

@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-11-03T23:28:41.140484+00:00",
+  "attempt": {
+    "model": "anthropic/claude-haiku-5.5",
+    "stage": 2,
+    "started_at": "2026-11-03T23:27:56.030358+00:00",
+    "request_file": "annotation_runs/five_model_v1/anthropic_claude-haiku-5.5/stage2.attempt004.request.json",
+    "status": "failed",
+    "error": "HTTPError: HTTP Error 400: Bad Request",
+    "ended_at": "2026-11-03T23:27:56.664196+00:00"
+  },
+  "error_response": {
+    "error": {
+      "message": "Provider returned error",
+      "code": 400,
+      "metadata": {
+        "raw": "{\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The compiled grammar is too large, which would cause performance issues. Simplify your tool schemas or reduce the number of strict tools.\"},\"request_id\":\"req_011CggrwTpVzQ9cpa7sgw6nW\"}",
+        "provider_name": "Azure",
+        "is_byok": false
+      }
+    },
+    "user_id": "user_3D19FjademvVgHKR8fN4YSCtCVx"
+  },
+  "known_cost_usd": "0.0813656",
+  "known_usage": {
+    "prompt_tokens": 45219,
+    "completion_tokens": 21714,
+    "total_tokens": 66933
+  },
+  "completed_stages": [
+    {
+      "model": "google/gemini-3.8-flash",
+      "stage": 1
+    },
+    {
+      "model": "google/gemini-3.8-flash",
+      "stage": 2
+    },
+    {
+      "model": "anthropic/claude-haiku-5.5",
+      "stage": 1
+    }
+  ]
+}
