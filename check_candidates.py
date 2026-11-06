@@ -1,4 +1,4 @@
-"""Screen candidate JSONL with Spot; export blinded English annotation forms."""
+"""Screen candidate JSONL with Spot; export solver reports and eligible candidates."""
 
 import argparse
 from collections import Counter
@@ -115,31 +115,6 @@ def screen(item, equivalent):
     return result
 
 
-def annotation_forms(item, annotation_id):
-    # Explicit allowlist: never copy generator confidence, rationales, controls,
-    # formulas, family labels, IDs, or proposed/solver witnesses into these forms.
-    common = {
-        "annotation_id": annotation_id,
-        "propositions": item["propositions"],
-        "requirement": item["ambiguous_text"],
-        "annotator_id": None,
-    }
-    if item.get("scenario"):
-        common["scenario"] = item["scenario"]
-    open_form = {**common, "interpretations": [], "comments": ""}
-    assessment = {
-        **common,
-        "readings": [
-            {"reading_id": reading["reading_id"], "plain": reading["plain"]}
-            for reading in item["readings"]
-        ],
-        "supports": {reading["reading_id"]: None for reading in item["readings"]},
-        "additional_interpretations": [],
-        "comments": "",
-    }
-    return open_form, assessment
-
-
 def write_jsonl(path, items):
     with path.open("w", encoding="utf-8", newline="\n") as output:
         for item in items:
@@ -151,27 +126,20 @@ def run(input_path, output_dir):
     items = load_candidates(input_path)
     equivalent, version = load_solver()
     output_dir = Path(output_dir)
-    # A fresh directory prevents stale or accidentally overwritten study exports.
+    # A fresh directory prevents stale or accidentally overwritten screening outputs.
     output_dir.mkdir(parents=True, exist_ok=False)
-    report, eligible, open_forms, assessments = [], [], [], []
+    report, eligible = [], []
     for item in items:
         result = screen(item, equivalent)
         result["spot_version"] = version
         if result["solver_status"] == "inequivalent":
-            annotation_id = f"item_{len(eligible) + 1:04d}"
-            result["annotation_id"] = annotation_id
             eligible.append(result)
-            open_form, assessment = annotation_forms(result, annotation_id)
-            open_forms.append(open_form)
-            assessments.append(assessment)
         report.append(result)
-    for name, records in (("solver_report", report), ("eligible", eligible),
-                          ("open_interpretations", open_forms),
-                          ("reading_assessment", assessments)):
+    for name, records in (("solver_report", report), ("eligible", eligible)):
         write_jsonl(output_dir / f"{input_path.stem}_{name}.jsonl", records)
     counts = Counter(item["solver_status"] for item in report)
     print(f"Spot {version}: {len(items)} checked; "
-          f"{counts['inequivalent']} eligible for annotation; "
+          f"{counts['inequivalent']} solver eligible; "
           f"{counts['equivalent']} equivalent (rejected); {counts['error']} errors")
     print(f"Outputs: {output_dir.resolve()}")
     return 1 if counts["error"] else 0
@@ -181,7 +149,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("input", type=Path, help="candidate JSONL file")
     parser.add_argument("--out-dir", required=True, type=Path,
-                        help="new directory for reports and annotation templates")
+                        help="new directory for solver reports and eligible candidates")
     args = parser.parse_args()
     try:
         return run(args.input, args.out_dir)
