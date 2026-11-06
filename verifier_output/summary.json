@@ -1,0 +1,668 @@
+{
+  "counts": {
+    "retained": 59,
+    "dropped": 29,
+    "incomplete": 0
+  },
+  "families": {
+    "joint_separate": {
+      "retained": 11,
+      "dropped": 1,
+      "incomplete": 0
+    },
+    "negation_scope": {
+      "retained": 12,
+      "dropped": 0,
+      "incomplete": 0
+    },
+    "next_later": {
+      "retained": 10,
+      "dropped": 2,
+      "incomplete": 0
+    },
+    "or_scope": {
+      "retained": 4,
+      "dropped": 5,
+      "incomplete": 0
+    },
+    "order_scope": {
+      "retained": 3,
+      "dropped": 6,
+      "incomplete": 0
+    },
+    "same_later": {
+      "retained": 8,
+      "dropped": 4,
+      "incomplete": 0
+    },
+    "trigger_scope": {
+      "retained": 1,
+      "dropped": 9,
+      "incomplete": 0
+    },
+    "until_termination": {
+      "retained": 10,
+      "dropped": 2,
+      "incomplete": 0
+    }
+  },
+  "errors": [],
+  "samples": [
+    {
+      "item_id": "joint_separate_001",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_002",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_003",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_004",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_005",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_006",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_007",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_008",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_009",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_010",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_011",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "joint_separate_012",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_001",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_002",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_003",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_004",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_005",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_006",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_007",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_008",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_009",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_010",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_011",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "negation_scope_012",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_001",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_002",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_003",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_004",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_005",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_006",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_007",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_008",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_009",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_010",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_011",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "next_later_012",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "or_scope_001",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "or_scope_002",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "or_scope_003",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "or_scope_004",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "or_scope_005",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "or_scope_006",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "or_scope_007",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "or_scope_008",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "or_scope_009",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "order_scope_001",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "order_scope_002",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "order_scope_003",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "order_scope_004",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "order_scope_005",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "order_scope_006",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "order_scope_007",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "order_scope_008",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "order_scope_009",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_001",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_002",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_003",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_004",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_005",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_006",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_007",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_008",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_009",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_010",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_011",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "same_later_012",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_001",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_002",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_003",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_004",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_007",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_008",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_009",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_010",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_011",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "trigger_scope_012",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_001",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_002",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_003",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_004",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_005",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_006",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_007",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_008",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_009",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_010",
+      "status": "retained",
+      "reasons": [
+        "at least two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_011",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    },
+    {
+      "item_id": "until_termination_012",
+      "status": "dropped",
+      "reasons": [
+        "fewer than two surviving interpretations"
+      ]
+    }
+  ]
+}

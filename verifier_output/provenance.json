@@ -1,0 +1,618 @@
+[
+  {
+    "item_id": "joint_separate_001",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 1,
+    "source_record_sha256": "a86d688ed397c2cee633585cbb7cc749a851753a1851d1af12a15aa5059f0488"
+  },
+  {
+    "item_id": "joint_separate_002",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 2,
+    "source_record_sha256": "a7c0ec206519c4ab852f99eb04fb9583c8cdcae75f395fdbc9f2b4fcd3ced868"
+  },
+  {
+    "item_id": "joint_separate_003",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 3,
+    "source_record_sha256": "a2829193bba197e8ac08544e6c4276a793b1ac2293c1371d22db47c3b6512b09"
+  },
+  {
+    "item_id": "joint_separate_004",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 4,
+    "source_record_sha256": "ec9c10f49f6eb174bd2fe27dd693db23ec516241e60c24f7e4469e606eda2d98"
+  },
+  {
+    "item_id": "joint_separate_005",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 5,
+    "source_record_sha256": "042f8eab5f0855e76c30134a42934f438b99df473c4c895db57a8fed954bd3f6"
+  },
+  {
+    "item_id": "joint_separate_006",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 6,
+    "source_record_sha256": "599215fe24fc36724a4e74ca55aba43fc8f95e96dbe12111c4907c02f31f66e2"
+  },
+  {
+    "item_id": "joint_separate_007",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 7,
+    "source_record_sha256": "d32bd7c3d66ef96c15e74b2a65826db7aeca4535f57f2bdb2aa43d5ba7c74301"
+  },
+  {
+    "item_id": "joint_separate_008",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 8,
+    "source_record_sha256": "200443c223594cbe38706302938a49bff5877cd58fd566c075fb14d5d3bec529"
+  },
+  {
+    "item_id": "joint_separate_009",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 9,
+    "source_record_sha256": "239e182f6faf923cbddfd902382cc4fc46afe436e4e9f7a106faffef0b440c60"
+  },
+  {
+    "item_id": "joint_separate_010",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 10,
+    "source_record_sha256": "1273688ab0cf7c815ac281547d76f894984c14772d545aac1823eb69d50b2f79"
+  },
+  {
+    "item_id": "joint_separate_011",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 11,
+    "source_record_sha256": "92d38be3367def4fb54da41706d574f3c0768f939c81b7db84ba743a6c63a404"
+  },
+  {
+    "item_id": "joint_separate_012",
+    "family_id": "joint_separate",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/joint_separate/joint_separate_candidates_eligible.jsonl",
+    "line": 12,
+    "source_record_sha256": "d7f693a7d2ad813dbf6dc74ffbc20c30369376a8cb9ce4e2817eb3ca4861fe76"
+  },
+  {
+    "item_id": "negation_scope_001",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 1,
+    "source_record_sha256": "bdebde73ab2d4eed25cb2163d1c6d0703cac7c674a2cd5e844ad0cdfae4c9d33"
+  },
+  {
+    "item_id": "negation_scope_002",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 2,
+    "source_record_sha256": "b677e0b7fb633d34713ad297333f6edebe80b0207fc1664dfaf09b7314bfa1b3"
+  },
+  {
+    "item_id": "negation_scope_003",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 3,
+    "source_record_sha256": "1f8200e2cc426df66277e2fc5aa130f8889609121e1e9d8c44545af69a85f1ea"
+  },
+  {
+    "item_id": "negation_scope_004",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 4,
+    "source_record_sha256": "2f2d6350491e835acff6b88b7f452340320a563642ee8160e13640c3a97ea6cd"
+  },
+  {
+    "item_id": "negation_scope_005",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 5,
+    "source_record_sha256": "440979963c22ceffe1a3d5cd3d9d8b7986adf3d757959051db966da855ef34ff"
+  },
+  {
+    "item_id": "negation_scope_006",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 6,
+    "source_record_sha256": "7872a0a8044a03deb9ce6111e0b0ca2ff8487d874bdff102b35b3ec9313432b8"
+  },
+  {
+    "item_id": "negation_scope_007",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 7,
+    "source_record_sha256": "c7c4fbd0bb25a3990c00ed75cc5ff3ffd56ac208d2562641e8fe44443ff2be06"
+  },
+  {
+    "item_id": "negation_scope_008",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 8,
+    "source_record_sha256": "dd6895fbe953b92e2c8315acb565aeffa2ece8ffffe5b38eafa574edde1ae8cb"
+  },
+  {
+    "item_id": "negation_scope_009",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 9,
+    "source_record_sha256": "ca6a1ab9d91a4d2933be6189bcf8e8a22edae3ce666b2f6b1bdb7ea02c5a5c05"
+  },
+  {
+    "item_id": "negation_scope_010",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 10,
+    "source_record_sha256": "47b83f783811cbb598f5e2c9c0ba17b042ebf8311208eca52b27d1a00b265905"
+  },
+  {
+    "item_id": "negation_scope_011",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 11,
+    "source_record_sha256": "7a4591ed3020b66fd9cb0198942c3503152da0f27f08858c5037df8a8647d939"
+  },
+  {
+    "item_id": "negation_scope_012",
+    "family_id": "negation_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/negation_scope/negation_scope_candidates_eligible.jsonl",
+    "line": 12,
+    "source_record_sha256": "572dff8f8cb5e601075a1676d28134a848027109da7d5fbde662bfb855e0f2a6"
+  },
+  {
+    "item_id": "next_later_001",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 1,
+    "source_record_sha256": "3a390c6da0905ab6c13f05ead788f5fa09c9ce099eb327b637e58df51ea7edf8"
+  },
+  {
+    "item_id": "next_later_002",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 2,
+    "source_record_sha256": "308b0c9ceabaa59c4b15e41f137c833f0b1a7a42cf5859afb897b16f7a15b9b7"
+  },
+  {
+    "item_id": "next_later_003",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 3,
+    "source_record_sha256": "fd5e5bf40dc0ba7c83fcb1d8c72a8209e755e16ebfb3497ed939396f5169ae88"
+  },
+  {
+    "item_id": "next_later_004",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 4,
+    "source_record_sha256": "d510f73682b731fe7d4ebfb8f487cfa7931718179aef6e52ab12ed970e2d2b28"
+  },
+  {
+    "item_id": "next_later_005",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 5,
+    "source_record_sha256": "fe47f1224b6149279ec595205ee6df3c73705fec319069949e416d0959d93f9d"
+  },
+  {
+    "item_id": "next_later_006",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 6,
+    "source_record_sha256": "c997b47068303a65db3971fbeeaece67b5043c41e44cc4ac90494b41706fa242"
+  },
+  {
+    "item_id": "next_later_007",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 7,
+    "source_record_sha256": "795823008125d3b957edb07bcc398e3124b8a9d1f782ee040c211c5a3b4d74ef"
+  },
+  {
+    "item_id": "next_later_008",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 8,
+    "source_record_sha256": "44b46f6eeea8e0bad1d02598824f2adb2e871f379be5e2efb7291bd7f7930672"
+  },
+  {
+    "item_id": "next_later_009",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 9,
+    "source_record_sha256": "ee259bd34516df0d31df87ad12deb0897d845a3aff2c6e6861811b4a7cdd2fd3"
+  },
+  {
+    "item_id": "next_later_010",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 10,
+    "source_record_sha256": "f48b8549bcb51f89fe353f74cc65e5360e134f131779501a2127ed73beab161e"
+  },
+  {
+    "item_id": "next_later_011",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 11,
+    "source_record_sha256": "7e822cfa0c66bd770e200dde5f47428a2b68cbabb53be4481d0ceae35cbddd18"
+  },
+  {
+    "item_id": "next_later_012",
+    "family_id": "next_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/next_later/next_later_candidates_eligible.jsonl",
+    "line": 12,
+    "source_record_sha256": "dfc193862f7ddca0054da044edbddb7bc64e5f3262dd656564fb4daa3abec9f4"
+  },
+  {
+    "item_id": "or_scope_001",
+    "family_id": "or_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/or_scope/or_scope_candidates_eligible.jsonl",
+    "line": 1,
+    "source_record_sha256": "db719a63978f30165050e8be905f42b5de53962f619d8dcbde6f782ecd99e97b"
+  },
+  {
+    "item_id": "or_scope_002",
+    "family_id": "or_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/or_scope/or_scope_candidates_eligible.jsonl",
+    "line": 2,
+    "source_record_sha256": "300f286318c27da7570606f900b94987bf17fb3775dbbf6b824148fdb46eafbc"
+  },
+  {
+    "item_id": "or_scope_003",
+    "family_id": "or_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/or_scope/or_scope_candidates_eligible.jsonl",
+    "line": 3,
+    "source_record_sha256": "231e6718b32c8976076d4454e601ee9e466fd44d6dc80fa4789222dae888d058"
+  },
+  {
+    "item_id": "or_scope_004",
+    "family_id": "or_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/or_scope/or_scope_candidates_eligible.jsonl",
+    "line": 4,
+    "source_record_sha256": "907cc5ccafcd1d9d0533bcc9672aad949b904ba95ddd5accf9294b983fa3c619"
+  },
+  {
+    "item_id": "or_scope_005",
+    "family_id": "or_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/or_scope/or_scope_candidates_eligible.jsonl",
+    "line": 5,
+    "source_record_sha256": "03f01d13cb589016a48af49a761dc9febd827ee8bcf6997be66481d303c78d22"
+  },
+  {
+    "item_id": "or_scope_006",
+    "family_id": "or_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/or_scope/or_scope_candidates_eligible.jsonl",
+    "line": 6,
+    "source_record_sha256": "550dd24f860e8a781589562b93ea9aec797a008a895c9d2279f819331c51afa3"
+  },
+  {
+    "item_id": "or_scope_007",
+    "family_id": "or_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/or_scope/or_scope_candidates_eligible.jsonl",
+    "line": 7,
+    "source_record_sha256": "7c4eab1425246c311a2e44dc5a9d049711acf299f4a0a99f4927c2498567824e"
+  },
+  {
+    "item_id": "or_scope_008",
+    "family_id": "or_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/or_scope/or_scope_candidates_eligible.jsonl",
+    "line": 8,
+    "source_record_sha256": "1e4ca4911f0721c30444f804746fd8e0deb9ea2355c6bcb42c71e43fbb01e943"
+  },
+  {
+    "item_id": "or_scope_009",
+    "family_id": "or_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/or_scope/or_scope_candidates_eligible.jsonl",
+    "line": 9,
+    "source_record_sha256": "a9fe0ddd0d9b2c987168a071d8f57a93ee73b0dd23d05c498cead18e9971f68f"
+  },
+  {
+    "item_id": "order_scope_001",
+    "family_id": "order_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/order_scope/order_scope_candidates_eligible.jsonl",
+    "line": 1,
+    "source_record_sha256": "3f5abe6ec226f8d968163ddf765aaebfe0c0714200bb77cdf0c2da91a7faace1"
+  },
+  {
+    "item_id": "order_scope_002",
+    "family_id": "order_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/order_scope/order_scope_candidates_eligible.jsonl",
+    "line": 2,
+    "source_record_sha256": "97eee2dcdda0be7572e7bd1cf2fb4111f50627a3c50861829bee3f80f3ae566b"
+  },
+  {
+    "item_id": "order_scope_003",
+    "family_id": "order_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/order_scope/order_scope_candidates_eligible.jsonl",
+    "line": 3,
+    "source_record_sha256": "433cb4be2adaada80f7db0600cf7ebc6c1f11aee937ed0c27e2d3d49b2ac929e"
+  },
+  {
+    "item_id": "order_scope_004",
+    "family_id": "order_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/order_scope/order_scope_candidates_eligible.jsonl",
+    "line": 4,
+    "source_record_sha256": "d0c0ae13208502b22ad672b75532037190b6292de2f04582b5f50bc35151c2bb"
+  },
+  {
+    "item_id": "order_scope_005",
+    "family_id": "order_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/order_scope/order_scope_candidates_eligible.jsonl",
+    "line": 5,
+    "source_record_sha256": "e9768834ae62edd59e03100b6623af733a45e9596c215a57b8c625ae5809a598"
+  },
+  {
+    "item_id": "order_scope_006",
+    "family_id": "order_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/order_scope/order_scope_candidates_eligible.jsonl",
+    "line": 6,
+    "source_record_sha256": "4c4c76e29ec02cbbae3028a157fe927206482159082fe19956c0117a23ce2ae5"
+  },
+  {
+    "item_id": "order_scope_007",
+    "family_id": "order_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/order_scope/order_scope_candidates_eligible.jsonl",
+    "line": 7,
+    "source_record_sha256": "bedd2daae61c02f56a83523ba9e0cd4e2cabae54d2db5b497456e63145825c29"
+  },
+  {
+    "item_id": "order_scope_008",
+    "family_id": "order_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/order_scope/order_scope_candidates_eligible.jsonl",
+    "line": 8,
+    "source_record_sha256": "65e7ad98cd6def9f7c0e32208e6e6241630f7659a165e3743ca3fa73a1e9dc00"
+  },
+  {
+    "item_id": "order_scope_009",
+    "family_id": "order_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/order_scope/order_scope_candidates_eligible.jsonl",
+    "line": 9,
+    "source_record_sha256": "6af2d405ca7d12b094284034ae43bdd1cf449364aabedf88257903d6ff1c4f4b"
+  },
+  {
+    "item_id": "same_later_001",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 1,
+    "source_record_sha256": "6678a41dd3167272f9f6f609c64b43f85b4f1f73382729d278db956da4342814"
+  },
+  {
+    "item_id": "same_later_002",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 2,
+    "source_record_sha256": "43f5cde2c3d747067f04b9fd76d9912024933b9842112d5d8c004fd28ea4a503"
+  },
+  {
+    "item_id": "same_later_003",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 3,
+    "source_record_sha256": "91ecb3d292d35065dd28907c2d11f4b0fb39d3f92ee9ff5264a35f17e9b7e953"
+  },
+  {
+    "item_id": "same_later_004",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 4,
+    "source_record_sha256": "4efa14ffe7fdb4997f9763ea5e724fb6c577141d0fe00024f1a4816c664de956"
+  },
+  {
+    "item_id": "same_later_005",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 5,
+    "source_record_sha256": "dc95a22b4b547258402b2e4af4fde432e6c4dc72a3a77299b0eca30b8d5b350a"
+  },
+  {
+    "item_id": "same_later_006",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 6,
+    "source_record_sha256": "c7cc01e1b506902febe113ad867cbf5879d9097905a0eb54319ecb4cfd5d89a5"
+  },
+  {
+    "item_id": "same_later_007",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 7,
+    "source_record_sha256": "3fcf5b55eb1c7220343de2d026b8b38c5a55eb98020fb9d84d0636c0627813bc"
+  },
+  {
+    "item_id": "same_later_008",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 8,
+    "source_record_sha256": "3804fa05f763e709f9e18091bf1269ac48067a1efe2904840ff3e0024bdbec1a"
+  },
+  {
+    "item_id": "same_later_009",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 9,
+    "source_record_sha256": "b93c44a6bd78cf65330528a79ff3af706e7d3c51e86837169f1b61e141d82019"
+  },
+  {
+    "item_id": "same_later_010",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 10,
+    "source_record_sha256": "bfcf1fb6c9a2821e2ce127818ee960da38e96133da85441eb7eda04f8a07e25c"
+  },
+  {
+    "item_id": "same_later_011",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 11,
+    "source_record_sha256": "1fe517a67ccfbd0692f9f013ebde0fb2ecfb3e3e45d31e007d7d1ea48ba12e28"
+  },
+  {
+    "item_id": "same_later_012",
+    "family_id": "same_later",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/same_later/same_later_candidates_eligible.jsonl",
+    "line": 12,
+    "source_record_sha256": "47e5ff0d3550bd6038dac8db0ab8cb4295262baf68f3756e4c5a71611d695e2a"
+  },
+  {
+    "item_id": "trigger_scope_001",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 1,
+    "source_record_sha256": "1b29270d3c89c968b8b93d0a6f655b3c3236ea4ee86df652ab9fcf9c621966a5"
+  },
+  {
+    "item_id": "trigger_scope_002",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 2,
+    "source_record_sha256": "d62cb2da48394746fc35df016604cd1474297833ba7b339fe72730594b8a61e6"
+  },
+  {
+    "item_id": "trigger_scope_003",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 3,
+    "source_record_sha256": "5bc2a688e51eb45683844b5542a0f15d7589829c5e99f605dcf87a5d5d0e6c8c"
+  },
+  {
+    "item_id": "trigger_scope_004",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 4,
+    "source_record_sha256": "c56ea8aa335ebb22248390efefff84a544e3b5af269014e7da2f2829b4f698b4"
+  },
+  {
+    "item_id": "trigger_scope_007",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 5,
+    "source_record_sha256": "94d21e91af7c990fbf36bd3130f0100c0a6cd8bd1acd8f91bc5c0703fd26704b"
+  },
+  {
+    "item_id": "trigger_scope_008",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 6,
+    "source_record_sha256": "1dcb621aa29e4206b0bc11e26102369a5fe94f29fa23270789d7470d26a42150"
+  },
+  {
+    "item_id": "trigger_scope_009",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 7,
+    "source_record_sha256": "654af65afebf9c8bce84a7a98c6b374b9cc0faf511af417cd75886bafaa4fa59"
+  },
+  {
+    "item_id": "trigger_scope_010",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 8,
+    "source_record_sha256": "7ea13ad435ea3a7f69b65cc073d6d33c42edc7f54123d0b32f8df9b5fc083e9c"
+  },
+  {
+    "item_id": "trigger_scope_011",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 9,
+    "source_record_sha256": "3503c36beef3310239cc01bafea0ecc8a903bceae1f4ee9cb7b77df5355e202d"
+  },
+  {
+    "item_id": "trigger_scope_012",
+    "family_id": "trigger_scope",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/trigger_scope_final/trigger_scope_candidates_eligible.jsonl",
+    "line": 10,
+    "source_record_sha256": "73a54457569a9d4373aad58b51ee614516107be66499e1ff90602ef01c8cb449"
+  },
+  {
+    "item_id": "until_termination_001",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 1,
+    "source_record_sha256": "8f2465e7f18c9e07ba1d681efd2e06f3a7fa697af37327b20c46e0669cac9b6d"
+  },
+  {
+    "item_id": "until_termination_002",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 2,
+    "source_record_sha256": "d08e5be6f476f35217d46e43b48ddd39c2b2024416bacae115ad6ac301769d38"
+  },
+  {
+    "item_id": "until_termination_003",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 3,
+    "source_record_sha256": "7ea613e32f049724f9e61af02e19a8977c63c0f5a878d67703f67a11fc9355e1"
+  },
+  {
+    "item_id": "until_termination_004",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 4,
+    "source_record_sha256": "f9b359b8372526e51560639fb7462df64976f93135a0f5e43343041e309dceb9"
+  },
+  {
+    "item_id": "until_termination_005",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 5,
+    "source_record_sha256": "2a78011370e06b59534ef5c3756105c949b0493e3abd6d316538292204cd9ddd"
+  },
+  {
+    "item_id": "until_termination_006",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 6,
+    "source_record_sha256": "8c541f759f83dba5014a3c8a440d097317f1f8c16ab20eeda078cf231849a121"
+  },
+  {
+    "item_id": "until_termination_007",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 7,
+    "source_record_sha256": "79e3d23f69d70f994cdf69955021ef5951c664ea0fbd1fc6a8bb02080cd8ead3"
+  },
+  {
+    "item_id": "until_termination_008",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 8,
+    "source_record_sha256": "46e8e4872deb1afbe35b68f0aefff2d8c514b91ee3496b590637d39b10481fbc"
+  },
+  {
+    "item_id": "until_termination_009",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 9,
+    "source_record_sha256": "6e67246e665fec5e7d04b4a4db6ccb73742693e09dc70f66998bb3936461ca37"
+  },
+  {
+    "item_id": "until_termination_010",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 10,
+    "source_record_sha256": "b187fd60f4eaabeab899743b4dce840650bc4ab102a44023972c6b7258b71cac"
+  },
+  {
+    "item_id": "until_termination_011",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 11,
+    "source_record_sha256": "34fc3910586c5ed3af0345172d346b9d37c11c0db52d7218a9ecdf8d434a0312"
+  },
+  {
+    "item_id": "until_termination_012",
+    "family_id": "until_termination",
+    "path": "/Users/lawre/ambiguity-in-nl2tl/candidate_screening/until_termination/until_termination_candidates_eligible.jsonl",
+    "line": 12,
+    "source_record_sha256": "1794d400637567db7cc4f272efb3b72a448a8883922e163ee08fb97d317bd695"
+  }
+]

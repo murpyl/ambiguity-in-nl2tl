@@ -1,15 +1,12 @@
 # CODING 
-- Plan first before you code. Use higher reasoning for planning than for coding. Create and delegate tasks to subagents. Instruct subagents to implement plans based on priorities. Subagents must have less usage than the original creator.
-- When delegating subagents, if subtasks do not require previous subtasks, run them in parallel.
-- After all coding, spawn equal amounts of auditor subagents for each subagent on higher usage levels to review the code.
-- Do not implement future-ticket features.
+- Plan first before you code. Use higher reasoning for planning than for coding.
+- When delegating subagents, if subtasks do not require previous subtasks, run them in parallel. Subagents must have less usage than the original creator.
 - Before asking about a consequential action, do all preparatory work before my approval so my approval is the final step
 - Do not preserve backward compatibility, choose the simplest implementation that fully meets all the current requirements, prefer well established libraries over custom implementations
 - Do not refactor unrelated systems. Do not introduce unnecessary complexity.
 - Do not introduce new architecture unless required.
 - Avoid unnecessary dependencies.
-- Run build when possible.
-- Strongly prefer end-to-end tests over unit tests.
+- Do not write unit tests unless something breaks.
 - No tests for reversible, low impact changes, only critical infrastructure
 
 # WRITING STYLE 

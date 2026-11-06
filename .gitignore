@@ -50,3 +50,9 @@ tools/
 videos/
 chathistory/
 tmp/
+
+#Outputs
+/verifier_output/requests/
+/verifier_output/samples/
+/verifier_output/families/
+*.log
