@@ -15,8 +15,8 @@ The family overlaps `order_scope` in existential versus universal trigger quanti
 Both final commands passed:
 
 ```
-/opt/miniconda3/envs/ltl/bin/python check_candidates.py trigger_scope_candidates.jsonl --out-dir candidate_screening/trigger_scope_final
-/opt/miniconda3/envs/ltl/bin/python dataset_checks.py trigger_scope_candidates.jsonl --stage candidates
+/opt/miniconda3/envs/ltl/bin/python check_candidates.py candidate_screening/trigger_scope_final/trigger_scope_candidates.jsonl --out-dir candidate_screening/trigger_scope_final
+/opt/miniconda3/envs/ltl/bin/python dataset_checks.py candidate_screening/trigger_scope_final/trigger_scope_candidates.jsonl --stage candidates
 ```
 
 Spot 2.16: 10 checked, 10 eligible, 0 equivalent pairs, 0 errors. Dataset checks: 0 issues.
