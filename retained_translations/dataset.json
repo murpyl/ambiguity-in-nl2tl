@@ -1,0 +1,2669 @@
+{
+  "joint_separate_001:ambiguous": {
+    "pair_id": "joint_separate_001",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A pulse and a flash must eventually occur.",
+    "gold_formulas": [
+      "(F (a & b))",
+      "((F a) & (F b))"
+    ]
+  },
+  "joint_separate_001:clear:interp_9635a7814d0787a0074b1e545449a7d76639bc21f8c6a8ebf38eaee8b8763ece": {
+    "pair_id": "joint_separate_001",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_9635a7814d0787a0074b1e545449a7d76639bc21f8c6a8ebf38eaee8b8763ece",
+    "nl": "A pulse and a flash eventually occur together at the same step.",
+    "gold_formulas": [
+      "(F (a & b))"
+    ]
+  },
+  "joint_separate_001:clear:interp_e7f414e3835a33141a5cac0879b36c7198f9d0f94f557a8303d8418ca705297a": {
+    "pair_id": "joint_separate_001",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_e7f414e3835a33141a5cac0879b36c7198f9d0f94f557a8303d8418ca705297a",
+    "nl": "Eventually a pulse occurs and, separately, eventually a flash occurs, not necessarily at the same step.",
+    "gold_formulas": [
+      "((F a) & (F b))"
+    ]
+  },
+  "joint_separate_002:ambiguous": {
+    "pair_id": "joint_separate_002",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Pulses and flashes must keep occurring.",
+    "gold_formulas": [
+      "(G (F a)) & (G (F b))",
+      "(G (F (a & b)))"
+    ]
+  },
+  "joint_separate_002:clear:interp_93b301561b5178ccef8018115fa204d496a23bfa41396f476f367ce7228512f7": {
+    "pair_id": "joint_separate_002",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_93b301561b5178ccef8018115fa204d496a23bfa41396f476f367ce7228512f7",
+    "nl": "Pulses and flashes must both keep occurring infinitely often, not necessarily together.",
+    "gold_formulas": [
+      "(G (F a)) & (G (F b))"
+    ]
+  },
+  "joint_separate_002:clear:interp_c4142e791387bd03609daffd68173f5323ff8bf17e0088db31ed5b0784485d07": {
+    "pair_id": "joint_separate_002",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_c4142e791387bd03609daffd68173f5323ff8bf17e0088db31ed5b0784485d07",
+    "nl": "At infinitely many steps, a pulse and a flash occur together.",
+    "gold_formulas": [
+      "(G (F (a & b)))"
+    ]
+  },
+  "joint_separate_003:ambiguous": {
+    "pair_id": "joint_separate_003",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a request occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Every request must be followed by a pulse and a flash.",
+    "gold_formulas": [
+      "G(c -> F(a & b))",
+      "(G (c -> ((F a) & (F b))))"
+    ]
+  },
+  "joint_separate_003:clear:interp_1f4a147f9361c409f6566211a01b3cbf257ceaeed7d1bd8348b0235cc27aa76f": {
+    "pair_id": "joint_separate_003",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a request occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_1f4a147f9361c409f6566211a01b3cbf257ceaeed7d1bd8348b0235cc27aa76f",
+    "nl": "Every request is eventually followed by a step containing both a pulse and a flash.",
+    "gold_formulas": [
+      "G(c -> F(a & b))"
+    ]
+  },
+  "joint_separate_003:clear:interp_b601fe2ada1f73d081a6b857b855eee309ac16a8ddd2f302a4f11607f466fc31": {
+    "pair_id": "joint_separate_003",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a request occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_b601fe2ada1f73d081a6b857b855eee309ac16a8ddd2f302a4f11607f466fc31",
+    "nl": "Every request is eventually followed by a pulse and is also eventually followed by a flash, not necessarily at the same step.",
+    "gold_formulas": [
+      "(G (c -> ((F a) & (F b))))"
+    ]
+  },
+  "joint_separate_004:ambiguous": {
+    "pair_id": "joint_separate_004",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a stop occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A pulse and a flash must occur before any stop.",
+    "gold_formulas": [
+      "!c U (a & b)",
+      "(((F a) & ((!c) W a)) & ((F b) & ((!c) W b)))"
+    ]
+  },
+  "joint_separate_004:clear:interp_7c930c123a0db7a4c86c692b8a6af698f628da2d2b49d3eafd02c9629b89b14a": {
+    "pair_id": "joint_separate_004",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a stop occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_7c930c123a0db7a4c86c692b8a6af698f628da2d2b49d3eafd02c9629b89b14a",
+    "nl": "A pulse and a flash must occur simultaneously before any stop occurs.",
+    "gold_formulas": [
+      "!c U (a & b)"
+    ]
+  },
+  "joint_separate_004:clear:interp_bfd86fbaef4ef47213753da400a46110e15a42a47244f8c8b79e14ea290a4152": {
+    "pair_id": "joint_separate_004",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a stop occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_bfd86fbaef4ef47213753da400a46110e15a42a47244f8c8b79e14ea290a4152",
+    "nl": "A pulse and a flash must each occur before the first stop, not necessarily together, and both must actually occur.",
+    "gold_formulas": [
+      "(((F a) & ((!c) W a)) & ((F b) & ((!c) W b)))"
+    ]
+  },
+  "joint_separate_005:ambiguous": {
+    "pair_id": "joint_separate_005",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a request occurs",
+      "d": "a stop occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "After each request, a pulse and a flash are required before the next stop.",
+    "gold_formulas": [
+      "(G (c -> ((! d) U (a & b))))",
+      "G((c -> (((F a) & ((!d) W a)) & ((F b) & ((!d) W b)))))"
+    ]
+  },
+  "joint_separate_005:clear:interp_4dde140d858ce8a7fadc4565bc4d56b81d61899c47caba4ccbef49363fb8825e": {
+    "pair_id": "joint_separate_005",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a request occurs",
+      "d": "a stop occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_4dde140d858ce8a7fadc4565bc4d56b81d61899c47caba4ccbef49363fb8825e",
+    "nl": "After each request, both a pulse and a flash must occur together before the next stop if any, and they must occur even if no stop follows.",
+    "gold_formulas": [
+      "(G (c -> ((! d) U (a & b))))"
+    ]
+  },
+  "joint_separate_005:clear:interp_82688c5a3aed617198592913cc28fadcbdc00af0af50031ebd538a6c5ad7442f": {
+    "pair_id": "joint_separate_005",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a request occurs",
+      "d": "a stop occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_82688c5a3aed617198592913cc28fadcbdc00af0af50031ebd538a6c5ad7442f",
+    "nl": "After every request, a pulse and a flash must each occur before the next stop, not necessarily together.",
+    "gold_formulas": [
+      "G((c -> (((F a) & ((!d) W a)) & ((F b) & ((!d) W b)))))"
+    ]
+  },
+  "joint_separate_006:ambiguous": {
+    "pair_id": "joint_separate_006",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active"
+    },
+    "kind": "ambiguous",
+    "nl": "The signal and the indicator must eventually be active for two consecutive steps.",
+    "gold_formulas": [
+      "((F(a & (X a))) & (F(b & (X b))))",
+      "F ((a & b) & X (a & b))"
+    ]
+  },
+  "joint_separate_006:clear:interp_1d166a816920afadb8863ea5b7176a04d9f6da5f9fa3b8bcb56c3dabad4ba99c": {
+    "pair_id": "joint_separate_006",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_1d166a816920afadb8863ea5b7176a04d9f6da5f9fa3b8bcb56c3dabad4ba99c",
+    "nl": "Eventually the signal is active for two consecutive steps and eventually the indicator is active for two consecutive steps, possibly at different times.",
+    "gold_formulas": [
+      "((F(a & (X a))) & (F(b & (X b))))"
+    ]
+  },
+  "joint_separate_006:clear:interp_2ade8fabc128ab67ead420a69d4e8fca61e66d07f6d052ddc511caf7d737d479": {
+    "pair_id": "joint_separate_006",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_2ade8fabc128ab67ead420a69d4e8fca61e66d07f6d052ddc511caf7d737d479",
+    "nl": "The signal and the indicator must simultaneously be active for two consecutive steps at some point.",
+    "gold_formulas": [
+      "F ((a & b) & X (a & b))"
+    ]
+  },
+  "joint_separate_007:ambiguous": {
+    "pair_id": "joint_separate_007",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active"
+    },
+    "kind": "ambiguous",
+    "nl": "The signal and the indicator must eventually become active.",
+    "gold_formulas": [
+      "F(a & b)",
+      "((F a) & (F b))"
+    ]
+  },
+  "joint_separate_007:clear:interp_9635a7814d0787a0074b1e545449a7d76639bc21f8c6a8ebf38eaee8b8763ece": {
+    "pair_id": "joint_separate_007",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_9635a7814d0787a0074b1e545449a7d76639bc21f8c6a8ebf38eaee8b8763ece",
+    "nl": "The signal and indicator become active simultaneously at some future step.",
+    "gold_formulas": [
+      "F(a & b)"
+    ]
+  },
+  "joint_separate_007:clear:interp_e7f414e3835a33141a5cac0879b36c7198f9d0f94f557a8303d8418ca705297a": {
+    "pair_id": "joint_separate_007",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_e7f414e3835a33141a5cac0879b36c7198f9d0f94f557a8303d8418ca705297a",
+    "nl": "The signal eventually becomes active and the indicator eventually becomes active, not necessarily together.",
+    "gold_formulas": [
+      "((F a) & (F b))"
+    ]
+  },
+  "joint_separate_008:ambiguous": {
+    "pair_id": "joint_separate_008",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active",
+      "c": "a release occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Eventually the signal and the indicator must be active until a release occurs.",
+    "gold_formulas": [
+      "(F ((a & b) W c))",
+      "F ((a & b) U c)"
+    ]
+  },
+  "joint_separate_008:clear:interp_8c904d6b7afa3c6a2aed4078b5fb81339480b7d210107d370172c9c6314cb840": {
+    "pair_id": "joint_separate_008",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active",
+      "c": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_8c904d6b7afa3c6a2aed4078b5fb81339480b7d210107d370172c9c6314cb840",
+    "nl": "Eventually the signal and indicator are both active until a release, where the release is optional.",
+    "gold_formulas": [
+      "(F ((a & b) W c))"
+    ]
+  },
+  "joint_separate_008:clear:interp_a5103e1efb25b99260e0d9aa41376f1e8088e78bd33e865dc0841cc99421b604": {
+    "pair_id": "joint_separate_008",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active",
+      "c": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_a5103e1efb25b99260e0d9aa41376f1e8088e78bd33e865dc0841cc99421b604",
+    "nl": "Eventually, both the signal and the indicator must be active together until a release occurs.",
+    "gold_formulas": [
+      "F ((a & b) U c)"
+    ]
+  },
+  "joint_separate_010:ambiguous": {
+    "pair_id": "joint_separate_010",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a start occurs",
+      "d": "a finish occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "After a start, a pulse and a flash must occur before a finish.",
+    "gold_formulas": [
+      "(G (c -> ((! d) U (a & b))))",
+      "G (c -> ((!d U a) & (!d U b)))"
+    ]
+  },
+  "joint_separate_010:clear:interp_4dde140d858ce8a7fadc4565bc4d56b81d61899c47caba4ccbef49363fb8825e": {
+    "pair_id": "joint_separate_010",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a start occurs",
+      "d": "a finish occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_4dde140d858ce8a7fadc4565bc4d56b81d61899c47caba4ccbef49363fb8825e",
+    "nl": "After each start, both a pulse and a flash must occur together before a finish, and they must occur even if no finish follows.",
+    "gold_formulas": [
+      "(G (c -> ((! d) U (a & b))))"
+    ]
+  },
+  "joint_separate_010:clear:interp_82688c5a3aed617198592913cc28fadcbdc00af0af50031ebd538a6c5ad7442f": {
+    "pair_id": "joint_separate_010",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a start occurs",
+      "d": "a finish occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_82688c5a3aed617198592913cc28fadcbdc00af0af50031ebd538a6c5ad7442f",
+    "nl": "After each start, both a pulse and a flash must occur before the next finish, not necessarily at the same step.",
+    "gold_formulas": [
+      "G (c -> ((!d U a) & (!d U b)))"
+    ]
+  },
+  "joint_separate_011:ambiguous": {
+    "pair_id": "joint_separate_011",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a click occurs",
+      "d": "a mark appears"
+    },
+    "kind": "ambiguous",
+    "nl": "A pulse immediately followed by a flash and a click immediately followed by a mark must eventually occur.",
+    "gold_formulas": [
+      "F ((a & c) & X (b & d))",
+      "((F(a & (X b))) & (F(c & (X d))))"
+    ]
+  },
+  "joint_separate_011:clear:interp_52a152e1f159a901b20148d4f0e0c6b6f31fd8d064261d2a340f846505219b4a": {
+    "pair_id": "joint_separate_011",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a click occurs",
+      "d": "a mark appears"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_52a152e1f159a901b20148d4f0e0c6b6f31fd8d064261d2a340f846505219b4a",
+    "nl": "A pulse immediately followed by a flash and a click immediately followed by a mark must occur simultaneously at the same time steps.",
+    "gold_formulas": [
+      "F ((a & c) & X (b & d))"
+    ]
+  },
+  "joint_separate_011:clear:interp_cad6ed80bc168b40bd7b81bff07c003e67f509a0f3ddb8bcac754ae9e799070e": {
+    "pair_id": "joint_separate_011",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a click occurs",
+      "d": "a mark appears"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_cad6ed80bc168b40bd7b81bff07c003e67f509a0f3ddb8bcac754ae9e799070e",
+    "nl": "Eventually there is a pulse immediately followed by a flash, and eventually there is a click immediately followed by a mark, possibly at different times.",
+    "gold_formulas": [
+      "((F(a & (X b))) & (F(c & (X d))))"
+    ]
+  },
+  "joint_separate_012:ambiguous": {
+    "pair_id": "joint_separate_012",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active"
+    },
+    "kind": "ambiguous",
+    "nl": "The signal and the indicator must keep being active for two consecutive steps.",
+    "gold_formulas": [
+      "((G(F(a & (X a)))) & (G(F(b & (X b)))))",
+      "G(F(((a & b) & (X(a & b)))))"
+    ]
+  },
+  "joint_separate_012:clear:interp_4ff79391231a0ebac50b100430e8cd9ed7eb0223d7ebdd74cb67c10fbcee8909": {
+    "pair_id": "joint_separate_012",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_4ff79391231a0ebac50b100430e8cd9ed7eb0223d7ebdd74cb67c10fbcee8909",
+    "nl": "Infinitely often, the signal is active for two consecutive steps and infinitely often the indicator is active for two consecutive steps.",
+    "gold_formulas": [
+      "((G(F(a & (X a)))) & (G(F(b & (X b)))))"
+    ]
+  },
+  "joint_separate_012:clear:interp_8db8fae3798d4c9f6713aec7c61a28b65045cf50e1826e099537ef13ad55470f": {
+    "pair_id": "joint_separate_012",
+    "family_id": "joint_separate",
+    "propositions": {
+      "a": "a signal is active",
+      "b": "an indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_8db8fae3798d4c9f6713aec7c61a28b65045cf50e1826e099537ef13ad55470f",
+    "nl": "Infinitely often, the signal and indicator are jointly active for two consecutive steps.",
+    "gold_formulas": [
+      "G(F(((a & b) & (X(a & b)))))"
+    ]
+  },
+  "negation_scope_001:ambiguous": {
+    "pair_id": "negation_scope_001",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "ambiguous",
+    "nl": "The first and second indicators must not be active now.",
+    "gold_formulas": [
+      "(!a & !b)",
+      "!(a & b)"
+    ]
+  },
+  "negation_scope_001:clear:interp_2be6f9623d3ecfd9c2a2b92766b03faae40d8d3dce008d520a3f6c977c8cce9d": {
+    "pair_id": "negation_scope_001",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_2be6f9623d3ecfd9c2a2b92766b03faae40d8d3dce008d520a3f6c977c8cce9d",
+    "nl": "Neither indicator is active at the initial step.",
+    "gold_formulas": [
+      "(!a & !b)"
+    ]
+  },
+  "negation_scope_001:clear:interp_ec61342e786a09fe8763f028e7e24fb15369fc818c4117b5d808f741c1eec6e6": {
+    "pair_id": "negation_scope_001",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_ec61342e786a09fe8763f028e7e24fb15369fc818c4117b5d808f741c1eec6e6",
+    "nl": "At the initial step, the two indicators are not both active.",
+    "gold_formulas": [
+      "!(a & b)"
+    ]
+  },
+  "negation_scope_002:ambiguous": {
+    "pair_id": "negation_scope_002",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "ambiguous",
+    "nl": "The first and second indicators must never be active.",
+    "gold_formulas": [
+      "(G (!a & !b))",
+      "G(!(a & b))"
+    ]
+  },
+  "negation_scope_002:clear:interp_3d2858502de7a992762ecd7a586adbb34f05a4f89f5b64a50bdc2230935a6048": {
+    "pair_id": "negation_scope_002",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_3d2858502de7a992762ecd7a586adbb34f05a4f89f5b64a50bdc2230935a6048",
+    "nl": "At every step, neither indicator is active.",
+    "gold_formulas": [
+      "(G (!a & !b))"
+    ]
+  },
+  "negation_scope_002:clear:interp_83f6b042764c52c0b29337647cbef8905d271870dd70a510e27518c38a537b28": {
+    "pair_id": "negation_scope_002",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_83f6b042764c52c0b29337647cbef8905d271870dd70a510e27518c38a537b28",
+    "nl": "The two indicators are never both active.",
+    "gold_formulas": [
+      "G(!(a & b))"
+    ]
+  },
+  "negation_scope_003:ambiguous": {
+    "pair_id": "negation_scope_003",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "ambiguous",
+    "nl": "At some point, the first and second indicators must not be active.",
+    "gold_formulas": [
+      "F(!(a & b))",
+      "F(!a & !b)"
+    ]
+  },
+  "negation_scope_003:clear:interp_0034f8599a4e3d3aac5f1d0339a3b776da4979a5bc53c9db2e7afe555aa45b6f": {
+    "pair_id": "negation_scope_003",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_0034f8599a4e3d3aac5f1d0339a3b776da4979a5bc53c9db2e7afe555aa45b6f",
+    "nl": "At some point, it is not the case that both indicators are active.",
+    "gold_formulas": [
+      "F(!(a & b))"
+    ]
+  },
+  "negation_scope_003:clear:interp_17eb066f0a9240e5a64e71e7ed9c5de3dc8fea4caef20765982d24c9f1f9c740": {
+    "pair_id": "negation_scope_003",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_17eb066f0a9240e5a64e71e7ed9c5de3dc8fea4caef20765982d24c9f1f9c740",
+    "nl": "At some step, neither indicator is active.",
+    "gold_formulas": [
+      "F(!a & !b)"
+    ]
+  },
+  "negation_scope_004:ambiguous": {
+    "pair_id": "negation_scope_004",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "ambiguous",
+    "nl": "Infinitely often, the first and second indicators must not be active.",
+    "gold_formulas": [
+      "(G (F !(a & b)))",
+      "(G (F ((! a) & (! b))))"
+    ]
+  },
+  "negation_scope_004:clear:interp_39bc1c1b58df12aed1ee5ac5df48bfee20a231b148b9fb92c30cceac7984d09a": {
+    "pair_id": "negation_scope_004",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_39bc1c1b58df12aed1ee5ac5df48bfee20a231b148b9fb92c30cceac7984d09a",
+    "nl": "Infinitely often, the two indicators are not both active.",
+    "gold_formulas": [
+      "(G (F !(a & b)))"
+    ]
+  },
+  "negation_scope_004:clear:interp_c98b503cedc89f3f3bee8a3df2e21d3d7f67695a92e4c2a80410db3ff0237884": {
+    "pair_id": "negation_scope_004",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_c98b503cedc89f3f3bee8a3df2e21d3d7f67695a92e4c2a80410db3ff0237884",
+    "nl": "Infinitely often, both indicators are inactive.",
+    "gold_formulas": [
+      "(G (F ((! a) & (! b))))"
+    ]
+  },
+  "negation_scope_005:ambiguous": {
+    "pair_id": "negation_scope_005",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "ambiguous",
+    "nl": "From some point onward, the first and second indicators must not be active.",
+    "gold_formulas": [
+      "F(G(!(a & b)))",
+      "F(G(((!a) & (!b))))"
+    ]
+  },
+  "negation_scope_005:clear:interp_75abd37b9f4051ed2acec7b62fad6c9f67baecc30edd7204da59aa7427e572de": {
+    "pair_id": "negation_scope_005",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_75abd37b9f4051ed2acec7b62fad6c9f67baecc30edd7204da59aa7427e572de",
+    "nl": "From some point onward, the indicators are never active together.",
+    "gold_formulas": [
+      "F(G(!(a & b)))"
+    ]
+  },
+  "negation_scope_005:clear:interp_ac544394e9833ce4595096e797b8390bc04af120a5c8fbc8b9e2cfaa7e792236": {
+    "pair_id": "negation_scope_005",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_ac544394e9833ce4595096e797b8390bc04af120a5c8fbc8b9e2cfaa7e792236",
+    "nl": "From some point onward, neither indicator is active.",
+    "gold_formulas": [
+      "F(G(((!a) & (!b))))"
+    ]
+  },
+  "negation_scope_006:ambiguous": {
+    "pair_id": "negation_scope_006",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a release occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "The first and second indicators must not be active until a release occurs, and a release must occur.",
+    "gold_formulas": [
+      "(((!a) & (!b)) U c)",
+      "(!(a & b)) U c"
+    ]
+  },
+  "negation_scope_006:clear:interp_adb6f6504cbd608f0bdb7408ca38e794677f0e0abe94a84a54f32e6bcc38c6a1": {
+    "pair_id": "negation_scope_006",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_adb6f6504cbd608f0bdb7408ca38e794677f0e0abe94a84a54f32e6bcc38c6a1",
+    "nl": "Neither indicator is active until a release, which must occur.",
+    "gold_formulas": [
+      "(((!a) & (!b)) U c)"
+    ]
+  },
+  "negation_scope_006:clear:interp_dac163655519af09a9db79f1986f926a8a5d2ad0b7a1a079f72b1453c5cc65f0": {
+    "pair_id": "negation_scope_006",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_dac163655519af09a9db79f1986f926a8a5d2ad0b7a1a079f72b1453c5cc65f0",
+    "nl": "The indicators are not both active simultaneously until a release occurs, and a release must occur.",
+    "gold_formulas": [
+      "(!(a & b)) U c"
+    ]
+  },
+  "negation_scope_007:ambiguous": {
+    "pair_id": "negation_scope_007",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a release occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "The first and second indicators must not be active until a release occurs; release is optional.",
+    "gold_formulas": [
+      "((!a & !b) W c)",
+      "((! (a & b)) W c)"
+    ]
+  },
+  "negation_scope_007:clear:interp_324150b502da480545677bbb8095ef4288d0a2311c2a6e430647b432d747cd0f": {
+    "pair_id": "negation_scope_007",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_324150b502da480545677bbb8095ef4288d0a2311c2a6e430647b432d747cd0f",
+    "nl": "Neither indicator is active until a release occurs, and if no release occurs then neither indicator is active forever.",
+    "gold_formulas": [
+      "((!a & !b) W c)"
+    ]
+  },
+  "negation_scope_007:clear:interp_66ce666653004bbd09f1daf4ad26b56bbed3098949cbf03dff71bde337104ffb": {
+    "pair_id": "negation_scope_007",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_66ce666653004bbd09f1daf4ad26b56bbed3098949cbf03dff71bde337104ffb",
+    "nl": "It is not the case that both indicators are active together unless and until a release occurs; if no release occurs, they are never both active together.",
+    "gold_formulas": [
+      "((! (a & b)) W c)"
+    ]
+  },
+  "negation_scope_008:ambiguous": {
+    "pair_id": "negation_scope_008",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "the gate is open"
+    },
+    "kind": "ambiguous",
+    "nl": "Whenever the gate is open, the first and second indicators must not be active.",
+    "gold_formulas": [
+      "G((c -> (!(a & b))))",
+      "(G (c -> ((! a) & (! b))))"
+    ]
+  },
+  "negation_scope_008:clear:interp_b86694f27d19bd41b187d5e8821b3c5138df070445620952a744497b94bb93ca": {
+    "pair_id": "negation_scope_008",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "the gate is open"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_b86694f27d19bd41b187d5e8821b3c5138df070445620952a744497b94bb93ca",
+    "nl": "Whenever the gate is open, the indicators are not both active.",
+    "gold_formulas": [
+      "G((c -> (!(a & b))))"
+    ]
+  },
+  "negation_scope_008:clear:interp_f2286dfd3fe194cf3a51f26f19c2d3f636189d840010a4210fc7e51805f5f3c0": {
+    "pair_id": "negation_scope_008",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "the gate is open"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_f2286dfd3fe194cf3a51f26f19c2d3f636189d840010a4210fc7e51805f5f3c0",
+    "nl": "Whenever the gate is open, both indicators are inactive.",
+    "gold_formulas": [
+      "(G (c -> ((! a) & (! b))))"
+    ]
+  },
+  "negation_scope_009:ambiguous": {
+    "pair_id": "negation_scope_009",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a pulse occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Whenever a pulse occurs, the first and second indicators must not be active at the immediately following step.",
+    "gold_formulas": [
+      "(G (c -> X !(a & b)))",
+      "(G (c -> (X ((! a) & (! b)))))"
+    ]
+  },
+  "negation_scope_009:clear:interp_07bf3bbdd83208c52e52a3cf19b9ed3247b8506f000a94018fb92f32c68e0496": {
+    "pair_id": "negation_scope_009",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a pulse occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_07bf3bbdd83208c52e52a3cf19b9ed3247b8506f000a94018fb92f32c68e0496",
+    "nl": "Whenever a pulse occurs, the two indicators are not both active at the immediately following step.",
+    "gold_formulas": [
+      "(G (c -> X !(a & b)))"
+    ]
+  },
+  "negation_scope_009:clear:interp_0a8116a742355417f22d7005dc9c1e922901cb2d5fb8e15cb72b45111a6fa3ce": {
+    "pair_id": "negation_scope_009",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a pulse occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_0a8116a742355417f22d7005dc9c1e922901cb2d5fb8e15cb72b45111a6fa3ce",
+    "nl": "Whenever a pulse occurs, both indicators are inactive at the next step.",
+    "gold_formulas": [
+      "(G (c -> (X ((! a) & (! b)))))"
+    ]
+  },
+  "negation_scope_010:ambiguous": {
+    "pair_id": "negation_scope_010",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a pulse occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Whenever a pulse occurs, there must be a step at that time or later when the first and second indicators are not active.",
+    "gold_formulas": [
+      "(G (c -> F !(a & b)))",
+      "G (c -> F ((!a) & (!b)))"
+    ]
+  },
+  "negation_scope_010:clear:interp_15ba06c89701df2e455eacddefe7f4da5c18d62968fb1f6f2ef0c6c659a5edf4": {
+    "pair_id": "negation_scope_010",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a pulse occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_15ba06c89701df2e455eacddefe7f4da5c18d62968fb1f6f2ef0c6c659a5edf4",
+    "nl": "Whenever a pulse occurs, at that step or some later step the two indicators are not both active.",
+    "gold_formulas": [
+      "(G (c -> F !(a & b)))"
+    ]
+  },
+  "negation_scope_010:clear:interp_20b64662ebe188b2a0bfe821097399a74a63cfcd675bb1c504b7a611c5834477": {
+    "pair_id": "negation_scope_010",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a pulse occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_20b64662ebe188b2a0bfe821097399a74a63cfcd675bb1c504b7a611c5834477",
+    "nl": "Whenever a pulse occurs, there must eventually be a step where neither indicator is active.",
+    "gold_formulas": [
+      "G (c -> F ((!a) & (!b)))"
+    ]
+  },
+  "negation_scope_011:ambiguous": {
+    "pair_id": "negation_scope_011",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a pulse occurs",
+      "d": "a release occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Whenever a pulse occurs, the first and second indicators must not be active until a release occurs at that step or later, and such a release is required.",
+    "gold_formulas": [
+      "(G (c -> (((! a) & (! b)) U d)))",
+      "(G (c -> ((! (a & b)) U d)))"
+    ]
+  },
+  "negation_scope_011:clear:interp_72036e0aaba4302e4b34276609bb093a5f21611791256cf42d0dd571451e5af6": {
+    "pair_id": "negation_scope_011",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a pulse occurs",
+      "d": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_72036e0aaba4302e4b34276609bb093a5f21611791256cf42d0dd571451e5af6",
+    "nl": "Whenever a pulse occurs, both indicators are inactive until a release occurs at that step or later, and such a release is required.",
+    "gold_formulas": [
+      "(G (c -> (((! a) & (! b)) U d)))"
+    ]
+  },
+  "negation_scope_011:clear:interp_f4563071b8acb631ad82ff25a290062d1785bea8839466274d5ea72e93ba613a": {
+    "pair_id": "negation_scope_011",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a pulse occurs",
+      "d": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_f4563071b8acb631ad82ff25a290062d1785bea8839466274d5ea72e93ba613a",
+    "nl": "Whenever a pulse occurs, it is not the case that both indicators are active together until a release occurs at that step or later, and such a release is required.",
+    "gold_formulas": [
+      "(G (c -> ((! (a & b)) U d)))"
+    ]
+  },
+  "negation_scope_012:ambiguous": {
+    "pair_id": "negation_scope_012",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a check occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A check must occur at a step when the first and second indicators are not active.",
+    "gold_formulas": [
+      "F(c & !a & !b)",
+      "(F (c & (! (a & b))))"
+    ]
+  },
+  "negation_scope_012:clear:interp_77a89b55d2a50551b7e6f916c5d26deb52e97cd1389728a7f14abfc97e523460": {
+    "pair_id": "negation_scope_012",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a check occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_77a89b55d2a50551b7e6f916c5d26deb52e97cd1389728a7f14abfc97e523460",
+    "nl": "Eventually, a check occurs at a step when neither indicator is active.",
+    "gold_formulas": [
+      "F(c & !a & !b)"
+    ]
+  },
+  "negation_scope_012:clear:interp_ef6b1cda4a5fc32ede4eefdc5ffbc634f65821912582c5afef3af75490d308ea": {
+    "pair_id": "negation_scope_012",
+    "family_id": "negation_scope",
+    "propositions": {
+      "a": "the first indicator is active",
+      "b": "the second indicator is active",
+      "c": "a check occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_ef6b1cda4a5fc32ede4eefdc5ffbc634f65821912582c5afef3af75490d308ea",
+    "nl": "Eventually a check occurs at a step where it is not the case that both indicators are active.",
+    "gold_formulas": [
+      "(F (c & (! (a & b))))"
+    ]
+  },
+  "next_later_001:ambiguous": {
+    "pair_id": "next_later_001",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Every pulse must be followed by a flash.",
+    "gold_formulas": [
+      "G((a -> (X b)))",
+      "G (a -> X (F b))",
+      "G((a -> (F b)))"
+    ]
+  },
+  "next_later_001:clear:interp_2e15fdb2a4c71bd27384bc6fa29ae65f52265cf018eea5282d9084ba0198c693": {
+    "pair_id": "next_later_001",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_2e15fdb2a4c71bd27384bc6fa29ae65f52265cf018eea5282d9084ba0198c693",
+    "nl": "Every pulse is immediately followed at the next step by a flash.",
+    "gold_formulas": [
+      "G((a -> (X b)))"
+    ]
+  },
+  "next_later_001:clear:interp_d6db04271d502e0909a839cdc8ea422a3d27535f606e9e69e45b7fc8ba5a2ff9": {
+    "pair_id": "next_later_001",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_d6db04271d502e0909a839cdc8ea422a3d27535f606e9e69e45b7fc8ba5a2ff9",
+    "nl": "Every pulse must be followed by a flash at some strictly later step.",
+    "gold_formulas": [
+      "G (a -> X (F b))"
+    ]
+  },
+  "next_later_001:clear:interp_e4f18a2f67b587960c4bd04e18ab7225a508d441a5411b527848be4d13126800": {
+    "pair_id": "next_later_001",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_e4f18a2f67b587960c4bd04e18ab7225a508d441a5411b527848be4d13126800",
+    "nl": "Every pulse is eventually followed by a flash, possibly at the same step.",
+    "gold_formulas": [
+      "G((a -> (F b)))"
+    ]
+  },
+  "next_later_002:ambiguous": {
+    "pair_id": "next_later_002",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "If there is a pulse now, a flash must follow.",
+    "gold_formulas": [
+      "(a -> (X (F b)))",
+      "(a -> (X b))",
+      "a -> F b"
+    ]
+  },
+  "next_later_002:clear:interp_40b3c5a70ef78ba7fd08c96da43f36ffc09bbbf317c3f70a87884342cce054cc": {
+    "pair_id": "next_later_002",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_40b3c5a70ef78ba7fd08c96da43f36ffc09bbbf317c3f70a87884342cce054cc",
+    "nl": "If a pulse occurs at the initial step, a flash must occur at some strictly later step.",
+    "gold_formulas": [
+      "(a -> (X (F b)))"
+    ]
+  },
+  "next_later_002:clear:interp_4c3c411184c3d095bcf80f2e820b5297af18d84e1749b8553e9fe1f24427a3ff": {
+    "pair_id": "next_later_002",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_4c3c411184c3d095bcf80f2e820b5297af18d84e1749b8553e9fe1f24427a3ff",
+    "nl": "If a pulse occurs at the initial step, a flash must occur at the next step.",
+    "gold_formulas": [
+      "(a -> (X b))"
+    ]
+  },
+  "next_later_002:clear:interp_caa4b7e45b9b1b3b22774f5722a1af922b54b1603c53035e64b9fea14ff520c1": {
+    "pair_id": "next_later_002",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_caa4b7e45b9b1b3b22774f5722a1af922b54b1603c53035e64b9fea14ff520c1",
+    "nl": "If there is a pulse now, a flash must occur at the current step or some later step.",
+    "gold_formulas": [
+      "a -> F b"
+    ]
+  },
+  "next_later_003:ambiguous": {
+    "pair_id": "next_later_003",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "There must be at least one pulse followed by a flash.",
+    "gold_formulas": [
+      "F (a & X b)",
+      "F((a & (F b)))",
+      "F(a & X(F b))"
+    ]
+  },
+  "next_later_003:clear:interp_ade3f465167ddea46feb87ccc3f6150c72ab86f490a5f6c5fa42df59f74c93dd": {
+    "pair_id": "next_later_003",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_ade3f465167ddea46feb87ccc3f6150c72ab86f490a5f6c5fa42df59f74c93dd",
+    "nl": "There must be at least one pulse followed by a flash at the immediately next step.",
+    "gold_formulas": [
+      "F (a & X b)"
+    ]
+  },
+  "next_later_003:clear:interp_c18fd8071224176fa02b7977437cb9bfe7b56e694b2f49397e9b3b535f9db728": {
+    "pair_id": "next_later_003",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_c18fd8071224176fa02b7977437cb9bfe7b56e694b2f49397e9b3b535f9db728",
+    "nl": "There is at least one pulse followed eventually by a flash, possibly at the same step.",
+    "gold_formulas": [
+      "F((a & (F b)))"
+    ]
+  },
+  "next_later_003:clear:interp_ce150b477fc29540f8f317a5e75b0281da0fef78fd80a158d7aabdcc9cf4dba5": {
+    "pair_id": "next_later_003",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_ce150b477fc29540f8f317a5e75b0281da0fef78fd80a158d7aabdcc9cf4dba5",
+    "nl": "There is at least one pulse that is followed at a later step by a flash.",
+    "gold_formulas": [
+      "F(a & X(F b))"
+    ]
+  },
+  "next_later_004:ambiguous": {
+    "pair_id": "next_later_004",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "the indicator is on"
+    },
+    "kind": "ambiguous",
+    "nl": "After every pulse, the indicator must then stay on permanently.",
+    "gold_formulas": [
+      "G (a -> X (G b))",
+      "G((a -> (G b)))"
+    ]
+  },
+  "next_later_004:clear:interp_37ae3987ed8b99a6489482ce303f4d07408b1ea33b8b892790e94064a0959839": {
+    "pair_id": "next_later_004",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "the indicator is on"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_37ae3987ed8b99a6489482ce303f4d07408b1ea33b8b892790e94064a0959839",
+    "nl": "After every pulse, the indicator must stay on permanently starting at the next step.",
+    "gold_formulas": [
+      "G (a -> X (G b))"
+    ]
+  },
+  "next_later_004:clear:interp_e5e2c8f0a59a494157b5622d96e23059e25810bf19e0cfebd466a672b9ff195e": {
+    "pair_id": "next_later_004",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "the indicator is on"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_e5e2c8f0a59a494157b5622d96e23059e25810bf19e0cfebd466a672b9ff195e",
+    "nl": "After every pulse, the indicator stays on from the pulse step onward.",
+    "gold_formulas": [
+      "G((a -> (G b)))"
+    ]
+  },
+  "next_later_006:ambiguous": {
+    "pair_id": "next_later_006",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a chime occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Every pulse must be followed by a flash, with a chime at some strictly later step than that flash.",
+    "gold_formulas": [
+      "(G (a -> (X (F (b & (X (F c)))))))",
+      "G(a -> X(b & X(F c)))"
+    ]
+  },
+  "next_later_006:clear:interp_855c26625d8839a62bade2c9db498d09b96677ffa76bffc68a7b6df54ebbb9c0": {
+    "pair_id": "next_later_006",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a chime occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_855c26625d8839a62bade2c9db498d09b96677ffa76bffc68a7b6df54ebbb9c0",
+    "nl": "Every pulse is followed by a flash at some strictly later step, and a chime occurs strictly later than that flash.",
+    "gold_formulas": [
+      "(G (a -> (X (F (b & (X (F c)))))))"
+    ]
+  },
+  "next_later_006:clear:interp_a872a05ba8a3b25de835b7a6b6f4ee4bc3412a165c811d0a76a3814230289507": {
+    "pair_id": "next_later_006",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a chime occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_a872a05ba8a3b25de835b7a6b6f4ee4bc3412a165c811d0a76a3814230289507",
+    "nl": "Every pulse is followed immediately by a flash, and a later chime follows that flash.",
+    "gold_formulas": [
+      "G(a -> X(b & X(F c)))"
+    ]
+  },
+  "next_later_007:ambiguous": {
+    "pair_id": "next_later_007",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A pulse must never be followed by a flash.",
+    "gold_formulas": [
+      "G (a -> X (G (!b)))",
+      "(G (a -> (X (! b))))",
+      "(G (a -> (G !b)))"
+    ]
+  },
+  "next_later_007:clear:interp_04373a0afc2145fb2187eb767525502c56a2b5033f24f247d276b7e9faaffe93": {
+    "pair_id": "next_later_007",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_04373a0afc2145fb2187eb767525502c56a2b5033f24f247d276b7e9faaffe93",
+    "nl": "A pulse must never be followed by a flash at any strictly later step.",
+    "gold_formulas": [
+      "G (a -> X (G (!b)))"
+    ]
+  },
+  "next_later_007:clear:interp_b512b14843fcb4e49b1e342f9ecf919a2cb02d3e37a93970442562c87f03b113": {
+    "pair_id": "next_later_007",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_b512b14843fcb4e49b1e342f9ecf919a2cb02d3e37a93970442562c87f03b113",
+    "nl": "No pulse is immediately followed by a flash at the next step.",
+    "gold_formulas": [
+      "(G (a -> (X (! b))))"
+    ]
+  },
+  "next_later_007:clear:interp_d7b9fcaba88f2d56e5f7bbbbaf39248f032c174d9b0e1fa7715a35b140d78cdb": {
+    "pair_id": "next_later_007",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_d7b9fcaba88f2d56e5f7bbbbaf39248f032c174d9b0e1fa7715a35b140d78cdb",
+    "nl": "After any pulse, no flash ever occurs, including at the pulse step.",
+    "gold_formulas": [
+      "(G (a -> (G !b)))"
+    ]
+  },
+  "next_later_008:ambiguous": {
+    "pair_id": "next_later_008",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a stop occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Every pulse must be followed by a flash before any subsequent stop, with no stop at the flash step.",
+    "gold_formulas": [
+      "(G (a -> (X (!c U (b & !c)))))",
+      "G((a -> ((!c) U (b & (!c)))))"
+    ]
+  },
+  "next_later_008:clear:interp_3b36b8e22adf0689ac92c66b513023592a2d4febe3fe651189e34811d136c2a0": {
+    "pair_id": "next_later_008",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a stop occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_3b36b8e22adf0689ac92c66b513023592a2d4febe3fe651189e34811d136c2a0",
+    "nl": "Every pulse is followed, at a strictly later step, by a flash before any subsequent stop, with no stop at the flash step.",
+    "gold_formulas": [
+      "(G (a -> (X (!c U (b & !c)))))"
+    ]
+  },
+  "next_later_008:clear:interp_ae16d59bd8a1670f0033a49df3a92f0852f0163dc5d0cff848d5f061c4d183d9": {
+    "pair_id": "next_later_008",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a stop occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_ae16d59bd8a1670f0033a49df3a92f0852f0163dc5d0cff848d5f061c4d183d9",
+    "nl": "Every pulse must have a flash before any stop, and the flash step itself cannot be a stop.",
+    "gold_formulas": [
+      "G((a -> ((!c) U (b & (!c)))))"
+    ]
+  },
+  "next_later_009:ambiguous": {
+    "pair_id": "next_later_009",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Every pair of pulses on consecutive steps must be followed by a flash.",
+    "gold_formulas": [
+      "(G ((a & (X a)) -> (X (X b))))",
+      "(G ((a & (X a)) -> (X (X (F b)))))"
+    ]
+  },
+  "next_later_009:clear:interp_0b0829a99f2f863e94876d565a5999e73f212e9b555d5d23bc5f8d5eef4f46bd": {
+    "pair_id": "next_later_009",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_0b0829a99f2f863e94876d565a5999e73f212e9b555d5d23bc5f8d5eef4f46bd",
+    "nl": "If two pulses occur on consecutive steps, a flash occurs at the next step after the pair.",
+    "gold_formulas": [
+      "(G ((a & (X a)) -> (X (X b))))"
+    ]
+  },
+  "next_later_009:clear:interp_a4e41a324314d5feb406fd23c8197bdf03286951b28ec3efc0b201910924329a": {
+    "pair_id": "next_later_009",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_a4e41a324314d5feb406fd23c8197bdf03286951b28ec3efc0b201910924329a",
+    "nl": "If two pulses occur on consecutive steps, a flash occurs at some strictly later step after the pair.",
+    "gold_formulas": [
+      "(G ((a & (X a)) -> (X (X (F b)))))"
+    ]
+  },
+  "next_later_010:ambiguous": {
+    "pair_id": "next_later_010",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Eventually, the rule that every pulse is followed by a flash must hold from then on.",
+    "gold_formulas": [
+      "F(G((a -> (X b))))",
+      "(F (G (a -> (X (F b)))))"
+    ]
+  },
+  "next_later_010:clear:interp_9955b414c775c930c8d740b766c0643f892e4c2a7aaf5652b714bebc37bf2e93": {
+    "pair_id": "next_later_010",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_9955b414c775c930c8d740b766c0643f892e4c2a7aaf5652b714bebc37bf2e93",
+    "nl": "From some point onward, every pulse is immediately followed by a flash.",
+    "gold_formulas": [
+      "F(G((a -> (X b))))"
+    ]
+  },
+  "next_later_010:clear:interp_b7ab63b137dfe66678a04d84d8bc4ef2fbd318755df08decde31b519b0acaff8": {
+    "pair_id": "next_later_010",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_b7ab63b137dfe66678a04d84d8bc4ef2fbd318755df08decde31b519b0acaff8",
+    "nl": "Eventually from some point onward, every pulse is followed by a flash at some strictly later step.",
+    "gold_formulas": [
+      "(F (G (a -> (X (F b)))))"
+    ]
+  },
+  "next_later_011:ambiguous": {
+    "pair_id": "next_later_011",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A pulse followed by a flash must occur over and over without end.",
+    "gold_formulas": [
+      "(G (F (a & (F b))))",
+      "(G (F (a & (X b))))"
+    ]
+  },
+  "next_later_011:clear:interp_3ce4f1fee912b30caa4d5a6176916e7955dca4215749fb68ed34e68d9e28525a": {
+    "pair_id": "next_later_011",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_3ce4f1fee912b30caa4d5a6176916e7955dca4215749fb68ed34e68d9e28525a",
+    "nl": "Infinitely often a pulse occurs and is followed by a flash at or after it.",
+    "gold_formulas": [
+      "(G (F (a & (F b))))"
+    ]
+  },
+  "next_later_011:clear:interp_ee58eee73e82a7d319e27c798ad7d6168a74176f697196e7475dc4f399497ffd": {
+    "pair_id": "next_later_011",
+    "family_id": "next_later",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_ee58eee73e82a7d319e27c798ad7d6168a74176f697196e7475dc4f399497ffd",
+    "nl": "Infinitely often, a pulse is immediately followed by a flash at the next step.",
+    "gold_formulas": [
+      "(G (F (a & (X b))))"
+    ]
+  },
+  "or_scope_002:ambiguous": {
+    "pair_id": "or_scope_002",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "a pulse occurs",
+      "c": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "After a request, the next step must contain a pulse or a flash.",
+    "gold_formulas": [
+      "G (a -> X ((b & !c) | (!b & c)))",
+      "G((a -> (X(b | c))))"
+    ]
+  },
+  "or_scope_002:clear:interp_956127ddcd59471b692afb085be06456b64e5597df4a51e87848c0234360dd78": {
+    "pair_id": "or_scope_002",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "a pulse occurs",
+      "c": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_956127ddcd59471b692afb085be06456b64e5597df4a51e87848c0234360dd78",
+    "nl": "After every request, the next step must contain either a pulse or a flash, but not both.",
+    "gold_formulas": [
+      "G (a -> X ((b & !c) | (!b & c)))"
+    ]
+  },
+  "or_scope_002:clear:interp_a5763728b7fc4f7c47e53d7c53f19a77fd41d93eab744b73b1577be4551fc341": {
+    "pair_id": "or_scope_002",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "a pulse occurs",
+      "c": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_a5763728b7fc4f7c47e53d7c53f19a77fd41d93eab744b73b1577be4551fc341",
+    "nl": "After every request, the next step contains a pulse or a flash, or both.",
+    "gold_formulas": [
+      "G((a -> (X(b | c))))"
+    ]
+  },
+  "or_scope_003:ambiguous": {
+    "pair_id": "or_scope_003",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "a pulse occurs",
+      "c": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A request must be answered at once by a pulse or a flash, but not both.",
+    "gold_formulas": [
+      "G (a -> ((b & !c) | (!b & c)))",
+      "(G (a -> (X ((b & !c) | (!b & c)))))"
+    ]
+  },
+  "or_scope_003:clear:interp_97e5f8db3afd58e68c56ada856b0a8ff91313766130fddb464eeba5151a26ae5": {
+    "pair_id": "or_scope_003",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "a pulse occurs",
+      "c": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_97e5f8db3afd58e68c56ada856b0a8ff91313766130fddb464eeba5151a26ae5",
+    "nl": "Whenever a request occurs, the same step must contain either a pulse or a flash, but not both.",
+    "gold_formulas": [
+      "G (a -> ((b & !c) | (!b & c)))"
+    ]
+  },
+  "or_scope_003:clear:interp_af700566c125aa8a1c69495c136943aee23e36c702d9763da40e8a94180cd2af": {
+    "pair_id": "or_scope_003",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "a pulse occurs",
+      "c": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_af700566c125aa8a1c69495c136943aee23e36c702d9763da40e8a94180cd2af",
+    "nl": "Every request is answered at the next step by exactly one of a pulse or a flash.",
+    "gold_formulas": [
+      "(G (a -> (X ((b & !c) | (!b & c)))))"
+    ]
+  },
+  "or_scope_005:ambiguous": {
+    "pair_id": "or_scope_005",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the first signal is active",
+      "c": "the second signal is active",
+      "d": "a release occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A request requires the first or second signal to stay active until a release, which must eventually occur.",
+    "gold_formulas": [
+      "G (a -> ((b U d) | (c U d)))",
+      "(G (a -> ((b | c) U d)))"
+    ]
+  },
+  "or_scope_005:clear:interp_5fceebb4762de69250ac22e28f33b06b13cc77492aba3372d0bfe889c9d5d464": {
+    "pair_id": "or_scope_005",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the first signal is active",
+      "c": "the second signal is active",
+      "d": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_5fceebb4762de69250ac22e28f33b06b13cc77492aba3372d0bfe889c9d5d464",
+    "nl": "For each request, either the first signal stays active until release, or the second signal stays active until release, and release must occur.",
+    "gold_formulas": [
+      "G (a -> ((b U d) | (c U d)))"
+    ]
+  },
+  "or_scope_005:clear:interp_76459a9cb530425fe8556c60a097dd141cf3442ec0dc2cbc8a2ffd457ed6888a": {
+    "pair_id": "or_scope_005",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the first signal is active",
+      "c": "the second signal is active",
+      "d": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_76459a9cb530425fe8556c60a097dd141cf3442ec0dc2cbc8a2ffd457ed6888a",
+    "nl": "For every request, at least one of the first or second signal is active at every step until a release occurs; a release is required.",
+    "gold_formulas": [
+      "(G (a -> ((b | c) U d)))"
+    ]
+  },
+  "or_scope_006:ambiguous": {
+    "pair_id": "or_scope_006",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the first signal is active",
+      "c": "the second signal is active",
+      "d": "a release occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A request requires the first or second signal to remain active unless released; release is optional.",
+    "gold_formulas": [
+      "G (a -> ((b | c) W d))",
+      "G(a -> ((b W d) | (c W d)))"
+    ]
+  },
+  "or_scope_006:clear:interp_1da49419298eaf2570e1726d21fbc8fde240ba7d96a4b02d3baca7ec8fbccfdb": {
+    "pair_id": "or_scope_006",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the first signal is active",
+      "c": "the second signal is active",
+      "d": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_1da49419298eaf2570e1726d21fbc8fde240ba7d96a4b02d3baca7ec8fbccfdb",
+    "nl": "For each request, at least one of the signals remains active unless released (release optional).",
+    "gold_formulas": [
+      "G (a -> ((b | c) W d))"
+    ]
+  },
+  "or_scope_006:clear:interp_f14558df3ec4ad4f900783d09659b628021ad0b012db72fea6da8b874ceb75e7": {
+    "pair_id": "or_scope_006",
+    "family_id": "or_scope",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the first signal is active",
+      "c": "the second signal is active",
+      "d": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_f14558df3ec4ad4f900783d09659b628021ad0b012db72fea6da8b874ceb75e7",
+    "nl": "After every request, either signal remains active until release, or remains active forever if no release occurs.",
+    "gold_formulas": [
+      "G(a -> ((b W d) | (c W d)))"
+    ]
+  },
+  "order_scope_001:ambiguous": {
+    "pair_id": "order_scope_001",
+    "family_id": "order_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A pulse is to be followed later by a flash.",
+    "gold_formulas": [
+      "F (a & X (F b))",
+      "(G (a -> (X (F b))))"
+    ]
+  },
+  "order_scope_001:clear:interp_1167672365c501c684a7bbf8829485ed861a9d6861db5bacbb70117579015204": {
+    "pair_id": "order_scope_001",
+    "family_id": "order_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_1167672365c501c684a7bbf8829485ed861a9d6861db5bacbb70117579015204",
+    "nl": "There must be at least one pulse followed by a flash at a strictly later step.",
+    "gold_formulas": [
+      "F (a & X (F b))"
+    ]
+  },
+  "order_scope_001:clear:interp_132d0540c407d91c9cec91552849b699e207138ce060857f15defca8241a79a9": {
+    "pair_id": "order_scope_001",
+    "family_id": "order_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_132d0540c407d91c9cec91552849b699e207138ce060857f15defca8241a79a9",
+    "nl": "Every pulse is followed at some strictly later step by a flash.",
+    "gold_formulas": [
+      "(G (a -> (X (F b))))"
+    ]
+  },
+  "order_scope_002:ambiguous": {
+    "pair_id": "order_scope_002",
+    "family_id": "order_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on"
+    },
+    "kind": "ambiguous",
+    "nl": "After a pulse, the light is to stay on from the next step onward.",
+    "gold_formulas": [
+      "G (a -> X (G b))",
+      "F((a & (X(G b))))"
+    ]
+  },
+  "order_scope_002:clear:interp_37ae3987ed8b99a6489482ce303f4d07408b1ea33b8b892790e94064a0959839": {
+    "pair_id": "order_scope_002",
+    "family_id": "order_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_37ae3987ed8b99a6489482ce303f4d07408b1ea33b8b892790e94064a0959839",
+    "nl": "After every pulse, the light must stay on permanently from the next step onward.",
+    "gold_formulas": [
+      "G (a -> X (G b))"
+    ]
+  },
+  "order_scope_002:clear:interp_c60005d81ceb043746e135b44a14190f17a7bc294f71c0b558dd015553d01f3d": {
+    "pair_id": "order_scope_002",
+    "family_id": "order_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_c60005d81ceb043746e135b44a14190f17a7bc294f71c0b558dd015553d01f3d",
+    "nl": "There is a pulse after which the light stays on from the next step onward.",
+    "gold_formulas": [
+      "F((a & (X(G b))))"
+    ]
+  },
+  "order_scope_004:ambiguous": {
+    "pair_id": "order_scope_004",
+    "family_id": "order_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a chime occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "A pulse is to be followed later by a flash and, later still, a chime.",
+    "gold_formulas": [
+      "G((a -> (X(F(b & (X(F c)))))))",
+      "F((a & (X(F(b & (X(F c)))))))"
+    ]
+  },
+  "order_scope_004:clear:interp_855c26625d8839a62bade2c9db498d09b96677ffa76bffc68a7b6df54ebbb9c0": {
+    "pair_id": "order_scope_004",
+    "family_id": "order_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a chime occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_855c26625d8839a62bade2c9db498d09b96677ffa76bffc68a7b6df54ebbb9c0",
+    "nl": "Every pulse is strictly later followed by a flash, and that flash strictly later followed by a chime.",
+    "gold_formulas": [
+      "G((a -> (X(F(b & (X(F c)))))))"
+    ]
+  },
+  "order_scope_004:clear:interp_f3b726ac91ee34cdff34d44ad8135aaf834726044f93e1ac094d865dd51b7c43": {
+    "pair_id": "order_scope_004",
+    "family_id": "order_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a flash occurs",
+      "c": "a chime occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_f3b726ac91ee34cdff34d44ad8135aaf834726044f93e1ac094d865dd51b7c43",
+    "nl": "There exists a pulse strictly later followed by a flash, and that flash strictly later followed by a chime.",
+    "gold_formulas": [
+      "F((a & (X(F(b & (X(F c)))))))"
+    ]
+  },
+  "same_later_001:ambiguous": {
+    "pair_id": "same_later_001",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "ambiguous",
+    "nl": "Requests require an active response.",
+    "gold_formulas": [
+      "G((a -> b))",
+      "G((a -> (F b)))"
+    ]
+  },
+  "same_later_001:clear:interp_47cb69b0ae5bc82561eb3c571f9007c944480ace7cfc71e18b5cd9f4262b3648": {
+    "pair_id": "same_later_001",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_47cb69b0ae5bc82561eb3c571f9007c944480ace7cfc71e18b5cd9f4262b3648",
+    "nl": "Every request has an active response at the same step.",
+    "gold_formulas": [
+      "G((a -> b))"
+    ]
+  },
+  "same_later_001:clear:interp_50311cc71251eafebab280ee99973cf57e8cb4923eed607f761750629888d20e": {
+    "pair_id": "same_later_001",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_50311cc71251eafebab280ee99973cf57e8cb4923eed607f761750629888d20e",
+    "nl": "Every request is eventually followed by an active response.",
+    "gold_formulas": [
+      "G((a -> (F b)))"
+    ]
+  },
+  "same_later_002:ambiguous": {
+    "pair_id": "same_later_002",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "ambiguous",
+    "nl": "A request at the starting step requires an active response.",
+    "gold_formulas": [
+      "(a -> X b)",
+      "(a -> (F b))",
+      "(a -> b)"
+    ]
+  },
+  "same_later_002:clear:interp_4c3c411184c3d095bcf80f2e820b5297af18d84e1749b8553e9fe1f24427a3ff": {
+    "pair_id": "same_later_002",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_4c3c411184c3d095bcf80f2e820b5297af18d84e1749b8553e9fe1f24427a3ff",
+    "nl": "If a request occurs initially, the response is active at the next step.",
+    "gold_formulas": [
+      "(a -> X b)"
+    ]
+  },
+  "same_later_002:clear:interp_caa4b7e45b9b1b3b22774f5722a1af922b54b1603c53035e64b9fea14ff520c1": {
+    "pair_id": "same_later_002",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_caa4b7e45b9b1b3b22774f5722a1af922b54b1603c53035e64b9fea14ff520c1",
+    "nl": "At the starting step, if a request occurs then an active response occurs at some later or same step.",
+    "gold_formulas": [
+      "(a -> (F b))"
+    ]
+  },
+  "same_later_002:clear:interp_fdb1a7ba9ae2f812ec03919528b71c1fb6cb902d35fd185542d19be6f6fd5f1d": {
+    "pair_id": "same_later_002",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_fdb1a7ba9ae2f812ec03919528b71c1fb6cb902d35fd185542d19be6f6fd5f1d",
+    "nl": "If a request occurs at the initial step, the response is active at that step.",
+    "gold_formulas": [
+      "(a -> b)"
+    ]
+  },
+  "same_later_003:ambiguous": {
+    "pair_id": "same_later_003",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "ambiguous",
+    "nl": "There must be a request with an active response.",
+    "gold_formulas": [
+      "F (a & F b)",
+      "F(a & b)"
+    ]
+  },
+  "same_later_003:clear:interp_89e8eeac60829aad83d0f3d9a6844bc942c6456ddc19baad88c4807506d76eda": {
+    "pair_id": "same_later_003",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_89e8eeac60829aad83d0f3d9a6844bc942c6456ddc19baad88c4807506d76eda",
+    "nl": "There must be a request that is answered by an active response at that step or later.",
+    "gold_formulas": [
+      "F (a & F b)"
+    ]
+  },
+  "same_later_003:clear:interp_9635a7814d0787a0074b1e545449a7d76639bc21f8c6a8ebf38eaee8b8763ece": {
+    "pair_id": "same_later_003",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_9635a7814d0787a0074b1e545449a7d76639bc21f8c6a8ebf38eaee8b8763ece",
+    "nl": "There is at least one step with both a request and an active response.",
+    "gold_formulas": [
+      "F(a & b)"
+    ]
+  },
+  "same_later_004:ambiguous": {
+    "pair_id": "same_later_004",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "ambiguous",
+    "nl": "Requests with an active response must keep occurring.",
+    "gold_formulas": [
+      "G (F (a & F b))",
+      "(G (F (a & b)))"
+    ]
+  },
+  "same_later_004:clear:interp_b47e21a4a2e3f218546c2f477a41543dcbae321e17e3f666c97f165333d70ad8": {
+    "pair_id": "same_later_004",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_b47e21a4a2e3f218546c2f477a41543dcbae321e17e3f666c97f165333d70ad8",
+    "nl": "Infinitely often, a request occurs that has an active response at that step or later.",
+    "gold_formulas": [
+      "G (F (a & F b))"
+    ]
+  },
+  "same_later_004:clear:interp_c4142e791387bd03609daffd68173f5323ff8bf17e0088db31ed5b0784485d07": {
+    "pair_id": "same_later_004",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_c4142e791387bd03609daffd68173f5323ff8bf17e0088db31ed5b0784485d07",
+    "nl": "Infinitely often a request occurs while the response is active.",
+    "gold_formulas": [
+      "(G (F (a & b)))"
+    ]
+  },
+  "same_later_005:ambiguous": {
+    "pair_id": "same_later_005",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "ambiguous",
+    "nl": "Eventually, requests must always have an active response.",
+    "gold_formulas": [
+      "F(G((a -> (F b))))",
+      "(F (G (a -> b)))"
+    ]
+  },
+  "same_later_005:clear:interp_17eee8d6f0fe999fa48b700b21fe9e991f59e5253e2da13ba373107dfb312eed": {
+    "pair_id": "same_later_005",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_17eee8d6f0fe999fa48b700b21fe9e991f59e5253e2da13ba373107dfb312eed",
+    "nl": "From some point onward, every request is eventually followed by an active response.",
+    "gold_formulas": [
+      "F(G((a -> (F b))))"
+    ]
+  },
+  "same_later_005:clear:interp_474699a71d27109ad0cd1b23a899ddf5b18c97a5b458b9fd0f4572ac60430ffd": {
+    "pair_id": "same_later_005",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_474699a71d27109ad0cd1b23a899ddf5b18c97a5b458b9fd0f4572ac60430ffd",
+    "nl": "Eventually, from some step onward, every request has an active response at the same step.",
+    "gold_formulas": [
+      "(F (G (a -> b)))"
+    ]
+  },
+  "same_later_009:ambiguous": {
+    "pair_id": "same_later_009",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "ambiguous",
+    "nl": "Every request requires a response that remains active forever.",
+    "gold_formulas": [
+      "G (a -> G b)",
+      "G (a -> X (G b))",
+      "(G (a -> (F (G b))))"
+    ]
+  },
+  "same_later_009:clear:interp_3c371822f09addc7163de55e34757075b9cfae2674901d961ed294f7ae21b594": {
+    "pair_id": "same_later_009",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_3c371822f09addc7163de55e34757075b9cfae2674901d961ed294f7ae21b594",
+    "nl": "Every request requires the response to be active from that step onward forever.",
+    "gold_formulas": [
+      "G (a -> G b)"
+    ]
+  },
+  "same_later_009:clear:interp_b1739d5d2a0efae5e17908e29804b40942c6234915a7bcef5e670c604e033813": {
+    "pair_id": "same_later_009",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_b1739d5d2a0efae5e17908e29804b40942c6234915a7bcef5e670c604e033813",
+    "nl": "Every request requires the response to remain active forever starting from the next step.",
+    "gold_formulas": [
+      "G (a -> X (G b))"
+    ]
+  },
+  "same_later_009:clear:interp_ca57a459c34230af84c71bf3f32827865cf6d577c49ed0da9d308ec25385733a": {
+    "pair_id": "same_later_009",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_ca57a459c34230af84c71bf3f32827865cf6d577c49ed0da9d308ec25385733a",
+    "nl": "Whenever a request occurs, eventually the response becomes active and stays active forever.",
+    "gold_formulas": [
+      "(G (a -> (F (G b))))"
+    ]
+  },
+  "same_later_011:ambiguous": {
+    "pair_id": "same_later_011",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "ambiguous",
+    "nl": "A request at the next step requires an active response.",
+    "gold_formulas": [
+      "(X (a -> (F b)))",
+      "(X((a -> b)))"
+    ]
+  },
+  "same_later_011:clear:interp_58cd83035366c4645c7b9b38f96df76f1b5d6ee2f3fc419d12e9313548b03ec8": {
+    "pair_id": "same_later_011",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_58cd83035366c4645c7b9b38f96df76f1b5d6ee2f3fc419d12e9313548b03ec8",
+    "nl": "If a request occurs at the next step, the response is active at some later step.",
+    "gold_formulas": [
+      "(X (a -> (F b)))"
+    ]
+  },
+  "same_later_011:clear:interp_b1069e06fc5ebb3adf939f82aecd756dc269bc3a16494c0b794c0fe10fa61f4d": {
+    "pair_id": "same_later_011",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_b1069e06fc5ebb3adf939f82aecd756dc269bc3a16494c0b794c0fe10fa61f4d",
+    "nl": "At the next step, if there is a request then there is an active response at that same next step.",
+    "gold_formulas": [
+      "(X((a -> b)))"
+    ]
+  },
+  "same_later_012:ambiguous": {
+    "pair_id": "same_later_012",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active",
+      "c": "the response is permitted"
+    },
+    "kind": "ambiguous",
+    "nl": "Requests made while the response is permitted require an active response.",
+    "gold_formulas": [
+      "G ((a & c) -> b)",
+      "(G ((a & c) -> (F b)))"
+    ]
+  },
+  "same_later_012:clear:interp_4894318fb9e5857bb918b5410ed50a09fadd95e0ded737defcd0502c49e3780c": {
+    "pair_id": "same_later_012",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active",
+      "c": "the response is permitted"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_4894318fb9e5857bb918b5410ed50a09fadd95e0ded737defcd0502c49e3780c",
+    "nl": "Requests made while permitted require an active response at the same step.",
+    "gold_formulas": [
+      "G ((a & c) -> b)"
+    ]
+  },
+  "same_later_012:clear:interp_4b55a07ccf969973ef5905c2a8b3ec598fbdfb5eb143a7ddb95bae01a26598c8": {
+    "pair_id": "same_later_012",
+    "family_id": "same_later",
+    "propositions": {
+      "a": "a request occurs",
+      "b": "the response is active",
+      "c": "the response is permitted"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_4b55a07ccf969973ef5905c2a8b3ec598fbdfb5eb143a7ddb95bae01a26598c8",
+    "nl": "Whenever a request occurs while the response is permitted, the response is active at some later step.",
+    "gold_formulas": [
+      "(G ((a & c) -> (F b)))"
+    ]
+  },
+  "trigger_scope_004:ambiguous": {
+    "pair_id": "trigger_scope_004",
+    "family_id": "trigger_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on"
+    },
+    "kind": "ambiguous",
+    "nl": "A pulse requires the light to stay on from that step onward.",
+    "gold_formulas": [
+      "(G (a -> (G b)))",
+      "(G (a -> (X (G b))))"
+    ]
+  },
+  "trigger_scope_004:clear:interp_3c371822f09addc7163de55e34757075b9cfae2674901d961ed294f7ae21b594": {
+    "pair_id": "trigger_scope_004",
+    "family_id": "trigger_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_3c371822f09addc7163de55e34757075b9cfae2674901d961ed294f7ae21b594",
+    "nl": "Every pulse requires the light to be on at that step and at all later steps.",
+    "gold_formulas": [
+      "(G (a -> (G b)))"
+    ]
+  },
+  "trigger_scope_004:clear:interp_dd25e841bd9d30f29e38f11848da26ee088f4a7e5b75b1dddb27184f5c4664a1": {
+    "pair_id": "trigger_scope_004",
+    "family_id": "trigger_scope",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a light is on"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_dd25e841bd9d30f29e38f11848da26ee088f4a7e5b75b1dddb27184f5c4664a1",
+    "nl": "Every pulse requires the light to be on at all steps from the next step onward.",
+    "gold_formulas": [
+      "(G (a -> (X (G b))))"
+    ]
+  },
+  "until_termination_001:ambiguous": {
+    "pair_id": "until_termination_001",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "The state must stay active until a release occurs.",
+    "gold_formulas": [
+      "(a U b)",
+      "(a W b)"
+    ]
+  },
+  "until_termination_001:clear:interp_38f4f8484eefa1e477534d08eb18a9f9ec0d2fbdafd82800a685b6ddf45cd5bf": {
+    "pair_id": "until_termination_001",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_38f4f8484eefa1e477534d08eb18a9f9ec0d2fbdafd82800a685b6ddf45cd5bf",
+    "nl": "The state stays active until a release occurs, and the release must occur.",
+    "gold_formulas": [
+      "(a U b)"
+    ]
+  },
+  "until_termination_001:clear:interp_4afd1791c3066338e48e991db6aca10632f02f9850a52d627305bb4dc1ae1bce": {
+    "pair_id": "until_termination_001",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_4afd1791c3066338e48e991db6aca10632f02f9850a52d627305bb4dc1ae1bce",
+    "nl": "The state is active until a release occurs if one occurs; if no release occurs, the state stays active forever.",
+    "gold_formulas": [
+      "(a W b)"
+    ]
+  },
+  "until_termination_002:ambiguous": {
+    "pair_id": "until_termination_002",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "a request occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Whenever a request occurs, the state must remain active until a release occurs.",
+    "gold_formulas": [
+      "(G (c -> (a U b)))",
+      "G((c -> (a W b)))"
+    ]
+  },
+  "until_termination_002:clear:interp_5484c9e34f2312593208eb0b5dde5b671987c42c21ffde07b6240f33e1520218": {
+    "pair_id": "until_termination_002",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "a request occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_5484c9e34f2312593208eb0b5dde5b671987c42c21ffde07b6240f33e1520218",
+    "nl": "Whenever a request occurs, the state is active until a release occurs, and a release eventually occurs after that request.",
+    "gold_formulas": [
+      "(G (c -> (a U b)))"
+    ]
+  },
+  "until_termination_002:clear:interp_e9c8811c57b3bc675dfd70e85190aa16e39a7fca25a2d052ddb353ca7646c9bf": {
+    "pair_id": "until_termination_002",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "a request occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_e9c8811c57b3bc675dfd70e85190aa16e39a7fca25a2d052ddb353ca7646c9bf",
+    "nl": "Whenever a request occurs, the state remains active until a release, or forever if no release comes.",
+    "gold_formulas": [
+      "G((c -> (a W b)))"
+    ]
+  },
+  "until_termination_003:ambiguous": {
+    "pair_id": "until_termination_003",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Eventually, the state must stay active until a release occurs.",
+    "gold_formulas": [
+      "F (a U b)",
+      "F(a W b)"
+    ]
+  },
+  "until_termination_003:clear:interp_077cf3555a96707089eed0aea8f1cc8c532c80db0be73fb892b776e737333af4": {
+    "pair_id": "until_termination_003",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_077cf3555a96707089eed0aea8f1cc8c532c80db0be73fb892b776e737333af4",
+    "nl": "Eventually, the state must stay active until a release occurs, and a release is required.",
+    "gold_formulas": [
+      "F (a U b)"
+    ]
+  },
+  "until_termination_003:clear:interp_6828662e4a066061bed626f56e09f510d46786893a16cf5697a16864b500a3e9": {
+    "pair_id": "until_termination_003",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_6828662e4a066061bed626f56e09f510d46786893a16cf5697a16864b500a3e9",
+    "nl": "Eventually the state becomes active and stays active until a release, or forever if no release comes.",
+    "gold_formulas": [
+      "F(a W b)"
+    ]
+  },
+  "until_termination_004:ambiguous": {
+    "pair_id": "until_termination_004",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "From every step onward, the state must stay active until a release occurs.",
+    "gold_formulas": [
+      "(G (a W b))",
+      "G((a U b))"
+    ]
+  },
+  "until_termination_004:clear:interp_12c6f516b591a980c252153e81fa4631a740d6f9887bca4961b65834301bc092": {
+    "pair_id": "until_termination_004",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_12c6f516b591a980c252153e81fa4631a740d6f9887bca4961b65834301bc092",
+    "nl": "At every step from now on, the state is active until a release if one occurs, or forever if no release occurs.",
+    "gold_formulas": [
+      "(G (a W b))"
+    ]
+  },
+  "until_termination_004:clear:interp_456a22b43600787ac6bf75a35f6ad4ad968128c8e650f483287c04fdfa5e0312": {
+    "pair_id": "until_termination_004",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_456a22b43600787ac6bf75a35f6ad4ad968128c8e650f483287c04fdfa5e0312",
+    "nl": "At every step, the state remains active until some later release occurs.",
+    "gold_formulas": [
+      "G((a U b))"
+    ]
+  },
+  "until_termination_005:ambiguous": {
+    "pair_id": "until_termination_005",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "the indicator is lit"
+    },
+    "kind": "ambiguous",
+    "nl": "The state must remain active and the indicator lit until a release occurs.",
+    "gold_formulas": [
+      "((a & c) U b)",
+      "(a & c) W b"
+    ]
+  },
+  "until_termination_005:clear:interp_7228810b3befbee3f1db086f5564ae7c025addeaa9c34c010235911b1d05e8d2": {
+    "pair_id": "until_termination_005",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "the indicator is lit"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_7228810b3befbee3f1db086f5564ae7c025addeaa9c34c010235911b1d05e8d2",
+    "nl": "The state is active and the indicator is lit until a release occurs, and a release eventually occurs.",
+    "gold_formulas": [
+      "((a & c) U b)"
+    ]
+  },
+  "until_termination_005:clear:interp_d1d41d66ef5aa29940942647ee1f4b7a51e5d76039bfbf4bcc9edebc60d7a24d": {
+    "pair_id": "until_termination_005",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "the indicator is lit"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_d1d41d66ef5aa29940942647ee1f4b7a51e5d76039bfbf4bcc9edebc60d7a24d",
+    "nl": "The state must remain active and the indicator lit until a release occurs, or forever if no release occurs.",
+    "gold_formulas": [
+      "(a & c) W b"
+    ]
+  },
+  "until_termination_006:ambiguous": {
+    "pair_id": "until_termination_006",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "a cancellation occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "The state must remain active until a release or a cancellation occurs.",
+    "gold_formulas": [
+      "(a W (b | c))",
+      "(a U (b | c))"
+    ]
+  },
+  "until_termination_006:clear:interp_36a06f84fcfb0614060ab00bbcecfbe9b65193a70f78b9df613f603f8eecf3c1": {
+    "pair_id": "until_termination_006",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "a cancellation occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_36a06f84fcfb0614060ab00bbcecfbe9b65193a70f78b9df613f603f8eecf3c1",
+    "nl": "The state stays active until a release or a cancellation occurs, with the state allowed to remain active forever otherwise.",
+    "gold_formulas": [
+      "(a W (b | c))"
+    ]
+  },
+  "until_termination_006:clear:interp_f6b7708549ccc3471ea527f57e49d3423ad9fe8f7d7ad8b0e34aa6510efaf2b2": {
+    "pair_id": "until_termination_006",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "a cancellation occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_f6b7708549ccc3471ea527f57e49d3423ad9fe8f7d7ad8b0e34aa6510efaf2b2",
+    "nl": "The state stays active until a release or a cancellation occurs, and one of them must occur.",
+    "gold_formulas": [
+      "(a U (b | c))"
+    ]
+  },
+  "until_termination_007:ambiguous": {
+    "pair_id": "until_termination_007",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "the indicator is lit"
+    },
+    "kind": "ambiguous",
+    "nl": "The state must remain active until a release occurs while the indicator is lit.",
+    "gold_formulas": [
+      "(a W (b & c))",
+      "a U (b & c)"
+    ]
+  },
+  "until_termination_007:clear:interp_3eaf241d9dbd58a5ab638ce71db165f6a305790ecd6356c9853d21a1e9a2fec1": {
+    "pair_id": "until_termination_007",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "the indicator is lit"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_3eaf241d9dbd58a5ab638ce71db165f6a305790ecd6356c9853d21a1e9a2fec1",
+    "nl": "The state remains active until a release occurs while the indicator is lit, or forever if no such release comes.",
+    "gold_formulas": [
+      "(a W (b & c))"
+    ]
+  },
+  "until_termination_007:clear:interp_5d016b2e24c757e6dfca026c923687b95d5c04e986533932d367128c6747ffe5": {
+    "pair_id": "until_termination_007",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "the indicator is lit"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_5d016b2e24c757e6dfca026c923687b95d5c04e986533932d367128c6747ffe5",
+    "nl": "The state must remain active until a release occurs while the indicator is lit, and such an event is required.",
+    "gold_formulas": [
+      "a U (b & c)"
+    ]
+  },
+  "until_termination_008:ambiguous": {
+    "pair_id": "until_termination_008",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "the indicator is lit"
+    },
+    "kind": "ambiguous",
+    "nl": "The state must remain active until the indicator stays lit permanently.",
+    "gold_formulas": [
+      "(a U (G b))",
+      "(a W (G b))"
+    ]
+  },
+  "until_termination_008:clear:interp_b7ff6b26a4aeb446ed3321ccca475d684c1014637cf7254d852fc913dac61af2": {
+    "pair_id": "until_termination_008",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "the indicator is lit"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_b7ff6b26a4aeb446ed3321ccca475d684c1014637cf7254d852fc913dac61af2",
+    "nl": "The state is active until the indicator becomes permanently lit, and the indicator eventually becomes permanently lit.",
+    "gold_formulas": [
+      "(a U (G b))"
+    ]
+  },
+  "until_termination_008:clear:interp_f0dd85477216387974d5a7296c9b6b698061d3b981e3f9a0fe05ffc7d55dff3d": {
+    "pair_id": "until_termination_008",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "the indicator is lit"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_f0dd85477216387974d5a7296c9b6b698061d3b981e3f9a0fe05ffc7d55dff3d",
+    "nl": "The state stays active until the indicator is lit permanently from some step onward, with the state allowed to remain active forever otherwise.",
+    "gold_formulas": [
+      "(a W (G b))"
+    ]
+  },
+  "until_termination_009:ambiguous": {
+    "pair_id": "until_termination_009",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "a request occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Whenever a request occurs, starting at the next step the state must remain active until a release occurs.",
+    "gold_formulas": [
+      "G (c -> X (a W b))",
+      "(G (c -> (X (a U b))))"
+    ]
+  },
+  "until_termination_009:clear:interp_048056828ce5d07cc64ed53d8ab1f03ca71b5638e15c91e8280f9ed987553129": {
+    "pair_id": "until_termination_009",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "a request occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_048056828ce5d07cc64ed53d8ab1f03ca71b5638e15c91e8280f9ed987553129",
+    "nl": "Whenever a request occurs, starting at the next step the state must remain active until a release, or forever if no release occurs.",
+    "gold_formulas": [
+      "G (c -> X (a W b))"
+    ]
+  },
+  "until_termination_009:clear:interp_c2e583e9bb6eb55d968cd3c5ed98337f9dbad28fff965a442d7641eac2b68c8e": {
+    "pair_id": "until_termination_009",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "the state is active",
+      "b": "a release occurs",
+      "c": "a request occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_c2e583e9bb6eb55d968cd3c5ed98337f9dbad28fff965a442d7641eac2b68c8e",
+    "nl": "Every request is followed, from the next step onward, by the state staying active until a release occurs, and the release must occur.",
+    "gold_formulas": [
+      "(G (c -> (X (a U b))))"
+    ]
+  },
+  "until_termination_010:ambiguous": {
+    "pair_id": "until_termination_010",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a release occurs",
+      "c": "a flash occurs"
+    },
+    "kind": "ambiguous",
+    "nl": "Until a release occurs, every pulse must be followed by a flash at the next step.",
+    "gold_formulas": [
+      "((a -> (X c)) W b)",
+      "(a -> X c) U b"
+    ]
+  },
+  "until_termination_010:clear:interp_64366e0f41713e9814ff9414bdb8fc693e44740e527126f7cd9d602e4302081f": {
+    "pair_id": "until_termination_010",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a release occurs",
+      "c": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_64366e0f41713e9814ff9414bdb8fc693e44740e527126f7cd9d602e4302081f",
+    "nl": "Until a release occurs, every pulse is followed by a flash at the next step, with no release required.",
+    "gold_formulas": [
+      "((a -> (X c)) W b)"
+    ]
+  },
+  "until_termination_010:clear:interp_67f7a94a65dc32cd5920944c4086bc94bef8366fe7248fa4884a757d67fc3a34": {
+    "pair_id": "until_termination_010",
+    "family_id": "until_termination",
+    "propositions": {
+      "a": "a pulse occurs",
+      "b": "a release occurs",
+      "c": "a flash occurs"
+    },
+    "kind": "clear",
+    "interpretation_id": "interp_67f7a94a65dc32cd5920944c4086bc94bef8366fe7248fa4884a757d67fc3a34",
+    "nl": "Until a required release occurs, every pulse must be followed by a flash at the next step.",
+    "gold_formulas": [
+      "(a -> X c) U b"
+    ]
+  }
+}
