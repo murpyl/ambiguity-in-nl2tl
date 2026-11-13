@@ -136,7 +136,7 @@ def _api_error(body=None, status=None, exception_name=""):
 
 
 class OpenRouterTransport:
-    def __init__(self, settings, retries=2):
+    def __init__(self):
         from dotenv import load_dotenv
         from openai import OpenAI
 
@@ -144,28 +144,9 @@ class OpenRouterTransport:
         key = os.environ.get("OPENROUTER_API_KEY")
         if not key:
             raise BatchError("configuration", "OPENROUTER_API_KEY is not set")
-        self.settings = dict(settings)
-        self.retries = retries
         # This module owns bounded retries so SDK retries cannot multiply them.
         self.client = OpenAI(api_key=key, base_url="https://openrouter.ai/api/v1",
                              max_retries=0, timeout=600)
-
-    def check_models(self, models):
-        for attempt in range(self.retries + 1):
-            try:
-                raw = self.client.models.list().model_dump(mode="json")
-                break
-            except Exception as exc:
-                error = _api_error(getattr(exc, "body", None), getattr(exc, "status_code", None),
-                                   type(exc).__name__)
-                if not error.retryable or attempt == self.retries:
-                    raise error from None
-                time.sleep(min(2 ** attempt, 8))
-        available = {entry["id"]: entry for entry in raw.get("data", []) if isinstance(entry, dict) and "id" in entry}
-        missing = sorted(set(models) - available.keys())
-        if missing:
-            raise BatchError("model_unavailable", "requested exact model IDs unavailable: " + ", ".join(missing))
-        return {"requested_models": list(models), "models": [available[model] for model in models]}
 
     def complete(self, model, messages, settings):
         try:

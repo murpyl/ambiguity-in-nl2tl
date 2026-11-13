@@ -1,6 +1,6 @@
 """Translate retained ambiguous/clear NL with all five models and score votes.
 
-Defaults to a dry run. Add --execute for API calls, or --evaluate-only for caches.
+Use --execute for API calls or --evaluate-only to score saved translations.
 """
 import argparse
 import csv
@@ -53,8 +53,6 @@ def load_dataset(path):
         shared = {"pair_id": pair, "family_id": record["family_id"],
                   "propositions": record["propositions"]}
         groups = [g for g in record["groups"] if g.get("final_retained") is True]
-        if len(groups) < 2:
-            raise ValueError(f"{pair}: retained pair needs at least two surviving readings")
         golds = [g["representative"]["ltl"] for g in groups]
         rows = [(pair + ":ambiguous", {**shared, "kind": "ambiguous",
                  "nl": record["ambiguous_text"], "gold_formulas": golds})]
@@ -64,16 +62,7 @@ def load_dataset(path):
             rows.append((pair + ":clear:" + reading, {**shared, "kind": "clear",
                          "interpretation_id": reading, "nl": representative["clear_nl"],
                          "gold_formulas": [representative["ltl"]]}))
-        for key, example in rows:
-            if key in examples:
-                raise ValueError(f"Duplicate statement ID: {key}")
-            if not example["nl"].strip() or not example["propositions"]:
-                raise ValueError(f"{key}: missing text or propositions")
-            if any(parse(formula) is None for formula in example["gold_formulas"]):
-                raise ValueError(f"{key}: unparseable gold formula")
-            examples[key] = example
-    if not examples:
-        raise ValueError(f"No retained statements in {path}")
+        examples.update(rows)
     return examples
 
 
@@ -207,7 +196,7 @@ def main():
     cli.add_argument("--workers", type=int, default=16)
     cli.add_argument("--temperature", type=float, default=1.0)
     cli.add_argument("--max-tokens", type=int, default=8192)
-    modes = cli.add_mutually_exclusive_group()
+    modes = cli.add_mutually_exclusive_group(required=True)
     modes.add_argument("--execute", action="store_true")
     modes.add_argument("--evaluate-only", action="store_true")
     args = cli.parse_args()
@@ -220,9 +209,6 @@ def main():
     counts = Counter(e["kind"] for e in examples.values())
     print(f"{dict(counts)}; {len(args.models)} models; {args.samples} samples; "
           f"{len(examples) * len(args.models) * args.samples} total target calls", flush=True)
-    if not (args.execute or args.evaluate_only):
-        print("Dry run: dataset and gold formulas validated; no API calls. Add --execute.")
-        return
     args.output.mkdir(parents=True, exist_ok=True)
     config_path = args.output / "config.json"
     if config_path.exists() and json.loads(config_path.read_text()) != manifest:

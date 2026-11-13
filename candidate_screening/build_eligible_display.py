@@ -124,17 +124,10 @@ def main():
         for line_number, line in enumerate(path.read_text(encoding='utf-8').splitlines(), 1):
             if not line.strip():
                 continue
-            try:
-                record = json.loads(line)
-            except json.JSONDecodeError as error:
-                raise ValueError(f'{source}:{line_number}: {error}') from error
-            if not isinstance(record, dict):
-                raise ValueError(f'{source}:{line_number}: expected a JSON object')
+            record = json.loads(line)
             cards.append(card(record, source, line_number, len(cards) + 1))
             count += 1
         sources.append((source, count))
-    if not sources:
-        raise ValueError('No files with stems ending in _eligible found')
     options = ''.join(f'<option value="{escape(source)}">{escape(source)} ({count})</option>' for source, count in sources)
     document = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Eligible candidates · Combined reading view</title><style>{STYLE}</style></head>

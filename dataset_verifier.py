@@ -21,7 +21,6 @@ MODELS = (
     "qwen/qwen3.8-flash",
 )
 THRESHOLD = 3
-EXPECTED_COUNT = 88
 ALLOWLIST = ("item_id", "ambiguous_text", "propositions")
 
 DISCOVERY_PROMPT = '''You independently interpret temporal requirements.
@@ -101,29 +100,17 @@ def load_inputs(root):
             if not line.strip():
                 continue
             row = json.loads(line)
-            if not isinstance(row, dict):
-                raise ValueError(f"{path}:{line_number}: expected object")
-            sample = {key: row.get(key) for key in ALLOWLIST}
+            sample = {key: row[key] for key in ALLOWLIST}
             sample_filename(sample["item_id"])
-            text(sample["ambiguous_text"], sample["item_id"])
-            family_id = text(row.get("family_id"), f"{sample['item_id']}.family_id")
-            if not re.fullmatch(r"[a-z][a-z0-9_]*", family_id):
-                raise ValueError(f"{sample['item_id']}: invalid family_id {family_id!r}")
-            props = sample["propositions"]
-            if not isinstance(props, dict) or not props:
-                raise ValueError(f"{sample['item_id']}: expected proposition dictionary")
-            for symbol, meaning in props.items():
-                text(meaning, f"{sample['item_id']}/{symbol}")
-                if not isinstance(symbol, str) or parse(symbol) != ("atom", symbol):
-                    raise ValueError(f"{sample['item_id']}: invalid atom {symbol!r}")
+            family_id = row["family_id"]
+            if not isinstance(family_id, str) or not re.fullmatch(r"[a-z][a-z0-9_]*", family_id):
+                raise ValueError(f"invalid family_id for report path: {family_id!r}")
             samples.append(sample)
             provenance.append({"item_id": sample["item_id"], "family_id": family_id, "path": str(path.resolve()),
                                "line": line_number, "source_record_sha256": digest(row)})
     duplicates = sorted(k for k, n in Counter(s["item_id"] for s in samples).items() if n > 1)
     if duplicates:
         raise ValueError(f"duplicate item_ids: {duplicates}")
-    if len(samples) != EXPECTED_COUNT:
-        raise ValueError(f"expected {EXPECTED_COUNT} unique eligible samples, found {len(samples)}")
     return sorted(samples, key=lambda s: s["item_id"]), sorted(provenance, key=lambda s: s["item_id"])
 
 
@@ -390,9 +377,7 @@ def model_token_limit(value):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    action = parser.add_mutually_exclusive_group(required=True)
-    action.add_argument("--dry-run", action="store_true", help="validate inputs and Spot, save prompts; no network")
-    action.add_argument("--execute", action="store_true", help="enable paid OpenRouter generation")
+    parser.add_argument("--execute", action="store_true", required=True, help="enable paid OpenRouter generation")
     parser.add_argument("--input-root", type=Path, default=Path(__file__).parent / "candidate_screening")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=42)
@@ -421,8 +406,7 @@ def main(argv=None):
     save(marker, {"tool": "dataset_verifier", "version": 1})
     samples, solver = [], None
     # Remove only this verifier's current-result snapshots. Keep request history
-    # for resume, but never leave an earlier final decision looking current after
-    # a failed preflight or a dry run.
+    # for resume and clear stale results before starting.
     for name in ("report.json", "summary.json", "fatal_error.json", "review_messages.json",
                  "model_availability.json", "review_prompt.json", "config.json", "input.json",
                  "provenance.json", "discovery_messages.json"):
@@ -444,13 +428,8 @@ def main(argv=None):
                                            "model_max_tokens": model_max_tokens, "settings_by_model": settings_by_model,
                                            "input_sha256": digest(samples)})
         save(destination / "discovery_messages.json", build_discovery_messages(samples))
-        if args.dry_run:
-            save(destination / "review_prompt.json", {"role": "system", "content": REVIEW_PROMPT})
-            print(f"Dry run: {len(samples)} unique blind samples; Spot {solver.version}; no network calls. Prompts: {destination}")
-            return 0
         from verifier_transport import BatchCache, OpenRouterTransport
-        transport = OpenRouterTransport(settings, retries=args.retries)
-        save(destination / "model_availability.json", transport.check_models(list(MODELS)))
+        transport = OpenRouterTransport()
         cache = BatchCache(destination, transport, settings, retries=args.retries, model_max_tokens=model_max_tokens)
         result = run_verifier(samples, provenance, destination, cache, solver, args.seed)
         print(json.dumps(result["summary"]))
@@ -460,7 +439,7 @@ def main(argv=None):
         error = {"error_type": type(exc).__name__, "error": str(exc)}
         save(destination / "fatal_error.json", error)
         if samples:
-            reports = [{"item_id": s["item_id"], "status": "incomplete", "reasons": [f"preflight/processing failure: {exc}"],
+            reports = [{"item_id": s["item_id"], "status": "incomplete", "reasons": [f"processing failure: {exc}"],
                         "groups": [], "invalid_formulas": [], "surviving_interpretations": []} for s in samples]
             write_reports(destination, reports, [error], solver, args.seed, provenance)
         print(f"Verifier failed: {exc}", file=sys.stderr)

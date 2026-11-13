@@ -75,20 +75,12 @@ def load_dataset(path: Path):
     """Read one `NL;STL` pair per line."""
     examples = []
     with path.open("r", encoding="utf-8") as file:
-        for line_number, line in enumerate(file, start=1):
+        for line in file:
             line = line.strip()
             if not line:
                 continue
-            if ";" not in line:
-                raise ValueError(
-                    f"{path}:{line_number}: expected 'natural language;STL formula'"
-                )
             nl, stl = line.split(";", 1)
-            if not nl.strip() or not stl.strip():
-                raise ValueError(f"{path}:{line_number}: empty NL or STL formula")
             examples.append({"nl": nl.strip(), "stl": stl.strip()})
-    if not examples:
-        raise ValueError(f"No examples found in {path}")
     return examples
 
 

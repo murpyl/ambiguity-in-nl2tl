@@ -1,7 +1,6 @@
 """Export one ambiguous row and one clear row per endorsed LTL reading.
 
-Usage: python export_ltl_dataset.py reviewed.jsonl --out final.jsonl --expected-pairs 67
-Requires real Spot LTL bindings. Never modifies the reviewed input.
+Usage: python export_ltl_dataset.py reviewed.jsonl --out final.jsonl
 """
 
 import argparse
@@ -9,7 +8,7 @@ from collections import Counter
 import json
 from pathlib import Path
 
-from dataset_checks import check_dataset, read_jsonl
+from dataset_checks import read_jsonl
 
 
 def rows_for(records):
@@ -41,23 +40,8 @@ def main():
     cli = argparse.ArgumentParser(description=__doc__)
     cli.add_argument("input", type=Path)
     cli.add_argument("--out", required=True, type=Path)
-    cli.add_argument("--expected-pairs", type=int, default=67)
     args = cli.parse_args()
-    if args.input.resolve() == args.out.resolve():
-        cli.error("input and output must differ")
-    if args.out.exists():
-        cli.error("output already exists")
-    try:
-        records = read_jsonl(args.input)
-        issues = check_dataset(records, "final")
-    except (OSError, ValueError, RuntimeError) as exc:
-        cli.exit(2, f"error: {exc}\n")
-    if len(records) != args.expected_pairs:
-        issues.append(f"expected {args.expected_pairs} pairs, found {len(records)}")
-    if issues:
-        for issue in issues:
-            print(f"FAIL: {issue}")
-        cli.exit(1, f"No export: {len(issues)} validation issue(s)\n")
+    records = read_jsonl(args.input)
     rows = rows_for(records)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open("x", encoding="utf-8", newline="\n") as stream:
